@@ -1,0 +1,139 @@
+<section xml:id="TNB">
+  <title>The TNB Frame of Motion in 3D</title>
+  <objectives>
+  <ul>
+    <li>
+      <p>
+        To understand how the unit tangent, unit normal, and binormal vectors are measured for a curve in space
+      </p>
+    </li>
+    <li>
+      <p>
+        To understand how to efficently calculate the unit tangent, unit normal, and binormal vectors in terms of a parameteriation
+      </p>
+    </li>
+  </ul>
+</objectives>
+<subsection>
+  <title>The TNB Frame</title>
+  <figure xml:id="fig_test">
+    <caption>A three-dimensional plot of some cones</caption>
+    <interactive xml:id="sage_cones" platform="sage" width="100%" aspect="1:1.1">
+      <slate surface="sage">
+        var('t,s')
+        plot1=parametric_plot3d((t,0,0),(t,-5,5),color='black')
+        plot1+=parametric_plot3d((0,0,t),(t,0,11),color='black',linestyle="dashed")
+        plot1+=parametric_plot3d((0.4*s*cos(t),0.4*s*sin(t),s),(t,0,2*pi),(s,8,10), color="gray", opacity=.25, aspect_ratio=1)
+        plot1+=parametric_plot3d((0.4*s*cos(t),0.4*s*sin(t),s), (t,0,2*pi),(s,0,8), color="blue",opacity=.40, aspect_ratio=1)
+        plot1+=parametric_plot3d((0.4*s*cos(t),0.4*s*sin(t),3),(t,0,2*pi),(s,0,3),color="purple", opacity=2,aspect_ratio=1)
+        plot1+=arrow3d((4,0,0),(4,0,10),color="red",width=4)
+        plot1+=text3d("10",(5,0,5),color='red')
+        plot1+=arrow3d((-16/5,0,0),(-16/5,0,8),color="red",width=4)
+        plot1+=text3d("8",(-21/5,0,4),color='red')
+        plot1+=arrow3d((6/5,0,0),(6/5,0,3),color="red",width=4)
+        plot1+=text3d("x",(9/5,0,1.5),color='red')
+        plot1+=parametric_plot3d((t,0,10),(t,0,4),color='red')
+        plot1+=text3d("4",(2,0,11),color='red')
+        show(plot1)
+      </slate>
+    </interactive>
+  </figure>
+
+<figure xml:id="path2d">
+  <caption> A 2D curve with points</caption>
+  <image source="./images/path1.png" />
+</figure>
+<question>
+  <p>
+    <ol>
+      <li>For each point (labeled sequentially) on the path in <xref ref="path2d">Figure</xref>, draw and label <m>\overrightarrow{\textbf{T}}</m> and <m>\overrightarrow{\textbf{N}}</m>.</li>
+      <li>Give a ranking of the given points in <xref ref="path2d">Figure</xref> by curvature. In other words, list out the points from <m>A</m> to <m>F</m> in order of increasing curvature.</li>
+    </ol>
+  </p>
+</question>
+
+<question>
+  <p>
+    Mark each of the following as either TRUE or FALSE. If they are false, <b>explain why</b> they are false.
+    <ol>
+      <li>If a particle travels at constant speed, its acceleration vector is <m>\vec 0</m>.</li>
+      <li>If a particle travels at constant speed, its path must be a straight line.</li>
+      <li>If a particle is moving along a parameterized curve, then the acceleration vector at a point cannot be parallel to the velocity vector.</li>
+      <li>The arc length of a parameterized curve depends on the parameterization used to compute the integral.</li>
+      <li>If a particle is moving around a circle, then its acceleration and velocity vectors are orthogonal.</li>
+    </ol>
+  </p>
+</question>
+
+<question>
+  <p>
+    Consider the graph of a helix given by <m>\overrightarrow{\textbf{r}}(t) = \langle 3\sin(t),  2\cos(t),t \rangle</m>. Calculate the following:
+    <ol>
+      <li> <m>\overrightarrow{\textbf{r}}(0) =</m></li>
+      <li> <m>\overrightarrow{\textbf{T}}(0) =</m></li>
+      <li> <m>\overrightarrow{\textbf{N}}(0) =</m></li>
+      <li> <m>\overrightarrow{\textbf{B}}(0) =</m></li>
+      <li> <m>\kappa(0)=</m></li>
+      <li> <m>\overrightarrow{\textbf{r}}(\frac{\pi}{2}) =</m></li>
+      <li> <m>\overrightarrow{\textbf{T}}(\frac{\pi}{2}) =</m></li>
+      <li> <m>\overrightarrow{\textbf{N}}(\frac{\pi}{2}) =</m></li>
+      <li> <m>\overrightarrow{\textbf{B}}(\frac{\pi}{2}) =</m></li>
+      <li> <m>\kappa(\frac{\pi}{2})=</m></li>
+      <li> Write a few sentences to explain how your calculations make sense for each of the two points examined. Be sure to note what changed and what didn't.</li>
+    </ol>
+  </p>
+</question>
+<p>
+  You can use the sage cell below to help visualize curves in space with the following vectors:
+  <ul>
+    <li>velocity (in orange)</li>
+    <li>acceleration (in black)</li>
+    <li>unit tangent (in red)</li>
+    <li>unit normal (in blue)</li>
+  </ul>
+  Remember that you can change any of the parts of this code and reevaluate to get an updated plot. If you mess something up, simply reload this webpage and the original code will be reloaded. You can also use <url href="https://www.monroecc.edu/faculty/paulseeburger/calcnsf/CalcPlot3D/">CalcPlot3d</url> for your visualization needs.
+</p>
+<sage>
+  <input>
+    var('t');
+    r1= vector([3*cos(t), 1-t^2,3*sin(t)] )
+    plot1=parametric_plot3d(r1,(t,0,pi/2),color='green',thickness=5)
+    a=pi/6
+    v=diff(r1,t)
+    acc=diff(v,t)
+    T=v/norm(v)
+    Tprime=diff(T,t)
+    N=Tprime/norm(Tprime)
+    point=r1(t=a)
+    dot = point3d(point,size=10,rgbcolor="darkblue")
+    vplot=  dot    +   arrow3d(point,point+T(t=a), color='red')
+    vplot = vplot + arrow3d(point,point+10*N(t=a), color='blue')
+    vplot = vplot + arrow3d(point,point+v(t=a), color='orange')
+    vplot = vplot + arrow3d(point,point+acc(t=a), color='black')
+    show(plot1+vplot,aspect_ratio=1)
+  </input>
+</sage>
+</subsection>
+<subsection>
+  <title>Decomposition of Acceleration</title>
+<question>
+  <p>
+    Find the decomposition of <m>\overrightarrow{\textbf{a}}(t) </m> into tangential and normal components at the point indicated. 
+    <ol>
+      <li> <m>\overrightarrow{\textbf{r}}(t) =\langle t, \frac{t^2}{2}, \frac{t^3}{6} \rangle </m> at <m>t=1</m></li>
+      <li> <m>\overrightarrow{\textbf{r}}(t) =\langle t, e^t, t e^t \rangle </m> at <m>t=0</m></li>
+    </ol>
+  </p>
+  <hint>Use Example 7 on page 726 as a guide.</hint>
+</question>
+
+<question>
+  <p>
+    Let <m>\overrightarrow{\textbf{r}}(t) =\langle t^2, 4t-3 \rangle</m>. Find <m>\overrightarrow{\textbf{T}}(t)</m> and <m>\overrightarrow{\textbf{N}}(t)</m>. Also show that the decomposition of <m>\overrightarrow{\textbf{a}}(t)</m> into tangential and normal components is
+    <me>\overrightarrow{\textbf{a}}(t) = \left( \frac{2t}{\sqrt{t^2+4}} \right) \overrightarrow{\textbf{T}}+\left( \frac{4}{\sqrt{t^2+4}} \right) \overrightarrow{\textbf{N}}
+    </me>
+  </p>
+</question>
+
+</subsection>
+</section>

@@ -1,0 +1,104 @@
+<section xml:id="linesplanes">
+  <title>Lines and Planes</title>
+<objectives>
+  <ul>
+    <li>
+      <p>
+        To convert between the parametric form of a line in 3D and geometric information
+      </p>
+    </li>
+    <li>
+      <p>
+        To convert between the equation of a plane in 3D and geometric information
+      </p>
+    </li>
+  </ul>
+</objectives>
+<subsection>
+  <title>Lines in 2D and 3D</title>
+  <p>
+    Vectors offer a way to measure and represent change, often as simple as the change in location of an object. There are many additional tools built around vectors that we will use throughout this course.
+  </p>
+<p>
+  A line is the "flat" object in 2D and generally speaking is stated in the form <m>Ax+By+C=0</m>.
+</p>
+<question>
+  <p>
+    For each of the following equations, draw a graph by hand. Be sure to label your axes.
+    <ol>
+    <li><m>3x+2y=6</m></li>
+    <li><m>3x=6</m></li>
+    <li><m>2y=6</m></li>
+    </ol>
+  </p>
+</question>
+
+<question>
+  <p>
+    <ol>
+    <li>Give the parametric form of a line that goes through the points (1,2) and (3,4).</li>
+    <li>Give the parametric form of a line that goes through the points (1,2,3) and (4,5,6).</li>
+    <li>Do the lines given by <m>\overrightarrow{r}_1(t)=\langle 0,1,1 \rangle + t\langle 1,2,2 \rangle </m> and <m>\overrightarrow{r}_2(t)=\langle 2,0,3 \rangle + t\langle 1,4,4 \rangle </m> intersect? If so, state at what point(s) they intersect.</li>
+    <li>Give a parametric form for the y-axis.</li>
+    <li>Give a parametric form for the line given by <m>x=2y=3z</m>.</li>
+    </ol>
+  </p>
+</question>
+
+<p> A plane is the "flat" object in three dimensions and generally speaking is stated in the form <m>Ax+By+Cz=D</m>.
+</p>
+<question>
+  <p>
+    For each of the following equations draw a graph by hand and be sure to label your axes. I suggest you start by finding the <m>x-</m>, <m>y-</m>, and <m>z-</m>intercepts, then think about <em>all</em> of the points that will satisfy these equations.
+    <ol>
+    <li><m>3x+2y+4z=12</m></li>
+    <li><m>3x+2y=6</m></li>
+    <li><m>2y=6</m></li>
+    <li><m>x=y</m></li>
+    </ol>
+  </p>
+</question>
+<p>
+  In the sage cell below, you can put in the equation of a plane and the parametric equations of a line, then click Evaluate to see the graphs of these. Notice that for the examples given, the line intersects the plane, but is <em>not</em> perpendicular to the plane.
+</p>
+<sage>
+  <input>
+    var('x,y,z,t')
+    plot1=implicit_plot3d(2*x-3*y+z==1,(x,-5,5),(y,-5,5),(z,-5,5),color="blue",opacity=.6)
+    plot1+=parametric_plot3d((3*t-1,2-t,-t),(t,-2,2),color="red")
+    show(plot1)
+  </input>
+</sage>
+<question>
+  <ol>
+    <li>Find the plane that goes through the points <m>(1,2,3)</m>, <m>(4,5,6)</m>, and <m>(7,8,9)</m>.</li>
+    <li>What is the normal vector to the plane <m>3x+4y=6z-20</m>.</li>
+    <li>What is the <m>xz</m>-trace of the plane <m>3x+4y=6z-20</m>.</li>
+    <li>Find <em>all</em> planes in <m>\mathbb{R}^3</m> whose line of intersection with the <m>xz</m>-plane is given by <m>\pi x +e z=\sqrt{5}</m>.</li>
+    <li>Give the equations of <em>two</em> planes that make a <m>90^\circ</m> angle with <m>3x+4y=6z-20</m> and have an angle of <m>90^\circ</m> between them as well.</li>
+    <li>Give two vectors that are in the plane given by <m>3x+4y=6z-20</m> and are orthogonal to each other. Hint: What geometric information do you have about vectors in the given plane?</li>
+    <li>Give the parametric form of the line of intersection for the planes given by <m>x+y+z=10</m> and <m>-2x-4y+2z=7</m>. Hint: Look at question 62 in section 12.5.</li>
+  </ol>
+</question>
+<question>
+  <p>
+    Determine whether the following statements are TRUE of FALSE. If a statement is false, provide a counterexample. If a statement is true, write a sentence or two to justify why you think it is true.
+    <ol>
+    <li>Two planes in <m>\mathbb{R}^3</m> are either intersecting or parallel.</li>
+    <li>Two lines in <m>\mathbb{R}^3</m> are either intersecting or parallel.</li>
+    <li>If two lines, <m>L_1</m> and <m>L_2</m>, in <m>\mathbb{R}^3</m> are parallel to a plane <m>P_1</m>, then <m>L_1</m> and <m>L_2</m> are parallel.</li>
+    <li>If two lines, <m>L_1</m> and <m>L_2</m>, in <m>\mathbb{R}^3</m> are perpendicular to a plane <m>P_1</m>, then <m>L_1</m> and <m>L_2</m> are parallel.</li>
+    </ol>
+  </p>
+</question>
+
+<question>
+  <p>
+    Determine whether the following line is parallel to the plane <m>2x-3y+5z=5</m>:
+    <me> x=5+7t \quad y=4+3t \quad z=-3-2t</me>
+  </p>
+</question>
+</subsection>
+
+</section>
+

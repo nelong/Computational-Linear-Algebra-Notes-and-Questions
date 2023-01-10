@@ -1,0 +1,30 @@
+<section xml:id="coord_systems">
+  <title>Systems of Linear Equations and Matrices</title>
+<objectives>
+  <ul>
+    <li>
+      <p>
+        To understand reliable and efficent ways of finding solutions to systems of linear equations
+      </p>
+    </li>
+    <li>
+      <p>
+        To understand the terms and methods associated with matrices corresponding to linear systems of equations
+      </p>
+    </li>
+  </ul>
+</objectives>
+<subsection>
+  <title>Linear systems of equations</title>
+  <question>
+    <p>
+      How would you solve the following system?
+      <md>
+        <mrow> x+y=4</mrow>
+        <mrow>2x-y=2</mrow>
+      </md>
+    </p>
+  </question>
+</subsection>
+</section>
+

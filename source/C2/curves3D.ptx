@@ -1,0 +1,86 @@
+<section xml:id="Curves_3D">
+
+  <title>Vector Valued Functions in 3D and Curves in Space</title>
+
+  <introduction>
+    <p>
+      We will look at expanding the work we have done on parametric equatitons to curves in 3D over the next several classes.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Controls and Options for Plotting</title>
+    <p>
+      The controls and options for this explorer are on the right panel as shown below.
+    </p>
+	<figure>
+    <caption>A screenshot from the coordinate explorer.</caption>
+    <image width="100%" source="images/3d_constant_explorer.png"/>
+  </figure>
+
+  <question>
+    <p>
+      Parameterize each of the following curves. Be sure to state your bounds on the parameter and note which direction your parametrization goes.
+    </p>
+  <figure>
+    <caption>A screenshot from the coordinate explorer.</caption>
+    <image width="100%" source="images/paracurves.png"/>
+  </figure>
+</question>
+<question>
+  <p>
+  <ol>
+    <li> Is the point <m>(1,2,3)</m> on the cone <m>z^2=x^2+y^2</m>? Be sure to explain your answer.</li>
+    <li> Show that the vector valued function
+      <me>\overrightarrow{\textbf{r}}(t)=\langle e^{-t}\cos(t) , e^{-t}\sin(t),e^{-t} \rangle</me>
+      lies on the cone <m>z^2=x^2+y^2</m>.</li>
+  </ol>
+  </p>
+</question>
+<question>
+  <p>
+    For each of the following graphs, choose the corresponding vector valued function. Write a sentence or two explaining your choice for each part.
+<ol>
+  <li> <m>\overrightarrow{\textbf{r}}(t)=\langle t , 2t,t^2 \rangle</m> where <m>-2 \leq t \leq 2</m></li>
+  <li> <m>\overrightarrow{\textbf{r}}(t)=\langle \cos(\pi t) , \sin(\pi t),t^2 \rangle</m> where <m>-1 \leq t \leq 1</m></li>
+  <li> <m>\overrightarrow{\textbf{r}}(t)=\langle t , t^2,e^{.75t} \rangle</m> where <m>-2 \leq t \leq 2</m></li>
+  <li> <m>\overrightarrow{\textbf{r}}(t)=\langle t , \ln(t),\frac{2t}{3} \rangle</m> where <m>-.1 \leq t \leq 5</m></li>
+</ol>
+  a) <image width="100%" source="images/21a.png"/>
+  b) <image width="100%" source="images/21b.png"/>
+  c) <image width="100%" source="images/21c.png"/>
+  d) <image width="100%" source="images/21d.png"/>
+</p>
+</question>
+
+<question>
+  <p>For each part,
+<ol>
+  <li> draw the given surfaces on the same set of axes</li>
+  <li> draw what the intersections of the surfaces will look like when projected onto the <m>xy</m>-, <m>xz</m>-, and <m>yz</m>-planes</li>
+  <li> parameterize the curve given by their intersection</li>
+</ol>
+<ol>
+  <li> <m>x^2+y^2=9</m> and <m>x^2-y^2=z</m></li>
+  <li> <m>x^2+y^2=9</m> and <m>y=z^2</m></li>
+  <li> <m>z=x^2+y^2</m> and <m>x+y=0</m></li>
+</ol>
+</p>
+</question>
+
+<question>
+  <p>
+    Give a vector valued function forming the boundary of the given figure. Be sure to state your bounds on the parameter and note which direction your parametrization goes.
+</p>
+<image width="100%" source="./images/paracurves2.png" />
+</question>
+
+<question>
+  <p>
+    Write a couple of sentences explaining what "Vector Valued Functions of One Variable" means.
+  </p>
+</question>
+
+
+</subsection>
+</section>
+

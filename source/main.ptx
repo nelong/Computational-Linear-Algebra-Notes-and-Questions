@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+
+  <docinfo>
+    <macros>
+      \newcommand{\R}{\mathbb R}
+    </macros>
+  </docinfo>
+
+  <book xml:id="my-great-book">
+    <title>Computational Linear Algebra</title>
+    <subtitle>Notes and Questions for MATH 3325</subtitle>
+
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+          <personname>Nicholas Long</personname>
+          <department>Department of Mathematics and Statistics</department>
+          <institution>Stephen F. Austin State University</institution>
+        </author>
+        <date>
+          <today />
+        </date>
+      </titlepage>
+
+      <colophon>
+
+        
+
+        <copyright>
+          <year>2022<ndash />2023</year>
+          <holder>Nicholas Long</holder>
+          <shortlicense> 
+            This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+          </shortlicense>
+        </copyright>
+      </colophon>
+    </frontmatter>
+
+    <xi:include href="./C1.ptx" />
+
+    <backmatter xml:id="backmatter">
+      <title>Backmatter</title>
+
+      <colophon>
+        <p> This book was authored in <pretext />. </p>
+      </colophon>
+
+    </backmatter>
+
+  </book>
+</pretext>

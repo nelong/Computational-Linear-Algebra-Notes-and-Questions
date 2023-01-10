@@ -1,0 +1,41 @@
+<section xml:id="surfaces_in_space">
+  <title>Surfaces in Space</title>
+<objectives>
+  <ul>
+    <li>
+      <p>
+        To identify the equations and important geometric information of quadric surfaces
+      </p>
+    </li>
+    <li>
+      <p>
+        To identify and plot other common surfaces such as <m>z=f(x,y)</m> and cylinder surfaces
+      </p>
+    </li>
+  </ul>
+</objectives>
+<subsection>
+  <title>Quadric and Cylinder Surfaces</title>
+  <question>
+    <p>
+      Using your newly found understanding of surfaces, draw a good plot of each equation by hand. Be sure to label your graphs.
+      <ol>
+        <li><m>25x^2+4y^2+100z^2=100</m></li>
+        <li><m>25x^2+4y^2-100z^2=100</m></li>
+        <li><m>-25x^2-4y^2+100z^2=100</m></li>
+        <li><m>25x^2-4y^2=0</m></li>
+        <li><m>25x^2+4y^2+100z^2=0</m></li>
+        <li><m>25x^2+4y^2+100z=0</m></li>
+        <li><m>25x^2-4y^2+100z=0</m></li>
+        <li><m>-4y^2+100z=0</m></li>
+        <li><m>25x+4y+100z=100</m></li>
+        <li><m>-25x^2-4y^2-100z^2=100</m></li>
+        <li><m>25x^2-4y^2+100z^2=-100</m></li>
+      </ol>
+    </p>
+  </question>
+
+</subsection>
+
+</section>
+

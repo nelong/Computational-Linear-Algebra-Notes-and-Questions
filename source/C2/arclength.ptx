@@ -1,0 +1,92 @@
+<section xml:id="arclength">
+  <title>Properties of Curves in Space</title>
+<objectives>
+  <ul>
+    <li>
+      <p>
+        To understand how speed, arc length, and curvature are measured for a curve in space
+      </p>
+    </li>
+    <li>
+      <p>
+        To understand how to efficently calculate arc length and curvature in terms of a parameteriation
+      </p>
+    </li>
+  </ul>
+</objectives>
+<subsection>
+<title>Velocity, Speed, and Arc Length</title>
+
+<question>
+  <p>
+    A shark, which can shoot a laser beam straight ahead, travels along the path parameterized by <m> \overrightarrow{ \textbf{r}}(t) = \langle5-t,21-t^2,3-\frac{t^3}{27}\rangle</m>. Show that there is precisely one time <m>t</m> at which the shark can shoot his laser at an object located at the origin.
+  </p>
+</question>
+
+<question>
+  <p>
+    Let a curve <m>C</m> be parameterized by <m>\overrightarrow{\textbf{r}}(t)=\langle \cos(t),\sin(t),t^{3/2} \rangle</m> for <m>0\leq t\leq 2\pi</m>.
+    <ol>
+      <li>What is the average speed over <m>[0,2 \pi]</m>?</li>
+      <li>What is the speed at <m>t=2\pi</m>?</li>
+      <li>What is the speed at <m>t=0</m>?</li>
+      <li>What is the velocity at <m>t=2\pi</m>?</li>
+      <li>What is the velocity at <m>t=0</m>?</li>
+      <li>What is the length of the curve <m>C</m>?</li>
+    </ol>
+    </p>
+</question>
+
+<question>
+  <p>
+    Find the arc length parametrization for a line. Use the parametric form <m>\langle a,b,c \rangle t + \langle x_0,y_0,z_0 \rangle</m>.
+  </p>
+</question>
+
+<question>
+  <p>
+    A particle's acceleration at time <m>t</m> is given by <m>\vec a (t) = \langle e^t, 2t, t+1 \rangle </m>. It's position and velocity at time <m>t=0</m> are <m>\langle 2,1,1 \rangle</m> and  <m>\langle 1,0,1 \rangle </m>, respectively. Find a parametrization for the particle's position at time <m>t</m>.
+  </p>
+</question>
+
+<question>
+  <p>
+    Let a curve <m>C</m> be parameterized by <m>\overrightarrow{\textbf{r}}(t)=\langle 3 \cos(t),2 \sin(t) \rangle</m> for <m>0\leq t\leq 2\pi</m>.
+    <ol>
+      <li> Graph the curve <m>C</m></li>
+      <li> Compute the speed as a function of time.</li>
+      <li> Graph the speed of the given parametrization as a function of time.</li>
+      <li> Explain all of the features of the graph in terms of features of the parametrization or the curve <m>C</m>.</li>
+    </ol>
+  </p>
+</question>
+
+<question>
+  <p>
+    The curve known as the Bernoulli spiral has parametrization <m>\overrightarrow{\textbf{r}}(t)=\langle e^{t} \cos(4t),e^t \sin(4t) \rangle</m> for <m>t \in \mathbb{R}</m>.
+    <ol>
+      <li> Plot the curve for <m>t \in [-\infty,3]</m>.</li>
+      <li> Find the length of the spiral on the interval from <m>-\infty</m> to a time <m>t</m>.</li>
+      <li> Use your answer to the previous part to find an arc length parametrization of <m>\overrightarrow{\textbf{r}}(t)</m>.</li>
+    </ol>
+  </p>
+</question>
+
+</subsection>
+<subsection>
+  <title>Curvature</title>
+
+<question>
+  <p>
+    Calculate the curvature as a function of time for each of the following functions:
+      <ol>
+        <li> <m>\overrightarrow{\bf{r}}(t) = \langle 3\sin(t),t,3\cos(t) \rangle</m></li>
+        <li> <m>\overrightarrow{\bf{r}}(t) = \langle 3t-9, 6t-397584,\pi-\frac{t}{e} \rangle</m></li>
+      </ol>
+    </p>
+  </question>
+
+</subsection>
+
+</section>
+
