@@ -1,190 +1,34 @@
-<section xml:id="conic_sections">
-  <title>Conic Sections</title>
-<objectives>
-  <ul>
-    <li>
-      <p>
-        To convert between the equations and graphs of conic sections in 2D
-      </p>
-    </li>
-  </ul>
-</objectives>
-<subsection>
-  <title>Basic Conic Sections</title>
+<section xml:id="intro_activity">
+  <title>Traffic Flow</title>
+
+
+<activity>
+  <title>Introduction to Traffic Flow</title>
+  <statement>
     <p>
-      <url href="./images/Conic Sections.pdf">Here is a handout that shows the basics of conic sections in terms of both the graphs and equations.</url>
+      Consider the following diagram of a network with the flows indicated:
     </p>
-    
-</subsection>
-<subsection>
-  <title>Conic Sections Questions</title>
-<question>
-  <p>
-    Graph the following equations and label 5 points on each graph.
-  </p>
-    <ol>
-      <li><m>x^2+y^2=1</m></li>
-      <li><m>x^2-y^2=1</m></li>
-      <li><m>x^2=y</m></li>
-    </ol>
-  </question>
-<question>
-  <p>
-    For each of the following equations, state how the graph will differ from the basic plots of the problem above. Then plot the equation and include where the 5 points you choose from above appear.
-  </p>
-  <ol>
-      <li><m>\left(\frac{x}{3}\right)^2+\left(\frac{y}{4}\right)^2=1</m></li>
-      <li><m>y^2-x^2=1</m></li>
-      <li><m>\frac{y^2}{4}-\frac{x^2}{9}=1</m></li>
-      <li><m>(y-7)^2=-4(x+1)</m></li>
-    </ol>
-</question>
-<question>
-  <p>
-    For each of the following equations, plot the equation and be sure to label your graph as completely as possible.
-  </p>
-  <ol>
-      <li><m>\frac{(x-2)^2}{9}+\frac{(y+1)^2}{16}=1</m></li>
-      <li><m>\frac{(y+3)^2}{4}-\frac{(x+1)^2}{9}=1</m></li>
-      <li><m>(y-7)^2=-4(x+1)</m></li>
-  </ol>
-</question>
-<question>
-  <p>
-    Identify what shape the graphs of the following equations will have and complete the square to find the new center of the graph.
-  </p>
-  <ol>
-      <li><m>x^2-8x-8y+8=0</m></li>
-      <li><m>4x^2+y^2+24x-2y+21=0</m></li>
-      <li><m>9x^2-4y^2+90x+32y+125=0</m></li>
-  </ol>
-</question>
-</subsection>
-<subsection>
-  <title>Ellipse Parametric Equation</title>
-  <p>
-    In <xref ref="circle" /> we learned that to parametrize the implicit equation of a circle with center <m>(h,k)</m> and radius <m>r > 0</m> given by
-    <me> (x-h)^2 + (y-k)^2 = r^2 </me>
-    we can use the relationship between <m>\sin</m> and <m>\cos</m>. We found a parametric equation for the circle can be expressed by 
-    <me>x(t) =r \cos(\theta) + h \qquad y(t) = r \sin(\theta) + k.</me>
-    The conic section most closely related to the circle is the ellipse. We have been reminded in class that the general equation of an ellipse is given by
-    <me> \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1.</me>
-    Below is an ellipse that you can "play" around with:
-  </p>
-  <interactive desmos="qywzphvknl" width="100%" aspect="1:1" />
-  <p>
-   We can continue to make use of the relationship between <m>\sin</m> and <m>\cos</m> to discover parametric equations for an ellipse. In fact, without the <m>a</m> and <m>b</m> in the equation things would work perfectly. To remedy this (that is, get rid of <m>a,b</m>) we simply multiply by <m>\sin</m> and <m>\cos</m> by these values. Consider the equations
-   <me>x(t) = a \cos(t) \qquad y(t) = b \sin(t). </me>
-  </p>
-  
-  <activity xml:id="ellipse_act">
-    <task>
-      <p>
-        Substitute the equations for <m>x(t), y(t)</m> above into
-    <me> \frac{x^2}{a^2} + \frac{y^2}{b^2}</me>
-    and simplify.
+    <figure>
+      <image width = "80%" source = "./TrafficFlowExample.png" />
+      <caption>A network with directions of flow</caption>
+    </figure>
+    <p>
+      If all the flows, <m>x_1</m>, <m>x_2</m>, <m>x_3</m>, <m>x_4</m>, and <m>x_5</m>, are all nonnegative, what is the <alert>largest possible value</alert> for <m>x_3</m>?
     </p>
-    </task>
-    <task>
-      <p>
-        Consider the ellipse given by <m> \frac{x^2}{9} + \frac{y^2}{4} = 1.</m> What are the parametric equations for this ellipse?  Graph them below to ensure you obtain the exact same graph.
-      </p>
-      <figure xml:id="ellipse_desmos">
-        <caption>A Desmos Interactive for <xref ref="ellipse_act" /></caption>
-        <interactive desmos="dlwiulbqe7" width="100%" aspect="1:1" />
-      </figure>
-    </task>
-    <task>
-      <p>
-      In <xref ref="ellipse_desmos" />, update the equation in <m>x</m> and <m>y</m> as well as the parametric equations for the ellipse <m>\frac{x^2}{16} + \frac{y^2}{25} = 1.</m>
-      </p>
-    </task>
-    <task>
-      <p>
-        Write a few sentences about the orientation of the parametric equations. In particular, you should talk about the following: at what point do you "start", i.e. what point corresponds to <m>t=0</m>? How do you move around the ellipse (clockwise or counterclockwise)?
-      </p>
-    </task>
-    <task>
-      <p>
-        Update the equation in <m>x</m> and <m>y</m> as well as the parametric equations so that the ellipse has a center of <m>(-2,1)</m>.
-      </p>
-    </task>
-    <task>
-      <p>
-      Since we know that
-      <me> (\sin(t))^2 +(\cos(t))^2=1 \quad \text{for every }t\in\mathbb{R}</me> and the form of a translated ellipse is
-      given by
-      <me>\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1,</me>
-      set
-      <me>\frac{(x-h)^2}{a^2}=(\sin(t))^2</me>
-      and solve for x.
-      </p>
-    </task>
-    <task>
-      <p>
-        Set up a similar equation involving <m>y</m> and <m>\cos(t)</m> then solve for <m>y</m> to get a general set of parametric equations for the translated ellipse.
-      </p>
-    </task>
-  </activity>
-  
-  <activity xml:id="hyperbola_param">
-    <title>Parameterizing a Translated Hyperbola</title>
-    <introduction>
-      <p>
-        Another conic section that will be useful to quickly parameterize is the hyperbola. The translated hyperbola is given by 
-        <men xml:id="hyp_eq"> \frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1</men>
-        for horizontal orientation and
-        <men xml:id="hyp_eq2"> \frac{(y-k)^2}{a^2} - \frac{(x-h)^2}{b^2} = 1</men>
-        for vertical orientation.
-      </p>
-    </introduction>
-    <task xml:id="hyp_trig">
-      <statement>
-      <p>
-        Find a trig identity of the form
-        <me> (\underline{\hspace{0.5in}})^2-(\underline{\hspace{0.5in}})^2=1</me>
-      </p>
-      </statement>
-      <hint>
-        <p>
-          Look for one involving secant and tangent.
-        </p>
-      </hint>
-    </task>
-    <task>
-      <p>
-        Set the first blank element of your trig identity from the previous part equal to the following expression, and then solve for <m>x</m>.
-        <me>\frac{(x-h)^2}{a^2}</me>
-      </p>
-    </task>
-    <task>
-      <p>
-        Set up a similar equation involving <m>y</m> and the trig function from the second blank of <xref ref="hyp_trig" /> then solve for <m>y</m> to get a general set of parametric equations for the translated hyperbola.
-      </p>
-    </task>
-    <task>
-      <p>
-        Subsitute in your parametric equations for the translated hyperbola into the Desmos Interactive below to check that your equations trace the same graph as the translated hyperbola. You should move the sliders for <m>h</m>, <m>k</m>, <m>a</m>, and <m>b</m> to convince yourself that this set of parametric equations works for all cases (of the horizontal orientation.)
-      </p>
-      <figure xml:id="hyperbola_desmos">
-        <caption>A Desmos Interactive for <xref ref="hyperbola_param" /></caption>
-        <interactive desmos="xxhji8sfzx" width="100%" aspect="1:1" />
-      </figure>
-    </task>
-  </activity>
-<question>
-  <p>
-    For each of the following equations, give a parameterization and be sure state the bounds of your parameterization.
-  </p>
-  <ol>
-      <li><m>\frac{(x-2)^2}{9}+\frac{(y+1)^2}{16}=1</m></li>
-      <li><m>\frac{(y+3)^2}{4}-\frac{(x+1)^2}{9}=1</m></li>
-      <li><m>(y-7)^2=-4(x+1)</m></li>
-  </ol>
-</question>
-</subsection>
-<aside>
-This section last revised August 2020
-</aside>
+  </statement>
+  <hint>
+    <p>
+      To answer this consider the following:
+      <ol>
+        <li>For each node (A, B, C, D) set up a conservation equation. Remember the flow in must equal the flow out.</li>
+        <li>How many linear equations do you have? How many unknowns?</li>
+        <li>Use your conservation equations for A and D to solve for <m>x_3</m> in terms of <m>x_1</m> and <m>x_5</m>. How might we solve for <m>x_2</m> and <m>x_4</m> in terms of <m>x_3</m> and <m>x_5</m>?</li>
+        <li>Is our solution unique?</li>
+      </ol>
+    </p>
+  </hint>
+</activity>
+
+
 </section>
 
