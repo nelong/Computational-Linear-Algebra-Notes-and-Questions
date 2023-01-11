@@ -1,34 +1,105 @@
 <section xml:id="intro_activity">
-  <title>Traffic Flow</title>
-
+  <title>Warmup Problems</title>
 
 <activity>
-  <title>Introduction to Traffic Flow</title>
-  <statement>
-    <p>
-      Consider the following diagram of a network with the flows indicated:
+  <task xml:id="task_warmups_simult">
+    <p>Solve:
+      <md>
+        <mrow>3x_1-2x_2\amp= 6</mrow>
+        <mrow>-x_1+x_2\amp= 1</mrow>
+      </md>
     </p>
-    <figure>
-      <image width = "80%" source = "./TrafficFlowExample.png" />
-      <caption>A network with directions of flow</caption>
-    </figure>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        Draw a graph of the solution set of the equation: <m>3x_1-2x_2=6</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        If a solution has <m>x_1=a</m>, what is <m>x_2</m> or viceversa?
+      </p>
+    </hint>
+  </task>
+  <task>
     <p>
-      If all the flows, <m>x_1</m>, <m>x_2</m>, <m>x_3</m>, <m>x_4</m>, and <m>x_5</m>, are all nonnegative, what is the <alert>largest possible value</alert> for <m>x_3</m>?
+      Draw a graph of the solution set of the equation:
+      <m>-x_1+x_2=1</m>.
     </p>
-  </statement>
-  <hint>
+  </task>
+
+  <task>
     <p>
-      To answer this consider the following:
-      <ol>
-        <li>For each node (A, B, C, D) set up a conservation equation. Remember the flow in must equal the flow out.</li>
-        <li>How many linear equations do you have? How many unknowns?</li>
-        <li>Use your conservation equations for A and D to solve for <m>x_3</m> in terms of <m>x_1</m> and <m>x_5</m>. How might we solve for <m>x_2</m> and <m>x_4</m> in terms of <m>x_3</m> and <m>x_5</m>?</li>
-        <li>Is our solution unique?</li>
-      </ol>
+      Graph the solution sets from the two previous steps together. How does your answer to <xref ref="task_warmups_simult">part</xref> compare to your graph?
     </p>
-  </hint>
+  </task>
+  <task>
+    <p>
+      Solve:
+        <md>
+          <mrow>2x_1-2x_2\amp=6</mrow>
+          <mrow>-x_1+x_2\amp=1 </mrow>
+        </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      Solve:
+      <md>
+        <mrow>2x_1-2x_2\amp=-2</mrow>
+        <mrow>-x_1+x_2\amp=1</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      Wait, what just happened? Explain the results of the previous two activities. What do the graphs of the corresponding solution sets look like in relation to the graphs of the equations?
+    </p>
+  </task>
+  <task>
+    <p>
+      What are the possible intersections of two lines? Clearly state your conjecture.
+    </p>
+  </task>
 </activity>
 
+<p>
+  Throughout this course we will be doing many of the same things you did in the previous questions, but we will do them in a more general setting that will allow us to solve <em>many</em> new and old problems.
+</p>
+<subsection>
+  <title>Application Warmup Problem</title>
+  <p>
+    Here is an application problem where you can see the relevence of your work you just did.
+  </p>
+  <activity>
+    <title>Introduction to Traffic Flow</title>
+    <statement>
+      <p>
+        Consider the following diagram of a network with the flows indicated:
+      </p>
+      <figure>
+        <image width = "80%" source = "./TrafficFlowExample.png" />
+        <caption>A network with directions of flow</caption>
+      </figure>
+      <p>
+        If all the flows, <m>x_1</m>, <m>x_2</m>, <m>x_3</m>, <m>x_4</m>, and <m>x_5</m>, are all nonnegative, what is the <alert>largest possible value</alert> for <m>x_3</m>?
+      </p>
+    </statement>
+    <hint>
+      <p>
+        To answer this consider the following:
+        <ol>
+          <li>For each node (A, B, C, D) set up a conservation equation. Remember the flow in must equal the flow out.</li>
+          <li>How many linear equations do you have? How many unknowns?</li>
+          <li>Use your conservation equations for A and D to solve for <m>x_3</m> in terms of <m>x_1</m> and <m>x_5</m>. How might we solve for <m>x_2</m> and <m>x_4</m> in terms of <m>x_3</m> and <m>x_5</m>?</li>
+          <li>Is our solution unique?</li>
+        </ol>
+      </p>
+    </hint>
+  </activity>
+</subsection>
 
 </section>
 

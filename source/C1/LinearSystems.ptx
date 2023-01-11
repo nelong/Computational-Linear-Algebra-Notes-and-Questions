@@ -1,4 +1,640 @@
-<section xml:id="coord_systems">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="solving_linear_systems" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Solving Linear Systems</title>
+  <subsection>
+    <title>Elementary Operations</title>
+    <p>
+      Our first discussion of linear algebra will cover the ideas of efficiently solving a system of linear equations and matrix operations.
+    </p>
+    <p>
+      A system of <m>m</m> linear equations in <m>n</m> variables can be written:
+      <me>
+        \begin{array}{rcrcrcrcr}
+          a_{11} x_1  \amp +\amp  a_{12} x_2 \amp +\amp  ... \amp +\amp   a_{1n}x_n \amp =\amp  b_1 \\
+          a_{21} x_1  \amp +\amp  a_{22} x_2 \amp +\amp  ... \amp +\amp   a_{2n}x_n \amp =\amp  b_2 \\
+          \vdots  \amp  \amp  \vdots \amp  \amp   \amp  \amp   \vdots \amp \amp   \\
+          a_{m1} x_1  \amp +\amp  a_{m2} x_2 \amp +\amp  ... \amp +\amp   a_{mn}x_n \amp =\amp  b_m
+        \end{array}
+      </me>
+      The term <m>a_{ij}</m> is the <term>coefficient</term> of the <m>j</m>-th variable (denoted <m>x_j</m>) in the <m>i</m>-th equation. In these notes, we will only consider real values for the coefficients of our linear systems, i.e. <m>a_{ij} \in \mathbb{R}</m>. A <term>solution</term> is a choice of variable values that satisfies <em>all</em> equations in the system. A solution is <em>not</em> a particular variable value but must include a choice for <em>all</em> variables in the system. The <term>solution set</term> for a system of equations is the set of all possible solutions. We will have many ways to describe solutions to a system this semester but they all specify the values of <m>x_1</m>, <m>x_2</m>, ..., and <m>x_n</m>, typically as an ordered <m>n</m>-tuple (<m>x_1</m>,<m>x_2</m>, &#8230;, <m>x_n</m>).
+    </p>
+
+  <activity>
+    <p>
+      Is <m>(1,2,3)</m> a solution to the following system?
+      <me>
+        \begin{array}{rcrcrcrcr}
+          1 x_1  \amp +\amp  2 x_2 \amp +\amp  3 x_3 \amp =\amp  14 \\ % -1  3
+          2 x_1  \amp -\amp  3 x_2 \amp +\amp  2 x_3 \amp =\amp  0 \\
+           x_1   \amp  \amp        \amp +\amp  7 x_3 \amp =\amp  0
+        \end{array}
+      </me>
+    </p>
+  </activity>
+  <p>
+    The previous problem shows how easy it is to check if a set of variable values is a solution. However, <em>finding</em> a solution or the set of all solutions is harder but very important to many problems. Generally speaking, the process of finding the solution set for a system of equations is to trade the system of equations you have for an <term>equivalent</term> system (a system with the same solution set).
+  </p>
+
+  <activity>
+    <introduction>
+      <p>
+        For each pair of equations given, state whether <m>E_1</m> is equivalent to <m>E_2</m>.
+      </p>
+    </introduction>
+    <task>
+      <p><m>E_1: x^2-1=0</m> and <m>E_2: x-1=0</m></p>
+    </task>
+    <task>
+      <p><m>E_1: x^2-2x+1=0</m> and <m>E_2: x-1=0</m></p>
+    </task>
+    <task>
+      <p><m>E_1: e^x=1</m> and <m>E_2: x^3+x^2+x=0</m></p>
+    </task>
+  </activity>
+  <p>
+    Hopefully it will be easier to explicitly write the solution set of the new equivalent system. An <term>elementary operation</term> on a system of equations is an operation of the form:
+    <ol>
+      <li>multiplying an equation by a non-zero scalar</li>
+      <li>switching two equations</li>
+      <li>adding a multiple of one equation to another equation</li>
+    </ol>
+  </p>
+  <activity>
+    <introduction>
+      <p>
+        For this question, we will consider the following system of linear equations:
+        <md>
+        <mrow>a_1 x_1+a_2x_2+a_3x_3\amp =a_4</mrow>
+        <mrow>b_1 x_1+b_2x_2+b_3x_3\amp =b_4</mrow>
+        </md>
+      </p>
+    </introduction>
+  <task>
+    <p>
+      Multiply the second equation in our system by negative three and state the <em>new</em> system of equations.
+    </p>
+  </task>
+  <task>
+    <p>
+      Write a few sentences about why the new system of equations given in the previous part is equivalent to the original system.
+    </p>
+  </task>
+  <task>
+    <p>
+      Write a few sentences about why switching the order in which equations are presented in a system does not change the set of solutions.
+    </p>
+  </task>
+  <task>
+    <p>
+      Write out the equation obtained by multiplying the second equation in the original system by a non-zero scalar (which we will call <m>k</m>) and adding to the first equation.
+    </p>
+  </task>
+  <task>
+    <p>
+      Replace the second equation in the original system with your answer to the previous part, which we will call System 2. Prove that System 2 is equivalent to the original system. In other words, you need to show that <m>(c_1,c_2,c_3)</m> is a solution of the equations <m>S_1</m>:
+      <md>
+        <mrow>a_1 x_1+a_2x_2+a_3x_3\amp =a_4</mrow>
+        <mrow>b_1 x_1+b_2x_2+b_3x_3\amp =b_4</mrow>
+      </md>
+      <em>if and only if</em> <m>(c_1,c_2,c_3)</m> is a solution to System 2.
+    </p>
+  </task>
+</activity>
+
+<exercise xml:id="ex_solve_sys_prac">
+  <introduction>
+    <p>
+      Solve the following systems just using elementary operations. Remember to show your work.
+    </p>
+  </introduction>
+  <task>
+    <p>
+      <md>
+        <mrow> 2y+z\amp =4</mrow>
+        <mrow>x-3y+2z\amp =5</mrow>
+        <mrow>2x+y \amp =-2</mrow>
+      </md>
+    </p>
+  </task>
+  <task xml:id="task_system">
+    <p>
+      <md>
+        <mrow>3x-2y-z\amp =0</mrow>
+        <mrow>2x+y+z\amp =10</mrow>
+        <mrow>x+4y+3z\amp =20</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow>3x-2y-z\amp =0</mrow>
+        <mrow>2x+y+z\amp =10</mrow>
+        <mrow>x+4y+3z\amp=10</mrow>
+      </md>
+    </p>
+  </task>
+</exercise>
+
+<p>
+  A system of equations is <term>consistent</term> if there exists at least one solution to the system. In other words, a consistent system of equations has a nonempty solution set. A system that is not consistent is said to be <term>inconsistent</term>.
+</p>
+
+<p>
+  In <xref ref="ex_solve_sys_prac" />, note that you didn't change anything but the <em>coefficients</em> in the system of equations as you traded one system for another. Some of the coefficients probably became zero, but you didn't really eliminate any variables or consider a totally different problem. We will use matrices to efficiently store, and manipulate the coefficients in a system of linear equations, since they are all that matter for now. Matrices will have <em>many</em> uses in this and other courses, and we will use capital letters like <m>A</m> and <m>B</m> to denote matrices. Matrices will be rectangular arrays with the same number of entries in each row and the same number of entries in each column. The size of a matrix is given (in order) as the number of rows by the number of columns, so a <m>3</m> by <m>2</m> matrix has <m>3</m> rows and <m>2</m> columns.
+</p>
+
+<p>
+  In order to specify what <term>entry</term> we are referring to in a matrix, we need an ordered pair of indices telling us the number of the row and number of the column to look in respectively. For instance, if <me>B=\begin{bmatrix} 1\amp 5\amp 0\\\heartsuit\amp \bigstar \amp \blacklozenge \\ &#xA3;\amp \circledR\amp \maltese \end{bmatrix}</me>, then the <m>(3,2)</m> entry of <m>B</m> is in the third row and 2nd column. You could also write this as <m>B_{3,2}= \circledR</m>. The <term><m>i</m>-th row</term> of a matrix <m>A</m> will be denoted <m>row_i(A)</m> and the <term><m>j</m>-th column</term> will be denoted <m>column_j(A)</m>.
+</p>
+
+<p>
+  In order to distinguish <term>vectors</term> (as being more than just <m>n</m> by <m>1</m> matrices), we will use the arrow notation and lower case symbols like <m>\vec{u}</m> and <m>\vec{v}</m> to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if <m>\vec{v} =\begin{bmatrix}v_1\\ v_2\\\vdots\\ v_m\end{bmatrix}</m>, then the second <term>component</term> of <m>\vec{v}</m> is the scalar <m>v_2</m>. The size of a vector in <m>\mathbb{R}^n</m> is the number of components the vector has. In Chapter 2, we will deal with a <em>much</em> more general notion of vectors that will <em>not</em> have components like vectors in <m>\mathbb{R}^n</m>.</p>
+
+<p>
+  The <term>coefficient matrix</term> of a linear system of <m>m</m> equations in <m>n</m> variables is a <m>m</m> by <m>n</m> matrix whose <m>(i,j)</m> entry is the coefficient of the <m>j</m>-th variable, <m>x_j</m>, in the <m>i</m>-th equation of the system. The <term>augmented matrix</term> of a linear system of <m>m</m> equations in <m>n</m> variables is a <m>m</m> by <m>(n+1)</m> matrix whose first <m>n</m> columns are the coefficient matrix of the system and the last column is the constant terms from the right side of each equation.
+</p>
+<p>
+  The system
+  <me>
+  \begin{array}{rcrcrcrcr}
+    a_{11} x_1  \amp +\amp  a_{12} x_2 \amp +\amp  ... \amp +\amp   a_{1n}x_n \amp =\amp  b_1 \\ % -1  3
+    a_{21} x_1  \amp +\amp  a_{22} x_2 \amp +\amp  ... \amp +\amp   a_{2n}x_n \amp =\amp  b_2 \\
+    \vdots  \amp  \amp  \vdots \amp  \amp   \amp  \amp   \vdots \amp \amp  \vdots \\
+    a_{m1} x_1  \amp +\amp  a_{m2} x_2 \amp +\amp  ... \amp +\amp   a_{mn}x_n \amp =\amp  b_m
+  \end{array}
+  </me>
+  has a coefficient matrix
+  <me>A=\begin{bmatrix} a_{11} \amp  a_{12} \amp  ... \amp   a_{1n} \\
+    a_{21}\amp  a_{22}\amp  ... \amp   a_{2n} \\
+    \vdots  \amp  \vdots \amp    \amp   \vdots   \\
+    a_{m1}\amp  a_{m2} \amp  ... \amp   a_{mn}  \end{bmatrix}
+  </me>
+  and an augmented matrix of
+  <me>[A|b]=\begin{bmatrix} a_{11} \amp  a_{12} \amp  ... \amp   a_{1n} \amp |\amp b_1\\
+    a_{21}\amp  a_{22}\amp  ... \amp   a_{2n} \amp |\amp b_2\\
+    \vdots  \amp  \vdots \amp    \amp   \vdots \amp |\amp  \vdots  \\
+    a_{m1}\amp  a_{m2} \amp  ... \amp   a_{mn} \amp |\amp b_m \end{bmatrix}
+  </me>
+</p>
+
+<p>
+  For some properties of the system of equations, we need only look at the coefficient matrix but others will need the augmented matrix. It is important to know the difference and be able to state which corresponding matrix you are using in your work.
+</p>
+<question xml:id="question-coefmatrix">
+  <introduction>
+    <p>
+      For each system given, write the coefficent matrix.
+    </p>
+  </introduction>
+  <task>
+    <p>
+      <md>
+        <mrow>3x_1-2x_2\amp =6</mrow>
+        <mrow>2x_1-2x_2\amp =-2</mrow>
+        <mrow>-x_1+x_2\amp =1</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow> 3x_1-2x_2-4x_3\amp =6</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow>3x_1-2x_2\amp =6</mrow>
+        <mrow>2x_1-2x_2\amp=6</mrow>
+        <mrow>-x_1+x_2\amp =1</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow>x\amp =5</mrow>
+        <mrow>4x\amp =-1</mrow>
+        <mrow>-2x\amp =10</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow>7x\amp =3</mrow>
+        <mrow>2y\amp =1</mrow>
+        <mrow>3z\amp =-2</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow>3r-5s+t\amp =2</mrow>
+        <mrow>-6r+10s-2t\amp =3</mrow>
+      </md>
+    </p>
+  </task>
+</question>
+<question xml:id="question-augmatrix">
+  <introduction>
+    <p>
+      For each system given, write the corresponding augmented matrix.
+    </p>
+  </introduction>
+  <task>
+    <p>
+      <md>
+        <mrow>3x_1-2x_2\amp =6</mrow>
+        <mrow>2x_1-2x_2\amp =-2</mrow>
+        <mrow>-x_1+x_2\amp =1</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow> 3x_1-2x_2-4x_3\amp =6</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow>3x_1-2x_2\amp =6</mrow>
+        <mrow>2x_1-2x_2\amp=6</mrow>
+        <mrow>-x_1+x_2\amp =1</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow>x\amp =5</mrow>
+        <mrow>4x\amp =-1</mrow>
+        <mrow>-2x\amp =10</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow>7x\amp =3</mrow>
+        <mrow>2y\amp =1</mrow>
+        <mrow>3z\amp =-2</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow>3r-5s+t\amp =2</mrow>
+        <mrow>-6r+10s-2t\amp =3</mrow>
+      </md>
+    </p>
+  </task>
+</question>
+<!-- <activity>
+  <introduction>
+    <p>
+      Consider the various systems that have appeared earlier in this section when answering the following questions. That means each question will have several answers. Clearly indicate which earlier system each belongs to.
+    </p>
+  </introduction>
+  <task>
+  <statement>
+    <p>
+      What is the coefficient matrix for the previous systems?
+    </p>
+  </statement>
+  </task>
+  <task>
+    <p>
+      What is the augmented matrix for the previous systems?
+    </p>
+  </task>
+</activity> -->
+
+<p>
+  The elementary operations on equations outlined above will correspond to elementary row operations on matrices as well. Specifically, an <term>elementary row operation</term> on a matrix is an operation of the form:
+  <ul>
+    <li>multiplying a row by a non-zero scalar</li>
+    <li>switching two rows</li>
+    <li>adding a multiple of one row to another row</li>
+  </ul>
+  We now have operations to trade our system of equations for an equivalent system, but we have not stated a way to make sure that the solution set will be easy to explicitly state from our new equivalent system. The following matrix forms will be useful for determining solution sets and various other properties of the corresponding system of equations.
+</p>
+
+<definition>
+  <statement>
+  <p>
+A rectangular matrix is in <term>row echelon form</term> if it has the following three properties:
+<ul>
+<li>All nonzero rows are above any rows of all zeros.</li>
+<li>Each <term>leading entry</term> (being the first non-zero entry) of a row is in a column to the right of the leading entry of the row above it.</li>
+<li>All entries in a column below a leading entry are zeros.</li>
+</ul>
+  </p>
+<p>If a matrix in row echelon form satisfies the following additional properties, then we say the matrix is in <term>reduced row echelon form</term>:
+<ul>
+  <li>The leading entry in each nonzero row is 1.</li>
+  <li>Each leading 1 is the only nonzero entry in its column.</li>
+</ul>
+</p>
+  </statement>
+</definition>
+
+<p>The leading entry in a nonzero row of the row echelon form is
+called a <term>pivot</term>. The column in which a pivot occurs is
+called a <term>pivot column</term> and the corresponding variable is a
+<term>basic variable</term> or <term>pivot variable</term>. A variable
+corresponding to a column in which the coefficient matrix does
+<em>not</em> have a pivot are called <term>free variables</term>. While the echelon form is needed to find where pivots will occur, we will sometimes refer to pivot positions of a matrix even when the matrix is not in echelon form.</p>
+
+<theorem>
+  <statement>
+    <p>The reduced row echelon form of a rectangular matrix is unique.
+    </p>
+  </statement>
+</theorem>
+<p>It is important to note that the row echelon form of a matrix is
+<em>not</em> unique.</p>
+
+<activity>
+  <introduction><p>Give an example of a matrix <m>M</m> that has the
+  following properties. If such a matrix cannot exist, explain why.
+</p>
+  </introduction>
+  <task>
+    <p><m>M</m> satisfies the first two properties of row echelon form
+    but does not satisfy the third.
+    </p>
+  </task>
+  <task>
+    <p><m>M</m> satisfies the first and third properties of row
+    echelon form but does not satisfy the second.
+    </p>
+  </task>
+  <task>
+    <p><m>M</m> satisfies the second and third properties of row
+    echelon form but does not satisfy the first.</p>
+  </task>
+  <task>
+    <p><m>M</m> satisfies the three properties of row echelon form but
+    does not satisfy the first property of reduced row echelon
+    form.</p>
+  </task>
+  <task>
+    <p><m>M</m> satisfies the properties of row echelon form
+    and the first property of reduced row echelon form but does not
+    satisfy the second property of reduced row echelon form.
+    </p>
+  </task>
+</activity>
+
+<exercise xml:id="ex_3x4_REF">
+  <statement>
+    <p>List out all possible row echelon forms of 3 by 4 matrices
+    using the symbols <m>\blacksquare</m> for a pivot, <m>*</m> for a
+    non-pivot entry (possibly <m>0</m>), and <m>0</m> (when an entry
+    <em>must</em> be <m>0</m>). For each of these, list out which
+    variables are pivot variables and which are free variables.</p>
+  </statement>
+  <hint><p>There are 15 possible.</p></hint>
+</exercise>
+
+<exercise xml:id="ex_3x4_RREF">
+  <statement>
+    <p>List out all possible reduced row echelon forms of 3 by 4
+    matrices using the symbols <m>\blacksquare</m> for a pivot,
+    <m>*</m> for a non-pivot entry (possibly <m>0</m>), and <m>0</m>
+    (when an entry <em>must</em> be <m>0</m>). What value must the
+    <m>\blacksquare</m> entries be? For each of these, list out which
+    variables are pivot variables and which are free variables.
+    </p>
+  </statement>
+</exercise>
+
+<exercise xml:id="ex_five_systems">
+  <introduction>
+    <p>Solve each of the following systems by converting to an
+    augmented matrix and using elementary row operations to reduce the
+    augmented matrix to reduced row echelon form. With each reduced
+    row echelon form, put a box around all pivot entries. Use the
+    system of equations corresponding to the reduced row echelon form
+    to write out the solution set for each system.
+    </p>
+  </introduction>
+  <task>
+    <p><md><mrow> 3x_1-2x_2\amp =6</mrow>
+    <mrow> 2x_1-2x_2\amp =-2</mrow>
+    <mrow>-x_1+x_2\amp =1</mrow>
+  </md>
+    </p>
+  </task>
+  <task>
+    <p><md>
+      <mrow> 3x_1-2x_2\amp =6</mrow>
+      <mrow> 2x_1-2x_2\amp=6</mrow>
+      <mrow>-x_1+x_2\amp =1</mrow>
+    </md>
+    </p>
+  </task>
+  <task>
+    <p>
+      <md>
+        <mrow>4x-y+3z\amp =5</mrow>
+        <mrow>3x-y+2z\amp =7</mrow>
+      </md>
+    </p>
+  </task>
+  <task>
+    <p><md>
+      <mrow>7x-11y-2z\amp =3</mrow>
+      <mrow>8x-2y+3z\amp =1</mrow>
+    </md>
+    </p>
+  </task>
+  <task>
+    <p><md>
+      <mrow>3r-5s+t\amp =2</mrow>
+      <mrow>-6r+10s-2t\amp =3</mrow>
+    </md>
+    </p>
+  </task>
+</exercise>
+
+
+<investigation>
+  <statement>
+    <p>Once you have the augmented matrix for a system of linear
+    equations in reduced row-echelon form, how do you use it to
+    determine the solution set for the system? Write a step-by-step
+    procedure that is general enough to be used on any system of
+    linear equations. Be aware of any implicit assumptions you're
+    making (and try to avoid them).
+    </p>
+  </statement>
+</investigation>
+<p>
+Two of the most important questions we will consider this semester are:
+<ol>
+  <li>Is the system consistent?</li>
+  <li>If a solution exists, is the solution unique?</li>
+</ol>
+</p>
+
+
+<investigation>
+  <statement>
+    <p>Look back at your results so far and try to figure out what
+    properties of the system (or corresponding matrices) will help us
+    answer question 1 and which properties of the system will help us
+    answer question 2. Write a conjecture about each question.
+    </p>
+  </statement>
+</investigation>
+
+<p>In class, we came up with statements of the following two theorems:</p>
+
+<theorem xml:id="thm_consistency">
+  <title>Consistency Theorem</title>
+  <statement>
+    <p>A system of equations is consistent if and only if the row
+    echelon form of its augmented matrix has no pivot entries in the
+    rightmost column. Equivalently, a system of equations is
+    inconsistent if and only if the row echelon form of its <em>augmented</em>
+    matrix has a pivot entry in the rightmost column.</p>
+  </statement>
+</theorem>
+
+<theorem xml:id="thm_uniqueness">
+  <title>Uniqueness Theorem</title>
+  <statement>
+    <p>A system of <m>m</m> equations with <m>n</m> variables has a
+    unique solution if and only if its <em>augmented</em> matrix has <m>n</m>
+    pivot entries and no pivot entry in the rightmost column.</p>
+  </statement>
+</theorem>
+
+<p>For the moment, proving these theorems is beyond our proof-writing
+skills. We may return to proving these theorems at a later stage,
+however.</p>
+
+<activity>
+  <statement>
+    <p>Using the statement of the <xref ref="thm_consistency"
+    text="title" /> and <xref ref="thm_uniqueness" text="title" />,
+    treat each of your answers to <xref ref="ex_3x4_REF" /> as an <em>augmented</em> matrix of a linear system of equations and state:
+    <ol>
+<li>whether each corresponding system of equations will be consistent, inconsistent, or you can't tell.</li>
+<li>whether each corresponding system of equations will have a unique
+solution, multiple solutions, no solutions, or you can't tell.</li>
+    </ol>
+    </p>
+  </statement>
+</activity>
+
+<activity>
+  <statement>
+    <p>Using the statement of the <xref ref="thm_consistency"
+    text="title" /> and <xref ref="thm_uniqueness" text="title" />,
+    treat each of your answers to <xref ref="ex_3x4_REF" /> as a <em>coefficient</em> matrix of a linear system of equations and state:
+    <ol>
+<li>whether each corresponding system of equations will be consistent, inconsistent, or you can't tell.</li>
+<li>whether each corresponding system of equations will have a unique
+solution, multiple solutions, no solutions, or you can't tell.</li>
+    </ol>
+    </p>
+  </statement>
+  <hint>
+    <p>You will probably need to restate the theorems or think about
+    how coefficient matrices are different to augmented matrices!</p>
+  </hint>
+</activity>
+
+
+<paragraphs>
+  <title>Geometric Interpretation of a Solution Set</title>
+
+<p>Recall from earlier, that the solution set of a linear equation in two variables was a line in <m>\mathbb{R}^2</m> (the plane) and that the solution set of a system of two equations in two variables was possibly a point, a line, or empty. Similarly, the solution set for a linear equation in three variables will be a plane in 3-space (<m>\mathbb{R}^3</m>).</p>
+
+<activity>
+  <p>
+    <ol>
+      <li>List out all the possible ways two planes can intersect in a three dimensional space.</li>
+      <li>List out all the possible ways three planes can intersect in a three dimensional space.</li>
+      <li>List out all the possible ways four planes can intersect in a three dimensional space.</li>
+      <li>List out all the possible ways five planes can intersect in a three dimensional space.</li>
+    </ol>
+  </p>
+</activity>
+
+<p>We don't usually draw what a solution set of a linear equation in four variables looks like because drawing in four dimensions is difficult. The graph os a single linear equation in four variables would be called a hyperplane in <m>4</m>-space. Although we don't draw <m>m</m> hyperplanes in <m>n</m>-space, the intersections of hyperplanes will work very similarly to the pictures we can draw in 3-space (also known as <m>\mathbb{R}^3</m>).</p>
+
+<investigation>
+  <p>Why does the graph of a linear equation in <m>n</m> variables need to be a flat <m>n-1</m> dimensional hyperplane?</p>
+</investigation>
+
+<p>We can use the open source computer algebra system SageMath to plot
+things, and we can even do it right here in the course notes. Click
+the button to plot a plane below.</p>
+
+<sage>
+  <input>
+    var('x,y');
+    plot3d(3*x-2*y,(x,-10,10),(y,-10,10),color='red')
+  </input>
+</sage>
+
+<p>Plotting the equations, <m>3x-2y-z=0</m>, <m>2x+y+z=10</m>, and
+<m>x+4y+3z=20</m> in red, yellow, and green respectively gives:</p>
+
+<sage>
+  <input>
+    var('x,y');
+    p1=plot3d(3*x-2*y,(x,-10,10),(y,-10,10),color='red')
+    p2=plot3d(10-2*x-y,(x,-10,10),(y,-10,10),color='yellow')
+    p3=plot3d((1/3)*(20-x-4*y),(x,-10,10),(y,-10,10),color='green')
+    show(p1+p2+p3)
+  </input>
+</sage>
+
+<investigation>
+  <p>Does your answer to <xref ref="task_system" /> make sense with
+  this plot? Explain.</p>
+</investigation>
+
+
+<exercise>
+  <statement>
+    <p>For each of the systems in <xref ref="ex_five_systems" />, use
+    SageMath to draw a plot of each of the equations in the system and
+    write a sentence for each system about why the plot and your
+    answer to <xref ref="ex_five_systems" /> make sense.
+    </p>
+  </statement>
+  <hint>
+    <p>You can edit the code block above and click the button again,
+    and it will update the graph.</p>
+  </hint>
+</exercise>
+
+<p>If you remember parametric equations of lines and planes in space from multivariable calculus, then we will return to those ideas soon</p>
+
+</paragraphs>
+
+  </subsection>
+
+ </section>
+
+
+
+
+<!-- <section xml:id="coord_systems">
   <title>Systems of Linear Equations and Matrices</title>
 <objectives>
   <ul>
@@ -25,6 +661,119 @@
       </md>
     </p>
   </question>
+  <p>Your answer to the previous problem suggests (at least) two more questions.
+    <ul>
+      <li>How do we interpret solutions? What is the meaning of a solution?</li>
+      <li>Is there always a solution to linear system of equations?</li>
+    </ul>
+  </p>
+  <question>
+    <task>
+      <p>
+        How would you solve the following system?
+        <md>
+          <mrow> x+y=4</mrow>
+          <mrow>3x+3y=7</mrow>
+        </md>
+      </p>
+    </task>
+    <task>
+      <p>
+        How would you solve the following system?
+        <md>
+          <mrow>x+y=4</mrow>
+          <mrow>3x+3y=12</mrow>
+        </md>
+      </p>
+    </task>
+    <task>
+      <p>
+        What possibilities do you think are possible for the set of solutions to a linear system?
+      </p>
+    </task>
+  </question>
+</subsection>
+<subsection>
+  <title>Matrix Forms of Linear Systems of Equations</title>
+  <p>Consider the linear system with <m>m</m> equations in <m>n</m> unknowns:
+    <me>
+      \begin{array}{rcrcrcrcr}
+        a_{11} x_1  \amp +\amp  a_{12} x_2 \amp +\amp  ... \amp +\amp   a_{1n}x_n \amp =\amp  b_1 \\ % -1  3
+        a_{21} x_1  \amp +\amp  a_{22} x_2 \amp +\amp  ... \amp +\amp   a_{2n}x_n \amp =\amp  b_2 \\
+        \vdots  \amp  \amp  \vdots \amp  \amp   \amp  \amp   \vdots \amp \amp  \vdots \\
+        a_{m1} x_1  \amp +\amp  a_{m2} x_2 \amp +\amp  ... \amp +\amp   a_{mn}x_n \amp =\amp  b_m
+      \end{array}
+    </me>
+  </p>
+  <p>
+    The rectangular array of coefficents <m>a_{ij}</m> given as 
+    <me>
+      A \equiv \begin{bmatrix} a_{11} \amp  a_{12} \amp  ... \amp   a_{1n} \\
+      a_{21}\amp  a_{22}\amp  ... \amp   a_{2n} \\
+      \vdots  \amp  \vdots \amp    \amp   \vdots   \\
+      a_{m1}\amp  a_{m2} \amp  ... \amp   a_{mn}  \end{bmatrix}
+    </me>
+    is called the coefficent matrix.
+  </p>
+  <question xml:id="question-coefmatrix">
+    <introduction>
+      <p>
+        For each system given, write the coefficent matrix.
+      </p>
+    </introduction>
+    <task>
+      <p>
+        <md>
+          <mrow>3x_1-2x_2\amp =6</mrow>
+          <mrow>2x_1-2x_2\amp =-2</mrow>
+          <mrow>-x_1+x_2\amp =1</mrow>
+        </md>
+      </p>
+    </task>
+    <task>
+      <p>
+        <md>
+          <mrow> 3x_1-2x_2-4x_3\amp =6</mrow>
+        </md>
+      </p>
+    </task>
+    <task>
+      <p>
+        <md>
+          <mrow>3x_1-2x_2\amp =6</mrow>
+          <mrow>2x_1-2x_2\amp=6</mrow>
+          <mrow>-x_1+x_2\amp =1</mrow>
+        </md>
+      </p>
+    </task>
+    <task>
+      <p>
+        <md>
+          <mrow>x\amp =5</mrow>
+          <mrow>4x\amp =-1</mrow>
+          <mrow>-2x\amp =10</mrow>
+        </md>
+      </p>
+    </task>
+    <task>
+      <p>
+        <md>
+          <mrow>7x\amp =3</mrow>
+          <mrow>2y\amp =1</mrow>
+          <mrow>3z\amp =-2</mrow>
+        </md>
+      </p>
+    </task>
+    <task>
+      <p>
+        <md>
+          <mrow>3r-5s+t\amp =2</mrow>
+          <mrow>-6r+10s-2t\amp =3</mrow>
+        </md>
+      </p>
+    </task>
+  </question> 
 </subsection>
 </section>
 
+ -->
