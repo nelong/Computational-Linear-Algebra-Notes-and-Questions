@@ -1,10 +1,9 @@
 
 
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="C1">
-  <title>Geometry and Preliminaries</title>
-  <!-- <xi:include  href="C1/2dStuff.ptx" /> -->
+  <title>Solving Linear Systems</title>
   <xi:include href="C1/introductiontoLA.ptx" />
   <xi:include href="C1/LinearSystems.ptx" />
-  
+  <xi:include href="C1/ConUniqueGeometry.ptx" />
 </chapter>
 

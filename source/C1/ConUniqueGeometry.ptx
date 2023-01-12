@@ -1,0 +1,125 @@
+<section xml:id="Conuniquegeo">
+  <title>Consistency and Uniqueness Theorems</title>
+<p>
+  In class, we came up with statements of the following two theorems:
+</p>
+
+<theorem xml:id="thm_consistency">
+  <title>Consistency Theorem</title>
+  <statement>
+    <p>
+      A system of equations is consistent if and only if the row echelon form of its augmented matrix has no pivot entries in the rightmost column. Equivalently, a system of equations is inconsistent if and only if the row echelon form of its <em>augmented</em> matrix has a pivot entry in the rightmost column.
+    </p>
+  </statement>
+</theorem>
+
+<theorem xml:id="thm_uniqueness">
+  <title>Uniqueness Theorem</title>
+  <statement>
+    <p>
+      A system of <m>m</m> equations with <m>n</m> variables has a unique solution if and only if its <em>augmented</em> matrix has <m>n</m> pivot entries and no pivot entry in the rightmost column.
+    </p>
+  </statement>
+</theorem>
+
+<activity>
+  <statement>
+    <p>
+      Using the statement of the <xref ref="thm_consistency" text="title" /> and <xref ref="thm_uniqueness" text="title" />, treat each of your answers to <xref ref="ex_3x4_REF" /> as an <em>augmented</em> matrix of a linear system of equations and state:
+      <ol>
+        <li>whether each corresponding system of equations will be consistent, inconsistent, or you can't tell.</li>
+        <li>whether each corresponding system of equations will have a unique solution, multiple solutions, no solutions, or you can't tell.</li>
+      </ol>
+    </p>
+  </statement>
+</activity>
+
+<activity>
+  <statement>
+    <p>
+      Using the statement of the <xref ref="thm_consistency" text="title" /> and <xref ref="thm_uniqueness" text="title" />, treat each of your answers to <xref ref="ex_3x4_REF" /> as a <em>coefficient</em> matrix of a linear system of equations and state:
+      <ol>
+        <li>whether each corresponding system of equations will be consistent, inconsistent, or you can't tell.</li>
+        <li>whether each corresponding system of equations will have a unique solution, multiple solutions, no solutions, or you can't tell.</li>
+      </ol>
+    </p>
+  </statement>
+  <hint>
+    <p>You will probably need to restate the theorems or think about
+    how coefficient matrices are different to augmented matrices!</p>
+  </hint>
+</activity>
+
+
+<paragraphs>
+  <title>Geometric Interpretation of a Solution Set</title>
+
+<p>Recall from earlier, that the solution set of a linear equation in two variables was a line in <m>\mathbb{R}^2</m> (the plane) and that the solution set of a system of two equations in two variables was possibly a point, a line, or empty. Similarly, the solution set for a linear equation in three variables will be a plane in 3-space (<m>\mathbb{R}^3</m>).</p>
+
+<activity>
+  <p>
+    <ol>
+      <li>List out all the possible ways two planes can intersect in a three dimensional space.</li>
+      <li>List out all the possible ways three planes can intersect in a three dimensional space.</li>
+      <li>List out all the possible ways four planes can intersect in a three dimensional space.</li>
+      <li>List out all the possible ways five planes can intersect in a three dimensional space.</li>
+    </ol>
+  </p>
+</activity>
+
+<p>We don't usually draw what a solution set of a linear equation in four variables looks like because drawing in four dimensions is difficult. The graph os a single linear equation in four variables would be called a hyperplane in <m>4</m>-space. Although we don't draw <m>m</m> hyperplanes in <m>n</m>-space, the intersections of hyperplanes will work very similarly to the pictures we can draw in 3-space (also known as <m>\mathbb{R}^3</m>).</p>
+
+<investigation>
+  <p>Why does the graph of a linear equation in <m>n</m> variables need to be a flat <m>n-1</m> dimensional hyperplane?</p>
+</investigation>
+
+<p>We can use the open source computer algebra system SageMath to plot
+things, and we can even do it right here in the course notes. Click
+the button to plot a plane below.</p>
+
+<sage>
+  <input>
+    var('x,y');
+    plot3d(3*x-2*y,(x,-10,10),(y,-10,10),color='red')
+  </input>
+</sage>
+
+<p>Plotting the equations, <m>3x-2y-z=0</m>, <m>2x+y+z=10</m>, and
+<m>x+4y+3z=20</m> in red, yellow, and green respectively gives:</p>
+
+<sage>
+  <input>
+    var('x,y');
+    p1=plot3d(3*x-2*y,(x,-10,10),(y,-10,10),color='red')
+    p2=plot3d(10-2*x-y,(x,-10,10),(y,-10,10),color='yellow')
+    p3=plot3d((1/3)*(20-x-4*y),(x,-10,10),(y,-10,10),color='green')
+    show(p1+p2+p3)
+  </input>
+</sage>
+
+<investigation>
+  <p>Does your answer to <xref ref="task_system" /> make sense with
+  this plot? Explain.</p>
+</investigation>
+
+
+<exercise>
+  <statement>
+    <p>For each of the systems in <xref ref="ex_five_systems" />, use
+    SageMath to draw a plot of each of the equations in the system and
+    write a sentence for each system about why the plot and your
+    answer to <xref ref="ex_five_systems" /> make sense.
+    </p>
+  </statement>
+  <hint>
+    <p>You can edit the code block above and click the button again,
+    and it will update the graph.</p>
+  </hint>
+</exercise>
+
+<p>If you remember parametric equations of lines and planes in space from multivariable calculus, then we will return to those ideas soon</p>
+
+</paragraphs>
+
+</section>
+
