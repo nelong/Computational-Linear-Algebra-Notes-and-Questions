@@ -18,17 +18,17 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
 </script>
 </head>
 <body class="ignore-math">
-<section class="paragraphs"><h4 class="heading"><span class="title">Geometric Interpretation of a Solution Set.</span></h4> <div class="para">Recall from earlier, that the solution set of a linear equation in two variables was a line in <span class="process-math">\(\mathbb{R}^2\)</span> (the plane) and that the solution set of a system of two equations in two variables was possibly a point, a line, or empty. Similarly, the solution set for a linear equation in three variables will be a plane in 3-space (<span class="process-math">\(\mathbb{R}^3\)</span>).</div> <article class="activity project-like"><h5 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span>
-</h5>
+<section class="paragraphs"><h3 class="heading"><span class="title">Geometric Interpretation of a Solution Set.</span></h3> <div class="para">Recall from earlier, that the solution set of a linear equation in two variables was a line in <span class="process-math">\(\mathbb{R}^2\)</span> (the plane) and that the solution set of a system of two equations in two variables was possibly a point, a line, or empty. Similarly, the solution set for a linear equation in three variables will be a plane in 3-space (<span class="process-math">\(\mathbb{R}^3\)</span>).</div> <article class="activity project-like"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
+</h4>
 <div class="para logical"><ol class="decimal">
 <li><div class="para">List out all the possible ways two planes can intersect in a three dimensional space.</div></li>
 <li><div class="para">List out all the possible ways three planes can intersect in a three dimensional space.</div></li>
 <li><div class="para">List out all the possible ways four planes can intersect in a three dimensional space.</div></li>
 <li><div class="para">List out all the possible ways five planes can intersect in a three dimensional space.</div></li>
-</ol></div></article> <div class="para">We don't usually draw what a solution set of a linear equation in four variables looks like because drawing in four dimensions is difficult. The graph os a single linear equation in four variables would be called a hyperplane in <span class="process-math">\(4\)</span>-space. Although we don't draw <span class="process-math">\(m\)</span> hyperplanes in <span class="process-math">\(n\)</span>-space, the intersections of hyperplanes will work very similarly to the pictures we can draw in 3-space (also known as <span class="process-math">\(\mathbb{R}^3\)</span>).</div> <article class="investigation project-like"><h5 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span>
-</h5>
+</ol></div></article> <div class="para">We don't usually draw what a solution set of a linear equation in four variables looks like because drawing in four dimensions is difficult. The graph os a single linear equation in four variables would be called a hyperplane in <span class="process-math">\(4\)</span>-space. Although we don't draw <span class="process-math">\(m\)</span> hyperplanes in <span class="process-math">\(n\)</span>-space, the intersections of hyperplanes will work very similarly to the pictures we can draw in 3-space (also known as <span class="process-math">\(\mathbb{R}^3\)</span>).</div> <article class="investigation project-like"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span>
+</h4>
 <div class="para">Why does the graph of a linear equation in <span class="process-math">\(n\)</span> variables need to be a flat <span class="process-math">\(n-1\)</span> dimensional hyperplane?</div></article> <div class="para">We can use the open source computer algebra system SageMath to plot things, and we can even do it right here in the course notes. Click the button to plot a plane below.</div> <pre class="ptx-sagecell sagecell-sage" id="sage-1"><script type="text/x-sage">var('x,y');
 plot3d(3*x-2*y,(x,-10,10),(y,-10,10),color='red')
 </script></pre> <div class="para">Plotting the equations, <span class="process-math">\(3x-2y-z=0\text{,}\)</span> <span class="process-math">\(2x+y+z=10\text{,}\)</span> and <span class="process-math">\(x+4y+3z=20\)</span> in red, yellow, and green respectively gives:</div> <pre class="ptx-sagecell sagecell-sage" id="sage-2"><script type="text/x-sage">var('x,y');
@@ -36,11 +36,11 @@ p1=plot3d(3*x-2*y,(x,-10,10),(y,-10,10),color='red')
 p2=plot3d(10-2*x-y,(x,-10,10),(y,-10,10),color='yellow')
 p3=plot3d((1/3)*(20-x-4*y),(x,-10,10),(y,-10,10),color='green')
 show(p1+p2+p3)
-</script></pre> <article class="investigation project-like"><h5 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span>
-</h5>
-<div class="para">Does your answer to <a href="" class="xref" data-knowl="./knowl/task_system.html" title="Task 1.2.1.b">Task 1.2.1.b</a> make sense with this plot? Explain.</div></article> <article class="exercise exercise-like"><a href="" class="exercise-knowl original" data-knowl="./knowl/exercise-5-hidden.html" title="Checkpoint 1.2.11"><h5 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span>
-</h5></a></article> <div class="para">If you remember parametric equations of lines and planes in space from multivariable calculus, then we will return to those ideas soon</div></section><span class="incontext"><a href="solving_linear_systems.html#paragraphs-1" class="internal">in-context</a></span>
+</script></pre> <article class="investigation project-like"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span>
+</h4>
+<div class="para">Does your answer to <a href="" class="xref" data-knowl="./knowl/task_system.html" title="Task 1.2.4.b">Task 1.2.4.b</a> make sense with this plot? Explain.</div></article> <article class="exercise exercise-like"><a href="" class="exercise-knowl original" data-knowl="./knowl/exercise-1-hidden.html" title="Checkpoint 1.3.3"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
+</h4></a></article> <div class="para">If you remember parametric equations of lines and planes in space from multivariable calculus, then we will return to those ideas soon</div></section><span class="incontext"><a href="Conuniquegeo.html#paragraphs-1" class="internal">in-context</a></span>
 </body>
 </html>
