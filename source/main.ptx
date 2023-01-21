@@ -5,6 +5,7 @@
   <docinfo>
     <macros>
       \newcommand{\R}{\mathbb R}
+      \newcommand\colvec[1]{\begin{bmatrix}#1\end{bmatrix}}
     </macros>
   </docinfo>
 

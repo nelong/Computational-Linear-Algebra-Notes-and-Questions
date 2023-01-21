@@ -1,5 +1,9 @@
 <section xml:id="intro_activity">
   <title>Warmup Problems</title>
+<introduction>
+  <p>
+    You should try to do the following activity right away.
+  </p>
 
 <activity>
   <task xml:id="task_warmups_simult">
@@ -68,6 +72,7 @@
 <p>
   Throughout this course we will be doing many of the same things you did in the previous questions, but we will do them in a more general setting that will allow us to solve <em>many</em> new and old problems.
 </p>
+</introduction>
 <subsection>
   <title>Application Warmup Problem</title>
   <p>
