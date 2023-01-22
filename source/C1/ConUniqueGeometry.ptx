@@ -121,12 +121,156 @@
   <title>Applications and Linear Algebra</title>
 
 <p>
-  Add examples about flow of material
-traffic
-circuit problems
-chemical equation balancing
-directed graphs
+  Many network or physical problems are diagramed by a figure that displays how different parts are connected and how much of something can flow between different nodes. A particularly common diagram is that of electric circuits. We will look at a couple of laws now that help us set up a system of equations for common circuit types.
 </p>
+<p>
+  An electrical network is a specialized network where we specify the locations of resistors, batteries, devices powered by sources, and others.The goal is often to determine the current through various locations of the network. In balancing a network we use two specific laws: <alert>Current</alert> and <alert>Voltage</alert>.
+  <ul>
+    <li>Current Law: sum of the currents flowing into any node is equal to the sum of the currents flowing out of that node. This is often called the conservation of flow.</li>
+    <li>Voltage Law: The sum of the voltage drops around any circuit is equal to the total voltage around the the circuit, most likely provided by batteries or other power source.</li>
+  </ul>
+</p>
+<p>
+  The above laws are attributed to Gustav Kirchhoff and are called <em>Kirchhoff's Laws</em>. We should also mention Ohm's Law, which describes the force, in volts, associated with the current (amps) passing through a resistor (ohms). Namely,
+  <me>V = I R</me>
+</p>
+<example>
+  <p>Consider the electrical network shown here
+    <figure>
+      <image width = "80%" source = "./ElectricalNetwork1.png" />
+      <caption>An electrical circuit</caption>
+    </figure>
+    We can set up the equations for the three currents using our voltage and current law in conjunction with Ohm's Law. This yields
+    <me>
+    \begin{array}{cccc}
+      I_1 \amp -I_2 \amp +I_3 \amp =0 \\
+      4I_1\amp+I_2\amp \amp=8  \\
+       \amp I_2\amp+4I_3\amp=16 
+       \end{array}
+    </me>
+</p>
+<p>
+  The first equation is using our conservation of flow. The second equation is using Ohm's law with our voltage law around the circuit CABC. The third equation is similar, but around the circuit DABD.
+</p>
+<p>
+  The rref of the corresponding augmented matrix is
+ <me>
+    \begin{bmatrix}
+    1\amp0\amp0\amp|1\\
+    0\amp1\amp0\amp|4\\
+    0\amp0\amp1\amp|3
+    \end{bmatrix}
+  </me>
+  Thus we have a unique solution of $I_1=1, I_2=4, I_3=3$.
+
+</p>
+</example>
+<activity>
+  <introduction>
+    <p>
+      For this activity, we will be considering the following circuit
+      <figure>
+        <image width = "80%" source = "./ElectricalCircuit.png" />
+        <caption>An electrical circuit</caption>
+      </figure>
+    </p>
+  </introduction>
+  <task>
+    <p>
+      Write out the current equations for each of the four junctions
+    </p>
+  </task>
+  <task>
+    <p>
+      Write out the voltage drop equations for three of the basic circuits.
+    </p>
+  </task>
+  <task>
+    <p>
+      Use Python to input the corresponding augmented matrix and solve the system based on the rref. Explain the meaning of your solution.
+    </p>
+  </task>
+</activity>
+<p>
+  Another common application of linear systems is balancing a physical system according to conservation of some property. For instance, in chemical reactions, the number of different atoms of an element does not change, rather the way they are arranged in molecules is what changes. Thus the number of each kind of molecule must be the same on the right and left side of a reation equation.
+</p>
+<example>
+  <p>
+    Let's look at the simple chemical equation for creating water from hydrogen and oxygen.
+    <me>
+      \alpha H_2 + \beta O_2 \rightarrow \gamma H_2O
+    </me>
+    We want to know how many molecules of each type are needed to go into the reaction and how many will come out. Note that the coefficents in this setting must be positive integers since we cannot have a fraction of a molecule. 
+  </p>
+  <p>
+    If we consider the number of hydrogen atoms in the reaction, we get
+    <me> 2\alpha = 2 \gamma</me>
+    If we consider the number of oxygen atoms in the reaction, we get
+    <me>2\beta = \gamma</me>
+    Thus we get the following system
+    <me>
+    \begin{array}{cccc}
+     2\alpha \amp \amp -2\gamma \amp =0 \\
+      \amp 2 \beta \amp -\gamma \amp=0  
+       \end{array}
+    </me>
+    which has augmented form
+    <me>
+      \begin{bmatrix}
+        2\amp 0\amp -2\amp 0 \\
+        0\amp 2  \amp -1 \amp0  
+      \end{bmatrix}
+    </me>
+    which can be reduced to 
+    <me>
+      \begin{bmatrix}
+        1\amp 0\amp -1\amp 0 \\
+        0\amp 1  \amp -1/2 \amp0  
+      \end{bmatrix}
+    </me>
+  </p>
+  <p>
+    Notice that there is <alert>NOT</alert> a unique solution to system of equations, but rather we can have solutions of the form 
+    <me>
+      \begin{array}{cc}
+      \alpha\amp=\gamma \\
+      \beta \amp=\gamma \\
+      \gamma \amp=\gamma (free)
+      \end{array}
+    </me>
+    Therefore, the <em>smallest integer solution</em> is when <m>\gamma =2</m>, which gives the following chemical reaction
+    <me>
+      2 H_2 + O_2 \rightarrow 2 H_2O
+    </me>
+  </p>
+</example>
+<activity>
+  <introduction>
+    <p>
+      Consider the chemical reaction
+      <me>
+        w NH_3 +x O_2 \rightarrow y N_2 +z H_2O
+      </me>
+    </p>
+  </introduction>
+  <task>
+    <p>
+      Write out equations for nitrogen, hydrogen, and oxygen atoms
+    </p>
+  </task>
+  <task>
+    <p>
+      Input the corresponding augmented matrix into Python and use the rref to write out the solution set
+    </p>
+  </task>
+  <task>
+    <p>
+      Write out the simplest form of the chemical reaction equation.
+    </p>
+  </task>
+</activity>
+directed graphs
+
 </subsection>
 
 </section>
