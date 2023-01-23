@@ -4,7 +4,8 @@
   <title>Solving Linear Systems</title>
   <xi:include href="C1/introductiontoLA.ptx" />
   <xi:include href="C1/LinearSystems.ptx" />
-  <xi:include href="C1/ConUniqueGeometry.ptx" />
+  <xi:include href="C1/ConUnique.ptx" />
+  <xi:include href="C1/Geometry_Applications.ptx" />
   <xi:include href="C1/VectorMatrixEQ.ptx" />
 </chapter>
 
