@@ -117,7 +117,7 @@
     0\amp0\amp1\amp|3
     \end{bmatrix}
   </me>
-  Thus we have a unique solution of $I_1=1, I_2=4, I_3=3$.
+  Thus we have a unique solution of <m>I_1=1, I_2=4, I_3=3</m>.
 
 </p>
 </example>
