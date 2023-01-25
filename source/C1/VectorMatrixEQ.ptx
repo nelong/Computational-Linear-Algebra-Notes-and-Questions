@@ -2,10 +2,96 @@
 
 <section xml:id="sec_vector_matrix_eqns" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Vector and Matrix Equations</title>
-<p>Recall that two vectors in <m>\mathbb{R}^n</m> are equal if and
-only if all of their components are equal.
-</p>
 
+<introduction>
+  <p>
+    In order to distinguish <term>vectors</term> (as being more than just <m>n</m> by <m>1</m> matrices), we will use the arrow notation and lower case symbols like <m>\vec{u}</m> and <m>\vec{v}</m> to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if <m>\vec{v} =\begin{bmatrix}v_1\\ v_2\\\vdots\\ v_m\end{bmatrix}</m>, then the second <term>component</term> of <m>\vec{v}</m> is the scalar <m>v_2</m>. The size of a vector in <m>\mathbb{R}^n</m> is the number of components the vector has. In later work, we will deal with a <em>much</em> more general notion of vectors that will <em>not</em> have components like vectors in <m>\mathbb{R}^n</m>. Recall that two vectors in <m>\mathbb{R}^n</m> are equal if and only if all of their components are equal.
+  </p>
+  <p>
+    Geometrically, we will view vectors in <m>\mathbb{R}^n</m> as an arrow which change in the <m>i</m>-th coordinate being given by the <m>i</m>-th component of the vector. For instance, the vector <m> \langle 1,2,3\rangle</m> will have a plot in 3-dimensions that looks like
+  </p>
+  <figure xml:id="vect1">
+    <caption>A three-dimensional plot of <m>\langle 1,2,3 \rangle</m></caption>
+    <interactive xml:id="sage_vec1" platform="sage" width="80%" aspect="1:1">
+      <slate surface="sage">
+        @interact
+        def _():
+          var('t')
+          vec1=arrow((0,0,0),(1,2,3),color='blue', width=3,)
+          vec1=parametric_plot3d((t,0,0),(t,-3,3),color="black")+vec1
+          vec1=parametric_plot3d((0,t,0),(t,-3,3),color="black")+vec1
+          vec1=parametric_plot3d((0,0,t),(t,-3,3),color="black")+vec1
+          show(vec1)
+      </slate>
+    </interactive>
+  </figure>
+  <p>
+    Vectors do not have a particular beginning or ending point so all of the blue vectors in the following plot are representations of <m>\langle 1,2,3\rangle</m>.
+  </p>
+  <figure xml:id="vect2">
+    <caption>A three-dimensional plot of several representatives for <m>\langle 1,2,3 \rangle</m></caption>
+    <interactive xml:id="sage_vec2" platform="sage" width="80%" aspect="1:1">
+      <slate surface="sage">
+        L=[(1,-2,1),(-1,2,1),(2,0,0),(1,2,-2),(-1,-3,-1)]
+        @interact
+        def _():
+          var('t')
+          vec1=arrow((0,0,0),(1,2,3),color='blue', width=3)
+          for a in L:
+            vec1+=arrow(a,(1+a[0],2+a[1],3+a[2]),color='blue', width=3)
+          vec1=parametric_plot3d((t,0,0),(t,-3,3),color="black")+vec1
+          vec1=parametric_plot3d((0,t,0),(t,-3,3),color="black")+vec1
+          vec1=parametric_plot3d((0,0,t),(t,-3,3),color="black")+vec1
+          show(vec1)
+      </slate>
+    </interactive>
+  </figure>
+  <p>
+    Vectors can be added together to measure the net change (done by completing one vector, then the other). Algebraically, vector addition is done componentwise. If <m>\vec{v}=\langle v_1,v_2,v_3\rangle</m> and <m>\vec{w}=\langle w_1,w_2,w_3\rangle</m>, then <m>\vec{v}+\vec{w}=\langle v_1+w_1,v_2+w_2,v_3+w_3\rangle</m>.
+  </p>
+  <figure xml:id="vect3">
+    <caption>A three-dimensional plot of the sum of two vectors</caption>
+    <interactive xml:id="sage_vec3" platform="sage" width="80%" aspect="1:1">
+      <slate surface="sage">
+        @interact
+        def _2(v=('v', input_grid(1, 3, default=[[1,2,3]], to_value=lambda x: vector(flatten(x)))),w=('w', input_grid(1, 3, default=[[-2,1,-1]], to_value=lambda x: vector(flatten(x))))):
+          var('t')
+          vec1=parametric_plot3d((t,0,0),(t,-3,3),color="black")
+          vec1=parametric_plot3d((0,t,0),(t,-3,3),color="black")+vec1
+          vec1=parametric_plot3d((0,0,t),(t,-3,3),color="black")+vec1
+          vec1+=arrow((0,0,0),v,color='red')+text3d('v',(v[0]/2+0.5,v[1]/2+0.5,v[2]/2),fontsize=20,color='red')
+          vec1+=arrow(v,v+w,color='blue')+text3d('w',(v[0]+w[0]/2+0.5,v[1]+w[1]/2+0.5,v[2]+w[2]/2),fontsize=20,color='blue')
+          vec1+=arrow((0,0,0),v+w,color='green')+text3d('v+w',(v[0]/2+w[0]/2-0.5,v[1]/2+w[1]/2-0.5,v[2]/2+w[2]/2),fontsize=20,color='green')
+          show(vec1)
+      </slate>
+    </interactive>
+  </figure>
+  <p>
+    Many other vector operations can be done componentwise, such as scalar multiplication and subtraction. If <m>k\in \mathbb{R}</m> and <m>\vec{v}\in \mathbb{R}^n</m>, then <m>k \vec{v} = \langle k v_1, k v_2, \ldots , k v_n \rangle</m>If <m>\vec{v},\vec{w}\in\mathbb{R}^n</m>, then <m>\vec{v}-\vec{w}=\langle v_1-w_1,v_2-w_2,\ldots,v_n-w_n\rangle</m>. Geometrically, scalar multiplication will stretch (and flip if <m>k \less 0</m>) the arrow for a vector.
+  </p>
+</introduction>
+<subsection>
+  <title>The Dot Product</title>
+<definition>
+  <p>
+    Let <m>\vec{v},\vec{w}\in\mathbb{R}^n</m>, then the dot product of <m>\vec{v}</m> with <m>\vec{w}</m> is the scalar value given by
+    <me>
+      \vec{v}\cdot\vec{w}= v_1 w_1+v_2 w_2+\ldots+v_n w_n
+    </me>
+  </p>
+</definition>
+<activity>
+  <introduction>
+    <p>
+      asdf
+    </p>
+  </introduction>
+https://www.desmos.com/calculator/aaurw828an
+</activity>
+</subsection>
+
+<subsection>
+  <title>Vector Equations</title>
 <investigation xml:id="q41">
   <p>Prove that the system of equations given by
   <me>
@@ -189,13 +275,13 @@ that you think would be useful in your work.
   <task>
     <p>
       <md>
-	<mrow>2x_1+3x_2\phantom{+3x_3}\amp =7</mrow>
-	<mrow>-x_1+x_2+4x_3\amp =0</mrow>
-	<mrow>5x_1-6x_2-x_3\amp =2</mrow>
+        <mrow>2x_1+3x_2\phantom{+3x_3}\amp =7</mrow>
+        <mrow>-x_1+x_2+4x_3\amp =0</mrow>
+        <mrow>5x_1-6x_2-x_3\amp =2</mrow>
       </md>
     </p>
   </task>
 </investigation>
-
+</subsection>
  </section>
 
