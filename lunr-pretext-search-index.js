@@ -403,70 +403,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.5",
   "title": "Vector and Matrix Equations",
-  "body": " Vector and Matrix Equations  Recall that two vectors in are equal if and only if all of their components are equal.   Prove that the system of equations given by has the same set of solutions as the vector equation . In other words, prove that is a solution to the vector equation iff is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.    Solve the following vector equation directly:     Give an example of a vector such that the equation has no solution or explain why no such vector exists.    Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.    Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.    Give an example of a vector such that the equation has no solutions or explain why no such vector exists.    Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.     A linear combination of a set is a vector of the form where and . Note that will not usually be in even though .     Can you write as a linear combination of and ? Justify your answer.    Repeat the previous problem for and .    Can you write as a linear combination of and ? Justify your answer.     We define a matrix-vector product as follows: If is a by matrix, and , then the matrix-vector product is given by  .     If is a by matrix, then for what value of ?   It should not surprise you that you can multiply a scalar multiple of a vector by a matrix by factoring out the scalar. In mathematical notation, . Additionally, you can apply the scalar multiplication to the matrix. In other words, . These kind of manipulations will be discussed more when we work with matrix operations later, but you may find these facts useful in your work right now. You should take time to write out the details of any of these arithmetic ideas that you think would be useful in your work.    Write out the -th component of the resulting vector of the product       How can you express the result of the matrix-vector product in terms of and the rows of ?   The -th component of the matrix-vector product is the dot product of row of with .    How can you express the result of the matrix-vector product in terms of and the columns of ?   One way to view this is as a linear combination of the columns of with the coefficient on the -th column of being .    Based on the above definition of the matrix vector product, if and , then by , has the same solution set as the system     Write each of the following as a matrix equation, a vector equation, and system of equations. You need to write out the exact corresponding vector equation, matrix equation, and system of equations, not some equivalent form.           "
+  "body": " Vector and Matrix Equations   In order to distinguish vectors (as being more than just by matrices), we will use the arrow notation and lower case symbols like and to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if , then the second component of is the scalar . The size of a vector in is the number of components the vector has. In later work, we will deal with a much more general notion of vectors that will not have components like vectors in . Recall that two vectors in are equal if and only if all of their components are equal.  Geometrically, we will view vectors in as an arrow which change in the -th coordinate being given by the -th component of the vector. For instance, the vector will have a plot in 3-dimensions that looks like    Vectors do not have a particular beginning or ending point so all of the blue vectors in the following plot are representations of .   Vectors can be added together to measure the net change (done by completing one vector, then the other). Algebraically, vector addition is done componentwise. If and , then .   Many other vector operations can be done componentwise, such as scalar multiplication and subtraction. If and , then . If , then . Geometrically, scalar multiplication will stretch (and flip if ) the arrow for a vector.    The Dot Product   Let , then the dot product of with is the scalar value given by    Sometimes we are interested in the total amount of change and not what direction a vector is in. The magnitude (or length) of a vector is given by the following A unit vector is a vector of length 1.   Let , then the vectors and are orthogonal if .     Use the Desmos interact embeded below to change the end points of our two vectors. Based on what you see about the value of the dot product for different configurations of vectors, answer the questions below    How does changing the length of the vectors change the value of the dot product?  How does changing the angle of the vectors change the value of the dot product?    The projection of a vector  onto a vector gives the vector part of that is parallel to and is computed as     If is the angle between two vectors and , then     Let , , and .   Find a unit vector that is in the opposite direction of   Can you choose and such that ?  Does make sense? Why or why not?  What angle does make with ?  What angle does make with the -axis?  How much of is parallel to ?  How much of is parallel to ?  How much of is parallel to ?  How much of is orthogonal to ?  Find a unit vector that is orthogonal to . How many such vectors are there?       Vector Equations    A linear combination of a set is a vector of the form where and . Note that will not usually be in even though .     Prove that the system of equations given by has the same set of solutions as the vector equation . In other words, prove that is a solution to the vector equation iff is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.    Solve the following vector equation directly:   Give an example of a vector such that the equation has no solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has no solutions or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Can you write as a linear combination of and ? Justify your answer.  Repeat the previous problem for and .  Can you write as a linear combination of and ? Justify your answer.    Write each of the locations given by a red dot as a linear combination of and .       "
 },
 {
-  "id": "q41",
+  "id": "p-124",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#q41",
-  "type": "Investigation",
-  "number": "1.5.1",
+  "url": "sec_vector_matrix_eqns.html#p-124",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
   "title": "",
-  "body": " Prove that the system of equations given by has the same set of solutions as the vector equation . In other words, prove that is a solution to the vector equation iff is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.  "
-},
-{
-  "id": "investigation-6",
-  "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-6",
-  "type": "Investigation",
-  "number": "1.5.2",
-  "title": "",
-  "body": " Solve the following vector equation directly:   "
-},
-{
-  "id": "investigation-7",
-  "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-7",
-  "type": "Investigation",
-  "number": "1.5.3",
-  "title": "",
-  "body": " Give an example of a vector such that the equation has no solution or explain why no such vector exists.  "
-},
-{
-  "id": "investigation-8",
-  "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-8",
-  "type": "Investigation",
-  "number": "1.5.4",
-  "title": "",
-  "body": " Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  "
-},
-{
-  "id": "investigation-9",
-  "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-9",
-  "type": "Investigation",
-  "number": "1.5.5",
-  "title": "",
-  "body": " Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  "
-},
-{
-  "id": "investigation-10",
-  "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-10",
-  "type": "Investigation",
-  "number": "1.5.6",
-  "title": "",
-  "body": " Give an example of a vector such that the equation has no solutions or explain why no such vector exists.  "
-},
-{
-  "id": "investigation-11",
-  "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-11",
-  "type": "Investigation",
-  "number": "1.5.7",
-  "title": "",
-  "body": " Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  "
+  "body": "vectors component "
 },
 {
   "id": "definition-3",
@@ -475,34 +421,16 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.5.1",
   "title": "",
-  "body": "  A linear combination of a set is a vector of the form where and . Note that will not usually be in even though .   "
+  "body": " Let , then the dot product of with is the scalar value given by   "
 },
 {
-  "id": "investigation-12",
+  "id": "p-130",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-12",
-  "type": "Investigation",
-  "number": "1.5.8",
+  "url": "sec_vector_matrix_eqns.html#p-130",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
   "title": "",
-  "body": " Can you write as a linear combination of and ? Justify your answer.  "
-},
-{
-  "id": "investigation-13",
-  "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-13",
-  "type": "Investigation",
-  "number": "1.5.9",
-  "title": "",
-  "body": " Repeat the previous problem for and .  "
-},
-{
-  "id": "investigation-14",
-  "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-14",
-  "type": "Investigation",
-  "number": "1.5.10",
-  "title": "",
-  "body": " Can you write as a linear combination of and ? Justify your answer.  "
+  "body": "magnitude unit vector "
 },
 {
   "id": "definition-4",
@@ -511,34 +439,79 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.5.2",
   "title": "",
-  "body": "  We define a matrix-vector product as follows: If is a by matrix, and , then the matrix-vector product is given by  .   "
+  "body": " Let , then the vectors and are orthogonal if .  "
 },
 {
-  "id": "investigation-15",
+  "id": "activity-17",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-15",
-  "type": "Investigation",
-  "number": "1.5.11",
+  "url": "sec_vector_matrix_eqns.html#activity-17",
+  "type": "Activity",
+  "number": "1.5.1",
   "title": "",
-  "body": " If is a by matrix, then for what value of ?  "
+  "body": "  Use the Desmos interact embeded below to change the end points of our two vectors. Based on what you see about the value of the dot product for different configurations of vectors, answer the questions below    How does changing the length of the vectors change the value of the dot product?  How does changing the angle of the vectors change the value of the dot product?  "
 },
 {
-  "id": "investigation-16",
+  "id": "definition-5",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-16",
-  "type": "Investigation",
-  "number": "1.5.12",
+  "url": "sec_vector_matrix_eqns.html#definition-5",
+  "type": "Definition",
+  "number": "1.5.3",
   "title": "",
-  "body": "  Write out the -th component of the resulting vector of the product       How can you express the result of the matrix-vector product in terms of and the rows of ?   The -th component of the matrix-vector product is the dot product of row of with .    How can you express the result of the matrix-vector product in terms of and the columns of ?   One way to view this is as a linear combination of the columns of with the coefficient on the -th column of being .   "
+  "body": " The projection of a vector  onto a vector gives the vector part of that is parallel to and is computed as   "
 },
 {
-  "id": "investigation-17",
+  "id": "theorem-4",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#investigation-17",
-  "type": "Investigation",
-  "number": "1.5.13",
+  "url": "sec_vector_matrix_eqns.html#theorem-4",
+  "type": "Theorem",
+  "number": "1.5.4",
   "title": "",
-  "body": "  Write each of the following as a matrix equation, a vector equation, and system of equations. You need to write out the exact corresponding vector equation, matrix equation, and system of equations, not some equivalent form.          "
+  "body": " If is the angle between two vectors and , then   "
+},
+{
+  "id": "question-5",
+  "level": "2",
+  "url": "sec_vector_matrix_eqns.html#question-5",
+  "type": "Question",
+  "number": "1.5.5",
+  "title": "",
+  "body": " Let , , and .   Find a unit vector that is in the opposite direction of   Can you choose and such that ?  Does make sense? Why or why not?  What angle does make with ?  What angle does make with the -axis?  How much of is parallel to ?  How much of is parallel to ?  How much of is parallel to ?  How much of is orthogonal to ?  Find a unit vector that is orthogonal to . How many such vectors are there?    "
+},
+{
+  "id": "definition-6",
+  "level": "2",
+  "url": "sec_vector_matrix_eqns.html#definition-6",
+  "type": "Definition",
+  "number": "1.5.6",
+  "title": "",
+  "body": "  A linear combination of a set is a vector of the form where and . Note that will not usually be in even though .   "
+},
+{
+  "id": "q41",
+  "level": "2",
+  "url": "sec_vector_matrix_eqns.html#q41",
+  "type": "Investigation",
+  "number": "1.5.2",
+  "title": "",
+  "body": " Prove that the system of equations given by has the same set of solutions as the vector equation . In other words, prove that is a solution to the vector equation iff is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.  "
+},
+{
+  "id": "activity-18",
+  "level": "2",
+  "url": "sec_vector_matrix_eqns.html#activity-18",
+  "type": "Activity",
+  "number": "1.5.3",
+  "title": "",
+  "body": " Solve the following vector equation directly:   Give an example of a vector such that the equation has no solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has no solutions or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Can you write as a linear combination of and ? Justify your answer.  Repeat the previous problem for and .  Can you write as a linear combination of and ? Justify your answer.  "
+},
+{
+  "id": "activity-19",
+  "level": "2",
+  "url": "sec_vector_matrix_eqns.html#activity-19",
+  "type": "Activity",
+  "number": "1.5.4",
+  "title": "",
+  "body": " Write each of the locations given by a red dot as a linear combination of and .     "
 },
 {
   "id": "colophon-2",

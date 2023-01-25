@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Conic Sections</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Computational Linear Algebra">
+<meta property="book:author" content="Nicholas Long">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Computational Linear Algebra:</span> <span class="subtitle">Notes and Questions for MATH 3325</span></a></h1>
+<p class="byline">Nicholas Long</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="C1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="coord_systems.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="C1.html" class="internal"><span class="codenumber">1</span> <span class="title">Geometry and Preliminaries</span></a></div>
+<ul class="structural">
+<li class="active">
+<div class="toc-item"><a href="conic_sections.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Conic Sections</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="conic_sections.html#subsection-1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Basic Conic Sections</span></a></div></li>
+<li><div class="toc-item"><a href="conic_sections.html#subsection-2" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Conic Sections Questions</span></a></div></li>
+<li><div class="toc-item"><a href="conic_sections.html#subsection-3" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Ellipse Parametric Equation</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="coord_systems.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Systems of Linear Equations and Matrices</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="coord_systems.html#subsection-4" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear systems of equations</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="conic_sections"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Conic Sections</span>
+</h2>
+<article class="objectives goal-like" id="objectives-1"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc"><li id="li-1"><div class="para" id="p-1">To convert between the equations and graphs of conic sections in 2D</div></li></ul></article><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Basic Conic Sections</span>
+</h3>
+<div class="para" id="p-2">
+<a class="external" href="./images/Conic%20Sections.pdf" target="_blank">Here is a handout that shows the basics of conic sections in terms of both the graphs and equations.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a>
+</div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Conic Sections Questions</span>
+</h3>
+<article class="question example-like" id="question-1"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-1"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-1"><article class="question example-like"><div class="para" id="p-3">Graph the following equations and label 5 points on each graph.</div> <ol class="decimal">
+<li id="li-2"><div class="para" id="p-derived-li-2"><span class="process-math">\(\displaystyle x^2+y^2=1\)</span></div></li>
+<li id="li-3"><div class="para" id="p-derived-li-3"><span class="process-math">\(\displaystyle x^2-y^2=1\)</span></div></li>
+<li id="li-4"><div class="para" id="p-derived-li-4"><span class="process-math">\(\displaystyle x^2=y\)</span></div></li>
+</ol></article></div>
+<article class="question example-like" id="question-2"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-2"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-2"><article class="question example-like"><div class="para" id="p-4">For each of the following equations, state how the graph will differ from the basic plots of the problem above. Then plot the equation and include where the 5 points you choose from above appear.</div> <ol class="decimal">
+<li id="li-5"><div class="para" id="p-derived-li-5"><span class="process-math">\(\displaystyle \left(\frac{x}{3}\right)^2+\left(\frac{y}{4}\right)^2=1\)</span></div></li>
+<li id="li-6"><div class="para" id="p-derived-li-6"><span class="process-math">\(\displaystyle y^2-x^2=1\)</span></div></li>
+<li id="li-7"><div class="para" id="p-derived-li-7"><span class="process-math">\(\displaystyle \frac{y^2}{4}-\frac{x^2}{9}=1\)</span></div></li>
+<li id="li-8"><div class="para" id="p-derived-li-8"><span class="process-math">\(\displaystyle (y-7)^2=-4(x+1)\)</span></div></li>
+</ol></article></div>
+<article class="question example-like" id="question-3"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-3"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-3"><article class="question example-like"><div class="para" id="p-5">For each of the following equations, plot the equation and be sure to label your graph as completely as possible.</div> <ol class="decimal">
+<li id="li-9"><div class="para" id="p-derived-li-9"><span class="process-math">\(\displaystyle \frac{(x-2)^2}{9}+\frac{(y+1)^2}{16}=1\)</span></div></li>
+<li id="li-10"><div class="para" id="p-derived-li-10"><span class="process-math">\(\displaystyle \frac{(y+3)^2}{4}-\frac{(x+1)^2}{9}=1\)</span></div></li>
+<li id="li-11"><div class="para" id="p-derived-li-11"><span class="process-math">\(\displaystyle (y-7)^2=-4(x+1)\)</span></div></li>
+</ol></article></div>
+<article class="question example-like" id="question-4"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-4"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-4"><article class="question example-like"><div class="para" id="p-6">Identify what shape the graphs of the following equations will have and complete the square to find the new center of the graph.</div> <ol class="decimal">
+<li id="li-12"><div class="para" id="p-derived-li-12"><span class="process-math">\(\displaystyle x^2-8x-8y+8=0\)</span></div></li>
+<li id="li-13"><div class="para" id="p-derived-li-13"><span class="process-math">\(\displaystyle 4x^2+y^2+24x-2y+21=0\)</span></div></li>
+<li id="li-14"><div class="para" id="p-derived-li-14"><span class="process-math">\(\displaystyle 9x^2-4y^2+90x+32y+125=0\)</span></div></li>
+</ol></article></div></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.3</span> <span class="title">Ellipse Parametric Equation</span>
+</h3>
+<div class="para logical" id="p-7">
+<div class="para">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "circle" missing or not unique]</code> we learned that to parametrize the implicit equation of a circle with center <span class="process-math">\((h,k)\)</span> and radius <span class="process-math">\(r &gt; 0\)</span> given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(x-h)^2 + (y-k)^2 = r^2 
+\end{equation*}
+</div>
+<div class="para">we can use the relationship between <span class="process-math">\(\sin\)</span> and <span class="process-math">\(\cos\text{.}\)</span> We found a parametric equation for the circle can be expressed by</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x(t) =r \cos(\theta) + h \qquad y(t) = r \sin(\theta) + k.
+\end{equation*}
+</div>
+<div class="para">The conic section most closely related to the circle is the ellipse. We have been reminded in class that the general equation of an ellipse is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1.
+\end{equation*}
+</div>
+<div class="para">Below is an ellipse that you can "play" around with:</div>
+</div>
+<iframe src="https://www.desmos.com/calculator/qywzphvknl" id="interactive-1" width="600" height="600"></iframe><div class="para logical" id="p-8">
+<div class="para">We can continue to make use of the relationship between <span class="process-math">\(\sin\)</span> and <span class="process-math">\(\cos\)</span> to discover parametric equations for an ellipse. In fact, without the <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in the equation things would work perfectly. To remedy this (that is, get rid of <span class="process-math">\(a,b\)</span>) we simply multiply by <span class="process-math">\(\sin\)</span> and <span class="process-math">\(\cos\)</span> by these values. Consider the equations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(t) = a \cos(t) \qquad y(t) = b \sin(t). 
+\end{equation*}
+</div>
+</div>
+<article class="activity project-like" id="ellipse_act"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
+</h4>
+<article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="p-9">
+<div class="para">Substitute the equations for <span class="process-math">\(x(t), y(t)\)</span> above into</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{x^2}{a^2} + \frac{y^2}{b^2}
+\end{equation*}
+</div>
+<div class="para">and simplify.</div>
+</div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-10">Consider the ellipse given by <span class="process-math">\(\frac{x^2}{9} + \frac{y^2}{4} = 1.\)</span> What are the parametric equations for this ellipse?  Graph them below to ensure you obtain the exact same graph.</div>
+<figure class="figure figure-like" id="ellipse_desmos"><iframe src="https://www.desmos.com/calculator/dlwiulbqe7" id="interactive-2" width="600" height="600"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.5<span class="period">.</span></span><span class="space"> </span>A Desmos Interactive for <a href="" class="xref" data-knowl="./knowl/ellipse_act.html" title="Activity 1.1.1">Activity 1.1.1</a></figcaption></figure></article><article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-11">In <a href="" class="xref" data-knowl="./knowl/ellipse_desmos.html" title="Figure 1.1.5">Figure 1.1.5</a>, update the equation in <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> as well as the parametric equations for the ellipse <span class="process-math">\(\frac{x^2}{16} + \frac{y^2}{25} = 1.\)</span>
+</div></article><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-12">Write a few sentences about the orientation of the parametric equations. In particular, you should talk about the following: at what point do you "start", i.e. what point corresponds to <span class="process-math">\(t=0\text{?}\)</span> How do you move around the ellipse (clockwise or counterclockwise)?</div></article><article class="task exercise-like" id="task-5"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="p-13">Update the equation in <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> as well as the parametric equations so that the ellipse has a center of <span class="process-math">\((-2,1)\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-6"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para logical" id="p-14">
+<div class="para">Since we know that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\sin(t))^2 +(\cos(t))^2=1 \quad \text{for every }t\in\mathbb{R}
+\end{equation*}
+</div>
+<div class="para">and the form of a translated ellipse is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1,
+\end{equation*}
+</div>
+<div class="para">set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{(x-h)^2}{a^2}=(\sin(t))^2
+\end{equation*}
+</div>
+<div class="para">and solve for x.</div>
+</div></article><article class="task exercise-like" id="task-7"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para" id="p-15">Set up a similar equation involving <span class="process-math">\(y\)</span> and <span class="process-math">\(\cos(t)\)</span> then solve for <span class="process-math">\(y\)</span> to get a general set of parametric equations for the translated ellipse.</div></article></article><article class="activity project-like" id="hyperbola_param"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Parameterizing a Translated Hyperbola.</span>
+</h4>
+<div class="introduction" id="introduction-1"><div class="para logical" id="p-16">
+<div class="para">Another conic section that will be useful to quickly parameterize is the hyperbola. The translated hyperbola is given by</div>
+<div class="displaymath process-math" id="hyp_eq">
+\begin{equation}
+\frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1\tag{1.1.1}
+\end{equation}
+</div>
+<div class="para">for horizontal orientation and</div>
+<div class="displaymath process-math" id="hyp_eq2">
+\begin{equation}
+\frac{(y-k)^2}{a^2} - \frac{(x-h)^2}{b^2} = 1\tag{1.1.2}
+\end{equation}
+</div>
+<div class="para">for vertical orientation.</div>
+</div></div>
+<article class="task exercise-like" id="hyp_trig"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="p-17">
+<div class="para">Find a trig identity of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\underline{\hspace{0.5in}})^2-(\underline{\hspace{0.5in}})^2=1
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><div class="para" id="p-18">Look for one involving secant and tangent.</div></div></div>
+</div></article><article class="task exercise-like" id="task-9"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="p-19">
+<div class="para">Set the first blank element of your trig identity from the previous part equal to the following expression, and then solve for <span class="process-math">\(x\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{(x-h)^2}{a^2}
+\end{equation*}
+</div>
+</div></article><article class="task exercise-like" id="task-10"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-20">Set up a similar equation involving <span class="process-math">\(y\)</span> and the trig function from the second blank of <a href="" class="xref" data-knowl="./knowl/hyp_trig.html" title="Task 1.1.2.a">Task 1.1.2.a</a> then solve for <span class="process-math">\(y\)</span> to get a general set of parametric equations for the translated hyperbola.</div></article><article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-21">Subsitute in your parametric equations for the translated hyperbola into the Desmos Interactive below to check that your equations trace the same graph as the translated hyperbola. You should move the sliders for <span class="process-math">\(h\text{,}\)</span> <span class="process-math">\(k\text{,}\)</span> <span class="process-math">\(a\text{,}\)</span> and <span class="process-math">\(b\)</span> to convince yourself that this set of parametric equations works for all cases (of the horizontal orientation.)</div>
+<figure class="figure figure-like" id="hyperbola_desmos"><iframe src="https://www.desmos.com/calculator/xxhji8sfzx" id="interactive-3" width="600" height="600"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.6<span class="period">.</span></span><span class="space"> </span>A Desmos Interactive for <a href="" class="xref" data-knowl="./knowl/hyperbola_param.html" title="Activity 1.1.2: Parameterizing a Translated Hyperbola">Activity 1.1.2</a></figcaption></figure></article></article><article class="question example-like" id="question-5"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-5"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-5"><article class="question example-like"><div class="para" id="p-22">For each of the following equations, give a parameterization and be sure state the bounds of your parameterization.</div> <ol class="decimal">
+<li id="li-15"><div class="para" id="p-derived-li-15"><span class="process-math">\(\displaystyle \frac{(x-2)^2}{9}+\frac{(y+1)^2}{16}=1\)</span></div></li>
+<li id="li-16"><div class="para" id="p-derived-li-16"><span class="process-math">\(\displaystyle \frac{(y+3)^2}{4}-\frac{(x+1)^2}{9}=1\)</span></div></li>
+<li id="li-17"><div class="para" id="p-derived-li-17"><span class="process-math">\(\displaystyle (y-7)^2=-4(x+1)\)</span></div></li>
+</ol></article></div></section><aside class="aside aside-like" id="aside-1"></aside></section><div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">./images/Conic Sections.pdf</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="C1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="coord_systems.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+</div>
+</body>
+</html>
