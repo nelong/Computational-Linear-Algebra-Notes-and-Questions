@@ -119,7 +119,7 @@
   <p>
     The <term>projection of a vector</term> <m>\vec{v}</m> onto a vector <m>\vec{w}</m> gives the vector part of <m>\vec{v}</m> that is parallel to <m>\vec{w}</m> and is computed as
     <me>
-      proj_{\vec{w}} \vec{v} = \frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}} \vec{w} = \frac{\vec{v}\cdot\vec{w}}{\Vert\vec{w}\Vert} \frac{\vec{w}}{\Vert\vec{w}\Vert}
+      proj_{\vec{w}} \vec{v} = \frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}} \vec{w} = \frac{\vec{v}\cdot\vec{w}}{\Vert\vec{w}\Vert} \left(\frac{\vec{w}}{\Vert\vec{w}\Vert}\right)
     </me>
   </p>
 </definition>
