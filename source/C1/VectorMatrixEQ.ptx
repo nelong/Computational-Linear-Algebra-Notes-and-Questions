@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec_vector_matrix_eqns" xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Vector and Matrix Equations</title>
+<section xml:id="sec_vector_eqns" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Vectors and Vector Equations</title>
 
 <introduction>
   <p>
@@ -182,7 +182,7 @@
 <activity>
   <task>
     <p>
-      Solve the following vector equation directly:
+      Solve the following vector equation:
       <me>x_1 \colvec{1\\1}+x_2 \colvec{-1\\1} = \colvec{3\\-4}</me>
     </p>
   </task>
@@ -211,6 +211,8 @@
       Give an example of a vector <m>\colvec{a\\b\\c}</m> such that the equation <me>x_1\colvec{1\\1\\0}+x_2 \colvec{0\\0\\1}+x_3 \colvec{a\\b\\c}=\colvec{7\\0\\-2}</me> has exactly 1 solution or explain why no such vector exists.
     </p>
   </task>
+</activity>
+<activity>
   <task>
     <p>
       Can you write <m>\vec{b}=\colvec{2\\2\\4}</m> as a linear combination of <m>\vec{v_1}=\colvec{2\\1\\1}</m> and <m>\vec{v_2}=\colvec{2\\-1\\1}</m>? Justify your answer.
@@ -218,7 +220,12 @@
   </task>
   <task>
     <p>
-      Repeat the previous problem for <m>\vec{b}=\colvec{2\\0\\0}</m> and <m>\vec{b}=\colvec{2\\3\\-1}</m>.
+      Can you write <m>\vec{b}=\colvec{2\\0\\0}</m> as a linear combination of <m>\vec{v_1}=\colvec{2\\1\\1}</m> and <m>\vec{v_2}=\colvec{2\\-1\\1}</m>? Justify your answer.
+    </p>
+  </task>
+  <task>
+    <p>
+      Can you write <m>\vec{b}=\colvec{2\\3\\-1}</m> as a linear combination of <m>\vec{v_1}=\colvec{2\\1\\1}</m> and <m>\vec{v_2}=\colvec{2\\-1\\1}</m>? Justify your answer.
     </p>
   </task>
   <task>
@@ -228,12 +235,19 @@
   </task>
 </activity>
 <activity>
+  <task>
   <p>
     Write each of the locations given by a red dot as a linear combination of <m>\vec{u}</m> and <m>\vec{v}</m>.
   </p>
-  <figure>
+  <figure xml:id="lincombplot">
     <image source="./LinearComboMesh.png" />
   </figure>
+</task>
+<task>
+  <p>
+    Can you write every location in the plane of <xref ref="lincombplot" /> as a linear combination of <m>\vec{u}</m> and <m>\vec{v}</m>? Either explain why you can write every point as a linear combination of <m>\vec{u}</m> and <m>\vec{v}</m> or give a point that cannot be written as a linear combination of <m>\vec{u}</m> and <m>\vec{v}</m>.
+  </p>
+</task>
 </activity>
 </subsection>
  </section>
