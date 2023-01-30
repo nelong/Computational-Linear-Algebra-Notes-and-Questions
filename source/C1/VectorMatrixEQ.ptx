@@ -179,7 +179,7 @@
   </p>
 </investigation>
 
-<activity>
+<activity xml:id="s1act">
   <task>
     <p>
       Solve the following vector equation:
@@ -212,7 +212,7 @@
     </p>
   </task>
 </activity>
-<activity>
+<activity xml:id="s2act">
   <task>
     <p>
       Can you write <m>\vec{b}=\colvec{2\\2\\4}</m> as a linear combination of <m>\vec{v_1}=\colvec{2\\1\\1}</m> and <m>\vec{v_2}=\colvec{2\\-1\\1}</m>? Justify your answer.

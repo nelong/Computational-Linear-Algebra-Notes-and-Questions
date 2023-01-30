@@ -3,8 +3,63 @@
 
 <subsection>
   <title>Span as a Noun</title>
-  Define span of a set
+  <definition>
+    <p>
+      Let <m>S</m> be a set of vectors, <m>S=\{\vec{v}_1,\vec{v}_2,\ldots\}</m>. We define the <term>span</term> of <m>S</m>, denoted <m>Span(S)</m>, as the set of all linear combinations of vectors from <m>S</m>. That is,
+      <me>Span(S)=Span(\{\vec{v}_1,\vec{v}_2,\ldots\})=\sum_i c_i \vec{v}_i</me>
+    </p>
+  </definition>
+  <activity>
+    <p>
+      Look back at <xref ref="s1act" /> and <xref ref="s2act" /> and restate each of the questions in terms of span. For instance, part 1 of <xref ref="s1act" /> could be stated as "Show that <m>\colvec{3\\-4}</m> is in the span of <m>\{\colvec{1\\1}, \colvec{-1\\1}\}</m>."
+    </p>
+  </activity>
+  <p>
+    Note that the set <m>S</m> might not be finite but the number of vectors involved in the summation for a linear combination is finite. Also, remember to treat <m>Span(S)</m> as a set and not a vector. Remember that the use of span in <m>Span(S)</m> is a noun.
+  </p>
+  <p>
+    The following are equivalent questions:
+    <ul>
+      <li>Is a vector <m>\vec{b}</m> in <m>Span(S)</m>?</li>
+      <li>Does <m>\vec{b} = \sum_i (c_1\vec{v}_i)</m> have a solution?</li>
+    </ul>
+    A few other related questions are:
+    <ul>
+      <li>When will there be a solution to <m>\vec{b} = \sum_i (c_1\vec{v}_i)</m>?</li>
+      <li>When will there be a UNIQUE solution to<m>\vec{b} = \sum_i (c_1\vec{v}_i)</m>?</li>
+      <li>How can we describe <m>Span(S)</m> as a collection of vectors?</li>
+    </ul>
+  </p>
 </subsection>
-
+<subsection>
+  <title>Span as a Verb</title>
+  <definition>
+    <p>
+      A set of vectors <m>\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\}</m> spans a vector space <m>V</m> if <m>Span(\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\})=V</m>. In other words, <m>\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\}</m> spans a vector space <m>V</m> if every vector in <m>V</m> can be written as a linear combination from the set <m>\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\} </m>.
+    </p>
+  </definition>
+  <activity>
+    <task>
+      <p>
+        Does <m>\{ \langle 1,2\rangle,\langle 3,6\rangle\}</m> span <m>\mathbb{R}^2</m>?
+      </p>
+    </task>
+    <task>
+      <p>
+        Does <m>\{ \langle 1,2\rangle,\langle 3,4\rangle\}</m> span <m>\mathbb{R}^2</m>?
+      </p>
+    </task>
+    <task>
+      <p>
+        Does <m>\{ \langle 1,2,3\rangle,\langle 4,5,6\rangle\}</m> span <m>\mathbb{R}^3</m>?
+      </p>
+    </task>
+    <task>
+      <p>
+        Does <m>\{ \langle 1,2,3\rangle,\langle 4,5,6\rangle , \langle 0,1,0\rangle\}</m> span <m>\mathbb{R}^3</m>?
+      </p>
+    </task>
+  </activity>
+</subsection>
 </section>
 
