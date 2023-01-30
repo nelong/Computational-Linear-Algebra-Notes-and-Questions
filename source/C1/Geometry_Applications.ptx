@@ -189,8 +189,8 @@
     Notice that there is <alert>NOT</alert> a unique solution to system of equations, but rather we can have solutions of the form 
     <me>
       \begin{array}{cc}
-      \alpha\amp=\gamma \\
-      \beta \amp=\gamma \\
+      \alpha \amp= \gamma \\
+      \beta \amp= \frac{1}{2}\gamma \\
       \gamma \amp=\gamma (free)
       \end{array}
     </me>
