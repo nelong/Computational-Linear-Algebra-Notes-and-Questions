@@ -397,18 +397,18 @@ var ptx_lunr_docs = [
   "body": "  Consider the chemical reaction    Write out equations for nitrogen, hydrogen, and oxygen atoms  Input the corresponding augmented matrix into Python and use the rref to write out the solution set  Write out the simplest form of the chemical reaction equation.  "
 },
 {
-  "id": "sec_vector_matrix_eqns",
+  "id": "sec_vector_eqns",
   "level": "1",
-  "url": "sec_vector_matrix_eqns.html",
+  "url": "sec_vector_eqns.html",
   "type": "Section",
   "number": "1.5",
-  "title": "Vector and Matrix Equations",
-  "body": " Vector and Matrix Equations   In order to distinguish vectors (as being more than just by matrices), we will use the arrow notation and lower case symbols like and to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if , then the second component of is the scalar . The size of a vector in is the number of components the vector has. In later work, we will deal with a much more general notion of vectors that will not have components like vectors in . Recall that two vectors in are equal if and only if all of their components are equal.  Geometrically, we will view vectors in as an arrow which change in the -th coordinate being given by the -th component of the vector. For instance, the vector will have a plot in 3-dimensions that looks like    Vectors do not have a particular beginning or ending point so all of the blue vectors in the following plot are representations of .   Vectors can be added together to measure the net change (done by completing one vector, then the other). Algebraically, vector addition is done componentwise. If and , then .   Many other vector operations can be done componentwise, such as scalar multiplication and subtraction. If and , then . If , then . Geometrically, scalar multiplication will stretch (and flip if ) the arrow for a vector.    The Dot Product   Let , then the dot product of with is the scalar value given by    Sometimes we are interested in the total amount of change and not what direction a vector is in. The magnitude (or length) of a vector is given by the following A unit vector is a vector of length 1.   Let , then the vectors and are orthogonal if .     Use the Desmos interact embeded below to change the end points of our two vectors. Based on what you see about the value of the dot product for different configurations of vectors, answer the questions below    How does changing the length of the vectors change the value of the dot product?  How does changing the angle of the vectors change the value of the dot product?    The projection of a vector  onto a vector gives the vector part of that is parallel to and is computed as     If is the angle between two vectors and , then     Let , , and .   Find a unit vector that is in the opposite direction of   Can you choose and such that ?  Does make sense? Why or why not?  What angle does make with ?  What angle does make with the -axis?  How much of is parallel to ?  How much of is parallel to ?  How much of is parallel to ?  How much of is orthogonal to ?  Find a unit vector that is orthogonal to . How many such vectors are there?       Vector Equations    A linear combination of a set is a vector of the form where and . Note that will not usually be in even though .     Prove that the system of equations given by has the same set of solutions as the vector equation . In other words, prove that is a solution to the vector equation iff is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.    Solve the following vector equation directly:   Give an example of a vector such that the equation has no solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has no solutions or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Can you write as a linear combination of and ? Justify your answer.  Repeat the previous problem for and .  Can you write as a linear combination of and ? Justify your answer.    Write each of the locations given by a red dot as a linear combination of and .       "
+  "title": "Vectors and Vector Equations",
+  "body": " Vectors and Vector Equations   In order to distinguish vectors (as being more than just by matrices), we will use the arrow notation and lower case symbols like and to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if , then the second component of is the scalar . The size of a vector in is the number of components the vector has. In later work, we will deal with a much more general notion of vectors that will not have components like vectors in . Recall that two vectors in are equal if and only if all of their components are equal.  Geometrically, we will view vectors in as an arrow which change in the -th coordinate being given by the -th component of the vector. For instance, the vector will have a plot in 3-dimensions that looks like    Vectors do not have a particular beginning or ending point so all of the blue vectors in the following plot are representations of .   Vectors can be added together to measure the net change (done by completing one vector, then the other). Algebraically, vector addition is done componentwise. If and , then .   Many other vector operations can be done componentwise, such as scalar multiplication and subtraction. If and , then . If , then . Geometrically, scalar multiplication will stretch (and flip if ) the arrow for a vector.    The Dot Product   Let , then the dot product of with is the scalar value given by    Sometimes we are interested in the total amount of change and not what direction a vector is in. The magnitude (or length) of a vector is given by the following A unit vector is a vector of length 1.   Let , then the vectors and are orthogonal if .     Use the Desmos interact embeded below to change the end points of our two vectors. Based on what you see about the value of the dot product for different configurations of vectors, answer the questions below    How does changing the length of the vectors change the value of the dot product?  How does changing the angle of the vectors change the value of the dot product?    The projection of a vector  onto a vector gives the vector part of that is parallel to and is computed as     If is the angle between two vectors and , then     Let , , and .   Find a unit vector that is in the opposite direction of   Can you choose and such that ?  Does make sense? Why or why not?  What angle does make with ?  What angle does make with the -axis?  How much of is parallel to ?  How much of is parallel to ?  How much of is parallel to ?  How much of is orthogonal to ?  Find a unit vector that is orthogonal to . How many such vectors are there?       Vector Equations    A linear combination of a set is a vector of the form where and . Note that will not usually be in even though .     Prove that the system of equations given by has the same set of solutions as the vector equation . In other words, prove that is a solution to the vector equation iff is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.    Solve the following vector equation:   Give an example of a vector such that the equation has no solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has no solutions or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.    Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.    Write each of the locations given by a red dot as a linear combination of and .    Can you write every location in the plane of as a linear combination of and ? Either explain why you can write every point as a linear combination of and or give a point that cannot be written as a linear combination of and .    "
 },
 {
   "id": "p-124",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#p-124",
+  "url": "sec_vector_eqns.html#p-124",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -417,7 +417,7 @@ var ptx_lunr_docs = [
 {
   "id": "definition-3",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#definition-3",
+  "url": "sec_vector_eqns.html#definition-3",
   "type": "Definition",
   "number": "1.5.1",
   "title": "",
@@ -426,7 +426,7 @@ var ptx_lunr_docs = [
 {
   "id": "p-130",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#p-130",
+  "url": "sec_vector_eqns.html#p-130",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -435,7 +435,7 @@ var ptx_lunr_docs = [
 {
   "id": "definition-4",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#definition-4",
+  "url": "sec_vector_eqns.html#definition-4",
   "type": "Definition",
   "number": "1.5.2",
   "title": "",
@@ -444,7 +444,7 @@ var ptx_lunr_docs = [
 {
   "id": "activity-17",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#activity-17",
+  "url": "sec_vector_eqns.html#activity-17",
   "type": "Activity",
   "number": "1.5.1",
   "title": "",
@@ -453,7 +453,7 @@ var ptx_lunr_docs = [
 {
   "id": "definition-5",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#definition-5",
+  "url": "sec_vector_eqns.html#definition-5",
   "type": "Definition",
   "number": "1.5.3",
   "title": "",
@@ -462,7 +462,7 @@ var ptx_lunr_docs = [
 {
   "id": "theorem-4",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#theorem-4",
+  "url": "sec_vector_eqns.html#theorem-4",
   "type": "Theorem",
   "number": "1.5.4",
   "title": "",
@@ -471,7 +471,7 @@ var ptx_lunr_docs = [
 {
   "id": "question-5",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#question-5",
+  "url": "sec_vector_eqns.html#question-5",
   "type": "Question",
   "number": "1.5.5",
   "title": "",
@@ -480,7 +480,7 @@ var ptx_lunr_docs = [
 {
   "id": "definition-6",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#definition-6",
+  "url": "sec_vector_eqns.html#definition-6",
   "type": "Definition",
   "number": "1.5.6",
   "title": "",
@@ -489,29 +489,83 @@ var ptx_lunr_docs = [
 {
   "id": "q41",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#q41",
+  "url": "sec_vector_eqns.html#q41",
   "type": "Investigation",
   "number": "1.5.2",
   "title": "",
   "body": " Prove that the system of equations given by has the same set of solutions as the vector equation . In other words, prove that is a solution to the vector equation iff is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.  "
 },
 {
-  "id": "activity-18",
+  "id": "s1act",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#activity-18",
+  "url": "sec_vector_eqns.html#s1act",
   "type": "Activity",
   "number": "1.5.3",
   "title": "",
-  "body": " Solve the following vector equation directly:   Give an example of a vector such that the equation has no solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has no solutions or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Can you write as a linear combination of and ? Justify your answer.  Repeat the previous problem for and .  Can you write as a linear combination of and ? Justify your answer.  "
+  "body": " Solve the following vector equation:   Give an example of a vector such that the equation has no solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has no solutions or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  "
 },
 {
-  "id": "activity-19",
+  "id": "s2act",
   "level": "2",
-  "url": "sec_vector_matrix_eqns.html#activity-19",
+  "url": "sec_vector_eqns.html#s2act",
   "type": "Activity",
   "number": "1.5.4",
   "title": "",
-  "body": " Write each of the locations given by a red dot as a linear combination of and .     "
+  "body": " Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  "
+},
+{
+  "id": "activity-20",
+  "level": "2",
+  "url": "sec_vector_eqns.html#activity-20",
+  "type": "Activity",
+  "number": "1.5.5",
+  "title": "",
+  "body": " Write each of the locations given by a red dot as a linear combination of and .    Can you write every location in the plane of as a linear combination of and ? Either explain why you can write every point as a linear combination of and or give a point that cannot be written as a linear combination of and .  "
+},
+{
+  "id": "span",
+  "level": "1",
+  "url": "span.html",
+  "type": "Section",
+  "number": "1.6",
+  "title": "Span (both a noun and a verb)",
+  "body": " Span (both a noun and a verb)   Span as a Noun   Let be a set of vectors, . We define the span of , denoted , as the set of all linear combinations of vectors from . That is,     Look back at and and restate each of the questions in terms of span. For instance, part 1 of could be stated as \"Show that is in the span of .\"   Note that the set might not be finite but the number of vectors involved in the summation for a linear combination is finite. Also, remember to treat as a set and not a vector. Remember that the use of span in is a noun.  The following are equivalent questions:  Is a vector in ?  Does have a solution?  A few other related questions are:  When will there be a solution to ?  When will there be a UNIQUE solution to ?  How can we describe as a collection of vectors?      Span as a Verb   A set of vectors spans a vector space if . In other words, spans a vector space if every vector in can be written as a linear combination from the set .    Does span ?  Does span ?  Does span ?  Does span ?    "
+},
+{
+  "id": "definition-7",
+  "level": "2",
+  "url": "span.html#definition-7",
+  "type": "Definition",
+  "number": "1.6.1",
+  "title": "",
+  "body": " Let be a set of vectors, . We define the span of , denoted , as the set of all linear combinations of vectors from . That is,   "
+},
+{
+  "id": "activity-21",
+  "level": "2",
+  "url": "span.html#activity-21",
+  "type": "Activity",
+  "number": "1.6.1",
+  "title": "",
+  "body": " Look back at and and restate each of the questions in terms of span. For instance, part 1 of could be stated as \"Show that is in the span of .\"  "
+},
+{
+  "id": "definition-8",
+  "level": "2",
+  "url": "span.html#definition-8",
+  "type": "Definition",
+  "number": "1.6.2",
+  "title": "",
+  "body": " A set of vectors spans a vector space if . In other words, spans a vector space if every vector in can be written as a linear combination from the set .  "
+},
+{
+  "id": "activity-22",
+  "level": "2",
+  "url": "span.html#activity-22",
+  "type": "Activity",
+  "number": "1.6.2",
+  "title": "",
+  "body": " Does span ?  Does span ?  Does span ?  Does span ?  "
 },
 {
   "id": "colophon-2",
