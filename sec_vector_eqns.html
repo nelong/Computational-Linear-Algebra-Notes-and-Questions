@@ -220,29 +220,26 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
 <div class="toc-item"><a href="solving_linear_systems.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Solving Linear Systems</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="solving_linear_systems.html#subsection-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Elementary Operations</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="Conunique.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Consistency and Uniqueness Theorems</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="Conunique.html#subsection-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Geometric Interpretation of a Solution Set</span></a></div></li></ul>
-</li>
+<li><div class="toc-item"><a href="Conunique.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Consistency and Uniqueness Theorems</span></a></div></li>
 <li>
 <div class="toc-item"><a href="Geo_App.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Geometric Interpretations and Applications</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="Geo_App.html#subsection-4" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Geometric Interpretation of a Solution Set</span></a></div></li>
-<li><div class="toc-item"><a href="Geo_App.html#subsection-5" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Applications and Linear Algebra</span></a></div></li>
+<li><div class="toc-item"><a href="Geo_App.html#subsection-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Geometric Interpretation of a Solution Set</span></a></div></li>
+<li><div class="toc-item"><a href="Geo_App.html#subsection-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Applications and Linear Algebra</span></a></div></li>
 </ul>
 </li>
 <li class="active">
 <div class="toc-item"><a href="sec_vector_eqns.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Vectors and Vector Equations</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-6" class="internal"><span class="codenumber">1.5.1</span> <span class="title">The Dot Product</span></a></div></li>
-<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-7" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Vector Equations</span></a></div></li>
+<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-5" class="internal"><span class="codenumber">1.5.1</span> <span class="title">The Dot Product</span></a></div></li>
+<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-6" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Vector Equations</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="span.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Span (both a noun and a verb)</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="span.html#subsection-8" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Span as a Noun</span></a></div></li>
-<li><div class="toc-item"><a href="span.html#subsection-9" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Span as a Verb</span></a></div></li>
+<li><div class="toc-item"><a href="span.html#subsection-7" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Span as a Noun</span></a></div></li>
+<li><div class="toc-item"><a href="span.html#subsection-8" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Span as a Verb</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -252,7 +249,7 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_vector_eqns"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">Vectors and Vector Equations</span>
 </h2>
-<section class="introduction" id="introduction-13"><div class="para" id="p-124">In order to distinguish <dfn class="terminology">vectors</dfn> (as being more than just <span class="process-math">\(n\)</span> by <span class="process-math">\(1\)</span> matrices), we will use the arrow notation and lower case symbols like <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\)</span> to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if <span class="process-math">\(\vec{v} =\begin{bmatrix}v_1\\ v_2\\\vdots\\ v_m\end{bmatrix}\text{,}\)</span> then the second <dfn class="terminology">component</dfn> of <span class="process-math">\(\vec{v}\)</span> is the scalar <span class="process-math">\(v_2\text{.}\)</span> The size of a vector in <span class="process-math">\(\mathbb{R}^n\)</span> is the number of components the vector has. In later work, we will deal with a <em class="emphasis">much</em> more general notion of vectors that will <em class="emphasis">not</em> have components like vectors in <span class="process-math">\(\mathbb{R}^n\text{.}\)</span> Recall that two vectors in <span class="process-math">\(\mathbb{R}^n\)</span> are equal if and only if all of their components are equal.</div> <div class="para" id="p-125">Geometrically, we will view vectors in <span class="process-math">\(\mathbb{R}^n\)</span> as an arrow which change in the <span class="process-math">\(i\)</span>-th coordinate being given by the <span class="process-math">\(i\)</span>-th component of the vector. For instance, the vector <span class="process-math">\(\langle 1,2,3\rangle\)</span> will have a plot in 3-dimensions that looks like</div>  <pre class="ptx-sagecell sagecell-sage" id="vecta"><script type="text/x-sage">@interact
+<section class="introduction" id="introduction-13"><div class="para" id="p-115">In order to distinguish <dfn class="terminology">vectors</dfn> (as being more than just <span class="process-math">\(n\)</span> by <span class="process-math">\(1\)</span> matrices), we will use the arrow notation and lower case symbols like <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\)</span> to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if <span class="process-math">\(\vec{v} =\begin{bmatrix}v_1\\ v_2\\\vdots\\ v_m\end{bmatrix}\text{,}\)</span> then the second <dfn class="terminology">component</dfn> of <span class="process-math">\(\vec{v}\)</span> is the scalar <span class="process-math">\(v_2\text{.}\)</span> The size of a vector in <span class="process-math">\(\mathbb{R}^n\)</span> is the number of components the vector has. In later work, we will deal with a <em class="emphasis">much</em> more general notion of vectors that will <em class="emphasis">not</em> have components like vectors in <span class="process-math">\(\mathbb{R}^n\text{.}\)</span> Recall that two vectors in <span class="process-math">\(\mathbb{R}^n\)</span> are equal if and only if all of their components are equal.</div> <div class="para" id="p-116">Geometrically, we will view vectors in <span class="process-math">\(\mathbb{R}^n\)</span> as an arrow which change in the <span class="process-math">\(i\)</span>-th coordinate being given by the <span class="process-math">\(i\)</span>-th component of the vector. For instance, the vector <span class="process-math">\(\langle 1,2,3\rangle\)</span> will have a plot in 3-dimensions that looks like</div>  <pre class="ptx-sagecell sagecell-sage" id="vecta"><script type="text/x-sage">@interact
 def _():
   var('t')
   vec1=arrow((0,0,0),(1,2,3),color='blue', width=3,)
@@ -260,7 +257,7 @@ def _():
   vec1=parametric_plot3d((0,t,0),(t,-3,3),color="black")+vec1
   vec1=parametric_plot3d((0,0,t),(t,-3,3),color="black")+vec1
   show(vec1)
-</script></pre> <div class="para" id="p-126">Vectors do not have a particular beginning or ending point so all of the blue vectors in the following plot are representations of <span class="process-math">\(\langle 1,2,3\rangle\text{.}\)</span>
+</script></pre> <div class="para" id="p-117">Vectors do not have a particular beginning or ending point so all of the blue vectors in the following plot are representations of <span class="process-math">\(\langle 1,2,3\rangle\text{.}\)</span>
 </div> <pre class="ptx-sagecell sagecell-sage" id="vect2"><script type="text/x-sage">L=[(1,-2,1),(-1,2,1),(2,0,0),(1,2,-2),(-1,-3,-1)]
 @interact
 def _():
@@ -272,7 +269,7 @@ def _():
   vec1=parametric_plot3d((0,t,0),(t,-3,3),color="black")+vec1
   vec1=parametric_plot3d((0,0,t),(t,-3,3),color="black")+vec1
   show(vec1)
-</script></pre> <div class="para" id="p-127">Vectors can be added together to measure the net change (done by completing one vector, then the other). Algebraically, vector addition is done componentwise. If <span class="process-math">\(\vec{v}=\langle v_1,v_2,v_3\rangle\)</span> and <span class="process-math">\(\vec{w}=\langle w_1,w_2,w_3\rangle\text{,}\)</span> then <span class="process-math">\(\vec{v}+\vec{w}=\langle v_1+w_1,v_2+w_2,v_3+w_3\rangle\text{.}\)</span>
+</script></pre> <div class="para" id="p-118">Vectors can be added together to measure the net change (done by completing one vector, then the other). Algebraically, vector addition is done componentwise. If <span class="process-math">\(\vec{v}=\langle v_1,v_2,v_3\rangle\)</span> and <span class="process-math">\(\vec{w}=\langle w_1,w_2,w_3\rangle\text{,}\)</span> then <span class="process-math">\(\vec{v}+\vec{w}=\langle v_1+w_1,v_2+w_2,v_3+w_3\rangle\text{.}\)</span>
 </div> <pre class="ptx-sagecell sagecell-sage" id="vect3"><script type="text/x-sage">@interact
 def _2(v=('v', input_grid(1, 3, default=[[1,2,3]], to_value=lambda x: vector(flatten(x)))),w=('w', input_grid(1, 3, default=[[-2,1,-1]], to_value=lambda x: vector(flatten(x))))):
   var('t')
@@ -283,20 +280,20 @@ def _2(v=('v', input_grid(1, 3, default=[[1,2,3]], to_value=lambda x: vector(fla
   vec1+=arrow(v,v+w,color='blue')+text3d('w',(v[0]+w[0]/2+0.5,v[1]+w[1]/2+0.5,v[2]+w[2]/2),fontsize=20,color='blue')
   vec1+=arrow((0,0,0),v+w,color='green')+text3d('v+w',(v[0]/2+w[0]/2-0.5,v[1]/2+w[1]/2-0.5,v[2]/2+w[2]/2),fontsize=20,color='green')
   show(vec1)
-</script></pre> <div class="para" id="p-128">Many other vector operations can be done componentwise, such as scalar multiplication and subtraction. If <span class="process-math">\(k\in \mathbb{R}\)</span> and <span class="process-math">\(\vec{v}\in \mathbb{R}^n\text{,}\)</span> then <span class="process-math">\(k \vec{v} = \langle k v_1, k v_2, \ldots , k v_n \rangle\text{.}\)</span> If <span class="process-math">\(\vec{v},\vec{w}\in\mathbb{R}^n\text{,}\)</span> then <span class="process-math">\(\vec{v}-\vec{w}=\langle v_1-w_1,v_2-w_2,\ldots,v_n-w_n\rangle\text{.}\)</span> Geometrically, scalar multiplication will stretch (and flip if <span class="process-math">\(k \lt 0\)</span>) the arrow for a vector.</div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+</script></pre> <div class="para" id="p-119">Many other vector operations can be done componentwise, such as scalar multiplication and subtraction. If <span class="process-math">\(k\in \mathbb{R}\)</span> and <span class="process-math">\(\vec{v}\in \mathbb{R}^n\text{,}\)</span> then <span class="process-math">\(k \vec{v} = \langle k v_1, k v_2, \ldots , k v_n \rangle\text{.}\)</span> If <span class="process-math">\(\vec{v},\vec{w}\in\mathbb{R}^n\text{,}\)</span> then <span class="process-math">\(\vec{v}-\vec{w}=\langle v_1-w_1,v_2-w_2,\ldots,v_n-w_n\rangle\text{.}\)</span> Geometrically, scalar multiplication will stretch (and flip if <span class="process-math">\(k \lt 0\)</span>) the arrow for a vector.</div></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.5.1</span> <span class="title">The Dot Product</span>
 </h3>
 <article class="definition definition-like" id="definition-3"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-129">
+<div class="para logical" id="p-120">
 <div class="para">Let <span class="process-math">\(\vec{v},\vec{w}\in\mathbb{R}^n\text{,}\)</span> then the <dfn class="terminology">dot product</dfn> of <span class="process-math">\(\vec{v}\)</span> with <span class="process-math">\(\vec{w}\)</span> is the scalar value given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \vec{v}\cdot\vec{w}= v_1 w_1+v_2 w_2+\ldots+v_n w_n
 \end{equation*}
 </div>
-</div></article><div class="para logical" id="p-130">
+</div></article><div class="para logical" id="p-121">
 <div class="para">Sometimes we are interested in the total amount of change and not what direction a vector is in. The <dfn class="terminology">magnitude</dfn> (or length) of a vector <span class="process-math">\(\vec{v}\in\mathbb{R}^n\)</span> is given by the following</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -308,19 +305,19 @@ def _2(v=('v', input_grid(1, 3, default=[[1,2,3]], to_value=lambda x: vector(fla
 <article class="definition definition-like" id="definition-4"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-131">Let <span class="process-math">\(\vec{v},\vec{w}\in\mathbb{R}^n\text{,}\)</span> then the vectors <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span> are <dfn class="terminology">orthogonal</dfn> if <span class="process-math">\(\vec{v} \cdot \vec{w} =0\text{.}\)</span>
-</div></article><article class="activity project-like" id="activity-17"><h4 class="heading">
+<div class="para" id="p-122">Let <span class="process-math">\(\vec{v},\vec{w}\in\mathbb{R}^n\text{,}\)</span> then the vectors <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\)</span> are <dfn class="terminology">orthogonal</dfn> if <span class="process-math">\(\vec{v} \cdot \vec{w} =0\text{.}\)</span>
+</div></article><article class="activity project-like" id="activity-16"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="introduction-14">
-<div class="para" id="p-132">Use the Desmos interact embeded below to change the end points of our two vectors. Based on what you see about the value of the dot product for different configurations of vectors, answer the questions below</div> <iframe src="https://www.desmos.com/calculator/aaurw828an" id="interactive-1" width="900" height="600"></iframe>
+<div class="para" id="p-123">Use the Desmos interact embeded below to change the end points of our two vectors. Based on what you see about the value of the dot product for different configurations of vectors, answer the questions below</div> <iframe src="https://www.desmos.com/calculator/aaurw828an" id="interactive-1" width="900" height="600"></iframe>
 </div>
 <article class="task exercise-like" id="task-48"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-133">How does changing the length of the vectors change the value of the dot product?</div></article><article class="task exercise-like" id="task-49"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-134">How does changing the angle of the vectors change the value of the dot product?</div></article></article><article class="definition definition-like" id="definition-5"><h4 class="heading">
+<div class="para" id="p-124">How does changing the length of the vectors change the value of the dot product?</div></article><article class="task exercise-like" id="task-49"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-125">How does changing the angle of the vectors change the value of the dot product?</div></article></article><article class="definition definition-like" id="definition-5"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-135">
+<div class="para logical" id="p-126">
 <div class="para">The <dfn class="terminology">projection of a vector</dfn> <span class="process-math">\(\vec{v}\)</span> onto a vector <span class="process-math">\(\vec{w}\)</span> gives the vector part of <span class="process-math">\(\vec{v}\)</span> that is parallel to <span class="process-math">\(\vec{w}\)</span> and is computed as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -330,46 +327,46 @@ proj_{\vec{w}} \vec{v} = \frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}} \vec{w}
 </div></article><article class="theorem theorem-like" id="theorem-4"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-136">
+<div class="para logical" id="p-127">
 <div class="para">If <span class="process-math">\(\theta\)</span> is the angle between two vectors <span class="process-math">\(\vec{v}\)</span> and <span class="process-math">\(\vec{w}\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \vec{v}\cdot\vec{w} = \Vert\vec{v}\Vert \Vert\vec{w}\Vert \cos(\theta)
 \end{equation*}
 </div>
-</div></article><article class="question example-like" id="question-5"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-5"><h4 class="heading">
+</div></article><article class="question example-like" id="question-4"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-4"><h4 class="heading">
 <span class="type">Question</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-5"><article class="question example-like"><div class="para logical" id="p-137">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-4"><article class="question example-like"><div class="para logical" id="p-128">
 <div class="para">Let <span class="process-math">\(\vec{u}=\langle 3,1,2 \rangle\text{,}\)</span> <span class="process-math">\(\vec{v}=\langle -1,2,0 \rangle\text{,}\)</span> and <span class="process-math">\(\vec{w}=\langle 4,-3,-1 \rangle\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-32"><div class="para" id="p-derived-li-32"><span class="process-math">\(\displaystyle ||\vec{w}||=\)</span></div></li>
-<li id="li-33"><div class="para" id="p-derived-li-33">Find a unit vector that is in the opposite direction of <span class="process-math">\(\vec{w}\)</span>
+<li id="li-28"><div class="para" id="p-derived-li-28"><span class="process-math">\(\displaystyle ||\vec{w}||=\)</span></div></li>
+<li id="li-29"><div class="para" id="p-derived-li-29">Find a unit vector that is in the opposite direction of <span class="process-math">\(\vec{w}\)</span>
 </div></li>
-<li id="li-34"><div class="para" id="p-derived-li-34"><span class="process-math">\(\displaystyle 3\vec{u}+\vec{v}-2\vec{w}=\)</span></div></li>
-<li id="li-35"><div class="para" id="p-derived-li-35">Can you choose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> such that <span class="process-math">\(a\vec{u}+ b\vec{v}=\vec{w}\text{?}\)</span>
+<li id="li-30"><div class="para" id="p-derived-li-30"><span class="process-math">\(\displaystyle 3\vec{u}+\vec{v}-2\vec{w}=\)</span></div></li>
+<li id="li-31"><div class="para" id="p-derived-li-31">Can you choose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> such that <span class="process-math">\(a\vec{u}+ b\vec{v}=\vec{w}\text{?}\)</span>
 </div></li>
-<li id="li-36"><div class="para" id="p-derived-li-36">Does <span class="process-math">\(\vec{w} \cdot \vec{v} \cdot \vec{u}\)</span> make sense? Why or why not?</div></li>
-<li id="li-37"><div class="para" id="p-derived-li-37">What angle does <span class="process-math">\(\vec{v}\)</span> make with <span class="process-math">\(\vec{u}\text{?}\)</span>
+<li id="li-32"><div class="para" id="p-derived-li-32">Does <span class="process-math">\(\vec{w} \cdot \vec{v} \cdot \vec{u}\)</span> make sense? Why or why not?</div></li>
+<li id="li-33"><div class="para" id="p-derived-li-33">What angle does <span class="process-math">\(\vec{v}\)</span> make with <span class="process-math">\(\vec{u}\text{?}\)</span>
 </div></li>
-<li id="li-38"><div class="para" id="p-derived-li-38">What angle does <span class="process-math">\(\vec{v}\)</span> make with the <span class="process-math">\(z\)</span>-axis?</div></li>
-<li id="li-39"><div class="para" id="p-derived-li-39">How much of <span class="process-math">\(\vec{v}\)</span> is parallel to <span class="process-math">\(\vec{u}\text{?}\)</span>
+<li id="li-34"><div class="para" id="p-derived-li-34">What angle does <span class="process-math">\(\vec{v}\)</span> make with the <span class="process-math">\(z\)</span>-axis?</div></li>
+<li id="li-35"><div class="para" id="p-derived-li-35">How much of <span class="process-math">\(\vec{v}\)</span> is parallel to <span class="process-math">\(\vec{u}\text{?}\)</span>
 </div></li>
-<li id="li-40"><div class="para" id="p-derived-li-40">How much of <span class="process-math">\(\vec{u}\)</span> is parallel to <span class="process-math">\(\vec{v}\text{?}\)</span>
+<li id="li-36"><div class="para" id="p-derived-li-36">How much of <span class="process-math">\(\vec{u}\)</span> is parallel to <span class="process-math">\(\vec{v}\text{?}\)</span>
 </div></li>
-<li id="li-41"><div class="para" id="p-derived-li-41">How much of <span class="process-math">\(\vec{w}\)</span> is parallel to <span class="process-math">\(\vec{u}\text{?}\)</span>
+<li id="li-37"><div class="para" id="p-derived-li-37">How much of <span class="process-math">\(\vec{w}\)</span> is parallel to <span class="process-math">\(\vec{u}\text{?}\)</span>
 </div></li>
-<li id="li-42"><div class="para" id="p-derived-li-42">How much of <span class="process-math">\(\vec{u}\)</span> is orthogonal to <span class="process-math">\(\vec{v}\text{?}\)</span>
+<li id="li-38"><div class="para" id="p-derived-li-38">How much of <span class="process-math">\(\vec{u}\)</span> is orthogonal to <span class="process-math">\(\vec{v}\text{?}\)</span>
 </div></li>
-<li id="li-43"><div class="para" id="p-derived-li-43">Find a unit vector that is orthogonal to <span class="process-math">\(\vec{v}= \langle-1,2,5\rangle\text{.}\)</span> How many such vectors are there?</div></li>
+<li id="li-39"><div class="para" id="p-derived-li-39">Find a unit vector that is orthogonal to <span class="process-math">\(\vec{v}= \langle-1,2,5\rangle\text{.}\)</span> How many such vectors are there?</div></li>
 </ol>
-</div></article></div></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+</div></article></div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.5.2</span> <span class="title">Vector Equations</span>
 </h3>
 <article class="definition definition-like" id="definition-6"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5.6</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-138">
+<div class="para logical" id="p-129">
 <div class="para">A <dfn class="terminology">linear combination</dfn> of a set <span class="process-math">\(S\)</span> is a vector of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -387,7 +384,7 @@ proj_{\vec{w}} \vec{v} = \frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}} \vec{w}
 </div></article><article class="investigation project-like" id="q41"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-139">
+<div class="para logical" id="p-130">
 <div class="para">Prove that the system of equations given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -410,7 +407,7 @@ x_1 \begin{bmatrix}a_{11}\\a_{21}\\\vdots\\a_{m1}\end{bmatrix}+x_2 \begin{bmatri
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span>
 </h4>
 <article class="task exercise-like" id="task-50"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para logical" id="p-140">
+<div class="para logical" id="p-131">
 <div class="para">Solve the following vector equation:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -418,7 +415,7 @@ x_1 \colvec{1\\1}+x_2 \colvec{-1\\1} = \colvec{3\\-4}
 \end{equation*}
 </div>
 </div></article><article class="task exercise-like" id="task-51"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para logical" id="p-141">
+<div class="para logical" id="p-132">
 <div class="para">Give an example of a vector <span class="process-math">\(\colvec{a\\b\\c}\)</span> such that the equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -427,7 +424,7 @@ x_1\colvec{1\\1\\0}+x_2 \colvec{0\\0\\1}=\colvec{a\\b\\c}
 </div>
 <div class="para">has no solution or explain why no such vector exists.</div>
 </div></article><article class="task exercise-like" id="task-52"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para logical" id="p-142">
+<div class="para logical" id="p-133">
 <div class="para">Give an example of a vector <span class="process-math">\(\colvec{a\\b\\c}\)</span> such that the equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -436,7 +433,7 @@ x_1\colvec{1\\1\\0}+x_2 \colvec{0\\0\\1}=\colvec{a\\b\\c}
 </div>
 <div class="para">has exactly 1 solution or explain why no such vector exists.</div>
 </div></article><article class="task exercise-like" id="task-53"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para logical" id="p-143">
+<div class="para logical" id="p-134">
 <div class="para">Give an example of a vector <span class="process-math">\(\colvec{a\\b\\c}\)</span> such that the equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -445,7 +442,7 @@ x_1\colvec{1\\1\\0}+x_2 \colvec{0\\0\\1}+x_3 \colvec{1\\1\\1}=\colvec{a\\b\\c}
 </div>
 <div class="para">has exactly 1 solution or explain why no such vector exists.</div>
 </div></article><article class="task exercise-like" id="task-54"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para logical" id="p-144">
+<div class="para logical" id="p-135">
 <div class="para">Give an example of a vector <span class="process-math">\(\colvec{a\\b\\c}\)</span> such that the equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -454,7 +451,7 @@ x_1\colvec{1\\1\\0}+x_2 \colvec{0\\0\\1}+x_3 \colvec{1\\1\\1}=\colvec{a\\b\\c}
 </div>
 <div class="para">has no solutions or explain why no such vector exists.</div>
 </div></article><article class="task exercise-like" id="task-55"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para logical" id="p-145">
+<div class="para logical" id="p-136">
 <div class="para">Give an example of a vector <span class="process-math">\(\colvec{a\\b\\c}\)</span> such that the equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -466,18 +463,18 @@ x_1\colvec{1\\1\\0}+x_2 \colvec{0\\0\\1}+x_3 \colvec{a\\b\\c}=\colvec{7\\0\\-2}
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span>
 </h4>
 <article class="task exercise-like" id="task-56"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-146">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\2\\4}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{2\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{2\\-1\\1}\text{?}\)</span> Justify your answer.</div></article><article class="task exercise-like" id="task-57"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-147">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\0\\0}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{2\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{2\\-1\\1}\text{?}\)</span> Justify your answer.</div></article><article class="task exercise-like" id="task-58"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-148">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\3\\-1}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{2\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{2\\-1\\1}\text{?}\)</span> Justify your answer.</div></article><article class="task exercise-like" id="task-59"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="p-149">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\0\\4}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{1\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{-1\\1\\1}\text{?}\)</span> Justify your answer.</div></article></article><article class="activity project-like" id="activity-20"><h4 class="heading">
+<div class="para" id="p-137">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\2\\4}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{2\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{2\\-1\\1}\text{?}\)</span> Justify your answer.</div></article><article class="task exercise-like" id="task-57"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-138">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\0\\0}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{2\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{2\\-1\\1}\text{?}\)</span> Justify your answer.</div></article><article class="task exercise-like" id="task-58"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-139">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\3\\-1}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{2\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{2\\-1\\1}\text{?}\)</span> Justify your answer.</div></article><article class="task exercise-like" id="task-59"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-140">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\0\\4}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{1\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{-1\\1\\1}\text{?}\)</span> Justify your answer.</div></article></article><article class="activity project-like" id="activity-19"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="period">.</span>
 </h4>
 <article class="task exercise-like" id="task-60"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-150">Write each of the locations given by a red dot as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\text{.}\)</span>
+<div class="para" id="p-141">Write each of the locations given by a red dot as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\text{.}\)</span>
 </div>
 <figure class="figure figure-like" id="lincombplot"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/./LinearComboMesh.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article><article class="task exercise-like" id="task-61"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-151">Can you write every location in the plane of <a href="" class="xref" data-knowl="./knowl/lincombplot.html" title="Figure 1.5.7">Figure 1.5.7</a> as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\text{?}\)</span> Either explain why you can write every point as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\)</span> or give a point that cannot be written as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\text{.}\)</span>
+<div class="para" id="p-142">Can you write every location in the plane of <a href="" class="xref" data-knowl="./knowl/lincombplot.html" title="Figure 1.5.7">Figure 1.5.7</a> as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\text{?}\)</span> Either explain why you can write every point as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\)</span> or give a point that cannot be written as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\text{.}\)</span>
 </div></article></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="Geo_App.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="span.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

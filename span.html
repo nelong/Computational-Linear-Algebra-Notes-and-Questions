@@ -214,29 +214,26 @@ window.MathJax = {
 <div class="toc-item"><a href="solving_linear_systems.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Solving Linear Systems</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="solving_linear_systems.html#subsection-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Elementary Operations</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="Conunique.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Consistency and Uniqueness Theorems</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="Conunique.html#subsection-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Geometric Interpretation of a Solution Set</span></a></div></li></ul>
-</li>
+<li><div class="toc-item"><a href="Conunique.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Consistency and Uniqueness Theorems</span></a></div></li>
 <li>
 <div class="toc-item"><a href="Geo_App.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Geometric Interpretations and Applications</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="Geo_App.html#subsection-4" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Geometric Interpretation of a Solution Set</span></a></div></li>
-<li><div class="toc-item"><a href="Geo_App.html#subsection-5" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Applications and Linear Algebra</span></a></div></li>
+<li><div class="toc-item"><a href="Geo_App.html#subsection-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Geometric Interpretation of a Solution Set</span></a></div></li>
+<li><div class="toc-item"><a href="Geo_App.html#subsection-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Applications and Linear Algebra</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec_vector_eqns.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Vectors and Vector Equations</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-6" class="internal"><span class="codenumber">1.5.1</span> <span class="title">The Dot Product</span></a></div></li>
-<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-7" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Vector Equations</span></a></div></li>
+<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-5" class="internal"><span class="codenumber">1.5.1</span> <span class="title">The Dot Product</span></a></div></li>
+<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-6" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Vector Equations</span></a></div></li>
 </ul>
 </li>
 <li class="active">
 <div class="toc-item"><a href="span.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Span (both a noun and a verb)</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="span.html#subsection-8" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Span as a Noun</span></a></div></li>
-<li><div class="toc-item"><a href="span.html#subsection-9" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Span as a Verb</span></a></div></li>
+<li><div class="toc-item"><a href="span.html#subsection-7" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Span as a Noun</span></a></div></li>
+<li><div class="toc-item"><a href="span.html#subsection-8" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Span as a Verb</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -246,56 +243,56 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="span"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.6</span> <span class="title">Span (both a noun and a verb)</span>
 </h2>
-<section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.6.1</span> <span class="title">Span as a Noun</span>
 </h3>
 <article class="definition definition-like" id="definition-7"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.6.1</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-152">
+<div class="para logical" id="p-143">
 <div class="para">Let <span class="process-math">\(S\)</span> be a set of vectors, <span class="process-math">\(S=\{\vec{v}_1,\vec{v}_2,\ldots\}\text{.}\)</span> We define the <dfn class="terminology">span</dfn> of <span class="process-math">\(S\text{,}\)</span> denoted <span class="process-math">\(Span(S)\text{,}\)</span> as the set of all linear combinations of vectors from <span class="process-math">\(S\text{.}\)</span> That is,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-Span(S)=Span(\{\vec{v}_1,\vec{v}_2,\ldots\})=\sum_i c_i \vec{v}_i
+Span(S)=Span(\{\vec{v}_1,\vec{v}_2,\ldots\})=\{\vec{w}|\vec{w}=\sum_i c_i \vec{v}_i\}
 \end{equation*}
 </div>
-</div></article><article class="activity project-like" id="activity-21"><h4 class="heading">
+</div></article><article class="activity project-like" id="activity-20"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.6.1</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-153">Look back at <a href="" class="xref" data-knowl="./knowl/s1act.html" title="Activity 1.5.3">Activity 1.5.3</a> and <a href="" class="xref" data-knowl="./knowl/s2act.html" title="Activity 1.5.4">Activity 1.5.4</a> and restate each of the questions in terms of span. For instance, part 1 of <a href="" class="xref" data-knowl="./knowl/s1act.html" title="Activity 1.5.3">Activity 1.5.3</a> could be stated as "Show that <span class="process-math">\(\colvec{3\\-4}\)</span> is in the span of <span class="process-math">\(\{\colvec{1\\1}, \colvec{-1\\1}\}\text{.}\)</span>"</div></article><div class="para" id="p-154">Note that the set <span class="process-math">\(S\)</span> might not be finite but the number of vectors involved in the summation for a linear combination is finite. Also, remember to treat <span class="process-math">\(Span(S)\)</span> as a set and not a vector. Remember that the use of span in <span class="process-math">\(Span(S)\)</span> is a noun.</div>
-<div class="para logical" id="p-155">
+<div class="para" id="p-144">Look back at <a href="" class="xref" data-knowl="./knowl/s1act.html" title="Activity 1.5.3">Activity 1.5.3</a> and <a href="" class="xref" data-knowl="./knowl/s2act.html" title="Activity 1.5.4">Activity 1.5.4</a> and restate each of the questions in terms of span. For instance, part 1 of <a href="" class="xref" data-knowl="./knowl/s1act.html" title="Activity 1.5.3">Activity 1.5.3</a> could be stated as "Show that <span class="process-math">\(\colvec{3\\-4}\)</span> is in the span of <span class="process-math">\(\{\colvec{1\\1}, \colvec{-1\\1}\}\text{.}\)</span>"</div></article><div class="para" id="p-145">Note that the set <span class="process-math">\(S\)</span> might not be finite but the number of vectors involved in the summation for a linear combination is finite. Also, remember to treat <span class="process-math">\(Span(S)\)</span> as a set and not a vector. Remember that the use of span in <span class="process-math">\(Span(S)\)</span> is a noun.</div>
+<div class="para logical" id="p-146">
 <div class="para">The following are equivalent questions:</div>
 <ul class="disc">
-<li id="li-44"><div class="para" id="p-derived-li-44">Is a vector <span class="process-math">\(\vec{b}\)</span> in <span class="process-math">\(Span(S)\text{?}\)</span>
+<li id="li-40"><div class="para" id="p-derived-li-40">Is a vector <span class="process-math">\(\vec{b}\)</span> in <span class="process-math">\(Span(S)\text{?}\)</span>
 </div></li>
-<li id="li-45"><div class="para" id="p-derived-li-45">Does <span class="process-math">\(\vec{b} = \sum_i (c_1\vec{v}_i)\)</span> have a solution?</div></li>
+<li id="li-41"><div class="para" id="p-derived-li-41">Does <span class="process-math">\(\vec{b} = \sum_i (c_1\vec{v}_i)\)</span> have a solution?</div></li>
 </ul>
 <div class="para">A few other related questions are:</div>
 <ul class="disc">
-<li id="li-46"><div class="para" id="p-derived-li-46">When will there be a solution to <span class="process-math">\(\vec{b} = \sum_i (c_1\vec{v}_i)\text{?}\)</span>
+<li id="li-42"><div class="para" id="p-derived-li-42">When will there be a solution to <span class="process-math">\(\vec{b} = \sum_i (c_1\vec{v}_i)\text{?}\)</span>
 </div></li>
-<li id="li-47"><div class="para" id="p-derived-li-47">When will there be a UNIQUE solution to<span class="process-math">\(\vec{b} = \sum_i (c_1\vec{v}_i)\text{?}\)</span>
+<li id="li-43"><div class="para" id="p-derived-li-43">When will there be a UNIQUE solution to <span class="process-math">\(\vec{b} = \sum_i (c_1\vec{v}_i)\text{?}\)</span>
 </div></li>
-<li id="li-48"><div class="para" id="p-derived-li-48">How can we describe <span class="process-math">\(Span(S)\)</span> as a collection of vectors?</div></li>
+<li id="li-44"><div class="para" id="p-derived-li-44">How can we describe <span class="process-math">\(Span(S)\)</span> as a collection of vectors?</div></li>
 </ul>
-</div></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.6.2</span> <span class="title">Span as a Verb</span>
 </h3>
 <article class="definition definition-like" id="definition-8"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.6.2</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-156">A set of vectors <span class="process-math">\(\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\}\)</span> spans a vector space <span class="process-math">\(V\)</span> if <span class="process-math">\(Span(\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\})=V\text{.}\)</span> In other words, <span class="process-math">\(\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\}\)</span> spans a vector space <span class="process-math">\(V\)</span> if every vector in <span class="process-math">\(V\)</span> can be written as a linear combination from the set <span class="process-math">\(\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\} \text{.}\)</span>
-</div></article><article class="activity project-like" id="activity-22"><h4 class="heading">
+<div class="para" id="p-147">A set of vectors <span class="process-math">\(\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\}\)</span> spans a vector space <span class="process-math">\(V\)</span> if <span class="process-math">\(Span(\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\})=V\text{.}\)</span> In other words, <span class="process-math">\(\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\}\)</span> spans a vector space <span class="process-math">\(V\)</span> if every vector in <span class="process-math">\(V\)</span> can be written as a linear combination from the set <span class="process-math">\(\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_m\} \text{.}\)</span>
+</div></article><article class="activity project-like" id="activity-21"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.6.2</span><span class="period">.</span>
 </h4>
 <article class="task exercise-like" id="task-62"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-157">Does <span class="process-math">\(\{ \langle 1,2\rangle,\langle 3,6\rangle\}\)</span> span <span class="process-math">\(\mathbb{R}^2\text{?}\)</span>
+<div class="para" id="p-148">Does <span class="process-math">\(\{ \langle 1,2\rangle,\langle 3,6\rangle\}\)</span> span <span class="process-math">\(\mathbb{R}^2\text{?}\)</span>
 </div></article><article class="task exercise-like" id="task-63"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-158">Does <span class="process-math">\(\{ \langle 1,2\rangle,\langle 3,4\rangle\}\)</span> span <span class="process-math">\(\mathbb{R}^2\text{?}\)</span>
+<div class="para" id="p-149">Does <span class="process-math">\(\{ \langle 1,2\rangle,\langle 3,4\rangle\}\)</span> span <span class="process-math">\(\mathbb{R}^2\text{?}\)</span>
 </div></article><article class="task exercise-like" id="task-64"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-159">Does <span class="process-math">\(\{ \langle 1,2,3\rangle,\langle 4,5,6\rangle\}\)</span> span <span class="process-math">\(\mathbb{R}^3\text{?}\)</span>
+<div class="para" id="p-150">Does <span class="process-math">\(\{ \langle 1,2,3\rangle,\langle 4,5,6\rangle\}\)</span> span <span class="process-math">\(\mathbb{R}^3\text{?}\)</span>
 </div></article><article class="task exercise-like" id="task-65"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="p-160">Does <span class="process-math">\(\{ \langle 1,2,3\rangle,\langle 4,5,6\rangle , \langle 0,1,0\rangle\}\)</span> span <span class="process-math">\(\mathbb{R}^3\text{?}\)</span>
+<div class="para" id="p-151">Does <span class="process-math">\(\{ \langle 1,2,3\rangle,\langle 4,5,6\rangle , \langle 0,1,0\rangle\}\)</span> span <span class="process-math">\(\mathbb{R}^3\text{?}\)</span>
 </div></article></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec_vector_eqns.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
