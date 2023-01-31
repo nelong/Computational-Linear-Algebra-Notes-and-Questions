@@ -6,7 +6,7 @@
   <definition>
     <p>
       Let <m>S</m> be a set of vectors, <m>S=\{\vec{v}_1,\vec{v}_2,\ldots\}</m>. We define the <term>span</term> of <m>S</m>, denoted <m>Span(S)</m>, as the set of all linear combinations of vectors from <m>S</m>. That is,
-      <me>Span(S)=Span(\{\vec{v}_1,\vec{v}_2,\ldots\})=\sum_i c_i \vec{v}_i</me>
+      <me>Span(S)=Span(\{\vec{v}_1,\vec{v}_2,\ldots\})=\{\vec{w}|\vec{w}=\sum_i c_i \vec{v}_i\}</me>
     </p>
   </definition>
   <activity>
@@ -26,7 +26,7 @@
     A few other related questions are:
     <ul>
       <li>When will there be a solution to <m>\vec{b} = \sum_i (c_1\vec{v}_i)</m>?</li>
-      <li>When will there be a UNIQUE solution to<m>\vec{b} = \sum_i (c_1\vec{v}_i)</m>?</li>
+      <li>When will there be a UNIQUE solution to <m>\vec{b} = \sum_i (c_1\vec{v}_i)</m>?</li>
       <li>How can we describe <m>Span(S)</m> as a collection of vectors?</li>
     </ul>
   </p>
