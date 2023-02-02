@@ -8,5 +8,6 @@
   <xi:include href="C1/Geometry_Applications.ptx" />
   <xi:include href="C1/VectorMatrixEQ.ptx" />
   <xi:include href="C1/span.ptx" />
+  <xi:include href="C1/linear_independence.ptx" />
 </chapter>
 
