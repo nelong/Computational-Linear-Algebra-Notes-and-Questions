@@ -541,6 +541,60 @@ var ptx_lunr_docs = [
   "body": " Does span ?  Does span ?  Does span ?  Does span ?  "
 },
 {
+  "id": "lin_indep",
+  "level": "1",
+  "url": "lin_indep.html",
+  "type": "Section",
+  "number": "1.7",
+  "title": "Linear Independence",
+  "body": " Linear Independence  We have seen how vector equations relate to a system of equations and how to frame different questions in terms of whether it is possible to find a linear combination from a set that equals a target vector. This was the same as asking if our target vector was in the span of . When we looked at vector equations, we also looked at whether there was a unique linear combination or whether there are many ways to write a target vector as a linear combination.  In this section we will introduce the idea of linear independence and how that relates to the uniqueness of these linear combinations. Let's consider the homogeneous vector equation: Notice that this always has a solution. What is it?  Is it possible to have another solution to this equation? Let's generate a couple of examples.   Give a set of two vectors from , and , such that has more than one solution. Justify your answer.  Give a set of two vectors from , and , such that has only one solution. How do you know there is only one solution?     A set of vectors is linearly independent if the only linear combination of elements of that equals the zero vector is the trivial linear combination. In other words, being a linear independent set implies that if where , then all .  A set of vectors is linearly dependent if the set is not linearly independent. More specifically, there exists a solution to where and at least one of the .     Is the set linearly independent?    Is the set linearly independent?    Choose a vector so that the set is linearly independent, where .  Is your choice of in ? Show why or why not.   "
+},
+{
+  "id": "activity-22",
+  "level": "2",
+  "url": "lin_indep.html#activity-22",
+  "type": "Activity",
+  "number": "1.7.1",
+  "title": "",
+  "body": " Give a set of two vectors from , and , such that has more than one solution. Justify your answer.  Give a set of two vectors from , and , such that has only one solution. How do you know there is only one solution?  "
+},
+{
+  "id": "definition-9",
+  "level": "2",
+  "url": "lin_indep.html#definition-9",
+  "type": "Definition",
+  "number": "1.7.1",
+  "title": "",
+  "body": "  A set of vectors is linearly independent if the only linear combination of elements of that equals the zero vector is the trivial linear combination. In other words, being a linear independent set implies that if where , then all .  A set of vectors is linearly dependent if the set is not linearly independent. More specifically, there exists a solution to where and at least one of the .   "
+},
+{
+  "id": "investigation-5",
+  "level": "2",
+  "url": "lin_indep.html#investigation-5",
+  "type": "Investigation",
+  "number": "1.7.2",
+  "title": "",
+  "body": " Is the set linearly independent?   "
+},
+{
+  "id": "investigation-6",
+  "level": "2",
+  "url": "lin_indep.html#investigation-6",
+  "type": "Investigation",
+  "number": "1.7.3",
+  "title": "",
+  "body": "Is the set linearly independent?   "
+},
+{
+  "id": "investigation-7",
+  "level": "2",
+  "url": "lin_indep.html#investigation-7",
+  "type": "Investigation",
+  "number": "1.7.4",
+  "title": "",
+  "body": "Choose a vector so that the set is linearly independent, where .  Is your choice of in ? Show why or why not.  "
+},
+{
   "id": "colophon-2",
   "level": "1",
   "url": "colophon-2.html",

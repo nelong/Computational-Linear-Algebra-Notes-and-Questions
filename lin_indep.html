@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Front Matter</title>
+<title>Linear Independence</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -190,7 +190,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="my-great-book.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="colophon-1.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="span.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand\colvec[1]{\begin{bmatrix}#1\end{bmatrix}}
@@ -202,7 +202,7 @@ window.MathJax = {
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
-<li class="active"><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li>
 <div class="toc-item"><a href="C1.html" class="internal"><span class="codenumber">1</span> <span class="title">Solving Linear Systems</span></a></div>
 <ul class="structural">
@@ -236,22 +236,53 @@ window.MathJax = {
 <li><div class="toc-item"><a href="span.html#subsection-8" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Span as a Verb</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="lin_indep.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Linear Independence</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="lin_indep.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Linear Independence</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="frontmatter" id="frontmatter"><h2 class="heading">
-<span class="title">Computational Linear Algebra:</span> <span class="subtitle">Notes and Questions for MATH 3325</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="lin_indep"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.7</span> <span class="title">Linear Independence</span>
 </h2>
-<div class="author">
-<div class="author-name">Nicholas Long</div>
-<div class="author-info">Department of Mathematics and Statistics<br>Stephen F. Austin State University</div>
+<div class="para" id="p-152">We have seen how vector equations relate to a system of equations and how to frame different questions in terms of whether it is possible to find a linear combination from a set <span class="process-math">\(S\)</span> that equals a target vector. This was the same as asking if our target vector was in the span of <span class="process-math">\(S\text{.}\)</span> When we looked at vector equations, we also looked at whether there was a unique linear combination or whether there are many ways to write a target vector as a linear combination.</div>
+<div class="para logical" id="p-153">
+<div class="para">In this section we will introduce the idea of linear independence and how that relates to the uniqueness of these linear combinations. Let's consider the homogeneous vector equation:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_1 \vec{v}_1 +c_2 \vec{v}_2 + \ldots + c_n \vec{v}_n =\vec{0}
+\end{equation*}
 </div>
-<div class="date">February 1, 2023</div>
-<nav class="summary-links"><ul><li><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></li></ul></nav></section></div>
+<div class="para">Notice that this <em class="alert">always</em> has a solution. What is it?</div>
+</div>
+<div class="para" id="p-154">Is it possible to have another solution to this equation? Let's generate a couple of examples.</div>
+<article class="activity project-like" id="activity-22"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.7.1</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="task-66"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-155">Give a set of two vectors from <span class="process-math">\(\mathbb{R}^3\text{,}\)</span> <span class="process-math">\(\vec{v}_1\)</span> and <span class="process-math">\(\vec{v}_2\text{,}\)</span> such that <span class="process-math">\(c_1 \vec{v}_1 +c_2 \vec{v}_2  =\vec{0}\)</span> has more than one solution. Justify your answer.</div></article><article class="task exercise-like" id="task-67"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-156">Give a set of two vectors from <span class="process-math">\(\mathbb{R}^3\text{,}\)</span> <span class="process-math">\(\vec{v}_1\)</span> and <span class="process-math">\(\vec{v}_2\text{,}\)</span> such that <span class="process-math">\(c_1 \vec{v}_1 +c_2 \vec{v}_2  =\vec{0}\)</span> has only one solution. How do you know there is only one solution?</div></article></article><article class="definition definition-like" id="definition-9"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.7.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-157">A set of vectors <span class="process-math">\(S\)</span> is <dfn class="terminology">linearly independent</dfn> if the only linear combination of elements of <span class="process-math">\(S\)</span> that equals the zero vector is the trivial linear combination. In other words, <span class="process-math">\(S\)</span> being a linear independent set implies that if <span class="process-math">\(c_1\vec{v_1}+c_2\vec{v_2}+...+c_k \vec{v_k}=\vec{0}\)</span> where <span class="process-math">\(\vec{v_i} \in S\text{,}\)</span> then all <span class="process-math">\(c_i=0\text{.}\)</span>
+</div> <div class="para" id="p-158">A set of vectors <span class="process-math">\(S\)</span> is <dfn class="terminology">linearly dependent</dfn> if the set is not linearly independent. More specifically, there exists a solution to <span class="process-math">\(c_1\vec{v_1}+c_2\vec{v_2}+...+c_k \vec{v_k}=\vec{0}\)</span> where <span class="process-math">\(\vec{v_i} \in S\)</span> and at least one of the <span class="process-math">\(c_j \neq 0\text{.}\)</span>
+</div></article><article class="investigation project-like" id="investigation-5"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.7.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-159">Is the set <span class="process-math">\(\left\{ \colvec{1\\ -3\\ 2} \right\}\)</span> linearly independent?</div></article><article class="investigation project-like" id="investigation-6"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.7.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-160">Is the set <span class="process-math">\(\left\{\colvec{2\\ 3\\ 0},
+\colvec{-1\\ -1\\ 2} \right\}\)</span> linearly independent?</div></article><article class="investigation project-like" id="investigation-7"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.7.4</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="task-68"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-161">Choose a vector <span class="process-math">\(\vec{v}\)</span> so that the set <span class="process-math">\(\left\{ \colvec{2\\
+3\\ 0}, \colvec{-1\\ -1\\ 2} , \vec{v}  \right\} \)</span> is linearly independent, where <span class="process-math">\(\vec{v} \in \mathbb{R}^3\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-69"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-162">Is your choice of <span class="process-math">\(\vec{v}\)</span> in <span class="process-math">\(Span \left( \left\{
+\colvec{2\\ 3\\ 0}, \colvec{-1\\ -1\\ 2} \right\} \right)\text{?}\)</span> Show why or why not.</div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="my-great-book.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="colophon-1.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="span.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div class="ptx-page-footer">
