@@ -37,27 +37,33 @@
 </definition>
 
 <investigation>
-  <statement><p> Is the set <m>\left\{ \colvec{1\\ -3\\ 2} \right\}</m> linearly independent?
-</p>
-</statement>
+  <statement>
+    <p>
+      Is the set <m>\left\{ \colvec{1\\ -3\\ 2} \right\}</m> linearly independent?
+    </p>
+  </statement>
 </investigation>
 
 
-<investigation><statement><p> Is the set <m>\left\{\colvec{2\\ 3\\ 0},
-\colvec{-1\\ -1\\ 2} \right\}</m> linearly independent?
-</p>
-</statement>
+<investigation>
+  <statement>
+    <p>
+      Is the set <m>\left\{\colvec{2\\ 3\\ 0}, \colvec{-1\\ -1\\ 2} \right\}</m> linearly independent?
+    </p>
+  </statement>
 </investigation>
 
-<investigation><task><p>
-Choose a vector <m>\vec{v}</m> so that the set <m>\left\{ \colvec{2\\
-3\\ 0}, \colvec{-1\\ -1\\ 2} , \vec{v}  \right\} </m> is linearly
-independent, where <m>\vec{v} \in \mathbb{R}^3</m>.</p>
-</task>
-<task><p>Is your choice of <m>\vec{v}</m> in <m> Span \left( \left\{
-\colvec{2\\ 3\\ 0}, \colvec{-1\\ -1\\ 2} \right\} \right)</m>? Show
-why or why not.</p>
-</task>
+<investigation>
+  <task>
+    <p>
+      Choose a vector <m>\vec{v}</m> so that the set <m>\left\{ \colvec{2\\ 3\\ 0}, \colvec{-1\\ -1\\ 2} , \vec{v}  \right\} </m> is linearly independent, where <m>\vec{v} \in \mathbb{R}^3</m>.
+    </p>
+  </task>
+  <task>
+    <p>
+      Is your choice of <m>\vec{v}</m> in <m> Span \left( \left\{ \colvec{2\\ 3\\ 0}, \colvec{-1\\ -1\\ 2} \right\} \right)</m>? Show why or why not.
+    </p>
+  </task>
 </investigation>
 </section>
 

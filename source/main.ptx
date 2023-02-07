@@ -27,8 +27,6 @@
 
       <colophon>
 
-        
-
         <copyright>
           <year>2022<ndash />2023</year>
           <holder>Nicholas Long</holder>
@@ -40,6 +38,7 @@
     </frontmatter>
 
     <xi:include href="./C1.ptx" />
+    <xi:include href="./C2.ptx" />
 
     <backmatter xml:id="backmatter">
       <title>Backmatter</title>
