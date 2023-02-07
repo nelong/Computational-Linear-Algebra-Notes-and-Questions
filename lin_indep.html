@@ -190,7 +190,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="span.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="span.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="C2.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand\colvec[1]{\begin{bmatrix}#1\end{bmatrix}}
@@ -239,6 +239,26 @@ window.MathJax = {
 <li class="active"><div class="toc-item"><a href="lin_indep.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Linear Independence</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="C2.html" class="internal"><span class="codenumber">2</span> <span class="title">Matrices</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="MatrixProdEq.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Matrix Products and Equations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="MatrixProdEq.html#subsection-9" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Matrix-Vector Products</span></a></div></li>
+<li><div class="toc-item"><a href="MatrixProdEq.html#subsection-10" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Matrix Equation</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_matrix_ops.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Matrix Operations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_matrix_ops.html#subsection-11" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Addition and Transposition</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix_ops.html#subsection-12" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Special Types of Matrices</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix_ops.html#subsection-13" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Matrix Multiplication</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="lin_indep"><h2 class="heading hide-type">
@@ -271,18 +291,15 @@ c_1 \vec{v}_1 +c_2 \vec{v}_2 + \ldots + c_n \vec{v}_n =\vec{0}
 <div class="para" id="p-159">Is the set <span class="process-math">\(\left\{ \colvec{1\\ -3\\ 2} \right\}\)</span> linearly independent?</div></article><article class="investigation project-like" id="investigation-6"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.7.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-160">Is the set <span class="process-math">\(\left\{\colvec{2\\ 3\\ 0},
-\colvec{-1\\ -1\\ 2} \right\}\)</span> linearly independent?</div></article><article class="investigation project-like" id="investigation-7"><h3 class="heading">
+<div class="para" id="p-160">Is the set <span class="process-math">\(\left\{\colvec{2\\ 3\\ 0}, \colvec{-1\\ -1\\ 2} \right\}\)</span> linearly independent?</div></article><article class="investigation project-like" id="investigation-7"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.7.4</span><span class="period">.</span>
 </h3>
 <article class="task exercise-like" id="task-68"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-161">Choose a vector <span class="process-math">\(\vec{v}\)</span> so that the set <span class="process-math">\(\left\{ \colvec{2\\
-3\\ 0}, \colvec{-1\\ -1\\ 2} , \vec{v}  \right\} \)</span> is linearly independent, where <span class="process-math">\(\vec{v} \in \mathbb{R}^3\text{.}\)</span>
+<div class="para" id="p-161">Choose a vector <span class="process-math">\(\vec{v}\)</span> so that the set <span class="process-math">\(\left\{ \colvec{2\\ 3\\ 0}, \colvec{-1\\ -1\\ 2} , \vec{v}  \right\} \)</span> is linearly independent, where <span class="process-math">\(\vec{v} \in \mathbb{R}^3\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-69"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-162">Is your choice of <span class="process-math">\(\vec{v}\)</span> in <span class="process-math">\(Span \left( \left\{
-\colvec{2\\ 3\\ 0}, \colvec{-1\\ -1\\ 2} \right\} \right)\text{?}\)</span> Show why or why not.</div></article></article></section></div>
+<div class="para" id="p-162">Is your choice of <span class="process-math">\(\vec{v}\)</span> in <span class="process-math">\(Span \left( \left\{ \colvec{2\\ 3\\ 0}, \colvec{-1\\ -1\\ 2} \right\} \right)\text{?}\)</span> Show why or why not.</div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="span.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="span.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="C2.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div class="ptx-page-footer">

@@ -547,7 +547,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.7",
   "title": "Linear Independence",
-  "body": " Linear Independence  We have seen how vector equations relate to a system of equations and how to frame different questions in terms of whether it is possible to find a linear combination from a set that equals a target vector. This was the same as asking if our target vector was in the span of . When we looked at vector equations, we also looked at whether there was a unique linear combination or whether there are many ways to write a target vector as a linear combination.  In this section we will introduce the idea of linear independence and how that relates to the uniqueness of these linear combinations. Let's consider the homogeneous vector equation: Notice that this always has a solution. What is it?  Is it possible to have another solution to this equation? Let's generate a couple of examples.   Give a set of two vectors from , and , such that has more than one solution. Justify your answer.  Give a set of two vectors from , and , such that has only one solution. How do you know there is only one solution?     A set of vectors is linearly independent if the only linear combination of elements of that equals the zero vector is the trivial linear combination. In other words, being a linear independent set implies that if where , then all .  A set of vectors is linearly dependent if the set is not linearly independent. More specifically, there exists a solution to where and at least one of the .     Is the set linearly independent?    Is the set linearly independent?    Choose a vector so that the set is linearly independent, where .  Is your choice of in ? Show why or why not.   "
+  "body": " Linear Independence  We have seen how vector equations relate to a system of equations and how to frame different questions in terms of whether it is possible to find a linear combination from a set that equals a target vector. This was the same as asking if our target vector was in the span of . When we looked at vector equations, we also looked at whether there was a unique linear combination or whether there are many ways to write a target vector as a linear combination.  In this section we will introduce the idea of linear independence and how that relates to the uniqueness of these linear combinations. Let's consider the homogeneous vector equation: Notice that this always has a solution. What is it?  Is it possible to have another solution to this equation? Let's generate a couple of examples.   Give a set of two vectors from , and , such that has more than one solution. Justify your answer.  Give a set of two vectors from , and , such that has only one solution. How do you know there is only one solution?     A set of vectors is linearly independent if the only linear combination of elements of that equals the zero vector is the trivial linear combination. In other words, being a linear independent set implies that if where , then all .  A set of vectors is linearly dependent if the set is not linearly independent. More specifically, there exists a solution to where and at least one of the .      Is the set linearly independent?      Is the set linearly independent?     Choose a vector so that the set is linearly independent, where .  Is your choice of in ? Show why or why not.   "
 },
 {
   "id": "activity-22",
@@ -574,7 +574,7 @@ var ptx_lunr_docs = [
   "type": "Investigation",
   "number": "1.7.2",
   "title": "",
-  "body": " Is the set linearly independent?   "
+  "body": "  Is the set linearly independent?   "
 },
 {
   "id": "investigation-6",
@@ -583,7 +583,7 @@ var ptx_lunr_docs = [
   "type": "Investigation",
   "number": "1.7.3",
   "title": "",
-  "body": "Is the set linearly independent?   "
+  "body": "  Is the set linearly independent?   "
 },
 {
   "id": "investigation-7",
@@ -592,7 +592,358 @@ var ptx_lunr_docs = [
   "type": "Investigation",
   "number": "1.7.4",
   "title": "",
-  "body": "Choose a vector so that the set is linearly independent, where .  Is your choice of in ? Show why or why not.  "
+  "body": " Choose a vector so that the set is linearly independent, where .  Is your choice of in ? Show why or why not.  "
+},
+{
+  "id": "MatrixProdEq",
+  "level": "1",
+  "url": "MatrixProdEq.html",
+  "type": "Section",
+  "number": "2.1",
+  "title": "Matrix Products and Equations",
+  "body": " Matrix Products and Equations   Matrix-Vector Products    We define a matrix-vector product as follows: If is a by matrix, and , then the matrix-vector product is given by  .     If is a by matrix, then for what value of ?   It should not surprise you that you can multiply a scalar multiple of a vector by a matrix by factoring out the scalar. In mathematical notation, . Additionally, you can apply the scalar multiplication to the matrix. In other words, . These kind of manipulations will be discussed more when we work with matrix operations later, but you may find these facts useful in your work right now. You should take time to write out the details of any of these arithmetic ideas that you think would be useful in your work.   Let Find    The matrix can be seen from a column vector form as which means that we can think of the product of and as .    Write out the -th component of the resulting vector of the product       How can you express the result of the matrix-vector product in terms of and the rows of ?   The -th component of the matrix-vector product is the dot product of row of with .    How can you express the result of the matrix-vector product in terms of and the columns of ?   One way to view this is as a linear combination of the columns of with the coefficient on the -th column of being .      The Matrix Equation  Based on the above definition of the matrix vector product, if and , then by , has the same solution set as the system     Write each of the following as a matrix equation, a vector equation, and system of equations. You need to write out the exact corresponding vector equation, matrix equation, and system of equations, not some equivalent form.            matrix equation as linear transformation of a vector space. function idea of LT range onto one to one  "
+},
+{
+  "id": "definition-10",
+  "level": "2",
+  "url": "MatrixProdEq.html#definition-10",
+  "type": "Definition",
+  "number": "2.1.1",
+  "title": "",
+  "body": "  We define a matrix-vector product as follows: If is a by matrix, and , then the matrix-vector product is given by  .   "
+},
+{
+  "id": "investigation-8",
+  "level": "2",
+  "url": "MatrixProdEq.html#investigation-8",
+  "type": "Investigation",
+  "number": "2.1.1",
+  "title": "",
+  "body": " If is a by matrix, then for what value of ?  "
+},
+{
+  "id": "activity-23",
+  "level": "2",
+  "url": "MatrixProdEq.html#activity-23",
+  "type": "Activity",
+  "number": "2.1.2",
+  "title": "",
+  "body": " Let Find   "
+},
+{
+  "id": "investigation-9",
+  "level": "2",
+  "url": "MatrixProdEq.html#investigation-9",
+  "type": "Investigation",
+  "number": "2.1.3",
+  "title": "",
+  "body": "  Write out the -th component of the resulting vector of the product       How can you express the result of the matrix-vector product in terms of and the rows of ?   The -th component of the matrix-vector product is the dot product of row of with .    How can you express the result of the matrix-vector product in terms of and the columns of ?   One way to view this is as a linear combination of the columns of with the coefficient on the -th column of being .   "
+},
+{
+  "id": "investigation-10",
+  "level": "2",
+  "url": "MatrixProdEq.html#investigation-10",
+  "type": "Investigation",
+  "number": "2.1.4",
+  "title": "",
+  "body": "  Write each of the following as a matrix equation, a vector equation, and system of equations. You need to write out the exact corresponding vector equation, matrix equation, and system of equations, not some equivalent form.            "
+},
+{
+  "id": "sec_matrix_ops",
+  "level": "1",
+  "url": "sec_matrix_ops.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Matrix Operations",
+  "body": " Matrix Operations   Addition and Transposition    Finish the following sentences.    Vectors are equal if…    Matrices are equal if…    A scalar is…    Just as you can add two vectors in componentwise, you can add two matrices entry-wise. For this reason, it only makes sense to add two matrices if they are the same size. You can also define scalar multiplication of a matrix entry-wise.   Let , , and .   Is a scalar multiple of ? Why or why not?        Symbolically, and     Let be a by matrix. The transpose of , denoted , is a by matrix such that .    There are a couple of ways to think about the transpose. First, you can think about flipping the matrix across the main diagonal (the elements of the form ). You can also view the transpose of a matrix as switching the rows and columns (but preserving the order). In other words, the -th row of is the -th column of .   Let and                Let , , and .      If and are by matrices, then .    What dimensions should have in order to be able to add to ?   For all matrices , .   A matrix is symmetric if .  The sum of two symmetric by matrices is symmetric.   If is a symmetric matrix, then is symmetric.    Special Types of Matrices  A square matrix is a matrix that has the same number of rows and columns. A by matrix is said to be upper triangular if whenever . Similarly, a matrix is lower triangular if whenever . We usually consider square matrices when we talk about upper or lower triangular, but it may be helpful to consider non-square cases.  Give an example of a matrix that is upper triangular but is not in echelon form. If one does not exist, explain why.   Give an example of a matrix that is in echelon form but is not upper triangular. If one does not exist, explain why.   Can a matrix be upper and lower triangular? Either give an example or explain why there cannot exist one.   Diagonal matrices are matrices whose only nonzero entries are on the diagonal. Specifically, a matrix is diagonal if whenever .  Give an example of a matrix that is diagonal but not in echelon form.   The by  identity matrix , denoted , is the unique matrix such that for every . In fact the entries of are easily computed in terms of the Dirac delta function. Specifically , where   Write out and use it to prove that for any the product of and will always be .   Superstar Bonus Question Prove that is the only matrix that has the property from the problem above.     Matrix Multiplication  Earlier we saw how to multiply a by matrix by a vector from . We will discuss how to define matrix multiplication with multiple interpretations.  Let be an by matrix and let and be vectors from . Earlier we defined what and meant. If we build a by matrix using and as the columns, then we can define , read as times , to be The above definition is just distributing our matrix-vector product across the columns of . In a similar fashion, given any by matrix where is the -th column of , we can define In particular, this means that if makes sense, then we can calculate just the -th column of without calculating all of . Namely, the -th column of is , which is written symbolically as .  Formally, we can define the product of a by matrix with a by matrix to be the by matrix such that  This formula looks difficult, but what it really tells us is that the entry of is really the dot product of the -th row of with the -th column of . Remember the dot product of and is just the sum of the products of the components. Namely, This idea lets us calculate the matrix product one entry at a time. Continuing this idea will lead us to see that the -th row of the product can be calculated as .  Note that in general , even when both products make sense.  What sizes of matrices can you add to a by matrix?  What sizes of matrices can you multiply on the right of a by matrix?  What sizes of matrices can you multiply on the left of a by matrix?  If , when does it make sense to multiply by ?   Let and .   What is the size of ?  Compute just the first column of .  Write the first column of as a linear combination of the columns of A. Be sure to check your work.  Solve the matrix equation  Compute just the second row of   Let and         Let and . Compute and .   Let and . Compute and .   You can approach proving the following theorem by showing matrix equality entry-wise or column-wise or row-wise.  For all matrices , , and such that the addition and multiplication of matrices below makes sense, .   Give 2 different examples of 3 by 3 matrices and such that .   Give 2 different examples of 3 by 3 matrices and such that .   For all matrices such that is defined, .    "
+},
+{
+  "id": "investigation-11",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-11",
+  "type": "Investigation",
+  "number": "2.2.1",
+  "title": "",
+  "body": "  Finish the following sentences.    Vectors are equal if…    Matrices are equal if…    A scalar is…   "
+},
+{
+  "id": "investigation-12",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-12",
+  "type": "Investigation",
+  "number": "2.2.2",
+  "title": "",
+  "body": " Let , , and .   Is a scalar multiple of ? Why or why not?      "
+},
+{
+  "id": "investigation-13",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-13",
+  "type": "Investigation",
+  "number": "2.2.3",
+  "title": "",
+  "body": " Symbolically, and  "
+},
+{
+  "id": "definition-11",
+  "level": "2",
+  "url": "sec_matrix_ops.html#definition-11",
+  "type": "Definition",
+  "number": "2.2.1",
+  "title": "",
+  "body": "  Let be a by matrix. The transpose of , denoted , is a by matrix such that .   "
+},
+{
+  "id": "investigation-14",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-14",
+  "type": "Investigation",
+  "number": "2.2.4",
+  "title": "",
+  "body": " Let and               "
+},
+{
+  "id": "investigation-15",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-15",
+  "type": "Investigation",
+  "number": "2.2.5",
+  "title": "",
+  "body": "Let , , and .     "
+},
+{
+  "id": "theorem-5",
+  "level": "2",
+  "url": "sec_matrix_ops.html#theorem-5",
+  "type": "Theorem",
+  "number": "2.2.2",
+  "title": "",
+  "body": "If and are by matrices, then .  "
+},
+{
+  "id": "investigation-16",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-16",
+  "type": "Investigation",
+  "number": "2.2.6",
+  "title": "",
+  "body": " What dimensions should have in order to be able to add to ?  "
+},
+{
+  "id": "theorem-6",
+  "level": "2",
+  "url": "sec_matrix_ops.html#theorem-6",
+  "type": "Theorem",
+  "number": "2.2.3",
+  "title": "",
+  "body": "For all matrices , .  "
+},
+{
+  "id": "p-203",
+  "level": "2",
+  "url": "sec_matrix_ops.html#p-203",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "symmetric "
+},
+{
+  "id": "theorem-7",
+  "level": "2",
+  "url": "sec_matrix_ops.html#theorem-7",
+  "type": "Theorem",
+  "number": "2.2.4",
+  "title": "",
+  "body": "The sum of two symmetric by matrices is symmetric.  "
+},
+{
+  "id": "theorem-8",
+  "level": "2",
+  "url": "sec_matrix_ops.html#theorem-8",
+  "type": "Theorem",
+  "number": "2.2.5",
+  "title": "",
+  "body": "If is a symmetric matrix, then is symmetric. "
+},
+{
+  "id": "p-206",
+  "level": "2",
+  "url": "sec_matrix_ops.html#p-206",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "square upper triangular lower triangular "
+},
+{
+  "id": "investigation-17",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-17",
+  "type": "Investigation",
+  "number": "2.2.7",
+  "title": "",
+  "body": "Give an example of a matrix that is upper triangular but is not in echelon form. If one does not exist, explain why.  "
+},
+{
+  "id": "investigation-18",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-18",
+  "type": "Investigation",
+  "number": "2.2.8",
+  "title": "",
+  "body": "Give an example of a matrix that is in echelon form but is not upper triangular. If one does not exist, explain why.  "
+},
+{
+  "id": "investigation-19",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-19",
+  "type": "Investigation",
+  "number": "2.2.9",
+  "title": "",
+  "body": "Can a matrix be upper and lower triangular? Either give an example or explain why there cannot exist one.  "
+},
+{
+  "id": "p-210",
+  "level": "2",
+  "url": "sec_matrix_ops.html#p-210",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Diagonal "
+},
+{
+  "id": "investigation-20",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-20",
+  "type": "Investigation",
+  "number": "2.2.10",
+  "title": "",
+  "body": "Give an example of a matrix that is diagonal but not in echelon form.  "
+},
+{
+  "id": "p-212",
+  "level": "2",
+  "url": "sec_matrix_ops.html#p-212",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "identity matrix "
+},
+{
+  "id": "investigation-21",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-21",
+  "type": "Investigation",
+  "number": "2.2.11",
+  "title": "",
+  "body": "Write out and use it to prove that for any the product of and will always be .  "
+},
+{
+  "id": "investigation-22",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-22",
+  "type": "Investigation",
+  "number": "2.2.12",
+  "title": "Superstar Bonus Question.",
+  "body": "Superstar Bonus Question Prove that is the only matrix that has the property from the problem above.  "
+},
+{
+  "id": "p-218",
+  "level": "2",
+  "url": "sec_matrix_ops.html#p-218",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "dot product "
+},
+{
+  "id": "investigation-23",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-23",
+  "type": "Investigation",
+  "number": "2.2.13",
+  "title": "",
+  "body": "What sizes of matrices can you add to a by matrix?  What sizes of matrices can you multiply on the right of a by matrix?  What sizes of matrices can you multiply on the left of a by matrix? "
+},
+{
+  "id": "investigation-24",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-24",
+  "type": "Investigation",
+  "number": "2.2.14",
+  "title": "",
+  "body": "If , when does it make sense to multiply by ?  "
+},
+{
+  "id": "investigation-25",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-25",
+  "type": "Investigation",
+  "number": "2.2.15",
+  "title": "",
+  "body": "Let and .   What is the size of ?  Compute just the first column of .  Write the first column of as a linear combination of the columns of A. Be sure to check your work.  Solve the matrix equation  Compute just the second row of  "
+},
+{
+  "id": "investigation-26",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-26",
+  "type": "Investigation",
+  "number": "2.2.16",
+  "title": "",
+  "body": "Let and        "
+},
+{
+  "id": "investigation-27",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-27",
+  "type": "Investigation",
+  "number": "2.2.17",
+  "title": "",
+  "body": "Let and . Compute and .  "
+},
+{
+  "id": "investigation-28",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-28",
+  "type": "Investigation",
+  "number": "2.2.18",
+  "title": "",
+  "body": "Let and . Compute and .  "
+},
+{
+  "id": "theorem-9",
+  "level": "2",
+  "url": "sec_matrix_ops.html#theorem-9",
+  "type": "Theorem",
+  "number": "2.2.6",
+  "title": "",
+  "body": "For all matrices , , and such that the addition and multiplication of matrices below makes sense, .  "
+},
+{
+  "id": "investigation-29",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-29",
+  "type": "Investigation",
+  "number": "2.2.19",
+  "title": "",
+  "body": "Give 2 different examples of 3 by 3 matrices and such that .  "
+},
+{
+  "id": "investigation-30",
+  "level": "2",
+  "url": "sec_matrix_ops.html#investigation-30",
+  "type": "Investigation",
+  "number": "2.2.20",
+  "title": "",
+  "body": "Give 2 different examples of 3 by 3 matrices and such that . "
+},
+{
+  "id": "theorem-10",
+  "level": "2",
+  "url": "sec_matrix_ops.html#theorem-10",
+  "type": "Theorem",
+  "number": "2.2.7",
+  "title": "",
+  "body": " For all matrices such that is defined, .  "
 },
 {
   "id": "colophon-2",
