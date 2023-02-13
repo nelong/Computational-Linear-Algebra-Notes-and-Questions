@@ -31,43 +31,54 @@
   </p>
 
   <investigation><introduction>
-    <p>Let <m>A=\begin{bmatrix} 3\amp -1\amp 0 \\2\amp 0\amp -7 \\ 4\amp 2\amp 6 \end{bmatrix}</m>,
-    <m>B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \\ 4\amp 2\amp 6 \end{bmatrix}</m>, and
-    <m>C=\begin{bmatrix} 1\amp 0\amp 0 \\0\amp 1\amp 0\\1\amp 1\amp 1 \end{bmatrix}</m>.
+    <p>
+      Let <m>A=\begin{bmatrix} 3\amp -1\amp 0 \\2\amp 0\amp -7 \\ 4\amp 2\amp 6 \end{bmatrix}</m>, <m>B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \\ 4\amp 2\amp 6 \end{bmatrix}</m>, and <m>C=\begin{bmatrix} 1\amp 0\amp 0 \\0\amp 1\amp 0\\1\amp 1\amp 1 \end{bmatrix}</m>.
     </p>
   </introduction>
   <task>
     <p>Is <m>B</m> a scalar multiple of <m>A</m>? Why or why not?</p>
   </task>
   <task>
-    <p><m>2A-3C=</m></p>
+    <p>
+      <m>2A-3C=</m>
+    </p>
   </task>
   <task>
-    <p><m>-(A+C)+2B=</m></p>
+    <p>
+      <m>-(A+C)+2B=</m>
+    </p>
   </task>
   <task>
-    <p><m>(84A+16B-12C)_{2,1}=</m>
+    <p>
+      <m>(84A+16B-12C)_{2,1}=</m>
     </p>
   </task>
   </investigation>
-  <investigation><statement>
-    <p>Symbolically, <m>(A+B)_{i,j}=<fillin characters="10" /></m> and
-    <m>(k A)_{i,j}=<fillin characters="10" /></m></p>
-  </statement></investigation>
+  <investigation>
+    <statement>
+      <p>
+        Symbolically, <m>(A+B)_{i,j}=<fillin characters="10" /></m> and <m>(k A)_{i,j}=<fillin characters="10" /></m>
+      </p>
+    </statement>
+  </investigation>
   <definition>
     <statement>
-      <p>Let <m>A</m> be a <m>m</m> by <m>n</m> matrix. The transpose of <m>A</m>, denoted
-      <m>A^T</m>, is a <m>n</m> by <m>m</m> matrix such that <m>(A^T)_{ij}= (A)_{ji}</m>.
+      <p>
+        Let <m>A</m> be a <m>m</m> by <m>n</m> matrix. The transpose of <m>A</m>, denoted <m>A^T</m>, is a <m>n</m> by <m>m</m> matrix such that <m>(A^T)_{ij}= (A)_{ji}</m>.
       </p>
     </statement>
   </definition>
 
-<p>There are a couple of ways to think about the transpose. First, you can think about flipping the matrix across the main diagonal (the elements of the form <m>A_{i,i}</m>). You can also view the transpose of a matrix as switching the rows and columns (but preserving the order). In other words, the <m>i</m>-th row of <m>A^T</m> is the <m>i</m>-th column of <m>A</m>.</p>
+<p>
+  There are a couple of ways to think about the transpose. First, you can think about flipping the matrix across the main diagonal (the elements of the form <m>A_{i,i}</m>). You can also view the transpose of a matrix as switching the rows and columns (but preserving the order). In other words, the <m>i</m>-th row of <m>A^T</m> is the <m>i</m>-th column of <m>A</m>.
+</p>
 
-<investigation><introduction>
-  <p>Let <m>A=\begin{bmatrix} 3\amp -1 \\2\amp 0 \\ 4\amp 2 \end{bmatrix}</m> and
-  <m>B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \end{bmatrix}</m></p>
-</introduction>
+<investigation>
+  <introduction>
+    <p>
+      Let <m>A=\begin{bmatrix} 3\amp -1 \\2\amp 0 \\ 4\amp 2 \end{bmatrix}</m> and <m>B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \end{bmatrix}</m>
+    </p>
+  </introduction>
 <task>
   <p>
     <m>A^T=</m>
@@ -90,148 +101,303 @@
 </task>
 </investigation>
 
-<investigation><introduction><p> Let <m>A=\begin{bmatrix} 3\amp -1\amp 0 \\2\amp 0\amp -7
-\\ 4\amp 2\amp 6 \end{bmatrix}</m>, <m>B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \\ 4\amp 2\amp 6
-\end{bmatrix}</m>, and <m>C=\begin{bmatrix} 1\amp 0\amp 0 \\0\amp 1\amp 0\\1\amp 1\amp 1
-\end{bmatrix}</m>.</p>
-</introduction>
-<task><p><m>A+B^T=</m></p></task>
-<task><p><m>((C-B)^T+A)^T=</m></p></task>
+<investigation>
+  <introduction>
+    <p>
+      Let <m>A=\begin{bmatrix} 3\amp -1\amp 0 \\2\amp 0\amp -7 \\ 4\amp 2\amp 6 \end{bmatrix}</m>, <m>B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \\ 4\amp 2\amp 6 \end{bmatrix}</m>, and <m>C=\begin{bmatrix} 1\amp 0\amp 0 \\0\amp 1\amp 0\\1\amp 1\amp 1 \end{bmatrix}</m>.
+    </p>
+  </introduction>
+  <task>
+    <p>
+      <m>A+B^T=</m>
+    </p>
+  </task>
+  <task>
+    <p>
+      <m>((C-B)^T+A)^T=</m>
+    </p>
+  </task>
 </investigation>
 
-<theorem><statement><p>If <m>A</m> and <m>B</m> are <m>m</m> by <m>n</m> matrices, then <m>(A+B)^T=A^T+B^T</m>.</p>
-</statement></theorem>
+<theorem>
+  <statement>
+    <p>
+      If <m>A</m> and <m>B</m> are <m>m</m> by <m>n</m> matrices, then <m>(A+B)^T=A^T+B^T</m>.
+    </p>
+  </statement>
+</theorem>
 
-<investigation><statement>
-  <p>What dimensions should <m>A</m> have in order to be able to add <m>A</m> to <m>A^T</m>?</p>
-</statement></investigation>
+<investigation>
+  <statement>
+    <p>
+      What dimensions should <m>A</m> have in order to be able to add <m>A</m> to <m>A^T</m>?
+    </p>
+  </statement>
+</investigation>
 
-<theorem><statement><p>For all matrices <m>A</m>, <m>(A^T)^T=A</m>.</p>
-</statement></theorem>
+<theorem>
+  <statement>
+    <p>
+      For all matrices <m>A</m>, <m>(A^T)^T=A</m>.
+    </p>
+  </statement>
+</theorem>
 
-<p>A matrix <m>A</m> is <term>symmetric</term> if <m>A^T=A</m>.</p>
-<theorem><statement><p>The sum of two symmetric <m>m</m> by <m>n</m> matrices is symmetric.</p>
-</statement></theorem>
+<p>
+  A matrix <m>A</m> is <term>symmetric</term> if <m>A^T=A</m>.
+</p>
 
-<theorem><statement><p>If <m>A</m> is a symmetric matrix, then <m>kA</m> is symmetric.</p></statement></theorem>
+<theorem>
+  <statement>
+    <p>
+      The sum of two symmetric <m>m</m> by <m>n</m> matrices is symmetric.
+    </p>
+  </statement>
+</theorem>
+
+<theorem>
+  <statement>
+    <p>
+      If <m>A</m> is a symmetric matrix, then <m>kA</m> is symmetric.
+    </p>
+  </statement>
+</theorem>
 </subsection>
-<subsection>
-  <title>Special Types of Matrices</title>
-<p>A <term>square</term> matrix is a matrix that has the same number of
-rows and columns. A <m>m</m> by <m>n</m> matrix <m>A</m> is said to be <term>upper
-triangular</term> if <m>A_{i,j}=0</m> whenever <m>\gt j</m>. Similarly, a matrix <m>A</m>
-is <term>lower triangular</term> if <m>A_{i,j}=0</m> whenever <m>i\lt j</m>. We usually consider square matrices when we talk about upper or lower triangular, but it may be helpful to consider non-square cases.</p>
 
-<investigation><statement><p>Give an example of a matrix that is upper triangular but is not in echelon form. If one does not exist, explain why.</p>
-</statement></investigation>
-
-<investigation><statement><p>Give an example of a matrix that is in echelon form but is not upper triangular. If one does not exist, explain why.</p>
-</statement></investigation>
-
-<investigation><statement><p>Can a matrix be upper <em>and</em> lower triangular? Either give an example or explain why there cannot exist one.</p>
-</statement></investigation>
-
-<p><term>Diagonal</term> matrices are matrices whose only nonzero entries are on the diagonal. Specifically, a matrix <m>A</m> is diagonal if <m>A_{i,j}=0</m> whenever <m>i \neq j</m>.</p>
-
-<investigation><statement><p>Give an example of a matrix that is diagonal but not in echelon form.</p>
-</statement></investigation>
-<p>The <m>n</m> by <m>n</m> <term>identity matrix</term>, denoted <m>Id_n</m>, is the unique matrix such that <m>Id_n \vec{x}= \vec{x}</m> for every <m>\vec{x} \in \mathbb{R}^n</m>. In fact the entries of <m>Id_n</m> are easily computed in terms of the Dirac delta function. Specifically <m>(Id_n)_{i,j}=\delta_{i,j}</m>, where<me>\delta_{i,j}=\left\{ \begin{array}{cc} 0 \amp  \mbox{if }i\neq j\\ 1 \amp  \mbox{if } i = j \end{array} \right. </me>
-</p>
-
-<investigation><statement><p>Write out <m>Id_5</m> and use it to prove that
-for any <m>\vec{v} \in \mathbb{R}^5</m> the product of <m>Id_5</m> and <m>\vec{v}</m>
-will always be <m>\vec{v}</m>.
-</p>
-</statement></investigation>
-
-<investigation><title>Superstar Bonus
-Question</title><statement><p>Prove that <m>Id_5</m> is the only matrix
-that has the property from the problem above.
-</p>
-</statement></investigation>
-</subsection>
 
 <subsection>
   <title>Matrix Multiplication</title>
-<p>Earlier we saw how to multiply a <m>m</m> by <m>n</m> matrix by a vector from <m>\mathbb{R}^n</m>. We will discuss how to define matrix multiplication with multiple interpretations.</p>
+<p>
+  Earlier we saw how to multiply a <m>m</m> by <m>n</m> matrix by a vector from <m>\mathbb{R}^n</m>. We will discuss how to define matrix multiplication with multiple interpretations.
+</p>
 
-<p>Let <m>A</m> be an <m>m</m> by <m>n</m> matrix and let <m>\vec{x_1}</m> and <m>\vec{x_2}</m> be vectors from <m>\mathbb{R}^n</m>. Earlier we defined what <m>A\vec{x_1}</m> and <m>A\vec{x_2}</m> meant. If we build a <m>n</m> by <m>2</m> matrix <m>B</m> using <m>\vec{x_1}</m> and <m>\vec{x_2}</m> as the columns, then we can define <m>AB</m>, read as <q><m>A</m> times <m>B</m></q>, to be<me>AB=A [\vec{x_1} \quad \vec{x_2}]=[A\vec{x_1} \quad A\vec{x_2}]</me>
-The above definition is just distributing our matrix-vector product across the columns of <m>B</m>. In a similar fashion, given any <m>n</m> by <m>k</m> matrix<me>B=[\vec{b_1} \quad  \vec{b_2}  \quad \cdots \quad  \vec{b_k}]</me>
-where <m>\vec{b_i}</m> is the <m>i</m>-th column of <m>B</m>, we can define
-<me>AB=[A\vec{b_1}  \quad A\vec{b_2}  \quad \cdots  \quad A\vec{b_k}]</me>
-In particular, this means that if <m>AB</m> makes sense, then we can calculate just the <m>i</m>-th column of <m>AB</m> without calculating all of <m>AB</m>. Namely, the <m>i</m>-th column of <m>AB</m> is <m>A column_i(B)</m>, which is written symbolically as <m>column_i(AB)=A column_i(B)</m>.</p>
+<p>
+  Let <m>A</m> be an <m>m</m> by <m>n</m> matrix and let <m>\vec{x_1}</m> and <m>\vec{x_2}</m> be vectors from <m>\mathbb{R}^n</m>. Earlier we defined what <m>A\vec{x_1}</m> and <m>A\vec{x_2}</m> meant. If we build a <m>n</m> by <m>2</m> matrix <m>B</m> using <m>\vec{x_1}</m> and <m>\vec{x_2}</m> as the columns, then we can define <m>AB</m>, read as <q><m>A</m> times <m>B</m></q>, to be
+  <me>AB=A [\vec{x_1} \quad \vec{x_2}]=[A\vec{x_1} \quad A\vec{x_2}]</me>
+  The above definition is just distributing our matrix-vector product across the columns of <m>B</m>. In a similar fashion, given any <m>n</m> by <m>k</m> matrix
+  <me>B=[\vec{b_1} \quad  \vec{b_2}  \quad \cdots \quad  \vec{b_k}]</me>
+  where <m>\vec{b_i}</m> is the <m>i</m>-th column of <m>B</m>, we can define
+  <me>AB=[A\vec{b_1}  \quad A\vec{b_2}  \quad \cdots  \quad A\vec{b_k}]</me>
+  In particular, this means that if <m>AB</m> makes sense, then we can calculate just the <m>i</m>-th column of <m>AB</m> without calculating all of <m>AB</m>. Namely, the <m>i</m>-th column of <m>AB</m> is <m>A column_i(B)</m>, which is written symbolically as <m>column_i(AB)=A column_i(B)</m>.
+</p>
 
-<p>Formally, we can define the product of a <m>m</m> by <m>n</m> matrix <m>A</m> with a <m>n</m> by <m>k</m> matrix <m>B</m> to be the <m>m</m> by <m>k</m> matrix <m>AB</m> such that<me>(AB)_{i,j}=\sum_{l=1}^n (A)_{i,l}(B)_{l,j}</me></p>
+<p>
+  Formally, we can define the product of a <m>m</m> by <m>n</m> matrix <m>A</m> with a <m>n</m> by <m>k</m> matrix <m>B</m> to be the <m>m</m> by <m>k</m> matrix <m>AB</m> such that
+  <me>(AB)_{i,j}=\sum_{l=1}^n (A)_{i,l}(B)_{l,j}</me>
+</p>
 
-<p>This formula looks difficult, but what it really tells us is that
-the <m>(i,j)</m> entry of <m>AB</m> is really the dot product of the
-<m>i</m>-th row of <m>A</m> with the <m>j</m>-th column of
-<m>B</m>. Remember the <term>dot product</term> of <m>\vec{v}
-=\colvec{v_1\\ v_2\\ \vdots\\ v_n} \in \mathbb{R}^n</m> and <m>\vec{w}
-=\colvec{w_1\\ w_2\\ \vdots\\ w_n} \in \mathbb{R}^n</m> is just the sum of the products of the components. Namely,<me>\vec{v} \cdot \vec{w} =\sum_{i=1}^n v_i w_i  </me>
-This idea lets us calculate the matrix product <m>AB</m> one entry at a time. Continuing this idea will lead us to see that the <m>i</m>-th row of the product <m>AB</m> can be calculated as <m>row_i(AB)=row_i(A) B</m>.</p>
+<p>
+  This formula looks difficult, but what it really tells us is that the <m>(i,j)</m> entry of <m>AB</m> is really the dot product of the <m>i</m>-th row of <m>A</m> with the <m>j</m>-th column of <m>B</m>. Remember the <term>dot product</term> of <m>\vec{v} =\colvec{v_1\\ v_2\\ \vdots\\ v_n} \in \mathbb{R}^n</m> and <m>\vec{w} =\colvec{w_1\\ w_2\\ \vdots\\ w_n} \in \mathbb{R}^n</m> is just the sum of the products of the components. Namely,
+  <me>\vec{v} \cdot \vec{w} =\sum_{i=1}^n v_i w_i  </me>
+  This idea lets us calculate the matrix product <m>AB</m> one entry at a time. Continuing this idea will lead us to see that the <m>i</m>-th row of the product <m>AB</m> can be calculated as <m>row_i(AB)=row_i(A) B</m>.
+</p>
 
-<p>Note that in general <m>AB \neq BA</m>, even when both products make sense.</p>
+<p>
+  Note that in general <m>AB \neq BA</m>, even when both products make sense.
+</p>
 
-<investigation><task>
-  <p>What sizes of matrices can you add to a <m>m</m> by <m>n</m> matrix?</p>
-</task>
-<task><p>What sizes of matrices can you multiply on the right of a <m>m</m> by <m>n</m> matrix?</p></task>
-<task><p>What sizes of matrices can you multiply on the left of a <m>m</m>
-by <m>n</m> matrix?</p>
-</task></investigation>
-<investigation><statement><p>If <m>A\in M_{m \times n}</m>, when does it make sense to multiply by <m>A^T</m>?</p>
-</statement></investigation>
-<investigation><introduction><p>Let <m>A=\begin{bmatrix} 3\amp 1\\-1\amp
-2  \end{bmatrix}</m> and <m>B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp
--2  \end{bmatrix}</m>.</p>
-</introduction>
-<task><p>
-  What is the size of <m>AB</m>?</p>
+<investigation>
+  <task>
+    <p>
+      What sizes of matrices can you add to a <m>m</m> by <m>n</m> matrix?
+    </p>
   </task>
-  <task><p>
-    Compute just the first column of <m>AB</m>.</p>
-    </task>
-<task><p>Write the first column of <m>AB</m> as a linear combination of the columns of A. Be sure to check your work.</p></task>
-<task><p> Solve the matrix equation <m>A\vec{x} = \colvec{-2\\ 3}</m></p></task>
-<task><p> Compute just the second row of <m>AB</m></p></task>
+  <task>
+    <p>
+      What sizes of matrices can you multiply on the right of a <m>m</m> by <m>n</m> matrix?
+    </p>
+  </task>
+  <task>
+    <p>
+      What sizes of matrices can you multiply on the left of a <m>m</m> by <m>n</m> matrix?
+    </p>
+  </task>
+</investigation>
+<investigation>
+  <statement>
+    <p>
+      If <m>A\in M_{m \times n}</m>, when does it make sense to multiply by <m>A^T</m>?
+    </p>
+  </statement>
+</investigation>
+<investigation>
+  <introduction>
+    <p>
+      Let <m>A=\begin{bmatrix} 3\amp 1\\-1\amp 2 \end{bmatrix}</m> and <m>B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp-2  \end{bmatrix}</m>.
+    </p>
+  </introduction>
+  <task>
+    <p>
+      What is the size of <m>AB</m>?
+    </p>
+  </task>
+  <task>
+    <p>
+      Compute just the first column of <m>AB</m>.
+    </p>
+  </task>
+  <task>
+    <p>
+      Write the first column of <m>AB</m> as a linear combination of the columns of A. Be sure to check your work.
+    </p>
+  </task>
+  <task>
+    <p>
+      Solve the matrix equation <m>A\vec{x} = \colvec{-2\\ 3}</m>.
+    </p>
+  </task>
+  <task>
+    <p>
+      Compute just the second row of <m>AB</m>
+    </p>
+  </task>
 </investigation>
 
-<investigation><introduction><p>Let <m>A=\begin{bmatrix} 3\amp 2\amp
-1\amp 5\amp 6\\4\amp 1\amp 3\amp 2\amp -1\\0\amp 2\amp 5\amp 6\amp
-7\\8\amp 2\amp 3\amp 1\amp 4 \end{bmatrix}</m> and <m>B=\begin{bmatrix}
-5\amp -2\amp 2\amp 4\\6\amp 2\amp 3\amp 6\\4\amp -1\amp 7\amp
-14\\2\amp 0\amp -2\amp -4\\1\amp 1\amp 2\amp 4
-\end{bmatrix}</m></p></introduction>
-<task><p>
-  <m>A_{2,3}=</m></p>
+<investigation>
+  <introduction>
+    <p>
+      Let <m>A=\begin{bmatrix} 3\amp 2\amp 1\amp 5\amp 6\\4\amp 1\amp 3\amp 2\amp -1\\0\amp 2\amp 5\amp 6\amp 7\\8\amp 2\amp 3\amp 1\amp 4 \end{bmatrix}</m> and <m>B=\begin{bmatrix} 5\amp -2\amp 2\amp 4\\6\amp 2\amp 3\amp 6\\4\amp -1\amp 7\amp 14\\2\amp 0\amp -2\amp -4\\1\amp 1\amp 2\amp 4 \end{bmatrix}</m>
+    </p>
+  </introduction>
+  <task>
+    <p>
+      <m>A_{2,3}=</m>
+    </p>
   </task>
-<task><p><m>B_{1,4}=</m></p></task>
-<task><p><m>(AB)_{2,3}=</m></p></task>
-<task><p><m>row_2 (AB)=</m></p></task>
-<task><p><m>column_3 (AB)=</m></p></task>
+  <task>
+    <p>
+      <m>B_{1,4}=</m>
+    </p>
+  </task>
+  <task>
+    <p>
+      <m>(AB)_{2,3}=</m>
+    </p>
+  </task>
+  <task>
+    <p>
+      <m>row_2 (AB)=</m>
+    </p>
+  </task>
+  <task>
+    <p>
+      <m>column_3 (AB)=</m>
+    </p>
+  </task>
 </investigation>
 
-<investigation><statement><p> Let <m>A=\begin{bmatrix} 3\amp 1\\-1\amp 2  \end{bmatrix}</m> and <m>B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp -2  \end{bmatrix}</m>. Compute <m>AB</m> and <m>BA</m>.</p>
-</statement></investigation>
+<investigation>
+  <statement>
+    <p>
+      Let <m>A=\begin{bmatrix} 3\amp 1\\-1\amp 2  \end{bmatrix}</m> and <m>B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp -2  \end{bmatrix}</m>. Compute <m>AB</m> and <m>BA</m>.
+    </p>
+  </statement>
+</investigation>
 
-<investigation><statement><p>Let <m>A=\begin{bmatrix} 3\amp 1\\-1\amp 2 \\-2 \amp  0 \end{bmatrix}</m> and <m>B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp -2  \end{bmatrix}</m>. Compute <m>AB</m> and <m>BA</m>.</p>
-</statement></investigation>
+<investigation>
+  <statement>
+    <p>
+      Let <m>A=\begin{bmatrix} 3\amp 1\\-1\amp 2 \\-2 \amp  0 \end{bmatrix}</m> and <m>B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp -2  \end{bmatrix}</m>. Compute <m>AB</m> and <m>BA</m>.
+    </p>
+  </statement>
+</investigation>
 
-<p> You can approach proving the following theorem by showing matrix equality entry-wise or column-wise or row-wise.</p>
-<theorem><statement><p>For all matrices <m>A</m>, <m>B</m>, and
-<m>C</m> such that the addition and multiplication of matrices below
-makes sense, <me>(A+B)C=AC+BC</me>. </p>
-</statement></theorem>
+<p>
+  You can approach proving the following theorem by showing matrix equality entry-wise or column-wise or row-wise.
+</p>
+<theorem>
+  <statement>
+    <p>
+      For all matrices <m>A</m>, <m>B</m>, and <m>C</m> such that the addition and multiplication of matrices below makes sense, <me>(A+B)C=AC+BC</me>.
+    </p>
+  </statement>
+</theorem>
 
-<investigation><statement><p>Give 2 different examples of 3 by 3 matrices <m>A</m> and <m>B</m> such that <m>AB=BA</m>.</p>
-</statement></investigation>
+<investigation>
+  <statement>
+    <p>
+      Give 2 different examples of 3 by 3 matrices <m>A</m> and <m>B</m> such that <m>AB=BA</m>.
+    </p>
+  </statement>
+</investigation>
 
-<investigation><statement><p>Give 2 different examples of 3 by 3 matrices <m>A</m> and <m>B</m> such that <m>AB \neq BA</m></p>.
-</statement></investigation>
+<investigation>
+  <statement>
+    <p>
+      Give 2 different examples of 3 by 3 matrices <m>A</m> and <m>B</m> such that <m>AB \neq BA</m>.
+    </p>
+  </statement>
+</investigation>
 
-<theorem><statement>
-<p>For all matrices <m>A,B</m> such that <m>AB</m> is defined, <m>(AB)^T=B^T A^T</m>.</p>
-</statement></theorem>
+<theorem>
+  <statement>
+    <p>
+      For all matrices <m>A,B</m> such that <m>AB</m> is defined, <m>(AB)^T=B^T A^T</m>.
+    </p>
+  </statement>
+</theorem>
 </subsection>
- </section>
+<subsection>
+  <title>Special Types of Matrices</title>
+<p>
+  A <term>square</term> matrix is a matrix that has the same number of rows and columns. A <m>m</m> by <m>n</m> matrix <m>A</m> is said to be <term>upper triangular</term> if <m>A_{i,j}=0</m> whenever <m>\gt j</m>. Similarly, a matrix <m>A</m> is <term>lower triangular</term> if <m>A_{i,j}=0</m> whenever <m>i\lt j</m>. We usually consider square matrices when we talk about upper or lower triangular, but it may be helpful to consider non-square cases.
+</p>
+
+<investigation>
+  <statement>
+    <p>
+      Give an example of a matrix that is upper triangular but is not in echelon form. If one does not exist, explain why.
+    </p>
+  </statement>
+</investigation>
+
+<investigation>
+  <statement>
+    <p>
+      Give an example of a matrix that is in echelon form but is not upper triangular. If one does not exist, explain why.
+    </p>
+  </statement>
+</investigation>
+
+<investigation>
+  <statement>
+    <p>
+      Can a matrix be upper <em>and</em> lower triangular? Either give an example or explain why there cannot exist one.
+    </p>
+  </statement>
+</investigation>
+
+<p>
+  <term>Diagonal</term> matrices are matrices whose only nonzero entries are on the diagonal. Specifically, a matrix <m>A</m> is diagonal if <m>A_{i,j}=0</m> whenever <m>i \neq j</m>.
+</p>
+
+<investigation>
+  <statement>
+    <p>
+      Give an example of a matrix that is diagonal but not in echelon form.
+    </p>
+  </statement>
+</investigation>
+<p>
+  The <m>n</m> by <m>n</m> <term>identity matrix</term>, denoted <m>Id_n</m>, is the unique matrix such that <m>Id_n \vec{x}= \vec{x}</m> for every <m>\vec{x} \in \mathbb{R}^n</m>. In fact the entries of <m>Id_n</m> are easily computed in terms of the Dirac delta function. Specifically <m>(Id_n)_{i,j}=\delta_{i,j}</m>, where
+  <me>\delta_{i,j}=\left\{ \begin{array}{cc} 0 \amp  \mbox{if }i\neq j\\ 1 \amp  \mbox{if } i = j \end{array} \right. </me>
+</p>
+
+<investigation>
+  <statement>
+    <p>
+      Write out <m>Id_5</m> and use it to prove that for any <m>\vec{v} \in \mathbb{R}^5</m> the product of <m>Id_5</m> and <m>\vec{v}</m> will always be <m>\vec{v}</m>.
+    </p>
+  </statement>
+</investigation>
+
+<investigation>
+  <title>Superstar Bonus Question</title>
+  <statement>
+    <p>
+      Prove that <m>Id_5</m> is the only matrix that has the property from the problem above.
+    </p>
+  </statement>
+</investigation>
+</subsection>
+</section>

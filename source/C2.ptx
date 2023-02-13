@@ -4,5 +4,7 @@
   <title>Matrices</title>
   <xi:include href="C2/MatrixEquations.ptx" />
   <xi:include href="C2/MatrixOps.ptx" />
+  <xi:include href="C2/InverseMatrices.ptx" />
+  <xi:include href="C2/IMT.ptx" />
 </chapter>
 
