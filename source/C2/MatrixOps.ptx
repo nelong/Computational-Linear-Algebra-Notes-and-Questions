@@ -24,10 +24,8 @@
     </task>
   </investigation>
 
-  <p>Just as you can add two vectors in <m>\mathbb{R}^n</m> componentwise,
-  you can add two matrices entry-wise. For this reason, it only makes
-  sense to add two matrices if they are the same size. You can also
-  define scalar multiplication of a matrix entry-wise.
+  <p>
+    Just as you can add two vectors in <m>\mathbb{R}^n</m> componentwise, you can add two matrices entry-wise. For this reason, it only makes sense to add two matrices if they are the same size. You can also define scalar multiplication of a matrix entry-wise.
   </p>
 
   <investigation><introduction>
@@ -340,7 +338,7 @@
 <subsection>
   <title>Special Types of Matrices</title>
 <p>
-  A <term>square</term> matrix is a matrix that has the same number of rows and columns. A <m>m</m> by <m>n</m> matrix <m>A</m> is said to be <term>upper triangular</term> if <m>A_{i,j}=0</m> whenever <m>\gt j</m>. Similarly, a matrix <m>A</m> is <term>lower triangular</term> if <m>A_{i,j}=0</m> whenever <m>i\lt j</m>. We usually consider square matrices when we talk about upper or lower triangular, but it may be helpful to consider non-square cases.
+  A <term>square</term> matrix is a matrix that has the same number of rows and columns. A <m>m</m> by <m>n</m> matrix <m>A</m> is said to be <term>upper triangular</term> if <m>A_{i,j}=0</m> whenever <m>i \gt j</m>. Similarly, a matrix <m>A</m> is <term>lower triangular</term> if <m>A_{i,j}=0</m> whenever <m>i\lt j</m>. We usually consider square matrices when we talk about upper or lower triangular, but it may be helpful to consider non-square cases.
 </p>
 
 <investigation>

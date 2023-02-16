@@ -50,137 +50,64 @@
   In general computing the inverse of a matrix takes more time and operations than solving a system of equations. For this reason, it is generally easier to find and solve a related system of equations problem than to compute the inverse matrix. We will outline a few ways to find inverse matrices and compute a few small examples.
 </p>
 
-<investigation><statement><p> If a matrix <m>A</m> is row reduced to
-<m>Id_n</m> by elementary row operations corresponding (in order of
-use) to elementary matrices <m>E_1</m>, <m>E_2</m>, ... , <m>E_k</m>,
-give an expression for <m>A^{-1}</m>.
-</p></statement></investigation>
+<investigation xml:id="q11">
+  <statement>
+    <p>
+      Any sequence of elementary row operations that reduces <m>A</m> to <m>Id_n</m> also transforms <m>Id_n</m> into <m>A^{-1}</m>.
+    </p>
+  </statement>
+</investigation>
 
-<investigation><statement><p> Use your answer to the previous question to prove the following:
-
-Any sequence of elementary row operations that reduces <m>A</m> to <m>Id_n</m> also transforms <m>Id_n</m> into <m>A^{-1}</m>.
-</p></statement></investigation>
-
-<p>The previous result shows that computing inverses is equivalent to a row reduction problem. In particular, if <m>A</m> is invertible, then reducing <m>[ A \quad | \quad Id_n]</m> to reduced row echelon form will produce the matrix <m>[ Id_n \quad | \quad A^{-1}]</m>.</p>
-
-<investigation xml:id="inv22"><statement><p>Use the idea above to compute the inverse of <m>\begin{bmatrix} a\amp b\\c\amp d \end{bmatrix}</m>. Be sure to note any assumptions you will need to make in order to reduce <m>[ A \quad | \quad Id_n]</m> to <m>[ Id_n \quad | \quad A^{-1}]</m>.
-</p></statement></investigation>
-
-<exercise><statement><p> If <m>A=\begin{bmatrix}1\amp  0\amp  1 \\0\amp 2\amp -1 \\ 0\amp 6\amp -1\end{bmatrix}</m>, find <m>A^{-1}</m> and check that <m>A A^{-1}=Id_3</m>.
-</p></statement></exercise>
-
-<exercise><introduction><p>
-If <m>A=\begin{bmatrix} 0\amp -1\\3\amp 4 \end{bmatrix}</m>, find
-<m>A^{-1}</m> and use your answer to solve <m>A\vec{x} = \vec{b}</m>
-if:</p></introduction>
-<task><p><m>\vec{b} =\colvec{3\\ 1}</m></p></task>
-<task><p><m>\vec{b} =\colvec{-1\\ -2}</m></p></task>
-<task><p><m>\vec{b} =\colvec{0\\ 5}</m></p></task>
-<task><p><m>\vec{b} =\colvec{\alpha\\ \beta}</m></p></task>
-</exercise>
-</subsection>
-<subsection>
-  <title>Elementary Matrices</title>
 <p>
-  Recall that an elementary row operation on a matrix is an operation of the form:
-  <ul>
-    <li>multiplying a row by a non-zero scalar</li>
-    <li>switching two rows</li>
-    <li>adding a multiple of one row to another row</li>
-  </ul>
-  Elementary matrices are obtained by performing an elementary operation on the identity matrix.
+  The previous result shows that computing inverses is equivalent to a row reduction problem. In particular, if <m>A</m> is invertible, then reducing <m>[ A \quad | \quad Id_n]</m> to reduced row echelon form will produce the matrix <m>[ Id_n \quad | \quad A^{-1}]</m>.
 </p>
-<investigation>
+<activity>
+  <task>
+    <p>
+      Use the result of the previous investigation to find the inverse of the matrix <m>\begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}</m>. Check your work by computing <m>AB=Id_n</m> and <m>BA=Id_n</m> for the matrix you think is the inverse of <m>A</m>.
+    </p>
+  </task>
+  <task>
+    <p>
+      Use the result of the previous investigation to find the inverse of the matrix <m>\begin{bmatrix} 1 \amp 2 \\ 2 \amp 4 \end{bmatrix}</m>. Check your work by computing <m>AB=Id_n</m> and <m>BA=Id_n</m> for the matrix you think is the inverse of <m>A</m>.
+    </p>
+  </task>
+  <task>
+    <p>
+      Use the idea above to compute the inverse of <m>\begin{bmatrix} a\amp b\\c\amp d \end{bmatrix}</m>. Be sure to note any assumptions you will need to make in order to reduce <m>[ A \quad | \quad Id_n]</m> to <m>[ Id_n \quad | \quad A^{-1}]</m>.
+    </p>
+  </task>
+  <task>
+    <p>
+      If <m>A=\begin{bmatrix}1\amp  0\amp  1 \\0\amp 2\amp -1 \\ 0\amp 6\amp -1\end{bmatrix}</m>, find <m>A^{-1}</m> and check that <m>A A^{-1}=Id_3</m>.
+    </p>
+  </task>
+</activity>
+
+<exercise>
   <introduction>
     <p>
-      Give the elementary matrix obtained by performing the given operation on <m>Id_3</m>. (These are 4 separate questions):
+      If <m>A=\begin{bmatrix} 0\amp -1\\3\amp 4 \end{bmatrix}</m>, find <m>A^{-1}</m> and use your answer to solve <m>A\vec{x} = \vec{b}</m> if:
     </p>
   </introduction>
-  <task>
-    <p>
-      Scaling the first row by <m>\alpha</m>
-    </p>
-  </task>
-  <task>
-    <p>
-      Switching the second and third rows
-    </p>
-  </task>
-  <task>
-    <p>
-      Adding 3 times the 2nd row to the 1st row
-    </p>
-  </task>
-  <task>
-    <p>
-      Adding 3 times the 1st row to the 2nd row
-    </p>
-  </task>
-</investigation>
+  <task><p><m>\vec{b} =\colvec{3\\ 1}</m></p></task>
+  <task><p><m>\vec{b} =\colvec{-1\\ -2}</m></p></task>
+  <task><p><m>\vec{b} =\colvec{0\\ 5}</m></p></task>
+  <task><p><m>\vec{b} =\colvec{\alpha\\ \beta}</m></p></task>
+</exercise>
 
 <investigation>
-  <statement>
-    <p>
-      Check that your answer to the previous question does the desired operation by multiplying each of the four previous elementary matrices by <m>\begin{bmatrix} a\amp b\amp c\\d\amp e\amp f\\g\amp h\amp i \end{bmatrix}</m>. Which side do you multiply the elementary matrix on to correspond to row operations?
-    </p>
-  </statement>
-</investigation>
-
-<investigation>
-  <statement>
-    <p>
-      Compute (and verify) the inverse of each of the elementary matrices from the previous problems.
-    </p>
-  </statement>
-  <hint><p>Think about how you would go backwards for each of the elementary operations.</p></hint>
-</investigation>
-
-<p>
-  Your work on the previous questions should convince you that elementary matrices are invertible and that multiplying by an elementary matrix produces the same result as having performed the corresponding elementary row operation. Elementary matrices offer a way of keeping track of elementary operations. We will not write our a proof of the following theorem at this time, but we state it for future uses:
-</p>
-
-<theorem>
-<statement>
   <p>
-Elementary matrices are invertible and the inverse matrix is an
-elementary matrix corresponding to the inverse elementary operation.
+    Your friend Nick, who thinks he knows everything, claims that <m>(AB)^{-1}=A^{-1}B^{-1}</m> because that's how exponents work. Is he right? Justify your answer like you are going to have to convince Nick.
   </p>
-</statement>
-</theorem>
-
-<p>You shoud, however, at this time prove the theorems below.</p>
-<theorem>
-  <statement>
+  <hint>
     <p>
-      If <m>A</m> and <m>B</m> are invertible <m>n</m> by <m>n</m>
-      matrices, then <m>(AB)^{-1} =B^{-1}A^{-1}</m> and <m>AB</m> is
-      an invertible <m>n</m> by <m>n</m> matrix.
+      Mulitply Nick's Result on both sides by the matrix <m>(AB)</m> and simplify.
     </p>
-  </statement>
-</theorem>
-
-<theorem xml:id="q11"><statement><p>If <m>A</m> can be reduced to <m>Id_n</m> by elementary row operations, then <m>A</m> is invertible.
-</p></statement></theorem>
-
-<investigation><statement><p> Give all values of <m>k</m> where <m>A=\begin{bmatrix} 1\amp 0\amp 2\\-1\amp k\amp 4\\3\amp 5\amp 1 \end{bmatrix}</m> will be invertible.
-</p></statement></investigation>
-
-<investigation><statement><p> Give all values of <m>k</m> where <m>A=\begin{bmatrix} 1\amp 0\amp 2\\-1\amp k\amp 4\\3\amp -1\amp 1 \end{bmatrix}</m> will be invertible.
-</p></statement></investigation>
-
-<investigation><statement><p> How many pivots must a matrix <m>A</m> have in order to be row reducible to <m>Id_n</m>? Justify using previous results.
-</p></statement></investigation>
-
-<theorem><statement><p>If <m>A</m> is invertible, then <m>A\vec{x}
-=\vec{b}</m> has a unique solution for every <m>\vec{b} \in
-\mathbb{R}^n</m>.  </p></statement></theorem>
-
-<investigation><statement><p> Prove or disprove: If <m>A</m> and <m>B</m> are invertible <m>n</m> by <m>n</m> matrices, then <m>A+B</m> is invertible.
-</p></statement></investigation>
-
-<investigation><statement><p> Prove that if <m>A</m> is invertible, then <m>A^T</m> is invertible.
-</p></statement></investigation>
+  </hint>
+</investigation>
 </subsection>
+
 </section>
 
 

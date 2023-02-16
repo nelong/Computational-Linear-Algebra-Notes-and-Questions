@@ -1,139 +1,141 @@
-<section xml:id="TNB">
-  <title>The TNB Frame of Motion in 3D</title>
-  <objectives>
-  <ul>
-    <li>
-      <p>
-        To understand how the unit tangent, unit normal, and binormal vectors are measured for a curve in space
-      </p>
-    </li>
-    <li>
-      <p>
-        To understand how to efficently calculate the unit tangent, unit normal, and binormal vectors in terms of a parameteriation
-      </p>
-    </li>
-  </ul>
-</objectives>
+<section xml:id="determinants">
+  <title>Determinants</title>
+<introduction>
+  <p>
+    Determinants will be an incredibly useful tool in quickly determining several important properties of square matrices. We will first look at how to compute determinants and later outline the important properties that determinants have. While some of you may have been taught some rules for how to compute determinants of 2 by 2 and 3 by 3 matrices, I encourage you to understand how to compute determinants in general.
+  </p>
+</introduction>
 <subsection>
-  <title>The TNB Frame</title>
-  <figure xml:id="fig_test">
-    <caption>A three-dimensional plot of some cones</caption>
-    <interactive xml:id="sage_cones" platform="sage" width="100%" aspect="1:1.1">
-      <slate surface="sage">
-        var('t,s')
-        plot1=parametric_plot3d((t,0,0),(t,-5,5),color='black')
-        plot1+=parametric_plot3d((0,0,t),(t,0,11),color='black',linestyle="dashed")
-        plot1+=parametric_plot3d((0.4*s*cos(t),0.4*s*sin(t),s),(t,0,2*pi),(s,8,10), color="gray", opacity=.25, aspect_ratio=1)
-        plot1+=parametric_plot3d((0.4*s*cos(t),0.4*s*sin(t),s), (t,0,2*pi),(s,0,8), color="blue",opacity=.40, aspect_ratio=1)
-        plot1+=parametric_plot3d((0.4*s*cos(t),0.4*s*sin(t),3),(t,0,2*pi),(s,0,3),color="purple", opacity=2,aspect_ratio=1)
-        plot1+=arrow3d((4,0,0),(4,0,10),color="red",width=4)
-        plot1+=text3d("10",(5,0,5),color='red')
-        plot1+=arrow3d((-16/5,0,0),(-16/5,0,8),color="red",width=4)
-        plot1+=text3d("8",(-21/5,0,4),color='red')
-        plot1+=arrow3d((6/5,0,0),(6/5,0,3),color="red",width=4)
-        plot1+=text3d("x",(9/5,0,1.5),color='red')
-        plot1+=parametric_plot3d((t,0,10),(t,0,4),color='red')
-        plot1+=text3d("4",(2,0,11),color='red')
-        show(plot1)
-      </slate>
-    </interactive>
-  </figure>
+  <title>Computing Determinants</title>
+<definition>
+  <statement>
+    <p>
+      The <term>determinant</term> is a function from <m>n</m> by <m>n</m> matrices to the real numbers (<m>\det:M_{n \times n} \rightarrow \mathbb{R}</m>).
+    </p>
+    <p>
+      If <m>A</m> is a 1 by 1 matrix, <m>A=[A_{1,1}]</m>, then <m>\det(A)=A_{1,1}</m>.
+    </p>
+    <p>
+      For <m>n \geq 2</m>, the determinant of a <m>n</m> by <m>n</m> matrix is given by the following formula in terms of determinants of <m>(n-1)</m> by <m>(n-1)</m> matrices:
+        <me>\det(A)=\sum_{j=1}^n (-1)^{1+j} (A_{1,j}) \, \det(A^*_{1,j})</me>
+      where <m>A^*_{i,j}</m> is the <m>(n-1)</m> by <m>(n-1)</m> matrix obtained by deleting the <m>i</m>-th row and <m>j</m>-th column of <m>A</m>. The term <m>A_{i,j}\,\det(A^*_{i,j})</m> is called the <m>(i,j)</m> <term>cofactor of <m>A</m></term>.
+    </p>
+  </statement>
+</definition>
 
-<figure xml:id="path2d">
-  <caption> A 2D curve with points</caption>
-  <image source="./images/path1.png" />
-</figure>
-<question>
-  <p>
-    <ol>
-      <li>For each point (labeled sequentially) on the path in <xref ref="path2d">Figure</xref>, draw and label <m>\overrightarrow{\textbf{T}}</m> and <m>\overrightarrow{\textbf{N}}</m>.</li>
-      <li>Give a ranking of the given points in <xref ref="path2d">Figure</xref> by curvature. In other words, list out the points from <m>A</m> to <m>F</m> in order of increasing curvature.</li>
-    </ol>
-  </p>
-</question>
-
-<question>
-  <p>
-    Mark each of the following as either TRUE or FALSE. If they are false, <b>explain why</b> they are false.
-    <ol>
-      <li>If a particle travels at constant speed, its acceleration vector is <m>\vec 0</m>.</li>
-      <li>If a particle travels at constant speed, its path must be a straight line.</li>
-      <li>If a particle is moving along a parameterized curve, then the acceleration vector at a point cannot be parallel to the velocity vector.</li>
-      <li>The arc length of a parameterized curve depends on the parameterization used to compute the integral.</li>
-      <li>If a particle is moving around a circle, then its acceleration and velocity vectors are orthogonal.</li>
-    </ol>
-  </p>
-</question>
-
-<question>
-  <p>
-    Consider the graph of a helix given by <m>\overrightarrow{\textbf{r}}(t) = \langle 3\sin(t),  2\cos(t),t \rangle</m>. Calculate the following:
-    <ol>
-      <li> <m>\overrightarrow{\textbf{r}}(0) =</m></li>
-      <li> <m>\overrightarrow{\textbf{T}}(0) =</m></li>
-      <li> <m>\overrightarrow{\textbf{N}}(0) =</m></li>
-      <li> <m>\overrightarrow{\textbf{B}}(0) =</m></li>
-      <li> <m>\kappa(0)=</m></li>
-      <li> <m>\overrightarrow{\textbf{r}}(\frac{\pi}{2}) =</m></li>
-      <li> <m>\overrightarrow{\textbf{T}}(\frac{\pi}{2}) =</m></li>
-      <li> <m>\overrightarrow{\textbf{N}}(\frac{\pi}{2}) =</m></li>
-      <li> <m>\overrightarrow{\textbf{B}}(\frac{\pi}{2}) =</m></li>
-      <li> <m>\kappa(\frac{\pi}{2})=</m></li>
-      <li> Write a few sentences to explain how your calculations make sense for each of the two points examined. Be sure to note what changed and what didn't.</li>
-    </ol>
-  </p>
-</question>
 <p>
-  You can use the sage cell below to help visualize curves in space with the following vectors:
-  <ul>
-    <li>velocity (in orange)</li>
-    <li>acceleration (in black)</li>
-    <li>unit tangent (in red)</li>
-    <li>unit normal (in blue)</li>
-  </ul>
-  Remember that you can change any of the parts of this code and reevaluate to get an updated plot. If you mess something up, simply reload this webpage and the original code will be reloaded. You can also use <url href="https://www.monroecc.edu/faculty/paulseeburger/calcnsf/CalcPlot3D/">CalcPlot3d</url> for your visualization needs.
+  The above definition uses cofactor expansion along the first row.
 </p>
-<sage>
-  <input>
-    var('t');
-    r1= vector([3*cos(t), 1-t^2,3*sin(t)] )
-    plot1=parametric_plot3d(r1,(t,0,pi/2),color='green',thickness=5)
-    a=pi/6
-    v=diff(r1,t)
-    acc=diff(v,t)
-    T=v/norm(v)
-    Tprime=diff(T,t)
-    N=Tprime/norm(Tprime)
-    point=r1(t=a)
-    dot = point3d(point,size=10,rgbcolor="darkblue")
-    vplot=  dot    +   arrow3d(point,point+T(t=a), color='red')
-    vplot = vplot + arrow3d(point,point+10*N(t=a), color='blue')
-    vplot = vplot + arrow3d(point,point+v(t=a), color='orange')
-    vplot = vplot + arrow3d(point,point+acc(t=a), color='black')
-    show(plot1+vplot,aspect_ratio=1)
-  </input>
-</sage>
+<investigation>
+  <introduction>
+    <p>
+      In this question, we will unpack the determinant formula above for a 2 by 2 matrix <m>A=\begin{bmatrix} a\amp b \\c\amp d \end{bmatrix}</m>.
+    </p>
+  </introduction>
+  <task>
+    <p>
+      Rather than using the summation notation of the formula above, write out the two terms in <m>\det(A)</m>.
+    </p>
+  </task>
+  <task><p><m>A^*_{1,1}=</m></p></task>
+  <task><p><m>A^*_{1,2}=</m></p></task>
+  <task><p><m>A_{1,1}=</m></p></task>
+  <task><p><m>A_{1,2}=</m></p></task>
+  <task><p><m>(-1)^{1+1}=</m></p></task>
+  <task><p><m>(-1)^{1+2}=</m></p></task>
+  <task><p><m>\det(A)=</m></p></task>
+</investigation>
+<p>
+  Your answer to the previous problem will be useful in calculating determinants of 3 by 3 matrices. We will use the theorem below without proving it.
+</p>
+<theorem>
+  <statement>
+    <p>
+      The determinant can be computed by cofactor expansion along any row or column. Specifically the cofactor expansion along the <m>k</m>-th row is given by
+        <me>\det(A)=\sum_{j=1}^n (-1)^{k+j} (A_{k,j}) \, \det(A^*_{k,j}) </me>
+      and the cofactor expansion along the <m>k</m>-th column is given by
+        <me>\det(A)=\sum_{i=1}^n (-1)^{i+k} (A_{i,k}) \quad \det(A^*_{i,k})</me>.
+    </p>
+  </statement>
+</theorem>
+
+<exercise>
+  <statement>
+    <p>
+      Use cofactor expansion along the first column of <m>A=\begin{bmatrix} a\amp b\amp c\\d\amp e\amp f\\g\amp h\amp i \end{bmatrix}</m> to compute <m>\det(A)</m>.
+    </p>
+  </statement>
+</exercise>
+
+<exercise><statement><p> Use cofactor expansion along the second row of <m>A=\begin{bmatrix} a\amp b\amp c\\d\amp e\amp f\\g\amp h\amp i \end{bmatrix}</m> to compute <m>\det(A)</m>. Did you get the same answer as the previous question?</p></statement></exercise>
+
+<exercise><statement><p> Compute the determinant of <m>B=\begin{bmatrix}g\amp h\amp i \\d\amp e\amp f\\ a\amp b\amp c \end{bmatrix}</m>. How does your answer compare with the previous problem?</p></statement></exercise>
+
+<exercise><statement><p> Compute the determinant of <m>C=\begin{bmatrix} a\amp b\amp c\\3d\amp 3e\amp 3f\\g\amp h\amp i \end{bmatrix}</m>.</p></statement></exercise>
+
+<exercise><statement><p> Compute the determinant of <m>D=\begin{bmatrix} a+kd\amp b+ke\amp c+kf\\d\amp e\amp f\\g\amp h\amp i \end{bmatrix}</m>.</p></statement></exercise>
+
+<exercise><introduction><p> Compute the determinant of the
+following matrices:</p></introduction>
+<task><p><m>\begin{bmatrix} 3\amp 0\amp 1\amp 0\\0\amp 2\amp -1\amp 4
+\\-3\amp 5\amp 0\amp 2\\2\amp 2\amp 2\amp -1 \end{bmatrix}</m></p>
+</task>
+<task><p><m>2\begin{bmatrix} 3\amp 0\amp 1\amp 0\\0\amp 2\amp -1\amp 4
+\\-3\amp 5\amp 0\amp 2\\2\amp 2\amp 2\amp -1
+\end{bmatrix}</m></p></task></exercise>
 </subsection>
 <subsection>
-  <title>Decomposition of Acceleration</title>
-<question>
-  <p>
-    Find the decomposition of <m>\overrightarrow{\textbf{a}}(t) </m> into tangential and normal components at the point indicated. 
-    <ol>
-      <li> <m>\overrightarrow{\textbf{r}}(t) =\langle t, \frac{t^2}{2}, \frac{t^3}{6} \rangle </m> at <m>t=1</m></li>
-      <li> <m>\overrightarrow{\textbf{r}}(t) =\langle t, e^t, t e^t \rangle </m> at <m>t=0</m></li>
-    </ol>
-  </p>
-  <hint>Use Example 7 on page 726 as a guide.</hint>
-</question>
+  <title>Properties of Determinants</title>
 
-<question>
-  <p>
-    Let <m>\overrightarrow{\textbf{r}}(t) =\langle t^2, 4t-3 \rangle</m>. Find <m>\overrightarrow{\textbf{T}}(t)</m> and <m>\overrightarrow{\textbf{N}}(t)</m>. Also show that the decomposition of <m>\overrightarrow{\textbf{a}}(t)</m> into tangential and normal components is
-    <me>\overrightarrow{\textbf{a}}(t) = \left( \frac{2t}{\sqrt{t^2+4}} \right) \overrightarrow{\textbf{T}}+\left( \frac{4}{\sqrt{t^2+4}} \right) \overrightarrow{\textbf{N}}
-    </me>
-  </p>
-</question>
+<investigation><statement><p> Prove that if <m>A</m> has a row of zeros, then <m>\det(A)=0</m>.
+</p></statement></investigation>
 
+<investigation><statement><p> Prove that <m>\det(Id_n)=1</m>.
+</p></statement></investigation>
+
+<p>We will now state several useful properties of determinants. We
+will defer the proofs until later in the course. You may use these
+theorems <em>unless a problem specifically asks you to prove one of
+them</em>, in which case, the problem will note that you may not use
+the theorem to prove it.</p>
+
+<theorem><statement><p>The determinants of elementary matrices have
+the following values:
+<ol marker="(a)">
+  <li>If <m>E_1</m> multiplies a row by a scalar <m>\alpha</m>, then
+  <m>\det(E_1) = \alpha</m>.</li>
+  <li>If <m>E_2</m> adds <m>\alpha</m> times a row to another row, then
+    <m>\det(E_2) = 1</m>.</li>
+      <li>If <m>E_3</m> swaps two rows, then
+  <m>\det(E_3) = -1</m>.</li>
+</ol>
+</p></statement></theorem>
+
+<theorem>
+  <statement>
+    <p>
+      <ol marker="(a)">
+  <li>If <m>A</m> and <m>B</m> are <m>n</m> by <m>n</m>, then
+  <m>\det(AB)=\det(A) \det(B)</m>.</li>
+  <li>The determinant of an upper or lower triangular matrix is
+  the product of its diagonal
+  entries. <md><mrow>\det(L)=\prod_{i=1}^n (L)_{i,i}</mrow>
+  <mrow>\det(U)=\prod_{i=1}^n (U)_{i,i}</mrow></md></li>
+  <li>The determinant of a diagonal matrix is the product of its
+  diagonal entries. If <m>D</m> is diagonal, then
+  <me>\det(D)=\prod_{i=1}^n (D)_{i,i}</me>.</li>
+  <li><m>\det(A)=\det(A^T)</m></li>
+  <li>A matrix <m>A</m> is invertible iff <m>\det(A)\neq
+  0</m>.</li>
+      </ol>
+    </p>
+  </statement>
+</theorem>
+<p>The final property of the theorem above should be included in 
+<xref ref="imt" text="title" />!
+</p>
+<theorem xml:id="ee"><statement><p>Let <m>A</m> be an <m>n\times n</m>
+matrix. We have that <m>\det(A)=0</m> iff <m>A\vec{x}=\vec{0}</m> has solutions such that <m>\vec{x} \neq \vec{0}</m>.
+</p></statement></theorem>
 </subsection>
 </section>
