@@ -961,7 +961,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Inverse Matrices",
-  "body": " Inverse Matrices   In this section, we will only consider square matrices.   A matrix is invertible if there exists a matrix such that and . The inverse matrix of is denoted .   Be careful that you do not use the notation until you have shown that is invertible. By inverse, we mean the multiplicative inverse for a matrix. A matrix that is not invertible is called a singular matrix . A non-singular matrix is an invertible matrix.  In the next couple of sections we will examine the following two questions:  How can you efficently calculate the inverse matrix for a given ?  How can you determine when a matrix is invertible without finding its inverse?      Computing Inverses    We will look at a way to find the inverse matrix of in terms of the matrix-vector product and how that can be used as a representation of matrix multiplication.   We want to find a matrix such that . So let's expand as columns. Using this perspective on the equation , we get How would we find out if there were any solutions to these matrix equations?  How could you find solutions to all of these matrix equations all at once?   In general computing the inverse of a matrix takes more time and operations than solving a system of equations. For this reason, it is generally easier to find and solve a related system of equations problem than to compute the inverse matrix. We will outline a few ways to find inverse matrices and compute a few small examples.  If a matrix is row reduced to by elementary row operations corresponding (in order of use) to elementary matrices , , ... , , give an expression for .  Use your answer to the previous question to prove the following: Any sequence of elementary row operations that reduces to also transforms into .  The previous result shows that computing inverses is equivalent to a row reduction problem. In particular, if is invertible, then reducing to reduced row echelon form will produce the matrix .  Use the idea above to compute the inverse of . Be sure to note any assumptions you will need to make in order to reduce to .  If , find and check that .  If , find and use your answer to solve if:    Elementary Matrices  Recall that an elementary row operation on a matrix is an operation of the form:  multiplying a row by a non-zero scalar  switching two rows  adding a multiple of one row to another row  Elementary matrices are obtained by performing an elementary operation on the identity matrix.    Give the elementary matrix obtained by performing the given operation on . (These are 4 separate questions):   Scaling the first row by   Switching the second and third rows  Adding 3 times the 2nd row to the 1st row  Adding 3 times the 1st row to the 2nd row     Check that your answer to the previous question does the desired operation by multiplying each of the four previous elementary matrices by . Which side do you multiply the elementary matrix on to correspond to row operations?      Compute (and verify) the inverse of each of the elementary matrices from the previous problems.   Think about how you would go backwards for each of the elementary operations.   Your work on the previous questions should convince you that elementary matrices are invertible and that multiplying by an elementary matrix produces the same result as having performed the corresponding elementary row operation. Elementary matrices offer a way of keeping track of elementary operations. We will not write our a proof of the following theorem at this time, but we state it for future uses:    Elementary matrices are invertible and the inverse matrix is an elementary matrix corresponding to the inverse elementary operation.    You shoud, however, at this time prove the theorems below.    If and are invertible by matrices, then and is an invertible by matrix.    If can be reduced to by elementary row operations, then is invertible.  Give all values of where will be invertible.  Give all values of where will be invertible.  How many pivots must a matrix have in order to be row reducible to ? Justify using previous results.  If is invertible, then has a unique solution for every .  Prove or disprove: If and are invertible by matrices, then is invertible.  Prove that if is invertible, then is invertible.   "
+  "body": " Inverse Matrices   In this section, we will only consider square matrices.   A matrix is invertible if there exists a matrix such that and . The inverse matrix of is denoted .   Be careful that you do not use the notation until you have shown that is invertible. By inverse, we mean the multiplicative inverse for a matrix. A matrix that is not invertible is called a singular matrix . A non-singular matrix is an invertible matrix.  In the next couple of sections we will examine the following two questions:  How can you efficently calculate the inverse matrix for a given ?  How can you determine when a matrix is invertible without finding its inverse?      Computing Inverses    We will look at a way to find the inverse matrix of in terms of the matrix-vector product and how that can be used as a representation of matrix multiplication.   We want to find a matrix such that . So let's expand as columns. Using this perspective on the equation , we get How would we find out if there were any solutions to these matrix equations?  How could you find solutions to all of these matrix equations all at once?   In general computing the inverse of a matrix takes more time and operations than solving a system of equations. For this reason, it is generally easier to find and solve a related system of equations problem than to compute the inverse matrix. We will outline a few ways to find inverse matrices and compute a few small examples.    Any sequence of elementary row operations that reduces to also transforms into .    The previous result shows that computing inverses is equivalent to a row reduction problem. In particular, if is invertible, then reducing to reduced row echelon form will produce the matrix .   Use the result of the previous investigation to find the inverse of the matrix . Check your work by computing and for the matrix you think is the inverse of .  Use the result of the previous investigation to find the inverse of the matrix . Check your work by computing and for the matrix you think is the inverse of .  Use the idea above to compute the inverse of . Be sure to note any assumptions you will need to make in order to reduce to .  If , find and check that .    If , find and use your answer to solve if:    Your friend Nick, who thinks he knows everything, claims that because that's how exponents work. Is he right? Justify your answer like you are going to have to convince Nick.   Mulitply Nick's Result on both sides by the matrix and simplify.     "
 },
 {
   "id": "definition-13",
@@ -991,31 +991,22 @@ var ptx_lunr_docs = [
   "body": "  We will look at a way to find the inverse matrix of in terms of the matrix-vector product and how that can be used as a representation of matrix multiplication.   We want to find a matrix such that . So let's expand as columns. Using this perspective on the equation , we get How would we find out if there were any solutions to these matrix equations?  How could you find solutions to all of these matrix equations all at once?  "
 },
 {
-  "id": "investigation-32",
+  "id": "q11",
   "level": "2",
-  "url": "InverseMatrices.html#investigation-32",
+  "url": "InverseMatrices.html#q11",
   "type": "Investigation",
   "number": "2.3.2",
   "title": "",
-  "body": "If a matrix is row reduced to by elementary row operations corresponding (in order of use) to elementary matrices , , ... , , give an expression for . "
+  "body": "  Any sequence of elementary row operations that reduces to also transforms into .   "
 },
 {
-  "id": "investigation-33",
+  "id": "activity-24",
   "level": "2",
-  "url": "InverseMatrices.html#investigation-33",
-  "type": "Investigation",
+  "url": "InverseMatrices.html#activity-24",
+  "type": "Activity",
   "number": "2.3.3",
   "title": "",
-  "body": "Use your answer to the previous question to prove the following: Any sequence of elementary row operations that reduces to also transforms into . "
-},
-{
-  "id": "inv22",
-  "level": "2",
-  "url": "InverseMatrices.html#inv22",
-  "type": "Investigation",
-  "number": "2.3.4",
-  "title": "",
-  "body": "Use the idea above to compute the inverse of . Be sure to note any assumptions you will need to make in order to reduce to . "
+  "body": " Use the result of the previous investigation to find the inverse of the matrix . Check your work by computing and for the matrix you think is the inverse of .  Use the result of the previous investigation to find the inverse of the matrix . Check your work by computing and for the matrix you think is the inverse of .  Use the idea above to compute the inverse of . Be sure to note any assumptions you will need to make in order to reduce to .  If , find and check that .  "
 },
 {
   "id": "exercise-1",
@@ -1024,124 +1015,16 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "2.3.2",
   "title": "",
-  "body": "If , find and check that . "
+  "body": " If , find and use your answer to solve if:  "
 },
 {
-  "id": "exercise-2",
+  "id": "investigation-33",
   "level": "2",
-  "url": "InverseMatrices.html#exercise-2",
-  "type": "Checkpoint",
-  "number": "2.3.3",
-  "title": "",
-  "body": "If , find and use your answer to solve if: "
-},
-{
-  "id": "investigation-35",
-  "level": "2",
-  "url": "InverseMatrices.html#investigation-35",
+  "url": "InverseMatrices.html#investigation-33",
   "type": "Investigation",
-  "number": "2.3.5",
-  "title": "",
-  "body": "  Give the elementary matrix obtained by performing the given operation on . (These are 4 separate questions):   Scaling the first row by   Switching the second and third rows  Adding 3 times the 2nd row to the 1st row  Adding 3 times the 1st row to the 2nd row  "
-},
-{
-  "id": "investigation-36",
-  "level": "2",
-  "url": "InverseMatrices.html#investigation-36",
-  "type": "Investigation",
-  "number": "2.3.6",
-  "title": "",
-  "body": "  Check that your answer to the previous question does the desired operation by multiplying each of the four previous elementary matrices by . Which side do you multiply the elementary matrix on to correspond to row operations?   "
-},
-{
-  "id": "investigation-37",
-  "level": "2",
-  "url": "InverseMatrices.html#investigation-37",
-  "type": "Investigation",
-  "number": "2.3.7",
-  "title": "",
-  "body": "  Compute (and verify) the inverse of each of the elementary matrices from the previous problems.   Think about how you would go backwards for each of the elementary operations.  "
-},
-{
-  "id": "theorem-11",
-  "level": "2",
-  "url": "InverseMatrices.html#theorem-11",
-  "type": "Theorem",
   "number": "2.3.4",
   "title": "",
-  "body": "  Elementary matrices are invertible and the inverse matrix is an elementary matrix corresponding to the inverse elementary operation.   "
-},
-{
-  "id": "theorem-12",
-  "level": "2",
-  "url": "InverseMatrices.html#theorem-12",
-  "type": "Theorem",
-  "number": "2.3.5",
-  "title": "",
-  "body": "  If and are invertible by matrices, then and is an invertible by matrix.   "
-},
-{
-  "id": "q11",
-  "level": "2",
-  "url": "InverseMatrices.html#q11",
-  "type": "Theorem",
-  "number": "2.3.6",
-  "title": "",
-  "body": "If can be reduced to by elementary row operations, then is invertible. "
-},
-{
-  "id": "investigation-38",
-  "level": "2",
-  "url": "InverseMatrices.html#investigation-38",
-  "type": "Investigation",
-  "number": "2.3.8",
-  "title": "",
-  "body": "Give all values of where will be invertible. "
-},
-{
-  "id": "investigation-39",
-  "level": "2",
-  "url": "InverseMatrices.html#investigation-39",
-  "type": "Investigation",
-  "number": "2.3.9",
-  "title": "",
-  "body": "Give all values of where will be invertible. "
-},
-{
-  "id": "investigation-40",
-  "level": "2",
-  "url": "InverseMatrices.html#investigation-40",
-  "type": "Investigation",
-  "number": "2.3.10",
-  "title": "",
-  "body": "How many pivots must a matrix have in order to be row reducible to ? Justify using previous results. "
-},
-{
-  "id": "theorem-14",
-  "level": "2",
-  "url": "InverseMatrices.html#theorem-14",
-  "type": "Theorem",
-  "number": "2.3.7",
-  "title": "",
-  "body": "If is invertible, then has a unique solution for every . "
-},
-{
-  "id": "investigation-41",
-  "level": "2",
-  "url": "InverseMatrices.html#investigation-41",
-  "type": "Investigation",
-  "number": "2.3.11",
-  "title": "",
-  "body": "Prove or disprove: If and are invertible by matrices, then is invertible. "
-},
-{
-  "id": "investigation-42",
-  "level": "2",
-  "url": "InverseMatrices.html#investigation-42",
-  "type": "Investigation",
-  "number": "2.3.12",
-  "title": "",
-  "body": "Prove that if is invertible, then is invertible. "
+  "body": " Your friend Nick, who thinks he knows everything, claims that because that's how exponents work. Is he right? Justify your answer like you are going to have to convince Nick.   Mulitply Nick's Result on both sides by the matrix and simplify.   "
 },
 {
   "id": "IvertibleMatrixThm",
@@ -1153,9 +1036,9 @@ var ptx_lunr_docs = [
   "body": " Invertible Matrix Theorem    In many texts there is a long list of equivalent conditions for when a square matrix is invertible. Below is a list of some of these conditions that we have talked about or proven. Go back through your notes and questions and cite when we connected two of the ideas in the list. For instance, parts and are linked by     Before stating this major theorem, we should explain what the phrase the following are equivalent (sometimes written TFAE in scratchwork or on the board) means. A theorem of this type is essentially a giant if and only if theorem. Specifically, each statement in the theorem is true or each statement in the theorem is false. It is not possible for some to be true and some to be false. In a theorem with, say, three statements, we often prove that statement 1 implies statement 2, statement 2 implies statement 3, and statement three implies statement 1. Then you can start at any statement and reach any other statement, showing that if one is true, all the others must be true. However, with longer lists, we sometimes have to prove things a bit more piecemeal.  The Invertible Matrix Theorem   Let be a by matrix. The following are equivalent:  is an invertible matrix.  is row equivalent to .  has pivots.  has only the trivial solution.  The linear transformation is one-to-one.  The linear transformation is onto.  has a solution for every .  The columns of form a linearly independent set.  The columns of span .  The rows of form a linearly independent set.  The rows of span .  is invertible.        Two important ideas in this course that have been tied to many different methods or ideas are 1) consistent systems of linear equations and 2) invertible matrices. These two ideas are a bit different though. Give an example of a consistent system of linear equations (in matrix equation form ) where the coefficient matrix is a non-invertible square matrix.    "
 },
 {
-  "id": "investigation-43",
+  "id": "investigation-34",
   "level": "2",
-  "url": "IvertibleMatrixThm.html#investigation-43",
+  "url": "IvertibleMatrixThm.html#investigation-34",
   "type": "Investigation",
   "number": "2.4.1",
   "title": "",
@@ -1171,13 +1054,148 @@ var ptx_lunr_docs = [
   "body": "The Invertible Matrix Theorem   Let be a by matrix. The following are equivalent:  is an invertible matrix.  is row equivalent to .  has pivots.  has only the trivial solution.  The linear transformation is one-to-one.  The linear transformation is onto.  has a solution for every .  The columns of form a linearly independent set.  The columns of span .  The rows of form a linearly independent set.  The rows of span .  is invertible.     "
 },
 {
-  "id": "investigation-44",
+  "id": "investigation-35",
   "level": "2",
-  "url": "IvertibleMatrixThm.html#investigation-44",
+  "url": "IvertibleMatrixThm.html#investigation-35",
   "type": "Investigation",
   "number": "2.4.2",
   "title": "",
   "body": "  Two important ideas in this course that have been tied to many different methods or ideas are 1) consistent systems of linear equations and 2) invertible matrices. These two ideas are a bit different though. Give an example of a consistent system of linear equations (in matrix equation form ) where the coefficient matrix is a non-invertible square matrix.   "
+},
+{
+  "id": "determinants",
+  "level": "1",
+  "url": "determinants.html",
+  "type": "Section",
+  "number": "2.5",
+  "title": "Determinants",
+  "body": " Determinants   Determinants will be an incredibly useful tool in quickly determining several important properties of square matrices. We will first look at how to compute determinants and later outline the important properties that determinants have. While some of you may have been taught some rules for how to compute determinants of 2 by 2 and 3 by 3 matrices, I encourage you to understand how to compute determinants in general.    Computing Determinants    The determinant is a function from by matrices to the real numbers ( ). If is a 1 by 1 matrix, , then . For , the determinant of a by matrix is given by the following formula in terms of determinants of by matrices: where is the by matrix obtained by deleting the -th row and -th column of . The term is called the cofactor of .    The above definition uses cofactor expansion along the first row.    In this question, we will unpack the determinant formula above for a 2 by 2 matrix .   Rather than using the summation notation of the formula above, write out the two terms in .          Your answer to the previous problem will be useful in calculating determinants of 3 by 3 matrices. We will use the theorem below without proving it.    The determinant can be computed by cofactor expansion along any row or column. Specifically the cofactor expansion along the -th row is given by and the cofactor expansion along the -th column is given by .     Use cofactor expansion along the first column of to compute .   Use cofactor expansion along the second row of to compute . Did you get the same answer as the previous question?  Compute the determinant of . How does your answer compare with the previous problem?  Compute the determinant of .  Compute the determinant of .  Compute the determinant of the following matrices:    Properties of Determinants  Prove that if has a row of zeros, then .  Prove that .  We will now state several useful properties of determinants. We will defer the proofs until later in the course. You may use these theorems unless a problem specifically asks you to prove one of them , in which case, the problem will note that you may not use the theorem to prove it.  The determinants of elementary matrices have the following values:  If multiplies a row by a scalar , then .  If adds times a row to another row, then .  If swaps two rows, then .        If and are by , then .  The determinant of an upper or lower triangular matrix is the product of its diagonal entries.  The determinant of a diagonal matrix is the product of its diagonal entries. If is diagonal, then .   A matrix is invertible iff .      The final property of the theorem above should be included in !  Let be an matrix. We have that iff has solutions such that .   "
+},
+{
+  "id": "definition-14",
+  "level": "2",
+  "url": "determinants.html#definition-14",
+  "type": "Definition",
+  "number": "2.5.1",
+  "title": "",
+  "body": "  The determinant is a function from by matrices to the real numbers ( ). If is a 1 by 1 matrix, , then . For , the determinant of a by matrix is given by the following formula in terms of determinants of by matrices: where is the by matrix obtained by deleting the -th row and -th column of . The term is called the cofactor of .   "
+},
+{
+  "id": "investigation-36",
+  "level": "2",
+  "url": "determinants.html#investigation-36",
+  "type": "Investigation",
+  "number": "2.5.1",
+  "title": "",
+  "body": "  In this question, we will unpack the determinant formula above for a 2 by 2 matrix .   Rather than using the summation notation of the formula above, write out the two terms in .         "
+},
+{
+  "id": "theorem-12",
+  "level": "2",
+  "url": "determinants.html#theorem-12",
+  "type": "Theorem",
+  "number": "2.5.2",
+  "title": "",
+  "body": "  The determinant can be computed by cofactor expansion along any row or column. Specifically the cofactor expansion along the -th row is given by and the cofactor expansion along the -th column is given by .   "
+},
+{
+  "id": "exercise-2",
+  "level": "2",
+  "url": "determinants.html#exercise-2",
+  "type": "Checkpoint",
+  "number": "2.5.3",
+  "title": "",
+  "body": " Use cofactor expansion along the first column of to compute .  "
+},
+{
+  "id": "exercise-3",
+  "level": "2",
+  "url": "determinants.html#exercise-3",
+  "type": "Checkpoint",
+  "number": "2.5.4",
+  "title": "",
+  "body": "Use cofactor expansion along the second row of to compute . Did you get the same answer as the previous question? "
+},
+{
+  "id": "exercise-4",
+  "level": "2",
+  "url": "determinants.html#exercise-4",
+  "type": "Checkpoint",
+  "number": "2.5.5",
+  "title": "",
+  "body": "Compute the determinant of . How does your answer compare with the previous problem? "
+},
+{
+  "id": "exercise-5",
+  "level": "2",
+  "url": "determinants.html#exercise-5",
+  "type": "Checkpoint",
+  "number": "2.5.6",
+  "title": "",
+  "body": "Compute the determinant of . "
+},
+{
+  "id": "exercise-6",
+  "level": "2",
+  "url": "determinants.html#exercise-6",
+  "type": "Checkpoint",
+  "number": "2.5.7",
+  "title": "",
+  "body": "Compute the determinant of . "
+},
+{
+  "id": "exercise-7",
+  "level": "2",
+  "url": "determinants.html#exercise-7",
+  "type": "Checkpoint",
+  "number": "2.5.8",
+  "title": "",
+  "body": "Compute the determinant of the following matrices: "
+},
+{
+  "id": "investigation-37",
+  "level": "2",
+  "url": "determinants.html#investigation-37",
+  "type": "Investigation",
+  "number": "2.5.2",
+  "title": "",
+  "body": "Prove that if has a row of zeros, then . "
+},
+{
+  "id": "investigation-38",
+  "level": "2",
+  "url": "determinants.html#investigation-38",
+  "type": "Investigation",
+  "number": "2.5.3",
+  "title": "",
+  "body": "Prove that . "
+},
+{
+  "id": "theorem-13",
+  "level": "2",
+  "url": "determinants.html#theorem-13",
+  "type": "Theorem",
+  "number": "2.5.9",
+  "title": "",
+  "body": "The determinants of elementary matrices have the following values:  If multiplies a row by a scalar , then .  If adds times a row to another row, then .  If swaps two rows, then .   "
+},
+{
+  "id": "theorem-14",
+  "level": "2",
+  "url": "determinants.html#theorem-14",
+  "type": "Theorem",
+  "number": "2.5.10",
+  "title": "",
+  "body": "    If and are by , then .  The determinant of an upper or lower triangular matrix is the product of its diagonal entries.  The determinant of a diagonal matrix is the product of its diagonal entries. If is diagonal, then .   A matrix is invertible iff .     "
+},
+{
+  "id": "ee",
+  "level": "2",
+  "url": "determinants.html#ee",
+  "type": "Theorem",
+  "number": "2.5.11",
+  "title": "",
+  "body": "Let be an matrix. We have that iff has solutions such that . "
 },
 {
   "id": "colophon-2",

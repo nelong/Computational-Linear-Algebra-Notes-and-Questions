@@ -190,7 +190,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="InverseMatrices.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C2.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="InverseMatrices.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C2.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="determinants.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand\colvec[1]{\begin{bmatrix}#1\end{bmatrix}}
@@ -260,12 +260,16 @@ window.MathJax = {
 </li>
 <li>
 <div class="toc-item"><a href="InverseMatrices.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Inverse Matrices</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="InverseMatrices.html#subsection-15" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Computing Inverses</span></a></div></li>
-<li><div class="toc-item"><a href="InverseMatrices.html#subsection-16" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Elementary Matrices</span></a></div></li>
-</ul>
+<ul class="structural"><li><div class="toc-item"><a href="InverseMatrices.html#subsection-15" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Computing Inverses</span></a></div></li></ul>
 </li>
 <li class="active"><div class="toc-item"><a href="IvertibleMatrixThm.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Invertible Matrix Theorem</span></a></div></li>
+<li>
+<div class="toc-item"><a href="determinants.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Determinants</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="determinants.html#subsection-16" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Computing Determinants</span></a></div></li>
+<li><div class="toc-item"><a href="determinants.html#subsection-17" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Properties of Determinants</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -273,46 +277,46 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="IvertibleMatrixThm"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Invertible Matrix Theorem</span>
 </h2>
-<article class="investigation project-like" id="investigation-43"><h3 class="heading">
+<article class="investigation project-like" id="investigation-34"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-284">In many texts there is a long list of equivalent conditions for when a square matrix is invertible. Below is a list of some of these conditions that we have talked about or proven. Go back through your notes and questions and cite when we connected two of the ideas in the list. For instance, parts <span class="process-math">\(a)\)</span> and <span class="process-math">\(b)\)</span> are linked by <a href="" class="xref" data-knowl="./knowl/q11.html" title="Theorem 2.3.6">Theorem 2.3.6</a>
-</div></article><div class="para" id="p-285">Before stating this major theorem, we should explain what the phrase “the following are equivalent” (sometimes written “TFAE” in scratchwork or on the board) means. A theorem of this type is essentially a giant if and only if theorem. Specifically, each statement in the theorem is true or each statement in the theorem is false. It is not possible for some to be true and some to be false. In a theorem with, say, three statements, we often prove that statement 1 implies statement 2, statement 2 implies statement 3, and statement three implies statement 1. Then you can start at any statement and reach any other statement, showing that if one is true, all the others must be true. However, with longer lists, we sometimes have to prove things a bit more piecemeal.</div>
+<div class="para" id="p-267">In many texts there is a long list of equivalent conditions for when a square matrix is invertible. Below is a list of some of these conditions that we have talked about or proven. Go back through your notes and questions and cite when we connected two of the ideas in the list. For instance, parts <span class="process-math">\(a)\)</span> and <span class="process-math">\(b)\)</span> are linked by <a href="" class="xref" data-knowl="./knowl/q11.html" title="Investigation 2.3.2">Investigation 2.3.2</a>
+</div></article><div class="para" id="p-268">Before stating this major theorem, we should explain what the phrase “the following are equivalent” (sometimes written “TFAE” in scratchwork or on the board) means. A theorem of this type is essentially a giant if and only if theorem. Specifically, each statement in the theorem is true or each statement in the theorem is false. It is not possible for some to be true and some to be false. In a theorem with, say, three statements, we often prove that statement 1 implies statement 2, statement 2 implies statement 3, and statement three implies statement 1. Then you can start at any statement and reach any other statement, showing that if one is true, all the others must be true. However, with longer lists, we sometimes have to prove things a bit more piecemeal.</div>
 <article class="theorem theorem-like" id="imt"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">The Invertible Matrix Theorem.</span>
 </h3>
-<div class="para logical" id="p-286">
+<div class="para logical" id="p-269">
 <div class="para">Let <span class="process-math">\(A\)</span> be a <span class="process-math">\(n\)</span> by <span class="process-math">\(n\)</span> matrix. The following are equivalent:</div>
 <ol class="lower-alpha">
-<li id="li-53"><div class="para" id="p-derived-li-53">
+<li id="li-50"><div class="para" id="p-derived-li-50">
 <span class="process-math">\(A\)</span> is an invertible matrix.</div></li>
-<li id="li-54"><div class="para" id="p-derived-li-54">
+<li id="li-51"><div class="para" id="p-derived-li-51">
 <span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(Id_n\text{.}\)</span>
 </div></li>
-<li id="li-55"><div class="para" id="p-derived-li-55">
+<li id="li-52"><div class="para" id="p-derived-li-52">
 <span class="process-math">\(A\)</span> has <span class="process-math">\(n\)</span> pivots.</div></li>
-<li id="li-56"><div class="para" id="p-derived-li-56">
+<li id="li-53"><div class="para" id="p-derived-li-53">
 <span class="process-math">\(A\vec{x} =\vec{0}\)</span> has only the trivial solution.</div></li>
-<li id="li-57"><div class="para" id="p-derived-li-57">The linear transformation <span class="process-math">\(\vec{x} \rightarrow A\vec{x}\)</span> is one-to-one.</div></li>
-<li id="li-58"><div class="para" id="p-derived-li-58">The linear transformation <span class="process-math">\(\vec{x} \rightarrow A\vec{x}\)</span> is onto.</div></li>
-<li id="li-59"><div class="para" id="p-derived-li-59">
+<li id="li-54"><div class="para" id="p-derived-li-54">The linear transformation <span class="process-math">\(\vec{x} \rightarrow A\vec{x}\)</span> is one-to-one.</div></li>
+<li id="li-55"><div class="para" id="p-derived-li-55">The linear transformation <span class="process-math">\(\vec{x} \rightarrow A\vec{x}\)</span> is onto.</div></li>
+<li id="li-56"><div class="para" id="p-derived-li-56">
 <span class="process-math">\(A\vec{x}=\vec{b}\)</span> has a solution for every <span class="process-math">\(\vec{b} \in \mathbb{R}^n\text{.}\)</span>
 </div></li>
-<li id="li-60"><div class="para" id="p-derived-li-60">The columns of <span class="process-math">\(A\)</span> form a linearly independent set.</div></li>
-<li id="li-61"><div class="para" id="p-derived-li-61">The columns of <span class="process-math">\(A\)</span> span <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
+<li id="li-57"><div class="para" id="p-derived-li-57">The columns of <span class="process-math">\(A\)</span> form a linearly independent set.</div></li>
+<li id="li-58"><div class="para" id="p-derived-li-58">The columns of <span class="process-math">\(A\)</span> span <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
 </div></li>
-<li id="li-62"><div class="para" id="p-derived-li-62">The rows of <span class="process-math">\(A\)</span> form a linearly independent set.</div></li>
-<li id="li-63"><div class="para" id="p-derived-li-63">The rows of <span class="process-math">\(A\)</span> span <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
+<li id="li-59"><div class="para" id="p-derived-li-59">The rows of <span class="process-math">\(A\)</span> form a linearly independent set.</div></li>
+<li id="li-60"><div class="para" id="p-derived-li-60">The rows of <span class="process-math">\(A\)</span> span <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
 </div></li>
-<li id="li-64"><div class="para" id="p-derived-li-64">
+<li id="li-61"><div class="para" id="p-derived-li-61">
 <span class="process-math">\(A^T\)</span> is invertible.</div></li>
 </ol>
-</div></article><article class="investigation project-like" id="investigation-44"><h3 class="heading">
+</div></article><article class="investigation project-like" id="investigation-35"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-287">Two important ideas in this course that have been tied to many different methods or ideas are 1) consistent systems of linear equations and 2) invertible matrices. These two ideas are a bit different though. Give an example of a consistent system of linear equations (in matrix equation form <span class="process-math">\(A\vec{x} = \vec{b}\)</span>) where the coefficient matrix <span class="process-math">\(A\)</span> is a non-invertible square matrix.</div></article></section></div>
+<div class="para" id="p-270">Two important ideas in this course that have been tied to many different methods or ideas are 1) consistent systems of linear equations and 2) invertible matrices. These two ideas are a bit different though. Give an example of a consistent system of linear equations (in matrix equation form <span class="process-math">\(A\vec{x} = \vec{b}\)</span>) where the coefficient matrix <span class="process-math">\(A\)</span> is a non-invertible square matrix.</div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="InverseMatrices.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="InverseMatrices.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="determinants.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div class="ptx-page-footer">
