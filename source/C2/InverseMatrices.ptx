@@ -59,7 +59,7 @@
 </investigation>
 
 <p>
-  The previous result shows that computing inverses is equivalent to a row reduction problem. In particular, if <m>A</m> is invertible, then reducing <m>[ A \quad | \quad Id_n]</m> to reduced row echelon form will produce the matrix <m>[ Id_n \quad | \quad A^{-1}]</m>.
+  The previous result shows that computing inverses is equivalent to a row reduction problem. In particular, if <m>A</m> is invertible, then reducing <m>[ A \quad | \quad Id_n]</m> to reduced row echelon form will produce the matrix <m>[ Id_n \;| \; A^{-1}]</m>.
 </p>
 <activity>
   <task>
@@ -74,7 +74,7 @@
   </task>
   <task>
     <p>
-      Use the idea above to compute the inverse of <m>\begin{bmatrix} a\amp b\\c\amp d \end{bmatrix}</m>. Be sure to note any assumptions you will need to make in order to reduce <m>[ A \quad | \quad Id_n]</m> to <m>[ Id_n \quad | \quad A^{-1}]</m>.
+      Use the idea above to compute the inverse of <m>\begin{bmatrix} a\amp b\\c\amp d \end{bmatrix}</m>. Be sure to note any assumptions you will need to make in order to reduce <m>[ A \; | \; Id_n]</m> to <m>[ Id_n \; | \; A^{-1}]</m>.
     </p>
   </task>
   <task>
@@ -106,6 +106,18 @@
     </p>
   </hint>
 </investigation>
+<investigation>
+  <p>
+    Nick makes another concerning statement about how algebra works with matrices. Specifically, he claims that if the product of two matrices is zero, then one of the two matrices must be the zero matrix. He writes <m>A B =0 \Rightarrow A=0</m> or <m>B=0</m> on the board to justify his idea. Is he wrong again or do matrices work like this?
+  </p>
+
+  <hint>
+    <p>
+      Come up with an example of matrices <m>A</m> and <m>B</m> that will demonstrate is claim his false.
+    </p>
+  </hint>
+</investigation>
+
 </subsection>
 
 </section>
