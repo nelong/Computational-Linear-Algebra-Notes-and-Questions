@@ -83,9 +83,6 @@
           <sage>
             <input>
               A = matrix(2,2,[1,2,3,4])
-              # Getting the characteristic polynomial in factored
-              # form is helpful. For that, change charpoly to
-              # fcp below
               A.charpoly('t')
             </input>
           </sage>

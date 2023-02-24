@@ -7,6 +7,7 @@
   <xi:include href="C2/InverseMatrices.ptx" />
   <xi:include href="C2/IMT.ptx" />
   <xi:include href="C2/Determinants.ptx" />
+  <xi:include href="C2/MatrixNature.ptx" />
   <xi:include href="C2/EV.ptx" />
 </chapter>
 

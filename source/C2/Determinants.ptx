@@ -170,8 +170,8 @@
           <me>\det(D)=\prod_{i=1}^n (D)_{i,i}</me>.
         </li>
         <li><m>\det(A)=\det(A^T)</m></li>
-        <li>A matrix <m>A</m> is invertible iff <m>\det(A)\neq 0</m>.</li>
         <li>If the matrix <m>A</m> is invertible, then <m>det(A^{-1})=\frac{1}{det(A)}</m></li>
+        <li>A matrix <m>A</m> is invertible iff <m>\det(A)\neq 0</m>.</li>
       </ol>
     </p>
   </statement>
