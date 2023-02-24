@@ -1078,7 +1078,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.5",
   "title": "Determinants",
-  "body": " Determinants   Determinants will be an incredibly useful tool in quickly determining several important properties of square matrices. We will first look at how to compute determinants and later outline the important properties that determinants have. While some of you may have been taught some rules for how to compute determinants of 2 by 2 and 3 by 3 matrices, I encourage you to understand how to compute determinants in general.    Computing Determinants    The determinant is a function from by matrices to the real numbers ( ).  If is a 1 by 1 matrix, , then .  For , the determinant of a by matrix is given by the following formula in terms of determinants of by matrices: where is the by matrix obtained by deleting the -th row and -th column of . The term is called the  cofactor of .    The above definition uses cofactor expansion along the first row.    In this question, we will unpack the determinant formula above for a 2 by 2 matrix .   Rather than using the summation notation of the formula above, write out the two terms in .          Your answer to the previous problem will be useful in calculating determinants of 3 by 3 matrices. We will use the theorem below without proving it.    The determinant can be computed by cofactor expansion along any row or column. Specifically the cofactor expansion along the -th row is given by and the cofactor expansion along the -th column is given by .     Use cofactor expansion along the first column of to compute .   Use cofactor expansion along the second row of to compute . Did you get the same answer as the previous question?  Compute the determinant of . How does your answer compare with the previous problem?  Compute the determinant of .  Compute the determinant of .  Compute the determinant of the following matrices:    Properties of Determinants  Prove that if has a row of zeros, then .  Prove that .  We will now state several useful properties of determinants. We will defer the proofs until later in the course. You may use these theorems unless a problem specifically asks you to prove one of them , in which case, the problem will note that you may not use the theorem to prove it.  The determinants of elementary matrices have the following values:  If multiplies a row by a scalar , then .  If adds times a row to another row, then .  If swaps two rows, then .        If and are by , then .  The determinant of an upper or lower triangular matrix is the product of its diagonal entries.  The determinant of a diagonal matrix is the product of its diagonal entries. If is diagonal, then .   A matrix is invertible iff .      The final property of the theorem above should be included in !  Let be an matrix. We have that iff has solutions such that .   "
+  "body": " Determinants   Determinants will be an incredibly useful tool in quickly determining several important properties of square matrices. We will first look at how to compute determinants and later outline the important properties that determinants have. While some of you may have been taught some rules for how to compute determinants of 2 by 2 and 3 by 3 matrices, I encourage you to understand how to compute determinants in general.    Computing Determinants    The determinant is a function from by matrices to the real numbers ( ).  If is a 1 by 1 matrix, , then .  For , the determinant of a by matrix is given by the following formula in terms of determinants of by matrices: where is the by matrix obtained by deleting the -th row and -th column of . The term is called the  cofactor of .    The above definition uses cofactor expansion along the first row.    In this question, we will unpack the determinant formula above for a 2 by 2 matrix .   Rather than using the summation notation of the formula above, write out the two terms in .          Your answer to the previous problem will be useful in calculating determinants of 3 by 3 matrices. We will use the theorem below without proving it.    The determinant can be computed by cofactor expansion along any row or column. Specifically the cofactor expansion along the -th row is given by and the cofactor expansion along the -th column is given by .     Use cofactor expansion along the first column of to compute .   Use cofactor expansion along the second row of to compute . Did you get the same answer as the previous question?  Compute the determinant of . How does your answer compare with the previous problem?  Compute the determinant of .  Compute the determinant of .   Compute the determinant of the following matrices:        Find when   Find when   Find when   Find when      Properties of Determinants    Prove that if has a row of zeros, then .      Prove that .    We will now state several useful properties of determinants. We will defer the proofs until later in the course. You may use these theorems unless a problem specifically asks you to prove one of them , in which case, the problem will note that you may not use the theorem to prove it.    The determinants of elementary matrices have the following values:  If multiplies a row by a scalar , then .  If adds times a row to another row, then .  If swaps two rows, then .          If and are by , then .  The determinant of an upper or lower triangular matrix is the product of its diagonal entries.   The determinant of a diagonal matrix is the product of its diagonal entries. If is diagonal, then .   If the matrix is invertible, then  A matrix is invertible iff .      The final property of the theorem above should be included in !    Let be an matrix. We have that iff has solutions such that .     "
 },
 {
   "id": "definition-14",
@@ -1159,25 +1159,34 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "2.5.8",
   "title": "",
-  "body": "Compute the determinant of the following matrices: "
+  "body": " Compute the determinant of the following matrices:      "
+},
+{
+  "id": "activity-25",
+  "level": "2",
+  "url": "determinants.html#activity-25",
+  "type": "Activity",
+  "number": "2.5.2",
+  "title": "",
+  "body": " Find when   Find when   Find when   Find when   "
 },
 {
   "id": "investigation-38",
   "level": "2",
   "url": "determinants.html#investigation-38",
   "type": "Investigation",
-  "number": "2.5.2",
+  "number": "2.5.3",
   "title": "",
-  "body": "Prove that if has a row of zeros, then . "
+  "body": "  Prove that if has a row of zeros, then .   "
 },
 {
   "id": "investigation-39",
   "level": "2",
   "url": "determinants.html#investigation-39",
   "type": "Investigation",
-  "number": "2.5.3",
+  "number": "2.5.4",
   "title": "",
-  "body": "Prove that . "
+  "body": "  Prove that .   "
 },
 {
   "id": "theorem-13",
@@ -1186,7 +1195,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "2.5.9",
   "title": "",
-  "body": "The determinants of elementary matrices have the following values:  If multiplies a row by a scalar , then .  If adds times a row to another row, then .  If swaps two rows, then .   "
+  "body": "  The determinants of elementary matrices have the following values:  If multiplies a row by a scalar , then .  If adds times a row to another row, then .  If swaps two rows, then .     "
 },
 {
   "id": "theorem-14",
@@ -1195,7 +1204,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "2.5.10",
   "title": "",
-  "body": "    If and are by , then .  The determinant of an upper or lower triangular matrix is the product of its diagonal entries.  The determinant of a diagonal matrix is the product of its diagonal entries. If is diagonal, then .   A matrix is invertible iff .     "
+  "body": "    If and are by , then .  The determinant of an upper or lower triangular matrix is the product of its diagonal entries.   The determinant of a diagonal matrix is the product of its diagonal entries. If is diagonal, then .   If the matrix is invertible, then  A matrix is invertible iff .     "
 },
 {
   "id": "ee",
@@ -1204,7 +1213,151 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "2.5.11",
   "title": "",
-  "body": "Let be an matrix. We have that iff has solutions such that . "
+  "body": "  Let be an matrix. We have that iff has solutions such that .   "
+},
+{
+  "id": "NatureofaMatrix",
+  "level": "1",
+  "url": "NatureofaMatrix.html",
+  "type": "Section",
+  "number": "2.6",
+  "title": "A Motivating Example",
+  "body": " A Motivating Example    We want to look at the effect that a matrix has when we look at the matrix's effect on an entire vector space. Let's start small and look at We want to look at what happens to different directions (measured with unit vectors) when we use the function .   Use Python to construct a bunch of unit vectors centered at the origin. Plot these vectors.  Use Python to calculate for each of your unit vectors. Plot these vectors. What do you notice about these results?  Where does send ? Why should this make sense on your plot?  Where does send ? Why should this make sense on your plot?  How does the area traced out by all unit vectors starting at the origin change under ? Calculate the determinant of and compare to your change in area.  Where does send ? Why should this make sense on your plot?  Are there other directions that work like this?  So and are important directions. Will there be any other directions that are just scalar multiplication under the action of ?  The set spans all of . How can we justify this statement?  We can write any vector in as a linear combination of the set . Use this idea to describe in terms of and .  Can we do all of these steps for other matrices? Great question Dr. Long. You deserve a raise and come cookies. You may proceed to the next section to see the answer.   "
+},
+{
+  "id": "activity-26",
+  "level": "2",
+  "url": "NatureofaMatrix.html#activity-26",
+  "type": "Activity",
+  "number": "2.6.1",
+  "title": "",
+  "body": "  We want to look at the effect that a matrix has when we look at the matrix's effect on an entire vector space. Let's start small and look at We want to look at what happens to different directions (measured with unit vectors) when we use the function .   Use Python to construct a bunch of unit vectors centered at the origin. Plot these vectors.  Use Python to calculate for each of your unit vectors. Plot these vectors. What do you notice about these results?  Where does send ? Why should this make sense on your plot?  Where does send ? Why should this make sense on your plot?  How does the area traced out by all unit vectors starting at the origin change under ? Calculate the determinant of and compare to your change in area.  Where does send ? Why should this make sense on your plot?  Are there other directions that work like this?  So and are important directions. Will there be any other directions that are just scalar multiplication under the action of ?  The set spans all of . How can we justify this statement?  We can write any vector in as a linear combination of the set . Use this idea to describe in terms of and .  Can we do all of these steps for other matrices? Great question Dr. Long. You deserve a raise and come cookies. You may proceed to the next section to see the answer.  "
+},
+{
+  "id": "EigenvaluesEigenvectors",
+  "level": "1",
+  "url": "EigenvaluesEigenvectors.html",
+  "type": "Section",
+  "number": "2.7",
+  "title": "Eigenvalues and Eigenvectors",
+  "body": " Eigenvalues and Eigenvectors    An eigenvector of a matrix is a nonzero vector such that for some scalar . The scalar is called an eigenvalue of if there exists a nonzero solution to .      Which of the following vectors are an eigenvector of ? For any vectors that are eigenvectors of , give the eigenvalue.          As a hint for the following two problems, it will suffice to try to find an eigenvector of the form . You might first convince yourself that for these matrices, no eigenvector can have first component .    Let . Try to find an eigenvector with eigenvalue . In other words, find a vector such that .      Let . Try to find an eigenvector with eigenvalue . In other words, find a vector such that .    As a hint to proving this, look back to     Let be a square matrix. We have that iff is an eigenvalue of .    If is a by matrix, then will be a -th degree polynomial in , which we call the characteristic polynomial of . The previous theorem shows that finding roots of the characteristic polynomial is the same as finding eigenvalues.    For each of the following matrices:  write out the characteristic polynomial  give all eigenvalues  for each eigenvalue, find an eigenvector  You should do the first two by hand to get a feel for finding the characteristic polynomial. After that, I have provided a SageMath cell you can modify to get the characteristic polynomial quickly, but you will need to work from there to find eigenvalues and eigenvectors.          Work smarter, not harder, on this part!   A root of a polynomial (in ) has (algebraic) multiplicity  if is the largest integer such that is a factor. Which, if any, of the eigenvalues you found above have algebraic multiplicity greater than ?       Prove that a nonzero vector, , is an eigenvector of with eigenvalue if and only if is in the null space of .     If is an eigenvector of with eigenvalue , then . By algebra, this means that , and hence . Thus, is in the null space of .   If , then . Hence, , or . Thus, is an eigenvector of with eigenvalue .      Prove that if is an eigenvector of , then is also an eigenvector of (when ).    Since is an eigenvector of , there is a scalar such that . By properties of matrix multiplication, we thus have . As , this shows that is an eigenvector with the same eigenvalue.      Prove that if and are eigenvectors of with the same eigenvalue, then is also an eigenvector of . What is the eigenvalue of ?    Let be the associated eigenvalue. We have that and . Thus, we have . Therefore, is an eigenvector with the same eigenvalue.      If is an eigenvalue of , then the eigenspace of , , is the set of vectors such that .       Determine all eigenspaces for each matrix.            Let . Show that only has an eigenvalue of 2. What is the algebraic multiplicity of the eigenvalue 2?    Can you pick , , and , so that the eigenspace of 2 has dimension 3? If so, give a choice of , , and that does so.    Can you pick , , and , so that the eigenspace of 2 has dimension 2? If so, give a choice of , , and that does so.    Can you pick , , and , so that the eigenspace of 2 has dimension 1? If so, give a choice of , , and that does so.    "
+},
+{
+  "id": "definition-15",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#definition-15",
+  "type": "Definition",
+  "number": "2.7.1",
+  "title": "",
+  "body": "  An eigenvector of a matrix is a nonzero vector such that for some scalar . The scalar is called an eigenvalue of if there exists a nonzero solution to .   "
+},
+{
+  "id": "investigation-40",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#investigation-40",
+  "type": "Investigation",
+  "number": "2.7.1",
+  "title": "",
+  "body": "  Which of the following vectors are an eigenvector of ? For any vectors that are eigenvectors of , give the eigenvalue.         "
+},
+{
+  "id": "investigation-41",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#investigation-41",
+  "type": "Investigation",
+  "number": "2.7.2",
+  "title": "",
+  "body": "  Let . Try to find an eigenvector with eigenvalue . In other words, find a vector such that .   "
+},
+{
+  "id": "investigation-42",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#investigation-42",
+  "type": "Investigation",
+  "number": "2.7.3",
+  "title": "",
+  "body": "  Let . Try to find an eigenvector with eigenvalue . In other words, find a vector such that .   "
+},
+{
+  "id": "theorem-16",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#theorem-16",
+  "type": "Theorem",
+  "number": "2.7.2",
+  "title": "",
+  "body": "  Let be a square matrix. We have that iff is an eigenvalue of .   "
+},
+{
+  "id": "p-332",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#p-332",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "characteristic polynomial of "
+},
+{
+  "id": "investigation-43",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#investigation-43",
+  "type": "Investigation",
+  "number": "2.7.4",
+  "title": "",
+  "body": "  For each of the following matrices:  write out the characteristic polynomial  give all eigenvalues  for each eigenvalue, find an eigenvector  You should do the first two by hand to get a feel for finding the characteristic polynomial. After that, I have provided a SageMath cell you can modify to get the characteristic polynomial quickly, but you will need to work from there to find eigenvalues and eigenvectors.          Work smarter, not harder, on this part!   A root of a polynomial (in ) has (algebraic) multiplicity  if is the largest integer such that is a factor. Which, if any, of the eigenvalues you found above have algebraic multiplicity greater than ?   "
+},
+{
+  "id": "investigation-44",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#investigation-44",
+  "type": "Investigation",
+  "number": "2.7.5",
+  "title": "",
+  "body": "  Prove that a nonzero vector, , is an eigenvector of with eigenvalue if and only if is in the null space of .     If is an eigenvector of with eigenvalue , then . By algebra, this means that , and hence . Thus, is in the null space of .   If , then . Hence, , or . Thus, is an eigenvector of with eigenvalue .   "
+},
+{
+  "id": "investigation-45",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#investigation-45",
+  "type": "Investigation",
+  "number": "2.7.6",
+  "title": "",
+  "body": "  Prove that if is an eigenvector of , then is also an eigenvector of (when ).    Since is an eigenvector of , there is a scalar such that . By properties of matrix multiplication, we thus have . As , this shows that is an eigenvector with the same eigenvalue.   "
+},
+{
+  "id": "investigation-46",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#investigation-46",
+  "type": "Investigation",
+  "number": "2.7.7",
+  "title": "",
+  "body": "  Prove that if and are eigenvectors of with the same eigenvalue, then is also an eigenvector of . What is the eigenvalue of ?    Let be the associated eigenvalue. We have that and . Thus, we have . Therefore, is an eigenvector with the same eigenvalue.   "
+},
+{
+  "id": "definition-16",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#definition-16",
+  "type": "Definition",
+  "number": "2.7.3",
+  "title": "",
+  "body": "  If is an eigenvalue of , then the eigenspace of , , is the set of vectors such that .   "
+},
+{
+  "id": "activity-27",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#activity-27",
+  "type": "Activity",
+  "number": "2.7.8",
+  "title": "",
+  "body": "  Determine all eigenspaces for each matrix.         "
+},
+{
+  "id": "q92",
+  "level": "2",
+  "url": "EigenvaluesEigenvectors.html#q92",
+  "type": "Investigation",
+  "number": "2.7.9",
+  "title": "",
+  "body": "  Let . Show that only has an eigenvalue of 2. What is the algebraic multiplicity of the eigenvalue 2?    Can you pick , , and , so that the eigenspace of 2 has dimension 3? If so, give a choice of , , and that does so.    Can you pick , , and , so that the eigenspace of 2 has dimension 2? If so, give a choice of , , and that does so.    Can you pick , , and , so that the eigenspace of 2 has dimension 1? If so, give a choice of , , and that does so.   "
 },
 {
   "id": "colophon-2",

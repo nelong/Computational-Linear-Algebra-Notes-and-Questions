@@ -190,7 +190,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="IvertibleMatrixThm.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C2.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="IvertibleMatrixThm.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C2.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="NatureofaMatrix.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand\colvec[1]{\begin{bmatrix}#1\end{bmatrix}}
@@ -270,6 +270,8 @@ window.MathJax = {
 <li><div class="toc-item"><a href="determinants.html#subsection-17" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Properties of Determinants</span></a></div></li>
 </ul>
 </li>
+<li><div class="toc-item"><a href="NatureofaMatrix.html" class="internal"><span class="codenumber">2.6</span> <span class="title">A Motivating Example</span></a></div></li>
+<li><div class="toc-item"><a href="EigenvaluesEigenvectors.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -346,26 +348,59 @@ window.MathJax = {
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.8</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-7"><article class="exercise exercise-like"><div class="introduction" id="introduction-27"><div class="para" id="p-294">Compute the determinant of the following matrices:</div></div>
 <article class="task exercise-like" id="task-120"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-295"><span class="process-math">\(\begin{bmatrix} 3\amp 0\amp 1\amp 0\\0\amp 2\amp -1\amp 4
-\\-3\amp 5\amp 0\amp 2\\2\amp 2\amp 2\amp -1 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-121"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-296"><span class="process-math">\(2\begin{bmatrix} 3\amp 0\amp 1\amp 0\\0\amp 2\amp -1\amp 4
-\\-3\amp 5\amp 0\amp 2\\2\amp 2\amp 2\amp -1
-\end{bmatrix}\)</span></div></article></article></div></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
+<div class="para" id="p-295"><span class="process-math">\(\begin{bmatrix} 3\amp 0\amp 1\amp 0\\0\amp 2\amp -1\amp 4 \\-3\amp 5\amp 0\amp 2\\2\amp 2\amp 2\amp -1 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-121"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-296"><span class="process-math">\(2\begin{bmatrix} 3\amp 0\amp 1\amp 0\\0\amp 2\amp -1\amp 4 \\-3\amp 5\amp 0\amp 2\\2\amp 2\amp 2\amp -1 \end{bmatrix}\)</span></div></article></article></div>
+<article class="activity project-like" id="activity-25"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
+</h4>
+<article class="task exercise-like" id="task-122"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="p-297">
+<div class="para">Find <span class="process-math">\(det(A)\)</span> when</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{bmatrix} 1\amp 2 \amp 3 \\ 4 \amp 5 \amp 6 \\ 7 \amp 8 \amp 9 \end{bmatrix}
+\end{equation*}
+</div>
+</div></article><article class="task exercise-like" id="task-123"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="p-298">
+<div class="para">Find <span class="process-math">\(det(B)\)</span> when</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B=\begin{bmatrix} -1\amp 2 \amp 3 \\ 0 \amp 1 \amp 0 \\ 3 \amp 1 \amp 4 \end{bmatrix}
+\end{equation*}
+</div>
+</div></article><article class="task exercise-like" id="task-124"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="p-299">
+<div class="para">Find <span class="process-math">\(det(C)\)</span> when</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C=\begin{bmatrix} 6\amp 6 \amp 0 \amp 1 \\ 0 \amp 3 \amp 1 \amp 0 \\ 0 \amp 0 \amp 2 \amp 1 \\ 0 \amp 0 \amp 3 \amp 1 \end{bmatrix}
+\end{equation*}
+</div>
+</div></article><article class="task exercise-like" id="task-125"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para logical" id="p-300">
+<div class="para">Find <span class="process-math">\(det(D)\)</span> when</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D=\begin{bmatrix} 1\amp 2 \amp 3 \amp 5 \\ 2 \amp 3 \amp 0 \amp 1 \\ 0 \amp 0 \amp 0 \amp 3 \\ 1 \amp 4 \amp 1 \amp 2 \end{bmatrix}
+\end{equation*}
+</div>
+</div></article></article></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.5.2</span> <span class="title">Properties of Determinants</span>
 </h3>
 <article class="investigation project-like" id="investigation-38"><h4 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
-</h4>
-<div class="para" id="p-297">Prove that if <span class="process-math">\(A\)</span> has a row of zeros, then <span class="process-math">\(\det(A)=0\text{.}\)</span>
-</div></article><article class="investigation project-like" id="investigation-39"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-298">Prove that <span class="process-math">\(\det(Id_n)=1\text{.}\)</span>
-</div></article><div class="para" id="p-299">We will now state several useful properties of determinants. We will defer the proofs until later in the course. You may use these theorems <em class="emphasis">unless a problem specifically asks you to prove one of them</em>, in which case, the problem will note that you may not use the theorem to prove it.</div>
+<div class="para" id="p-301">Prove that if <span class="process-math">\(A\)</span> has a row of zeros, then <span class="process-math">\(\det(A)=0\text{.}\)</span>
+</div></article><article class="investigation project-like" id="investigation-39"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.5.4</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-302">Prove that <span class="process-math">\(\det(Id_n)=1\text{.}\)</span>
+</div></article><div class="para" id="p-303">We will now state several useful properties of determinants. We will defer the proofs until later in the course. You may use these theorems <em class="emphasis">unless a problem specifically asks you to prove one of them</em>, in which case, the problem will note that you may not use the theorem to prove it.</div>
 <article class="theorem theorem-like" id="theorem-13"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5.9</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-300">
+<div class="para logical" id="p-304">
 <div class="para">The determinants of elementary matrices have the following values:</div>
 <ol class="lower-alpha">
 <li id="li-62"><div class="para" id="p-derived-li-62">If <span class="process-math">\(E_1\)</span> multiplies a row by a scalar <span class="process-math">\(\alpha\text{,}\)</span> then <span class="process-math">\(\det(E_1) = \alpha\text{.}\)</span>
@@ -378,7 +413,7 @@ window.MathJax = {
 </div></article><article class="theorem theorem-like" id="theorem-14"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5.10</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-301"><ol class="lower-alpha">
+<div class="para logical" id="p-305"><ol class="lower-alpha">
 <li id="li-65"><div class="para" id="p-derived-li-65">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <span class="process-math">\(n\)</span> by <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(\det(AB)=\det(A) \det(B)\text{.}\)</span>
 </div></li>
 <li id="li-66"><div class="para" id="p-derived-li-66">The determinant of an upper or lower triangular matrix is the product of its diagonal entries.<div class="displaymath process-math" id="md-27">
@@ -395,17 +430,18 @@ window.MathJax = {
 </div>
 </div></li>
 <li id="li-68"><div class="para" id="p-derived-li-68"><span class="process-math">\(\displaystyle \det(A)=\det(A^T)\)</span></div></li>
-<li id="li-69"><div class="para" id="p-derived-li-69">A matrix <span class="process-math">\(A\)</span> is invertible iff <span class="process-math">\(\det(A)\neq
-0\text{.}\)</span>
+<li id="li-69"><div class="para" id="p-derived-li-69">If the matrix <span class="process-math">\(A\)</span> is invertible, then <span class="process-math">\(det(A^{-1})=\frac{1}{det(A)}\)</span>
 </div></li>
-</ol></div></article><div class="para" id="p-302">The final property of the theorem above should be included in <a href="" class="xref" data-knowl="./knowl/imt.html" title="Theorem 2.4.1: The Invertible Matrix Theorem">The Invertible Matrix Theorem</a>!</div>
+<li id="li-70"><div class="para" id="p-derived-li-70">A matrix <span class="process-math">\(A\)</span> is invertible iff <span class="process-math">\(\det(A)\neq 0\text{.}\)</span>
+</div></li>
+</ol></div></article><div class="para" id="p-306">The final property of the theorem above should be included in <a href="" class="xref" data-knowl="./knowl/imt.html" title="Theorem 2.4.1: The Invertible Matrix Theorem">The Invertible Matrix Theorem</a>!</div>
 <article class="theorem theorem-like" id="ee"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-303">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix. We have that <span class="process-math">\(\det(A)=0\)</span> iff <span class="process-math">\(A\vec{x}=\vec{0}\)</span> has solutions such that <span class="process-math">\(\vec{x} \neq \vec{0}\text{.}\)</span>
+<div class="para" id="p-307">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix. We have that <span class="process-math">\(\det(A)=0\)</span> iff <span class="process-math">\(A\vec{x}=\vec{0}\)</span> has solutions such that <span class="process-math">\(\vec{x} \neq \vec{0}\text{.}\)</span>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="IvertibleMatrixThm.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="IvertibleMatrixThm.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="NatureofaMatrix.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div class="ptx-page-footer">
