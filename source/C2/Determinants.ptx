@@ -18,7 +18,7 @@
     <p>
       For <m>n \geq 2</m>, the determinant of a <m>n</m> by <m>n</m> matrix is given by the following formula in terms of determinants of <m>(n-1)</m> by <m>(n-1)</m> matrices:
         <me>\det(A)=\sum_{j=1}^n (-1)^{1+j} (A_{1,j}) \, \det(A^*_{1,j})</me>
-      where <m>A^*_{i,j}</m> is the <m>(n-1)</m> by <m>(n-1)</m> matrix obtained by deleting the <m>i</m>-th row and <m>j</m>-th column of <m>A</m>. The term <m>A_{i,j}\,\det(A^*_{i,j})</m> is called the <m>(i,j)</m> <term>cofactor of <m>A</m></term>.
+      where <m>A^*_{i,j}</m> is the <m>(n-1)</m> by <m>(n-1)</m> matrix obtained by deleting the <m>i</m>-th row and <m>j</m>-th column of <m>A</m>. The term <m>(-1)^{i+j} \det(A^*_{i,j})</m> is called the <m>(i,j)</m> <term>cofactor of <m>A</m></term>.
     </p>
   </statement>
 </definition>
