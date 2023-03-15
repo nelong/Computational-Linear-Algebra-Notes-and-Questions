@@ -160,6 +160,7 @@
     <p>
       <ol marker="(a)">
         <li>If <m>A</m> and <m>B</m> are <m>n</m> by <m>n</m>, then <m>\det(AB)=\det(A) \det(B)</m>.</li>
+        <li>If <m>A</m> is <m>n</m> by <m>n</m> and <m>k</m> is a scalar, then <m>\det(kA)=k^n \det(A)</m>.</li>
         <li>The determinant of an upper or lower triangular matrix is the product of its diagonal entries. 
           <md>
             <mrow>\det(L)=\prod_{i=1}^n (L)_{i,i}</mrow>
