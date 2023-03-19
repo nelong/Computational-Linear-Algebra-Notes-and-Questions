@@ -46,7 +46,13 @@
       <li>If there are no foxes, the rabbit population will grow by some proportion in the next year</li>
       <li>If there are foxes, then the rabbit population will decrease based on the interaction of the species (being eaten)</li>
     </ul>
-  Functions that fit these simple rules might be of the form <m> F_{n+1}=g(F_n,R_n)= -a F_n + b F_n R_n</m> and <m>R_{n+1}=h(F_n,R_n)= c R_n - d R_n F_n </m>. So choosing coefficients would 
+  Functions that fit these simple rules might be of the form <m> F_{n+1}=g(F_n,R_n)= -a F_n + b R_n</m> and <m>R_{n+1}=h(F_n,R_n)= c R_n - d F_n </m>. So choosing coefficients would give the relative weight of each of these rules on the change in each population. For instance,
+    <me> 
+      \begin{array}
+        F_{n+1}  =\amp -a F_n + b R_n \\
+        R_{n+1}  =\amp c R_n - d F_n 
+      \end{array}
+    </me>
   </p>
 
 </subsection>
