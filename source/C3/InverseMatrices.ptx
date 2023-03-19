@@ -1,0 +1,125 @@
+<section xml:id="InverseMatrices">
+  <title>Inverse Matrices</title>
+<introduction>
+  <p>
+    In this section, we will only consider square matrices.
+  </p>
+  <definition>
+    <p>
+      A matrix <m>A \in M_{n \times n}</m> is <term>invertible</term> if there exists a matrix <m>B</m> such that <m>AB=Id_n</m> and <m>BA=Id_n</m>. The inverse matrix of <m>A</m> is denoted <m>A^{-1}</m>.
+    </p>
+  </definition>
+  <p>
+    Be careful that you do not use the notation <m>A^{-1}</m> until you have shown that <m>A</m> is invertible. By inverse, we mean the multiplicative inverse for a matrix. A matrix that is not invertible is called a <term>singular matrix</term>. A <term>non-singular matrix</term> is an invertible matrix.
+  </p>
+  <p>
+    In the next couple of sections we will examine the following two questions:
+    <ul>
+      <li>How can you efficently calculate the inverse matrix for a given <m>A</m>?</li>
+      <li>How can you determine when a matrix is invertible without finding its inverse?</li>
+    </ul>
+  </p>
+</introduction>
+<subsection>
+  <title>Computing Inverses</title>
+
+<investigation>
+  <introduction>
+    <p>
+      We will look at a way to find the inverse matrix of <m>A</m> in terms of the matrix-vector product and how that can be used as a representation of matrix multiplication.
+    </p>
+  </introduction>
+  <task>
+    <p>
+      We want to find a matrix <m>C</m> such that <m>AC=Id</m>. So let's expand <m>C</m> as columns.
+      <me>AC=A [\vec{c}_1 \; \vec{c}_2 \; \ldots \; \vec{c}_n]=[A\vec{c}_1 \; A\vec{c}_2 \; \ldots \; A\vec{c}_n]</me>
+      Using this perspective on the equation <m>AC=Id</m>, we get
+      <me>A\vec{c}_1=\colvec{1 \\ 0\\0\\\vdots\\0}, \; A\vec{c}_2=\colvec{0 \\ 1\\0\\\vdots\\0}, \: \cdots, \; A\vec{c}_n=\colvec{0 \\ 0\\0\\\vdots\\1}</me>
+      How would we find out if there were any solutions to these matrix equations?
+    </p>
+  </task>
+  <task>
+    <p>
+      How could you find solutions to all of these matrix equations all at once?
+    </p>
+  </task>
+</investigation>
+
+
+<p>
+  In general computing the inverse of a matrix takes more time and operations than solving a system of equations. For this reason, it is generally easier to find and solve a related system of equations problem than to compute the inverse matrix. We will outline a few ways to find inverse matrices and compute a few small examples.
+</p>
+
+<investigation xml:id="q11">
+  <statement>
+    <p>
+      Any sequence of elementary row operations that reduces <m>A</m> to <m>Id_n</m> also transforms <m>Id_n</m> into <m>A^{-1}</m>.
+    </p>
+  </statement>
+</investigation>
+
+<p>
+  The previous result shows that computing inverses is equivalent to a row reduction problem. In particular, if <m>A</m> is invertible, then reducing <m>[ A \quad | \quad Id_n]</m> to reduced row echelon form will produce the matrix <m>[ Id_n \;| \; A^{-1}]</m>.
+</p>
+<activity>
+  <task>
+    <p>
+      Use the result of the previous investigation to find the inverse of the matrix <m>\begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}</m>. Check your work by computing <m>AB=Id_n</m> and <m>BA=Id_n</m> for the matrix you think is the inverse of <m>A</m>.
+    </p>
+  </task>
+  <task>
+    <p>
+      Use the result of the previous investigation to find the inverse of the matrix <m>\begin{bmatrix} 1 \amp 2 \\ 2 \amp 4 \end{bmatrix}</m>. Check your work by computing <m>AB=Id_n</m> and <m>BA=Id_n</m> for the matrix you think is the inverse of <m>A</m>.
+    </p>
+  </task>
+  <task>
+    <p>
+      Use the idea above to compute the inverse of <m>\begin{bmatrix} a\amp b\\c\amp d \end{bmatrix}</m>. Be sure to note any assumptions you will need to make in order to reduce <m>[ A \; | \; Id_n]</m> to <m>[ Id_n \; | \; A^{-1}]</m>.
+    </p>
+  </task>
+  <task>
+    <p>
+      If <m>A=\begin{bmatrix}1\amp  0\amp  1 \\0\amp 2\amp -1 \\ 0\amp 6\amp -1\end{bmatrix}</m>, find <m>A^{-1}</m> and check that <m>A A^{-1}=Id_3</m>.
+    </p>
+  </task>
+</activity>
+
+<exercise>
+  <introduction>
+    <p>
+      If <m>A=\begin{bmatrix} 0\amp -1\\3\amp 4 \end{bmatrix}</m>, find <m>A^{-1}</m> and use your answer to solve <m>A\vec{x} = \vec{b}</m> if:
+    </p>
+  </introduction>
+  <task><p><m>\vec{b} =\colvec{3\\ 1}</m></p></task>
+  <task><p><m>\vec{b} =\colvec{-1\\ -2}</m></p></task>
+  <task><p><m>\vec{b} =\colvec{0\\ 5}</m></p></task>
+  <task><p><m>\vec{b} =\colvec{\alpha\\ \beta}</m></p></task>
+</exercise>
+
+<investigation>
+  <p>
+    Your friend Nick, who thinks he knows everything, claims that <m>(AB)^{-1}=A^{-1}B^{-1}</m> because that's how exponents work. Is he right? Justify your answer like you are going to have to convince Nick.
+  </p>
+  <hint>
+    <p>
+      Mulitply Nick's Result on both sides by the matrix <m>(AB)</m> and simplify.
+    </p>
+  </hint>
+</investigation>
+<investigation>
+  <p>
+    Nick makes another concerning statement about how algebra works with matrices. Specifically, he claims that if the product of two matrices is zero, then one of the two matrices must be the zero matrix. He writes <m>A B =0 \Rightarrow A=0</m> or <m>B=0</m> on the board to justify his idea. Is he wrong again or do matrices work like this?
+  </p>
+
+  <hint>
+    <p>
+      Come up with an example of matrices <m>A</m> and <m>B</m> that will demonstrate is claim his false.
+    </p>
+  </hint>
+</investigation>
+
+</subsection>
+
+</section>
+
+

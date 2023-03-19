@@ -1,0 +1,236 @@
+<section xml:id="EigenvaluesEigenvectors">
+  <title>Eigenvalues and Eigenvectors</title>
+<definition>
+  <statement>
+    <p>
+      An <term>eigenvector</term> of a matrix <m>A</m> is a nonzero vector <m>\vec{x}</m> such that <m>A\vec{x}=\lambda \vec{x}</m> for some scalar <m>\lambda</m>. The scalar <m>\lambda</m> is called an <term>eigenvalue</term> of <m>A</m> if there exists a nonzero solution to <m>A\vec{x}=\lambda \vec{x}</m>.
+    </p>
+  </statement>
+</definition>
+
+
+<investigation>
+  <introduction>
+    <p>
+      Which of the following vectors are an eigenvector of <m>A=\begin{bmatrix} 2\amp 3\\3\amp 2 \end{bmatrix}</m>? For any vectors that are eigenvectors of <m>A</m>, give the eigenvalue.
+      <!-- To speed things along, we are going to use SageMath cells embedded in the course notes. the code below sets up the computation that you need to do to answer the first part below. You may modify the code and click the button again (or type shift-return) to solve the other parts. If you mess up the code, just reload the page.
+    </p>
+    <sage>
+      <input>
+        A = matrix(2,2,[2,3,3,2])
+        v = matrix(2,1,[1,2])
+        A*v
+      </input>
+    </sage> -->
+    </p>
+  </introduction>
+  <task><statement><p><m>\vec{v_1}=\colvec{1\\ 2}</m></p></statement></task>
+  <task><statement><p><m>\vec{v_2}=\colvec{-1\\ 1}</m></p></statement></task>
+  <task><statement><p><m>\vec{v_3}=\colvec{3\\ -1}</m></p></statement></task>
+  <task><statement><p><m>\vec{v_4}=\colvec{1\\ 1}</m></p></statement></task>
+  <task><statement><p><m>\vec{v_5}=\colvec{0\\ 0}</m></p></statement></task>
+</investigation>
+
+<p>
+  As a hint for the following two problems, it will suffice to try to find an eigenvector of the form <m>\colvec{1\\ a}</m>. You might first convince yourself that for these matrices, no eigenvector can have first component <m>0</m>.
+</p>
+
+<investigation>
+  <statement>
+    <p>
+      Let <m>A=\begin{bmatrix} 2\amp 1\\-1\amp 3 \end{bmatrix}</m>. Try to find an eigenvector with eigenvalue <m>3</m>. In other words, find a vector <m>\vec{v}</m> such that <m>A\vec{v}=3\vec{v}</m>.
+    </p>
+  </statement>
+</investigation>
+
+<investigation>
+  <statement>
+    <p>
+      Let <m>A=\begin{bmatrix} 3\amp 4\\3\amp -1 \end{bmatrix}</m>. Try to find an eigenvector with eigenvalue <m>-3</m>. In other words, find a vector <m>\vec{v}</m> such that <m>A\vec{v}=-3\vec{v}</m>.
+    </p>
+  </statement>
+</investigation>
+<p>
+  As a hint to proving this, look back to <xref ref="ee" />
+</p>
+<theorem>
+  <statement>
+    <p>
+      Let <m>A</m> be a square matrix. We have that <m>\det(A- \alpha Id)=0</m> iff <m>\alpha</m> is an eigenvalue of <m>A</m>.
+    </p>
+  </statement>
+</theorem>
+
+<p>
+  If <m>A</m> is a <m>n</m> by <m>n</m> matrix, then <m>\det(A- t Id)</m> will be a <m>n</m>-th degree polynomial in <m>t</m>, which we call the <term>characteristic polynomial of <m>A</m></term>. The previous theorem shows that finding roots of the characteristic polynomial is the same as finding eigenvalues.
+</p>
+
+<investigation>
+  <introduction>
+    <p>
+      For each of the following matrices:
+      <ol>
+        <li>write out the characteristic polynomial</li>
+        <li>give all eigenvalues</li>
+        <li>for each eigenvalue, find an eigenvector</li>
+      </ol>
+      You should do the first two by hand to get a feel for finding the characteristic polynomial. After that, I have provided a SageMath cell you can modify to get the characteristic polynomial quickly, but you will need to work from there to find eigenvalues and eigenvectors.
+    </p>
+  </introduction>
+  <task><statement><p><m>\begin{bmatrix} 1\amp 1 \\1\amp 1 \end{bmatrix}</m></p></statement></task>
+  <task><statement><p><m>\begin{bmatrix} 1\amp -3 \\-3\amp 1 \end{bmatrix}</m></p></statement></task>
+  <task><statement><p><m>\begin{bmatrix} 1\amp 2 \\3\amp 4 \end{bmatrix}</m></p>
+          <sage>
+            <input>
+              A = matrix(2,2,[1,2,3,4])
+              A.charpoly('t')
+            </input>
+          </sage>
+        </statement>
+      </task>
+  <task><statement><p><m>\begin{bmatrix} 1\amp 2\amp 3 \\4\amp 5\amp 6\\7\amp 8\amp 9 \end{bmatrix}</m></p></statement></task>
+  <task><statement><p><m>\begin{bmatrix} 4\amp -1\amp 6\\2\amp 1\amp 6\\2\amp -1\amp 8 \end{bmatrix}</m></p></statement></task>
+  <task><statement><p><m>\begin{bmatrix} 1\amp 1\amp 0\amp 0\\1\amp 1\amp 0\amp 0\\0\amp 0\amp 1\amp -3\\0\amp 0\amp -3\amp 1\end{bmatrix}</m></p></statement><hint><p>Work smarter, not harder, on this part!</p></hint></task>
+  <conclusion>
+    <p>
+      A root <m>\alpha</m> of a polynomial (in <m>t</m>) has <term>(algebraic) multiplicity</term> <m>k</m> if <m>k</m> is the largest integer such that <m>(t-\alpha)^k</m> is a factor. Which, if any, of the eigenvalues you found above have algebraic multiplicity greater than <m>1</m>?
+    </p>
+  </conclusion>
+</investigation>
+<!--\begin{annotation}
+\endnote{Part e) of the previous problem is important for students to work through since it sets up Question \ref{q92}. Sometimes Question \ref{q92} can be done as an entire 50 minute class since it encapsulates a lot of understanding of dimension, eigenspaces, and previews diagonalizability.}
+\end{annotation}-->
+
+
+<investigation>
+  <statement>
+    <p>
+      Prove that a nonzero vector, <m>\vec{v}</m>, is an eigenvector of <m>A</m> with eigenvalue <m>\lambda</m> if and only if <m>\vec{v}</m> is in the null space of <m>A-\lambda Id</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <m>(\Rightarrow)</m> If <m>\vec{v}</m> is an eigenvector of <m>A</m> with eigenvalue <m>\lambda</m>, then <m>A\vec{v} =\lambda\vec{v}</m>. By algebra, this means that <m>A\vec{v} - \lambda\vec{v} = \vec{0}</m>, and hence <m>(A-\lambda Id)\vec{v}=\vec{0}</m>. Thus, <m>\vec{v}</m> is in the null space of <m>A-\lambda Id</m>.
+    </p>
+    <p>
+      <m>(\Leftarrow)</m> If <m>\vec{v}\in Null(A-\lambda Id)</m>, then <m>(A-\lambda Id)\vec{v} = 0</m>. Hence, <m>A\vec{v}-\lambda \vec{v} = \vec{0}</m>, or <m>A\vec{v} = \lambda\vec{v}</m>. Thus, <m>\vec{v}</m> is an eigenvector of <m>A</m> with eigenvalue <m>\lambda</m>.
+    </p>
+  </solution>
+</investigation>
+
+<investigation>
+  <statement>
+    <p>
+      Prove that if <m>\vec{v}</m> is an eigenvector of <m>A</m>, then <m>\alpha \vec{v}</m> is also an eigenvector of <m>A</m> (when <m>\alpha \neq 0</m>).
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Since <m>\vec{v}</m> is an eigenvector of <m>A</m>, there is a scalar <m>\lambda</m> such that <m>A\vec{v} = \lambda \vec{v}</m>. By properties of matrix multiplication, we thus have <me>A(\alpha\vec{v}) = \alpha A\vec{v} = \alpha\lambda\vec{v} = \lambda(\alpha\vec{v})</me>. As <m>\alpha\neq 0</m>, this shows that <m>\alpha\vec{v}</m> is an eigenvector with the same eigenvalue.
+    </p>
+  </solution>
+</investigation>
+
+<investigation>
+  <statement>
+    <p>
+      Prove that if <m>\vec{v_1}</m> and <m>\vec{v_2}</m> are eigenvectors of <m>A</m> with the same eigenvalue, then <m>\vec{v_1}+\vec{v_2}</m> is also an eigenvector of <m>A</m>. What is the eigenvalue of <m>\vec{v_1}+\vec{v_2}</m>?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Let <m>\lambda</m> be the associated eigenvalue. We have that <m>A\vec{v}_1 = \lambda\vec{v}_1</m> and <m>A\vec{v}_2 = \lambda\vec{v}_2</m>. Thus, we have <me>A(\vec{v}_1 + \vec{v}_2) = A\vec{v}_1 + A\vec{v}_2 = \lambda\vec{v}_1 + \lambda\vec{v}_2 = \lambda(\vec{v}_1 + \vec{v}_2)</me>. Therefore, <m>\vec{v}_1 + \vec{v}_2</m> is an eigenvector with the same eigenvalue.
+    </p>
+  </solution>
+</investigation>
+
+<definition>
+  <statement>
+    <p>
+      If <m>\lambda</m> is an eigenvalue of <m>A</m>, then the <term>eigenspace of <m>\lambda</m></term>, <m>E_\lambda</m>, is the set of vectors <m>\vec{x}</m> such that <m>(A-\lambda Id_n)\vec{x}=\vec{0}</m>.
+    </p>
+  </statement>
+</definition>
+<!-- <p>
+  The previous two questions along with the inclusion of <m>\vec{0}</m> have proved the following theorem.
+</p>
+
+<theorem>
+  <statement>
+    <p>
+      If <m>\lambda</m> is an eigenvalue of <m>A \in M_{n \times n}</m>, then <m>E_\lambda</m> is a subspace of <m>\mathbb{R}^n</m>.
+    </p>
+  </statement>
+</theorem>
+
+<investigation>
+  <statement>
+    <p>
+      Prove that <m>dim(E_\lambda) \geq 1</m> for every eigenvalue <m>\lambda</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We prove this by contradiction. Suppose that there is an eigenspace with dimension <m>0</m>. Then <m>E_\lambda = \{\vec{0}\}</m>, since this is the only vector space of dimension <m>0</m>. However, we now see that <m>E_\lambda</m> does not contain any nonzero vectors, and thus cannot contain any eigenvectors and therefore is not an eigenspace.
+    </p>
+  </solution>
+</investigation> -->
+<activity>
+  <introduction>
+    <p>
+      Determine all eigenspaces for each matrix.
+    </p>
+  </introduction>
+  <task>
+    <p><m>\begin{bmatrix} -4 \amp 2 \\ 1 \amp 3 \end{bmatrix}</m></p>
+  </task>
+  <task>
+    <p><m>\begin{bmatrix} 4 \amp 1 \\ 3 \amp 6 \end{bmatrix}</m></p>
+  </task>
+  <task>
+    <p><m>\begin{bmatrix} 4 \amp 3 \\ 1 \amp 6 \end{bmatrix}</m></p>
+  </task>
+  <task>
+    <p><m>\begin{bmatrix} 1 \amp 2 \amp 3 \\ 1 \amp 2 \amp 3 \\ 1 \amp 2 \amp 3 \end{bmatrix}</m></p>
+  </task>
+  <task>
+    <p><m>\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}</m></p>
+  </task>
+  <task>
+    <p><m>\begin{bmatrix} 8 \amp 2 \\ 3 \amp 3 \end{bmatrix}</m></p>
+  </task>
+</activity>
+
+<investigation xml:id="q92">
+  <task>
+    <statement>
+      <p>
+        Let <m>A =\begin{bmatrix} 2 \amp a\amp b\\0\amp 2\amp c\\0\amp 0\amp 2 \end{bmatrix}</m>. Show that <m>A</m> only has an eigenvalue of 2. What is the algebraic multiplicity of the eigenvalue 2?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Can you pick <m>a</m>, <m>b</m>, and <m>c</m>, so that the eigenspace of 2 has dimension 3? If so, give a choice of <m>a</m>, <m>b</m>, and <m>c</m> that does so.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Can you pick <m>a</m>, <m>b</m>, and <m>c</m>, so that the eigenspace of 2 has dimension 2? If so, give a choice of <m>a</m>, <m>b</m>, and <m>c</m> that does so.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Can you pick <m>a</m>, <m>b</m>, and <m>c</m>, so that the eigenspace of 2 has dimension 1? If so, give a choice of <m>a</m>, <m>b</m>, and <m>c</m> that does so.
+      </p>
+    </statement>
+  </task>
+</investigation>
+
+
+</section>

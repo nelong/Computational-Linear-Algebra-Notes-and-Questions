@@ -1,0 +1,67 @@
+<section xml:id="NatureofaMatrix">
+  <title>A Motivating Example</title>
+<activity>
+  <introduction>
+    <p>
+      We want to look at the effect that a matrix has when we look at the matrix's effect on an entire vector space. Let's start small and look at
+      <me>A=\begin{bmatrix} 2 \amp 5\\ 5 \amp 2 \end{bmatrix}</me>
+      We want to look at what happens to different directions (measured with unit vectors) when we use the function <m>T_A (\vec{x}): \vec{x} \rightarrow A\vec{x}</m>.
+    </p>
+  </introduction>
+  <task>
+    <p>
+      Use Python to construct a bunch of unit vectors centered at the origin. Plot these vectors.
+    </p>
+  </task>
+  <task>
+    <p>
+      Use Python to calculate <m>T_A(\vec{x})</m> for each of your unit vectors. Plot these vectors. What do you notice about these results?
+    </p>
+  </task>
+  <task>
+    <p>
+      Where does <m>T_A</m> send <m>\colvec{1\\0}</m>? Why should this make sense on your plot?
+    </p>
+  </task>
+  <task>
+    <p>
+      Where does <m>T_A</m> send <m>\colvec{0\\1}</m>? Why should this make sense on your plot?
+    </p>
+  </task>
+  <task>
+    <p>
+      How does the area traced out by all unit vectors starting at the origin change under <m>T_A</m>? Calculate the determinant of <m>A</m> and compare to your change in area.
+    </p>
+  </task>
+  <task>
+    <p>
+      Where does <m>T_A</m> send <m>\colvec{\frac{1}{\sqrt{2}}\\-\frac{1}{\sqrt{2}}}</m>? Why should this make sense on your plot?
+    </p>
+  </task>
+  <task>
+    <p>
+      Are there other directions that work like this?
+    </p>
+  </task>
+  <task>
+    <p>
+      So <m>\vec{v}_1= \colvec{\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}}</m> and <m>\vec{v}_2=\colvec{\frac{1}{\sqrt{2}}\\-\frac{1}{\sqrt{2}}}</m> are important directions. Will there be any other directions that are just scalar multiplication under the action of <m>T_A</m>?
+    </p>
+  </task>
+  <task>
+    <p>
+      The set <m>\{\vec{v}_1,\vec{v}_2\}</m> spans all of <m>\mathbb{R}^2</m>. How can we justify this statement?
+    </p>
+  </task>
+  <task>
+    <p>
+      We can write any vector in <m>\mathbb{R}^2</m> as a linear combination of the set <m>\{\vec{v}_1,\vec{v}_2\}</m>. Use this idea to describe <m>T_A(\vec{w})</m> in terms of <m>\vec{v}_1</m> and <m>\vec{v}_2</m>.
+    </p>
+  </task>
+  <task>
+    <p>
+      Can we do all of these steps for other matrices? Great question Dr. Long. You deserve a raise and come cookies. You may proceed to the next section to see the answer.
+    </p>
+  </task>
+</activity>
+</section>

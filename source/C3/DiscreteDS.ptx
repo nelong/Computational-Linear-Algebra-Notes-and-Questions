@@ -1,0 +1,53 @@
+<section xml:id="DiscreteDS" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Discrete Dynamical Systems</title>
+<introduction>
+<p>
+  A <term>dynamical system</term> is a pair <m>(X,R)</m> where <m>X</m> is the set of states a system can be in and <m>R</m> is a rule for how the system evolves or changes. This can feel like a really abstract and general statement, so let's look at some real life examples and some simple math examples that we can easily work with.
+</p>
+<example>
+  <p>
+    Let our state space be the set of all possible collections of position, velocities, and times of the sun and nine planets (Pluto is still a planet to me...). You might store each planet's position, velocity, and time as a vector then we would say that the ten vectors are the current state of the system and the rule for evolution would be the the force of gravity. In this way, each state leads to the next by following the dynamical rule. 
+  </p>
+  <p>
+    The field of dynamical systems would study questions like 1)if this system always has a solution, 2)what properties solutions typically have, or 3) what is the long term behavior of solution? Another important part of the system above would be an initial condition, or the state of the system at beginning. 
+  </p>
+  <p>
+    You often label this as time zero and state the values for the different planets' position and velocity at time zero. This leads to even more questions like "If the initial configuration of planets was a bit different, would the long term behavior still be the same?" This example is a continuous dynamical system since we look how the states of the system evolve in terms of a continuous variable (time in this case). This particular system is quite complicated and has been a focus of science, philosophy, and religion for quite some time.
+  </p>
+</example>
+
+<example>
+  <p>
+    Let us look at a much simplier example and do some calculations. Let our dynamical system be <m>(\mathbb{R},f(x)=x^2)</m>. This means that our state space is the set of real numbers and our current state evolves according to the rule <m>x \rightarrow x^2</m>.
+  </p>
+  <p>
+    Notice here that we can only apply our rule (apply the function<m>f</m>) in discrete amounts. So if we start with the initial value <m>x_0=a</m>, then our next state will be <m>x_1=f(x_0=a)=a^2</m>. Our study really becomes aboue the sequence <m>x_0,x_1=f(x_0),x_2=f(x_1)=f(f(x_0)), x_3=f(x_2)=f(f(f(x_0))), \ldots</m>. This is called a <term>discrete dynamical system</term> because we can measure the state of the system (and it's evolution) only at discrete values.
+  </p>
+  <p>
+    Take a few minutes to find the solution sequence for <m>x_0=2</m>. Try to write out what the long term behavior of this solution sequence is. Will all initial values have this same long term behavior? How many different long term behaviors can you find?
+  </p>
+</example>
+<example>
+  <p>
+    You may think a game like chess is also a dynamical system but that is not the case. You could consider all the different ways that pieces could be configured on the board as a state space for the game, there is no rule for how the configuration must change. This is what makes chess an interesting game.
+  </p>
+</example>
+</introduction>
+<subsection>
+  <title>Predator-Prey Systems</title>
+  <p> In this section we will look at a basic type of two dimensional discrete dynamical system that models the populations of a predator and a prey, which we will call foxes (<m>F</m>) and rabbits, <m>R</m>. We will construct a discrete dynamcial system that describe the amount of foxes and rabbits in the next year based on the amount of foxes and rabbits in the current year. In other words, 
+    <me> F_{n+1}=g(F_n,R_n) \quad \quad R_{n+1}=h(F_n,R_n)</me>
+  </p>
+  <p>
+    Let's figure out reasonable functions for <m>g</m> and <m>h</m> under the following ideas:
+    <ul>
+      <li>If there are no rabbits, then some of the foxes will die in the next year (starvation)</li>
+      <li>If there are rabbits, then the fox populations grows in the next year based on the interaction of the species (predation)</li>
+      <li>If there are no foxes, the rabbit population will grow by some proportion in the next year</li>
+      <li>If there are foxes, then the rabbit population will decrease based on the interaction of the species (being eaten)</li>
+    </ul>
+  Functions that fit these simple rules might be of the form <m> F_{n+1}=g(F_n,R_n)= -a F_n + b F_n R_n</m> and <m>R_{n+1}=h(F_n,R_n)= c R_n - d R_n F_n </m>. So choosing coefficients would 
+  </p>
+
+</subsection>
+</section>
