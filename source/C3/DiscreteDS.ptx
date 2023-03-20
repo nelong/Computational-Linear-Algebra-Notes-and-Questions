@@ -35,8 +35,9 @@
 </introduction>
 <subsection>
   <title>Predator-Prey Systems</title>
-  <p> In this section we will look at a basic type of two dimensional discrete dynamical system that models the populations of a predator and a prey, which we will call foxes (<m>F</m>) and rabbits, <m>R</m>. We will construct a discrete dynamcial system that describe the amount of foxes and rabbits in the next year based on the amount of foxes and rabbits in the current year. In other words, 
-    <me> F_{n+1}=g(F_n,R_n) \quad \quad R_{n+1}=h(F_n,R_n)</me>
+  <p> In this section we will look at a basic type of two dimensional discrete dynamical system that models the populations of a predator and a prey, which we will call foxes (<m>F</m>) and rabbits, <m>R</m>. We will construct a discrete dynamcial system that describe the amount of foxes and rabbits in the next year based on the amount of foxes and rabbits in the current year. In other words,
+    <me> F_{n+1}=g(F_n,R_n) </me>
+    <me> R_{n+1}=h(F_n,R_n) </me>
   </p>
   <p>
     Let's figure out reasonable functions for <m>g</m> and <m>h</m> under the following ideas:
@@ -46,13 +47,16 @@
       <li>If there are no foxes, the rabbit population will grow by some proportion in the next year</li>
       <li>If there are foxes, then the rabbit population will decrease based on the interaction of the species (being eaten)</li>
     </ul>
-  Functions that fit these simple rules might be of the form <m> F_{n+1}=g(F_n,R_n)= -a F_n + b R_n</m> and <m>R_{n+1}=h(F_n,R_n)= c R_n - d F_n </m>. So choosing coefficients would give the relative weight of each of these rules on the change in each population. For instance,
+    Functions that fit these simple rules might be of the form
+    <me> F_{n+1}=g(F_n,R_n)= -a F_n + b R_n </me>
+    <me> R_{n+1}=h(F_n,R_n)= c R_n - d F_n </me>
+    So choosing coefficients would give the relative weight of each of these rules on the change in each population. For instance,
     <me> 
-      \begin{array}
-        F_{n+1}  =\amp -a F_n + b R_n \\
-        R_{n+1}  =\amp c R_n - d F_n 
-      \end{array}
+      \begin{array} F_{n+1}  =\amp -a F_n + b R_n \\ R_{n+1}  =\amp c R_n - d F_n \end{array}
     </me>
+    Note here that we can use linear algebra to analyse this type of problem because our sequence now looks like
+    <me>\vec{x}_0=\colvec{F_0 \\R_0}, \vec{x}_1=A \vec{x}_0, \vec{x}_2=A \vec{x}_1 = A(A \vec{x}_0), \ldots </me>
+    where <m>A=\begin{bmatrix} a\amp b \\c \amp d \end{bmatrix} </m>.
   </p>
 
 </subsection>
