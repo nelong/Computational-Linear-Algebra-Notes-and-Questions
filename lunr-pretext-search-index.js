@@ -1360,6 +1360,78 @@ var ptx_lunr_docs = [
   "body": "  Let . Show that only has an eigenvalue of 2. What is the algebraic multiplicity of the eigenvalue 2?    Can you pick , , and , so that the eigenspace of 2 has dimension 3? If so, give a choice of , , and that does so.    Can you pick , , and , so that the eigenspace of 2 has dimension 2? If so, give a choice of , , and that does so.    Can you pick , , and , so that the eigenspace of 2 has dimension 1? If so, give a choice of , , and that does so.   "
 },
 {
+  "id": "DiscreteDS",
+  "level": "1",
+  "url": "DiscreteDS.html",
+  "type": "Section",
+  "number": "3.1",
+  "title": "Discrete Dynamical Systems",
+  "body": " Discrete Dynamical Systems   A dynamical system is a pair where is the set of states a system can be in and is a rule for how the system evolves or changes. This can feel like a really abstract and general statement, so let's look at some real life examples and some simple math examples that we can easily work with.   Let our state space be the set of all possible collections of position, velocities, and times of the sun and nine planets (Pluto is still a planet to me...). You might store each planet's position, velocity, and time as a vector then we would say that the ten vectors are the current state of the system and the rule for evolution would be the the force of gravity. In this way, each state leads to the next by following the dynamical rule.  The field of dynamical systems would study questions like 1)if this system always has a solution, 2)what properties solutions typically have, or 3) what is the long term behavior of solution? Another important part of the system above would be an initial condition, or the state of the system at beginning.  You often label this as time zero and state the values for the different planets' position and velocity at time zero. This leads to even more questions like \"If the initial configuration of planets was a bit different, would the long term behavior still be the same?\" This example is a continuous dynamical system since we look how the states of the system evolve in terms of a continuous variable (time in this case). This particular system is quite complicated and has been a focus of science, philosophy, and religion for quite some time.    Let us look at a much simplier example and do some calculations. Let our dynamical system be . This means that our state space is the set of real numbers and our current state evolves according to the rule .  Notice here that we can only apply our rule (apply the function ) in discrete amounts. So if we start with the initial value , then our next state will be . Our study really becomes aboue the sequence . This is called a discrete dynamical system because we can measure the state of the system (and it's evolution) only at discrete values.  Take a few minutes to find the solution sequence for . Try to write out what the long term behavior of this solution sequence is. Will all initial values have this same long term behavior? How many different long term behaviors can you find?    You may think a game like chess is also a dynamical system but that is not the case. You could consider all the different ways that pieces could be configured on the board as a state space for the game, there is no rule for how the configuration must change. This is what makes chess an interesting game.     Predator-Prey Systems  In this section we will look at a basic type of two dimensional discrete dynamical system that models the populations of a predator and a prey, which we will call foxes ( ) and rabbits, . We will construct a discrete dynamcial system that describe the amount of foxes and rabbits in the next year based on the amount of foxes and rabbits in the current year. In other words,    Let's figure out reasonable functions for and under the following ideas:  If there are no rabbits, then some of the foxes will die in the next year (starvation)  If there are rabbits, then the fox populations grows in the next year based on the interaction of the species (predation)  If there are no foxes, the rabbit population will grow by some proportion in the next year  If there are foxes, then the rabbit population will decrease based on the interaction of the species (being eaten)  Functions that fit these simple rules might be of the form  So choosing coefficients would give the relative weight of each of these rules on the change in each population. For instance,  Note here that we can use linear algebra to analyse this type of problem because our sequence now looks like where . In other words, the solution to this two dimensional, discrete dynamical system is of the form .    Difference Equations and Linear Algebra  A dynamical system with an n-dimensional vector for the state and dynamical rule given by is called a linear difference equation .  Let examine how eigenvalues and eigenvectors could help us easily understand the long term behavior of a linear difference equation. In particular, we will assume that we have a difference equation given by a by matrix and that we can find a set of linearly independent eigenvectors, , with eigenvalues . This is actually a really big assumption and is NOT true in general, so the discussion below will not be enough to analyze the general case. Because we have a set of linearly independent vectors from , we can put them as columns of a matrix and apply the Invertible Matrix Theorem to demonstrate that this set will also span all of . This means that no matter what initial values we take for our system, we can write that initial value as a linear combination of the set . In other words, there is a solution to the vector equation for every . Because these vectors in our spanning set are not just some vectors, but rather are eigenvectors of , we will be able to write out the rest of the sequence and understand the long term behavior regardless of initial values of our system.  Looking at we get the following: Since each of the are eigenvectors, . Thus,   In this same way, we can look at the -th iteration of our system and get   Notice that the only thing changing under iteration is the power of the eigenvalue. Once we figure out how much of our inital value vector is in the direction of each of our eigenvectors, then that amount does NOT change during the evolution of our system! The only thing changing is that each eigenvector direction is getting stretched or shrunk by the eigenvalue at each step. So when will these different parts grow or shrink?    In this activity, we want to go through all of the parts of the argument above and its geometric meaning for the difference equation described by .   What are the eigenvalues and eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  Show that if , then .  What is the long term behavior of the solution with initial value ?     In this activity, we want to go through all of the parts of the argument above and its geometric meaning for the difference equation described by .   What are the eigenvalues and eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  Show that if , then .  What is the long term behavior of the solution with initial value ?     Types of Solutions to Two Dimensional Linear Difference Equations  Since the long term behavior of these type of systems depends on the eigenvalues, we wil try to talk about all of the possible cases of eigenvalues and the corresponding behaviors. Remember that we need to pay attention to how changes as increases.  and  and  and  and  and  and  and  What other possibilities are there?     "
+},
+{
+  "id": "p-361",
+  "level": "2",
+  "url": "DiscreteDS.html#p-361",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "dynamical system "
+},
+{
+  "id": "example-3",
+  "level": "2",
+  "url": "DiscreteDS.html#example-3",
+  "type": "Example",
+  "number": "3.1.1",
+  "title": "",
+  "body": " Let our state space be the set of all possible collections of position, velocities, and times of the sun and nine planets (Pluto is still a planet to me...). You might store each planet's position, velocity, and time as a vector then we would say that the ten vectors are the current state of the system and the rule for evolution would be the the force of gravity. In this way, each state leads to the next by following the dynamical rule.  The field of dynamical systems would study questions like 1)if this system always has a solution, 2)what properties solutions typically have, or 3) what is the long term behavior of solution? Another important part of the system above would be an initial condition, or the state of the system at beginning.  You often label this as time zero and state the values for the different planets' position and velocity at time zero. This leads to even more questions like \"If the initial configuration of planets was a bit different, would the long term behavior still be the same?\" This example is a continuous dynamical system since we look how the states of the system evolve in terms of a continuous variable (time in this case). This particular system is quite complicated and has been a focus of science, philosophy, and religion for quite some time.  "
+},
+{
+  "id": "example-4",
+  "level": "2",
+  "url": "DiscreteDS.html#example-4",
+  "type": "Example",
+  "number": "3.1.2",
+  "title": "",
+  "body": " Let us look at a much simplier example and do some calculations. Let our dynamical system be . This means that our state space is the set of real numbers and our current state evolves according to the rule .  Notice here that we can only apply our rule (apply the function ) in discrete amounts. So if we start with the initial value , then our next state will be . Our study really becomes aboue the sequence . This is called a discrete dynamical system because we can measure the state of the system (and it's evolution) only at discrete values.  Take a few minutes to find the solution sequence for . Try to write out what the long term behavior of this solution sequence is. Will all initial values have this same long term behavior? How many different long term behaviors can you find?  "
+},
+{
+  "id": "example-5",
+  "level": "2",
+  "url": "DiscreteDS.html#example-5",
+  "type": "Example",
+  "number": "3.1.3",
+  "title": "",
+  "body": " You may think a game like chess is also a dynamical system but that is not the case. You could consider all the different ways that pieces could be configured on the board as a state space for the game, there is no rule for how the configuration must change. This is what makes chess an interesting game.  "
+},
+{
+  "id": "p-371",
+  "level": "2",
+  "url": "DiscreteDS.html#p-371",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "difference equation "
+},
+{
+  "id": "activity-28",
+  "level": "2",
+  "url": "DiscreteDS.html#activity-28",
+  "type": "Activity",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  In this activity, we want to go through all of the parts of the argument above and its geometric meaning for the difference equation described by .   What are the eigenvalues and eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  Show that if , then .  What is the long term behavior of the solution with initial value ?  "
+},
+{
+  "id": "activity-29",
+  "level": "2",
+  "url": "DiscreteDS.html#activity-29",
+  "type": "Activity",
+  "number": "3.1.2",
+  "title": "",
+  "body": "  In this activity, we want to go through all of the parts of the argument above and its geometric meaning for the difference equation described by .   What are the eigenvalues and eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  Show that if , then .  What is the long term behavior of the solution with initial value ?  "
+},
+{
   "id": "colophon-2",
   "level": "1",
   "url": "colophon-2.html",
