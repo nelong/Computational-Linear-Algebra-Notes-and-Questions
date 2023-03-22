@@ -368,7 +368,12 @@ R_{n+1}  = 1.05 R_n - 2.1 F_n
 <div class="para">Looking at <span class="process-math">\(\vec{x}_1\)</span> we get the following:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\vec{x}_1 = A \vec{x}_0 = A (c_1 \vec{v}_1 + c_2 \vec{v}_2 + \ldots+ c_n \vec{v}_n) = c_1 (A \vec{v}_1) + c_2 (A \vec{v}_2) + \ldots+ c_n (A \vec{v}_n) 
+\vec{x}_1 = A \vec{x}_0 = A (c_1 \vec{v}_1 + c_2 \vec{v}_2 + \ldots+ c_n \vec{v}_n) 
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+= c_1 (A \vec{v}_1) + c_2 (A \vec{v}_2) + \ldots+ c_n (A \vec{v}_n) 
 \end{equation*}
 </div>
 <div class="para">Since each of the <span class="process-math">\(\vec{x}_i\)</span> are eigenvectors, <span class="process-math">\(A \vec{v}_i = \lambda_i \vec{v}_i\text{.}\)</span> Thus,</div>
@@ -382,7 +387,12 @@ R_{n+1}  = 1.05 R_n - 2.1 F_n
 <div class="para">In this same way, we can look at the <span class="process-math">\(k\)</span>-th iteration of our system and get</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\vec{x}_k = A^k \vec{x}_0 = A^k (c_1 \vec{v}_1 + c_2 \vec{v}_2 + \ldots+ c_n \vec{v}_n) = c_1 \lambda_1^k \vec{v}_1 + c_2 \lambda_2^k \vec{v}_2 + \ldots+ c_n \lambda_n^k \vec{v}_n 
+\vec{x}_k = A^k \vec{x}_0 = A^k (c_1 \vec{v}_1 + c_2 \vec{v}_2 + \ldots+ c_n \vec{v}_n) 
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+= c_1 \lambda_1^k \vec{v}_1 + c_2 \lambda_2^k \vec{v}_2 + \ldots+ c_n \lambda_n^k \vec{v}_n 
 \end{equation*}
 </div>
 </div>
@@ -418,7 +428,15 @@ R_{n+1}  = 1.05 R_n - 2.1 F_n
 </div></article></article></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.3</span> <span class="title">Types of Solutions to Two Dimensional Linear Difference Equations</span>
 </h3>
-<div class="para logical" id="p-387">
+<article class="question example-like" id="question-5"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-5"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-5"><article class="question example-like"><div class="para" id="p-387">What are the fixed points of the difference equation <span class="process-math">\(\vec{x}_{k+1}=A \vec{x}_k\)</span> where <span class="process-math">\(A=\begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}\text{.}\)</span>
+</div></article></div>
+<article class="question example-like" id="question-6"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-6"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-6"><article class="question example-like"><div class="para" id="p-388">What are the fixed points of the difference equation <span class="process-math">\(\vec{x}_{k+1}=A \vec{x}_k\)</span> where <span class="process-math">\(A=\begin{bmatrix} 2 \amp -1 \\ 1 \amp 0 \end{bmatrix}\text{.}\)</span>
+</div></article></div>
+<div class="para logical" id="p-389">
 <div class="para">Since the long term behavior of these type of systems depends on the eigenvalues, we wil try to talk about all of the possible cases of eigenvalues and the corresponding behaviors. Remember that we need to pay attention to how <span class="process-math">\(\lambda^k\)</span> changes as <span class="process-math">\(k\)</span> increases.</div>
 <ul class="disc">
 <li id="li-79"><div class="para" id="p-derived-li-79">
@@ -444,7 +462,40 @@ R_{n+1}  = 1.05 R_n - 2.1 F_n
 </div></li>
 <li id="li-86"><div class="para" id="p-derived-li-86">What other possibilities are there?</div></li>
 </ul>
-</div></section></section></div>
+</div>
+<article class="activity project-like" id="activity-30"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-35"><div class="para" id="p-390">Use your new found appreaciation of eigenvalues and eigenvectors to describe the general solution and behavior of solutions to the difference equation <span class="process-math">\(\vec{x}_{k+1}=A \vec{x}_k\)</span> with each of the following <span class="process-math">\(A\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="task-167"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-391"><span class="process-math">\(A=\begin{bmatrix} 2 \amp 0 \\ 0 \amp 1/2 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-168"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-392"><span class="process-math">\(A=\begin{bmatrix} 0.75 \amp 0 \\ 0 \amp 0.999 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-169"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-393"><span class="process-math">\(A=\begin{bmatrix} -2 \amp 0 \\ 0 \amp 3 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-170"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-394"><span class="process-math">\(A=\begin{bmatrix} 1.25 \amp -0.75 \\ -0.75 \amp 1.25 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-171"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="p-395"><span class="process-math">\(A=\begin{bmatrix} 2 \amp 1 \\ 1 \amp 2 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-172"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="p-396"><span class="process-math">\(A=\begin{bmatrix} 2 \amp -1 \\ 1 \amp 0 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-173"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para" id="p-397"><span class="process-math">\(A=\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-174"><h5 class="heading"><span class="codenumber">(h)</span></h5>
+<div class="para" id="p-398"><span class="process-math">\(A=\begin{bmatrix} -0.2 \amp 0.13 \\ -2.1 \amp 1.05 \end{bmatrix}\)</span></div></article></article><article class="definition definition-like" id="definition-17"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-399">An <dfn class="terminology">attractor</dfn> or attracting fixed point is a fixed point of a dynamical system where all nearby points converge to the fixed point. These are also called <dfn class="terminology">sinks</dfn>.</div> <div class="para" id="p-400">A <dfn class="terminology">repellor</dfn> or repelling fixed point is a fixed point of a dynamical system where all nearby points move away from the fixed point. These are also called <dfn class="terminology">sources</dfn>.</div> <div class="para" id="p-401">A <dfn class="terminology">saddle</dfn> fixed point is a fixed point of a dynamical system where some nearby points converge to the fixed point and other nearby points move away from the fixed point.</div></article><article class="question example-like" id="question-7"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-7"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-7"><article class="question example-like"><div class="para" id="p-402">If we consider the dynamical system given by <span class="process-math">\((\mathbb{R},f(x)=-x^2)\text{,}\)</span> what are the fixed points of this system and what behaviors do they exhibit?</div></article></div>
+<article class="activity project-like" id="activity-31"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-36"><div class="para" id="p-403">Use your work from the earlier activity to describe the fixed points and thier behavior for the difference equation <span class="process-math">\(\vec{x}_{k+1}=A \vec{x}_k\)</span> with each of the following <span class="process-math">\(A\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="task-175"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-404"><span class="process-math">\(A=\begin{bmatrix} 2 \amp 0 \\ 0 \amp 1/2 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-176"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-405"><span class="process-math">\(A=\begin{bmatrix} 0.75 \amp 0 \\ 0 \amp 0.999 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-177"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-406"><span class="process-math">\(A=\begin{bmatrix} -2 \amp 0 \\ 0 \amp 3 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-178"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-407"><span class="process-math">\(A=\begin{bmatrix} 1.25 \amp -0.75 \\ -0.75 \amp 1.25 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-179"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="p-408"><span class="process-math">\(A=\begin{bmatrix} 2 \amp 1 \\ 1 \amp 2 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-180"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="p-409"><span class="process-math">\(A=\begin{bmatrix} 2 \amp -1 \\ 1 \amp 0 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-181"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para" id="p-410"><span class="process-math">\(A=\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-182"><h5 class="heading"><span class="codenumber">(h)</span></h5>
+<div class="para" id="p-411"><span class="process-math">\(A=\begin{bmatrix} -0.2 \amp 0.13 \\ -2.1 \amp 1.05 \end{bmatrix}\)</span></div></article></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="C3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
