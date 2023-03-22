@@ -74,13 +74,15 @@
   </p>
   <p>
     Looking at <m>\vec{x}_1</m> we get the following:
-    <me> \vec{x}_1 = A \vec{x}_0 = A (c_1 \vec{v}_1 + c_2 \vec{v}_2 + \ldots+ c_n \vec{v}_n) = c_1 (A \vec{v}_1) + c_2 (A \vec{v}_2) + \ldots+ c_n (A \vec{v}_n) </me>
+    <me> \vec{x}_1 = A \vec{x}_0 = A (c_1 \vec{v}_1 + c_2 \vec{v}_2 + \ldots+ c_n \vec{v}_n) </me>
+    <me> = c_1 (A \vec{v}_1) + c_2 (A \vec{v}_2) + \ldots+ c_n (A \vec{v}_n) </me>
     Since each of the <m>\vec{x}_i</m> are eigenvectors, <m>A \vec{v}_i = \lambda_i \vec{v}_i</m>. Thus,
     <me> \vec{x}_1 = c_1 \lambda_1 \vec{v}_1 + c_2 \lambda_2 \vec{v}_2 + \ldots+ c_n \lambda_n \vec{v}_n </me>
   </p>
   <p>
     In this same way, we can look at the <m>k</m>-th iteration of our system and get
-    <me> \vec{x}_k = A^k \vec{x}_0 = A^k (c_1 \vec{v}_1 + c_2 \vec{v}_2 + \ldots+ c_n \vec{v}_n) = c_1 \lambda_1^k \vec{v}_1 + c_2 \lambda_2^k \vec{v}_2 + \ldots+ c_n \lambda_n^k \vec{v}_n </me>
+    <me> \vec{x}_k = A^k \vec{x}_0 = A^k (c_1 \vec{v}_1 + c_2 \vec{v}_2 + \ldots+ c_n \vec{v}_n) </me>
+    <me>= c_1 \lambda_1^k \vec{v}_1 + c_2 \lambda_2^k \vec{v}_2 + \ldots+ c_n \lambda_n^k \vec{v}_n </me>
   </p>
   <p>
     Notice that the only thing changing under iteration is the power of the eigenvalue. Once we figure out how much of our inital value vector is in the direction of each of our eigenvectors, then that amount does NOT change during the evolution of our system! The only thing changing is that each eigenvector direction is getting stretched or shrunk by the eigenvalue at each step. So when will these different parts grow or shrink?
@@ -147,6 +149,16 @@
 </subsection>
 <subsection>
   <title>Types of Solutions to Two Dimensional Linear Difference Equations</title>
+  <question>
+    <p>
+      What are the fixed points of the difference equation <m>\vec{x}_{k+1}=A \vec{x}_k</m> where <m>A=\begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}</m>.
+    </p>
+  </question>
+  <question>
+    <p>
+      What are the fixed points of the difference equation <m>\vec{x}_{k+1}=A \vec{x}_k</m> where <m>A=\begin{bmatrix} 2 \amp -1 \\ 1 \amp 0 \end{bmatrix}</m>.
+    </p>
+  </question>
   <p>
     Since the long term behavior of these type of systems depends on the eigenvalues, we wil try to talk about all of the possible cases of eigenvalues and the corresponding behaviors. Remember that we need to pay attention to how <m>\lambda^k</m> changes as <m>k</m> increases.
     <ul>
@@ -160,5 +172,115 @@
       <li>What other possibilities are there?</li>
     </ul>
   </p>
+  <activity>
+    <introduction>
+      <p>
+        Use your new found appreaciation of eigenvalues and eigenvectors to describe the general solution and behavior of solutions to the difference equation <m>\vec{x}_{k+1}=A \vec{x}_k</m> with each of the following <m>A</m>.
+      </p>
+    </introduction>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 2 \amp 0 \\ 0 \amp 1/2 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 0.75 \amp 0 \\ 0 \amp 0.999 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} -2 \amp 0 \\ 0 \amp 3 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 1.25 \amp -0.75 \\ -0.75 \amp 1.25 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 2 \amp 1 \\ 1 \amp 2 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 2 \amp -1 \\ 1 \amp 0 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} -0.2 \amp 0.13 \\ -2.1 \amp 1.05 \end{bmatrix}</m>
+      </p>
+    </task>
+  </activity>
+  <definition>
+    <p>
+      An <term>attractor</term> or attracting fixed point is a fixed point of a dynamical system where all nearby points converge to the fixed point. These are also called <term>sinks</term>.
+    </p>
+    <p>
+      A <term>repeller</term> or repelling fixed point is a fixed point of a dynamical system where all nearby points move away from the fixed point. These are also called <term>sources</term>.
+    </p>
+    <p>
+      A <term>saddle</term> fixed point is a fixed point of a dynamical system where some nearby points converge to the fixed point and other nearby points move away from the fixed point.
+    </p>
+  </definition>
+  <question>
+    <p>
+      If we consider the dynamical system given by <m>(\mathbb{R},f(x)=-x^2)</m>, what are the fixed points of this system and what behaviors do they exhibit?
+    </p>
+  </question>
+  <activity>
+    <introduction>
+      <p>
+        Use your work from the earlier activity to describe the fixed points and thier behavior for the difference equation <m>\vec{x}_{k+1}=A \vec{x}_k</m> with each of the following <m>A</m>.
+      </p>
+    </introduction>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 2 \amp 0 \\ 0 \amp 1/2 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 0.75 \amp 0 \\ 0 \amp 0.999 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} -2 \amp 0 \\ 0 \amp 3 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 1.25 \amp -0.75 \\ -0.75 \amp 1.25 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 2 \amp 1 \\ 1 \amp 2 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 2 \amp -1 \\ 1 \amp 0 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}</m>
+      </p>
+    </task>
+    <task>
+      <p>
+        <m>A=\begin{bmatrix} -0.2 \amp 0.13 \\ -2.1 \amp 1.05 \end{bmatrix}</m>
+      </p>
+    </task>
+  </activity>
 </subsection>
 </section>
