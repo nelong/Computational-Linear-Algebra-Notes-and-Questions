@@ -109,7 +109,7 @@
   Note here that <m>e^{At} \vec{x}_0</m> will be a vector (by matrix vector product) and thus our solution to <m>\dfrac{d \vec{x}}{dt} = A \vec{x}</m> is given by <m>\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} V^{-1} \vec{x}_0</m>.
 </p>
 <p>
-  This looks a bit like our solutions to the discrete dynamical systems but still different. The vector <m>V^{-1} \vec{x}_0</m> is a solution to what matrix equation? If <m>\vec{c}=V^{-1}\vec{x}_0</m>, then <m>\vec{c}</m> is the solution to <m>V \vec{c} =\vec{x}_0</m>!!! You should recognize that <m>\vec{c}</m> is the vector of coefficients for the vector equation <m>c_1 \vec{v_1} +c_2 \vec{v}_2 +\ldots + c_n vec{v}_n = \vec{x}_0</m>! The vector <m>\vec{c}=V^{-1}\vec{x}_0</m> comes from writing the initial condition of our system as a linear combination of the eigenvectors of <m>A</m>!
+  This looks a bit like our solutions to the discrete dynamical systems but still different. The vector <m>V^{-1} \vec{x}_0</m> is a solution to what matrix equation? If <m>\vec{c}=V^{-1}\vec{x}_0</m>, then <m>\vec{c}</m> is the solution to <m>V \vec{c} =\vec{x}_0</m>!!! You should recognize that <m>\vec{c}</m> is the vector of coefficients for the vector equation <m>c_1 \vec{v_1} +c_2 \vec{v}_2 +\ldots + c_n \vec{v}_n = \vec{x}_0</m>! The vector <m>\vec{c}=V^{-1}\vec{x}_0</m> comes from writing the initial condition of our system as a linear combination of the eigenvectors of <m>A</m>!
 </p>
 <p>
   Our solutions to <m>\dfrac{d \vec{x}}{dt} = A \vec{x}</m> are of the form
