@@ -190,7 +190,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="C3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C3.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="C3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C3.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="ChangeofCoordinates.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand\colvec[1]{\begin{bmatrix}#1\end{bmatrix}}
@@ -276,14 +276,24 @@ window.MathJax = {
 </li>
 <li>
 <div class="toc-item"><a href="C3.html" class="internal"><span class="codenumber">3</span> <span class="title">Applications of Linear Algebra</span></a></div>
-<ul class="structural"><li class="active">
+<ul class="structural">
+<li class="active">
 <div class="toc-item"><a href="DiscreteDS.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Discrete Dynamical Systems</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="DiscreteDS.html#subsection-18" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Predator-Prey Systems</span></a></div></li>
 <li><div class="toc-item"><a href="DiscreteDS.html#subsection-19" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Difference Equations and Linear Algebra</span></a></div></li>
 <li><div class="toc-item"><a href="DiscreteDS.html#subsection-20" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Types of Solutions to Two Dimensional Linear Difference Equations</span></a></div></li>
 </ul>
-</li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="ChangeofCoordinates.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Change of Coordinates</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="ChangeofCoordinates.html#subsection-21" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Same Eigenvalues, Different Eigenvectors</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="ContinuousDynamicalSystems.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Continuous Dynamical Systems</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="ContinuousDynamicalSystems.html#subsection-22" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Linear Systems of Ordinary Differential Equations</span></a></div></li></ul>
+</li>
+</ul>
 </li>
 <li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
@@ -479,7 +489,7 @@ R_{n+1}  = 1.05 R_n - 2.1 F_n
 <div class="para" id="p-398"><span class="process-math">\(A=\begin{bmatrix} -0.2 \amp 0.13 \\ -2.1 \amp 1.05 \end{bmatrix}\)</span></div></article></article><article class="definition definition-like" id="definition-17"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-399">An <dfn class="terminology">attractor</dfn> or attracting fixed point is a fixed point of a dynamical system where all nearby points converge to the fixed point. These are also called <dfn class="terminology">sinks</dfn>.</div> <div class="para" id="p-400">A <dfn class="terminology">repellor</dfn> or repelling fixed point is a fixed point of a dynamical system where all nearby points move away from the fixed point. These are also called <dfn class="terminology">sources</dfn>.</div> <div class="para" id="p-401">A <dfn class="terminology">saddle</dfn> fixed point is a fixed point of a dynamical system where some nearby points converge to the fixed point and other nearby points move away from the fixed point.</div></article><article class="question example-like" id="question-7"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-7"><h4 class="heading">
+<div class="para" id="p-399">An <dfn class="terminology">attractor</dfn> or attracting fixed point is a fixed point of a dynamical system where all nearby points converge to the fixed point. These are also called <dfn class="terminology">sinks</dfn>.</div> <div class="para" id="p-400">A <dfn class="terminology">repeller</dfn> or repelling fixed point is a fixed point of a dynamical system where all nearby points move away from the fixed point. These are also called <dfn class="terminology">sources</dfn>.</div> <div class="para" id="p-401">A <dfn class="terminology">saddle</dfn> fixed point is a fixed point of a dynamical system where some nearby points converge to the fixed point and other nearby points move away from the fixed point.</div></article><article class="question example-like" id="question-7"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-7"><h4 class="heading">
 <span class="type">Question</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-7"><article class="question example-like"><div class="para" id="p-402">If we consider the dynamical system given by <span class="process-math">\((\mathbb{R},f(x)=-x^2)\text{,}\)</span> what are the fixed points of this system and what behaviors do they exhibit?</div></article></div>
 <article class="activity project-like" id="activity-31"><h4 class="heading">
@@ -497,7 +507,7 @@ R_{n+1}  = 1.05 R_n - 2.1 F_n
 <div class="para" id="p-410"><span class="process-math">\(A=\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="task-182"><h5 class="heading"><span class="codenumber">(h)</span></h5>
 <div class="para" id="p-411"><span class="process-math">\(A=\begin{bmatrix} -0.2 \amp 0.13 \\ -2.1 \amp 1.05 \end{bmatrix}\)</span></div></article></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="C3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="C3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="ChangeofCoordinates.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div class="ptx-page-footer">
