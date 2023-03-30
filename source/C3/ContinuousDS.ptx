@@ -1,5 +1,6 @@
 <section xml:id="ContinuousDynamicalSystems">
   <title>Continuous Dynamical Systems</title>
+<introduction>
 <p>
   A <term>dynamical system</term> is a pair <m>(X,R)</m> where <m>X</m> is the set of states a system can be in and <m>R</m> is a rule for how the system evolves or changes. We will look at some dynamical systems where the rule of evolution will describe how the state of the system changes in terms of a continuous parameter. Let's look at some examples. 
 </p>
@@ -33,6 +34,7 @@
     The state of the system is given by some function <m>g(x,y,z,t)</m> that may vary in both space and time coordinates. This is another partial differential equation.
   </p>
 </example>
+</introduction>
 <activity>
   <introduction>
     <p>
@@ -116,6 +118,69 @@
     <me>\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} \vec{c} = \sum_{j=0}^n c_j e^{\lambda_j t} \vec{v}_j</me>
   Look at how much of this is determined by the algebra of problems you already know how to do. Which parts of this will determine the long term behavior of solutions? When will you have fixed point(s)? When will the fixed point(s) be attractors? repellors? saddles?
 </p>
+<example>
+  <p>
+    Let <m>A=\begin{bmatrix} 1.25 \amp -0.75 \\ -0.75 \amp 1.25 \end{bmatrix}</m>. As we have seen in our previous work, <m>A</m> has eigenvalues of <m>\lambda_1=1/2</m> and <m>\lambda_2=2</m> with a choice of eigenvectors given by <m>\vec{v_1}=\colvec{1\\1}</m> and <m>\vec{v}_2=\colvec{1 \\-1}</m>. The system of differential equations that corresponds to this matrix <m>A</m> is given by:
+    <md>
+      <mrow>\dfrac{d x_1}{dt} =\amp 1.25 x_1 -0.75 x_2 </mrow>
+      <mrow>\dfrac{d x_2}{dt} =\amp -0.75 x_1 +1.25 x_2 </mrow>
+    </md>
+  </p>
+  <p>
+    Using our tools from earlier, we can see that the solutions of this system can be written in the vector form
+    <md>
+      <mrow>\vec{x}(t) =\amp \colvec{x_1(t)\\x_2(t)} =\amp \sum_{j=0}^n c_j e^{\lambda_j t} \vec{v}_j</mrow>
+      <mrow> \amp  \amp c_1 e^{\frac{1}{2}t}\colvec{1\\1}+c_2 e^{2t} \colvec{1 \\-1}</mrow>
+    </md>
+  </p>
+</example>
+<activity>
+  <p>
+    To arouse a deeper interest into the study of linear systems, let us borrow from a classic example of relationships, first presented by Steven Strogatz in 1988 and then further illustrated by J.C. Sprott in 2004.
+  </p>
+  <p>
+    Now we know the story of Romeo and Juliet.  In our situation, Romeo is desperately in love with Juliet, but Juliet is more fickle than what Shakespeare had in mind.  In fact, the more Romeo loves Juliet, the more Juliet wants to run away and hide.  This discourages Romeo and he starts to love Juliet less, strangely this is exactly the moment that Juliet finds Romeo more attractive and she begins to love him.  On the other hand, Romeo notices again that Juliet is warming up to Romeo and he begins to warm up to her as well.  Will the eager beaver (Romeo) ever find true love with the ever fickle and cautious lover (Juliet)?
+  </p>
+  <p>
+    Let <m>R(t)</m> and <m>J(t)</m> be the love (or hate, when negative) that each person has for each other, respectively, at time <m>t</m>.  Let <m>a, b, c, d \gt 0</m>.   The love/hate relationship is governed by the dynamical system:
+    <md>
+      <mrow>\dfrac{dR}{dt}=\amp aR+bJ</mrow>
+      <mrow>\dfrac{dJ}{dt}=\amp -cR+dJ</mrow>
+    </md>
+    Consider the case where <m>a=0</m>, <m>b = c = d = 1</m> and answer the following:
+    <ul>
+      <li>Determine the eigenvalues and eigenvectors for the coefficient matrix.</li>
+      <li>Write down the general solution using the eigenvalues and eigenvectors.</li>
+      <li>Use Euler's formula to simplify the result completely to determine the real-valued solution to the position function.</li>
+      <li>Plot <m>R(t)</m> and <m>J(t)</m> over time.  Plot <m>R(t)</m> versus <m>J(t)</m>.  Contrast this to a phase portrait.</li>
+      <li>How does the situation change if <m>a = 3</m>?  What of <m>a > 3</m>?</li>
+    </ul>
+  </p>
+</activity>
+<activity>
+  <task>
+    <p>
+      For each of the matrices below, state the general solution for the system of differential equations given by <m>\dfrac{d\vec{x}}{dt}=A\vec{x}</m> and find the particular solution with <m>\vec{x}(1)=\colvec{-1\\2}</m>
+      <ol>
+        <li><m>A_1=\begin{bmatrix} 1 \amp 2 \\ 2 \amp 3 \end{bmatrix}</m></li>
+        <li><m>A_2=\begin{bmatrix} 1 \amp 1 \\ -1 \amp 1 \end{bmatrix}</m></li>
+        <li><m>A_3=\begin{bmatrix} 0.5 \amp 1.5 \\ 1.5 \amp 0.5 \end{bmatrix}</m></li>
+        <li><m>A_4=\begin{bmatrix} 3 \amp 2 \\ 1 \amp 1 \end{bmatrix}</m></li>
+      </ol>
+    </p>
+  </task>
+</activity>
 
 </subsection>
+<subsection>
+  <title>Converting Higher Order DEs to Systems</title>
+<p>
+  Since we have such a nice description and clean algebra to solve systems of differential equations of the form <m>\dfrac{d \vec{x}}{dt}=A \vec{x}</m>, it is common to write other types of questions in terms of a system of first order differential equations. For example, if we consider the damped harmonic oscillator (an object moving on a spring with some friction), then the system follows the differential equation
+  <me>m \dfrac{d^2 x}{dt^2} = -\alpha \dfrac{d x}{dt}- k x</me>
+  where <m>x(t)</m> is the function of time that measures the position of the object (as measured from the rest length of the spring), <m>m</m> is the mass of the object, <m>k</m> is the spring constant, and <m>\alpha</m> is the coefficent of friction for the object. This is called a second order differential equation because it involves a second derivative of the objective function, but we can rewrite this as first oder differential equation of <m>\vec{y}(t) =\colvec{\dfrac{dx}{dt}(t) \\ x(t)}</m>. In particular,
+  <me>\dfrac{d\vec{y}}{dt}=\colvec{-\frac{\alpha}{m} \dfrac{dx}{dt}- \frac{k}{m} x \\ \dfrac{dx}{dt}}</me>
+  Which takes the form <m>\dfrac{d\vec{y}}{dt}=A\vec{y}</m> for <m>A==\begin{bmatrix} -\frac{\alpha}{m} \amp - \frac{k}{m} \\ 1 \amp 0 \end{bmatrix}</m>. Thus by analyzing the second component of our solution, <m>\vec{y}(t)</m>, we can give the solution to <m>m \dfrac{d^2 x}{dt^2} = -\alpha \dfrac{d x}{dt}- k x</m>
+</p>
+</subsection>
+
 </section>
