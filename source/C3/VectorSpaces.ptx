@@ -1,0 +1,273 @@
+ <section>
+    <title>Vector Spaces: The Big Idea</title>
+
+    <p>Vector spaces are the primary objects that we study in linear
+    algebra. Generally speaking, a vector space is a collection of
+    objects (called vectors) that preserves linear relationships; that
+    is, the objects work well under vector addition and scalar
+    multiplication. As you will see shortly, vectors are not always
+    going to be the column vectors we have seen so far or viewed geometrically as arrows from one point to another.</p>
+
+    <definition>
+      <statement>
+    <p>A <term>vector space</term>, <m>V</m>, is a nonempty set of objects called <term>vectors</term> with two operations called addition and scalar multiplication such that the following hold for all <m>\vec{u}, \vec{v}, \vec{w} \in V</m> and <m>c,d \in \mathbb{R}</m>:
+    <ol>
+      <li>If <m>\vec{u}, \vec{v} \in V</m>, then <m>\vec{u}+\vec{v}\in V</m>.</li>
+<li> <m>\vec{u}+\vec{v}=\vec{v}+\vec{u}</m></li>
+<li> <m>(\vec{u}+\vec{v})+\vec{w}=\vec{u}+(\vec{v}+\vec{w})</m></li>
+<li> There exists a vector <m>\vec{0}_V</m> such that <m>\vec{v}+\vec{0}_V=\vec{v}</m>.</li>
+<li> For each <m>\vec{u} \in V</m>, there is a vector <m>-\vec{u} \in V</m> such that <m>\vec{u} + (-\vec{u})=\vec{0}_V</m>.</li>
+<li> If <m>\vec{u} \in V</m> and <m>c \in \mathbb{R}</m>, then <m>c\vec{u} \in V</m>.</li>
+<li> <m>c(\vec{u}+\vec{v})=c\vec{u}+c\vec{v}</m></li>
+<li> <m>(c+d)\vec{v}=c\vec{v}+d\vec{v}</m></li>
+<li> <m>c(d\vec{v})=(cd)\vec{v}</m></li>
+<li> <m>1 \vec{v}=\vec{v}</m></li>
+    </ol>
+You can refer to these properties as
+<ol>
+<li> closure of vector addition</li>
+<li> commutativity of vector addition</li>
+<li> associativity of vector addition</li>
+<li> existence of the zero vector</li>
+<li> existence of the additive inverse</li>
+<li> closure of scalar multiplication</li>
+<li> distributive property of scalar multiplication across vector addition</li>
+<li> distributive property of scalar addition across scalar multiplication (of a vector)</li>
+<li> associativity of scalar multiplication</li>
+<li> existence of scalar multiplicative identity</li>
+</ol>
+    </p>
+      </statement>
+    </definition>
+
+<p>This is the definition for a <em>real</em> vector space since the scalars come from <m>\mathbb{R}</m>, the real numbers. Sometimes it will be useful for us to consider complex vector spaces (scalars come from <m>\mathbb{C}</m>), but unless otherwise stated, you should assume that you are working with a real vector space.</p>
+
+<investigation><introduction><p>
+In order to gain an appreciation of definitions, use only the above definition to prove the following results:</p></introduction>
+<task>
+<statement><p>The zero vector is unique. You can begin this by supposing that there exists some <m>\vec{w}</m> such that <m>\vec{x} +\vec{w} = \vec{x}</m> for every <m>\vec{x} \in V</m>, then you need to show that <m>\vec{w}</m> must equal <m>\vec{0}_V</m>.</p></statement>
+</task>
+<task><statement><p>The additive inverse of a vector is
+unique.</p></statement></task>
+</investigation>
+
+<example>
+  <p>
+The real numbers, <m>\mathbb{R}</m>, are a vector space since all of
+the above properties hold.
+  </p>
+</example>
+<example>
+  <p>
+Real valued vectors, <m>\mathbb{R}^n</m>, are a vector space since all
+of the above properties hold when vector addition and scalar
+multiplication are done componentwise. We can think of the vectors in
+<m>\mathbb{R}^n</m> as a directed line segment (an arrow) or as a
+point in <m>n</m>-dimensional space.
+  </p>
+</example>
+
+
+<investigation><statement><p> Show why <m>\mathbb{Z}^n</m>, the set of vectors with <m>n</m> integer components is not a vector space.
+</p></statement></investigation>
+
+<investigation><statement><p> Is <m>\mathbb{C}^n</m> a real vector space? Why or why not?
+</p></statement></investigation>
+
+<investigation><statement><p> Is <m>\mathbb{R}^n</m> a complex vector space? Why or why not?
+</p></statement></investigation>
+
+<example><p>
+The set of <m>m</m> by <m>n</m> matrices over the real numbers,
+<m>M_{m \times n}(\mathbb{R})</m> or simply <m>M_{m \times n}</m>, is
+a vector space since all of the above properties hold when
+<q>vector</q> addition and scalar multiplication are done entry
+wise. The quotes are around vector in the previous sentence because
+you may not always think of matrices as being vectors but using the
+properties from <xref ref="sec_matrix_ops" />, you can treat matrices as vectors in the general sense.</p></example>
+
+
+<investigation xml:id="vse"><introduction><p>The set of polynomials
+(in variable <m>t</m>) of degree at most <m>n</m> is denoted by
+<m>\mathbb{P}_n</m>.</p>
+</introduction>
+<task>
+  <statement>
+    <p>
+      Is <m>t^2-4t \in \mathbb{P}_2</m>?
+    </p>
+  </statement>
+</task>
+<task>
+  <statement>
+    <p>Is <m>3t^2+t \in \mathbb{P}_3</m>?
+    </p>
+  </statement>
+</task>
+<task>
+  <statement>
+    <p>
+      Is <m>t^2-t+1 \in \mathbb{P}_1</m>?
+    </p>
+  </statement>
+</task>
+<task>
+  <statement>
+    <p>
+      Write <m>\mathbb{P}_n</m> as a set using set builder notation. Be sure you have a statement that you can use to verify if an object is in your set or not.
+    </p>
+  </statement>
+</task>
+<task>
+  <statement>
+    <p> Prove that <m>\mathbb{P}_n</m> is a real vector space.</p>
+  </statement>
+</task>
+</investigation>
+<example><p>
+The following sets are also vector spaces:
+<ol>
+<li> The set of all polynomials (in variable <m>t</m>) denoted <m>\mathbb{P}</m>.
+</li>
+<li> <m>F(S,\mathbb{R})</m>, the set of functions from a set <m>S</m> to the real numbers. We will take a closer look at this vector space in the next problem.</li>
+<li> <m>\{\vec{0}\}</m>, the <term>trivial vector space</term>.</li>
+</ol></p></example>
+
+<investigation>
+  <introduction>
+    <p> We are going to take a look at the
+vector space <m>V=F(\{a,b,c\},\mathbb{R})</m> to get used to our more
+general way of thinking about vectors and vector spaces. You should
+think of the vector space <m>V</m> as the set of functions with domain
+<m>\{a,b,c\}</m> and codomain <m>\mathbb{R}</m>. In other words, we
+are looking at the set of functions that only use <m>a</m>, <m>b</m>,
+and <m>c</m> as inputs and have outputs of real numbers.
+<ul>
+  <li>Let <m>g_1</m> be the function that takes
+<m>a</m>, <m>b</m>, and <m>c</m> to <m>3</m>, <m>-2</m>, and <m>0</m>
+  respectively. </li>
+  <li> Let <m>g_2</m> be the function that takes
+<m>a</m>, <m>b</m>, and <m>c</m> to <m>-2</m>, <m>7</m>, and <m>1</m>
+  respectively.</li>
+  <li> Let <m>g_3</m> be the function that takes
+<m>a</m>, <m>b</m>, and <m>c</m> to <m>1</m>, <m>1</m>, and <m>1</m>
+  respectively.</li>
+  <li> Let <m>g_4</m> be the function that takes
+<m>a</m>, <m>b</m>, and <m>c</m> to <m>0</m>, <m>0</m>, and <m>0</m>
+  respectively.</li>
+</ul>
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+  <ol>
+  <li> Fill in the blank: <m>g_2(b) =
+  </m><fillin characters="2" /> </li>
+  <li>Fill in the blank: <m>g_3(a) =</m><fillin characters="2" /></li>
+  <li>Fill in the blank: <m>g_1(c) =</m><fillin characters="2" /></li>
+  </ol>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>Does it make
+      sense to add the inputs of these functions? Explain.</p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>Does it
+      make sense to add the outputs of these functions? Explain.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>Let
+<m>g_5</m> be the function that takes <m>5</m>, <m>1</m>, and <m>0</m>
+to <m>a</m>, <m>b</m>, and <m>c</m> respectively. Is <m>g_5 \in V</m>?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>Describe the function <m>g_1 +g_2</m>. In other words, give the
+outputs for all possible inputs and write a sentence about how you
+      built <m>g_1+g_2</m> in terms of <m>g_1</m> and <m>g_2</m>.</p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>Describe the function <m>3 g_3</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>What function when added to
+      <m>g_2</m> will give <m>g_4</m>? </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>Can you write <m>g_1</m> as a
+linear combination of the set <m>\{ g_2 , g_3 , g_4\}</m>? Explain why
+      or why not.</p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+Can you write <m>g_4</m> as a linear combination of
+the set <m>\{ g_2 , g_3 , g_1\}</m>? Explain why or why not. 
+      </p>
+    </statement>
+  </task>
+</investigation>
+
+<investigation>
+  <task>
+    <statement>
+      <p>
+Write a sentence or two about what property makes a vector <m>\vec{v}
+\in V</m> the zero vector for <m>V</m>, called <m>\vec{0}_V</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>What is the zero vector for the vector space <m>M_{m \times
+      n}</m>? Remember to state your answer as an element of <m>M_{m
+      \times n}</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>What is the zero vector for the vector space
+      <m>\mathbb{P}_n</m>? Remember to state your answer as an element
+      of <m>\mathbb{P}_n</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+ What is the zero vector for the vector space <m>\mathbb{P}</m>?
+ Remember to state your answer as an element of <m>\mathbb{P}</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+What is the zero vector for the vector space
+<m>F(\mathbb{R},\mathbb{R})</m>? Remember to state your answer as an
+element of <m>F(\mathbb{R},\mathbb{R})</m>.
+      </p>
+    </statement>
+  </task>
+</investigation>
+</section>

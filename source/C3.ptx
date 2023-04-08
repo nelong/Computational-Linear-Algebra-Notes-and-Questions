@@ -6,5 +6,7 @@
   <xi:include href="C3/ChangeCoordinates.ptx" />
   <xi:include href="C3/ContinuousDS.ptx" />
   <xi:include href="C3/Operators.ptx" />
+  <xi:include href="C3/VectorSpaces.ptx" />
+  <xi:include href="C3/Subspaces.ptx" />
 </chapter>
 

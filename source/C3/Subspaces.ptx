@@ -1,0 +1,120 @@
+<section>
+  <title>Subspaces</title>
+
+<p>As <xref ref="vse" /> shows, it can be very tedious to prove that a set is indeed a vector space. A <term>subspace</term> of a vector space is a subset that is itself a vector space. Since most of the properties of the vector spaces we look at get inherited from some larger vector space, it is often easier to show that a set is a vector space by showing it is a subspace of the appropriate parent vector space.</p>
+
+<theorem>
+  <statement>
+<p>A subset <m>H</m> of a vector space <m>V</m> is a subspace if and only if the following are true:
+<ol marker="(a)">
+<li> The zero vector of <m>V</m> is in <m>H</m>; <m>\vec{0}_V \in H</m>.</li>
+<li> H is closed under vector addition; if <m>\vec{u}, \vec{v} \in H</m>, then <m>\vec{u}+\vec{v}\in H</m>.</li>
+<li> H is closed under scalar multiplication; if <m>\vec{u} \in H</m>
+and <m>c \in \mathbb{R}</m>, then <m>c\vec{u} \in H</m>.</li>
+</ol>
+</p>
+  </statement>
+
+<proof>
+  <p>We first assume that <m>H</m> is a subspace of <m>V</m>. Item (a)
+  of the theorem follows from axiom 4 of being a vector space. Item
+  (b) of the theorem follows from axiom 1 of being a vector
+  space. Item (c) of the theorem follows from axiom 6 of being a
+  vector space.</p>
+
+  <p>For the converse, we assume that <m>H\subseteq V</m> and the
+  three items of the theorem satement are satisfied. We must verify
+  the 10 vector space axioms:
+  <ol marker ="1.">
+    <li>This follows from item (b) of the theorem statement.</li>
+    <li>Since <m>H\subseteq V</m> and this axiom holds for all
+    elements of <m>V</m>, the axiom holds when restricted to elements of <m>H</m>.</li>
+    <li>Since <m>H\subseteq V</m> and this axiom holds for all
+    elements of <m>V</m>, the axiom holds when restricted to elements of <m>H</m>.</li>
+    <li>This follows from item (a) of the theorem statement.</li>
+    <li>This requires proof. Since <m>-1\in\mathbb{R}</m>, item (c) of
+    the theorem statement tells us that for all <m>\vec{u}\in H</m>,
+    <m>(-1)\vec{u}=-\vec{u}\in H</m>. Thus, this axiom is verified.</li>
+    <li>This follows from item (c) of the theorem statement.</li>
+    <li>Since <m>H\subseteq V</m> and this axiom holds for all
+    elements of <m>V</m>, the axiom holds when restricted to elements of <m>H</m>.</li>
+    <li>Since <m>H\subseteq V</m> and this axiom holds for all
+    elements of <m>V</m>, the axiom holds when restricted to elements of <m>H</m>.</li>
+    <li>Since <m>H\subseteq V</m> and this axiom holds for all
+    elements of <m>V</m>, the axiom holds when restricted to elements of <m>H</m>.</li>
+    <li>Since <m>H\subseteq V</m> and this axiom holds for all
+    elements of <m>V</m>, the axiom holds when restricted to elements of <m>H</m>.</li>
+    
+  </ol></p>
+</proof>
+</theorem>
+
+<p>This theorem is so useful because we can prove a set is a vector
+space by checking only <em>three</em> properties instead of the
+<em>ten</em> that are involved in the definition. The reason that we
+do not need to check these other properties is that by using this
+subspace, we already have proven the proper rules of arithmetic from
+the parent space. Additionally, since we are using the same rules for
+scalar multiplication and vector addition as the parent space, we
+<em>must</em> also have the same scalars as the parent space.
+</p>
+<investigation><statement><p> Use the preceding theorem to prove that <m>\mathbb{P}_n</m> is a subspace of <m>\mathbb{P}</m>.
+</p>
+</statement></investigation>
+
+<investigation><statement><p> Is <m>\mathbb{R}</m> a subspace of <m>\mathbb{C}</m>? Why or why not?
+</p></statement></investigation>
+
+<investigation><statement><p> Is <m>\mathbb{R}^2</m> a subspace of <m>\mathbb{R}^3</m>? Why or why not?
+</p></statement></investigation>
+
+<investigation><statement><p> Is the set of points on the plane given by <m>z=0</m> a subspace of <m>\mathbb{R}^3</m>? Why or why not?
+</p></statement></investigation>
+
+<investigation><statement><p> Is the set of points on the plane given by <m>z=1</m> a subspace of <m>\mathbb{R}^3</m>? Why or why not?
+</p></statement></investigation>
+
+<investigation><statement><p> Draw a plot of the points in
+<m>\mathbb{R}^2</m> given by <m>\{ \vec{x}=\colvec{x_1\\ x_2} \in
+\mathbb{R}^2 \mid x_1 x_2 \geq 0\}</m>. Is <m>\{ \vec{x}=\colvec{x_1\\
+x_2} \in \mathbb{R}^2 \mid x_1 x_2 \geq 0\}</m> a subspace of <m>\mathbb{R}^2</m>? Why or why not?
+</p></statement></investigation>
+
+<investigation><statement><p> Is <m>Sym_{n \times n}</m>, the set of symmetric <m>n</m> by <m>n</m> matrices a subspace of <m>M_{n \times n}</m>? Why or why not?
+</p></statement></investigation>
+
+
+<investigation><statement><p> Prove or disprove: The set of odd
+functions on <m>\mathbb{R}</m> (i.e., those for which <m>f(-t)=-f(t)</m> for every <m>t \in \mathbb{R}</m>) a subspace of <m>F(\mathbb{R},\mathbb{R})</m>.
+</p></statement>
+<solution>
+  <p>The statement is true. We use Theorem 3.6 to prove this. First note that the function <m>Z(t)=0</m>
+  is the zero vector for this vector space, as for any function
+  <m>f\colon \mathbb{R}\to\mathbb{R}</m>, <m>(f+Z)(t) = f(t)+Z(t) =
+  f(t)+0 = f(t)</m>. To see that <m>Z</m> is odd, we have <m>Z(-t)
+= 0=-0=-Z(t)</m>. Now suppose that <m>f,g</m> are odd functions. We
+have
+<me>(f+g)(-t) = f(-t)+g(-t)=-f(t)+(-g(t))=-(f(t)+g(t))=-(f+g)(t)</me>,
+verifying the second part of the theorem is satisfied. Finally, let
+<m>c\in\mathbb{R}</m>. Now <m>(cf)(-t) =
+c(f(-t))=c(-f(t))=-cf(t)=-(cf)(t)</m>. Thus, the set of odd functions
+are a subspace of the vector space of functions from <m>\mathbb{R}</m>
+to <m>\mathbb{R}</m>.
+  </p>
+</solution></investigation>
+
+<theorem><statement><p> If <m>A</m> is a <m>m</m> by <m>n</m> matrix, the solution set to the homogeneous equation <m>A\vec{x}=\vec{0}</m> is a subspace of <m>\mathbb{R}^n</m>.
+</p></statement></theorem>
+
+<theorem><statement><p> If <m>H</m> and <m>K</m> are subspaces of some vector space <m>V</m>, then the set <m>H \cap K</m> is a subspace of <m>V</m> as well.
+</p></statement></theorem>
+
+<investigation><statement><p> Prove or Disprove: the set of <m>2</m> by <m>2</m> matrices with at least one zero entry is a subspace of <m>M_{2 \times 2}</m>.
+</p></statement></investigation>
+
+<investigation><statement><p> Prove or Disprove: the set of matrices of the form <m>\begin{bmatrix} a \amp b \\0 \amp -a \end{bmatrix}</m> is a subspace of <m>M_{2 \times 2}</m>.
+</p></statement></investigation>
+
+<investigation><statement><p> Prove or disprove: The set of quadratic polynomials of the form <m>at^2+b</m> is a subspace of the vector space of polynomials.
+</p></statement></investigation>
+</section>
