@@ -71,8 +71,28 @@
   </task>
 </activity>
 <p>
-  As you saw in the previous activity, there are infinite number of eigenvalues for many of these differential operators. With many problems related to physical situations there are often some boundary conditions (since we usually study different physicals in a confined setting).
+  As you saw in the previous activity, there are infinite number of eigenvalues for many of these differential operators. An <term>eigenpair</term> is a a eigenvalue and corresponding eigenfunction for a linear operator. For example <m>(3,e^{3x})</m> is an example of an eigenpair for the derivative operator since <m>\dfrac{d}{dx}(e^{3x})=3 e^{3x}</m>. As With many problems related to physical situations there are often some boundary conditions (since we usually study different physicals in a confined setting). Let's look at an example with a basic version of boundary conditions.
 </p>
+</subsection>
+<subsection>
+  <title>Boundary Value Problems</title>
+<activity>
+  <task>
+    <p>
+      Let's consider smooth functions on the domain <m>[0,L]</m> and define a linear operator <m>T</m> such that <m>T(f)=\dfrac{d^2f}{dx^2}</m> with <m>f(0)=f(L)=0</m>. Can you give an example of an eigenpair of this operator that also satisfies this boundary condition?
+    </p>
+  </task>
+  <task>
+    <p>
+      If you had two eigenfunctions, <m>g</m> and <m>h</m>, that satisfy your boundary conditions for the previous task, would <m>\alpha g +\beta h</m> also satisfy your constraint
+    </p>
+  </task>
+  <task>
+    <p>
+      If you had two eigenfunctions, <m>g</m> and <m>h</m>, that satisfy a boundary condition of <m>f(0)=f(L)=1</m>, would <m>\alpha g +\beta h</m> also satisfy this new boundary condition?
+    </p>
+  </task>
+</activity>
 </subsection>
 
 </section>
