@@ -121,7 +121,7 @@
 <p>
   Our definition of a matrix vector product suggests that the <xref ref="MVProd">matrix-vector product</xref> of a <m>m</m> by <m>n</m> matrix will transform vectors from <m>\mathbb{R}^n</m> to vectors in <m>\mathbb{R}^m</m>. In this way, we can define a function as follows.
 </p>
-<definition>
+<definition xml:id="MatrixTransformation">
   <p>
     Let <m>A</m> be a <m>m</m> by <m>n</m> matrix. Then we define <m>T_A : \mathbb{R}^n \rightarrow \mathbb{R}^m</m>, where <m>T_A(\vec{x})=A\vec{x}</m>.
   </p>

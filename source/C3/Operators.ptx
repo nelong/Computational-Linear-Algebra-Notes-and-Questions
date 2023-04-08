@@ -1,0 +1,79 @@
+<section xml:id="Operators">
+  <title>Operators</title>
+<introduction>
+<p>
+  In our work for continuous dynamical systems and inner products, we have started to see how scalar valued functions can act just like the vectors from <m>\mathbb{R}^n</m>. For the rest of our course, we will think about a vector space of functions (and will give a precise definition of vector space a little later). Let's look at some examples of these kinds of spaces.
+</p>
+<example>
+  <p>
+    Let <m>P_n</m> be the set of all <m>n</m>-th degree polynomials. In other words, <m>P_n =\{f(x)=a_0+a_1 x+\ldots +a_n x^n| a_i \in \mathbb{R}\}</m>. Notice that linear combinations of <m>n</m>-th degree polynomials will give you other <m>n</m>-th degree polynomials. A set like <m>\{1,x,x^2,\ldots, x^n\}</m> will span <m>P_n</m>.
+  </p>
+</example>
+<example>
+  <p>
+    Let <m>P</m> be the set of all polynomials. Notice that linear combinations of polynomials will give you other polynomials. A set like <m>\{1,x,x^2,\ldots, \}</m> will span <m>P</m>. In fact, there is no finite set you can give that will span <m>P</m>, which means this space is inifinite dimensional.
+  </p>
+</example>
+<example>
+  <p>
+    Let <m>C^\infty([0,1])</m> be the set of smooth functions with domain of <m>[0,1]</m>. A function is smooth if all of its derivatives are continuous. This set contains more than <m>P</m> and would include functions like <m>g(x)=e^x</m>.
+  </p>
+  <p>
+    Let <m>C^n(D)</m> be the set of functions with domain  <m>D</m> and whose first <m>n</m> derivatives are continuous. The set <m>C^0(D)</m> would be the set of continuous functions on <m>D</m> (and includes functions that are not necessarily differentiable).
+  </p>
+</example>
+<p>
+  All of these examples work on the idea that if we take functions from these sets, <m>f,g,h \in S</m>, then linear combinations and vector equations make sense (<m>\alpha f(x)+\beta g(x)=h(x)</m>). What would the zero vector look like for these kinds of vectors/functions?
+</p>
+<question>
+  <p>
+    So what would the analog be of matrices with vector spaces of functions?
+  </p>
+</question>
+</introduction>
+<subsection>
+  <title>Linear Operators</title>
+<p>
+  Recall how we defined the Matrix-Vector Product in <xref ref="MVProd" /> and the associated transformation defined by a matrix <xref ref="MatrixTransformation" />.
+</p>
+<p>
+  A <term>linear operator</term> is linear transformation between vector spaces. A <term>linear transformation</term> is a map that respects linear combinations. In other words, if <m>f</m> is a linear transformation, then <m>f(a \vec{u} +b \vec{v})=a f(\vec{u}) +b f(\vec{v})</m>.
+</p>
+<example>
+  <p>
+    Let's consider the operator <m>\dfrac{d}{dx}</m> from the space <m>C^1([0,1])</m> to <m>C^0([0,1])</m>. In first semester calculus, you saw how you could factor out constant coefficents from derivatives and split up derivatives into different terms in a sum (<m>\dfrac{d}{dx} (a f(x)+b g(x))=a \dfrac{df}{dx}+ b\dfrac{dg}{dx}</m>). The other thing to note here is that this operator takes differentiable functions to continuous functions (the domain and range of this function are a bit different).
+  </p>
+  <p>
+    We can also define the integral operator as going from <m>C^0([0,1])</m> to <m>C^1([0,1])</m> by considering <m>f(x) \rightarrow \int_0^x f(u) \: du</m>. Integration is another operation that will perserve linear combinations.
+  </p>
+  <p>
+    Let's consider the mapping <m>DE</m> from <m>C^\infty(\mathbb{R})</m> to <m>C^\infty(\mathbb{R})</m> where <m>f(x) \rightarrow \dfrac{d^2 f}{dx^2}-3\dfrac{df}{dx}+2 f(x)</m>. You should take couple of minutes to show that <m>DE(a f(x) + b g(x))=a DE(f(x)) + b DE(g(x))</m>. This shows that the set of solutions to <m>\dfrac{d^2 f}{dx^2}-3\dfrac{df}{dx}+2 f(x) =0 </m> is a vector space. This kind of idea shows how we can find a set with a couple of different solutions that will span the set of all solutions to a differential equation.
+  </p>
+</example>
+<p>
+  Linear operators (or simply operators) will be the analogs of matrices, so as important and useful as eigenvalues/eigenvectors have been for studying vectors from <m>\mathbb{R}^n</m>, what would it look like to find eigenvalues for a linear operator?
+</p>
+<activity>
+  <task>
+    <p>
+      Let's look at <m>D</m>,the derivative operator from <m>C^\infty(\mathbb{R})</m> to <m>C^\infty(\mathbb{R})</m>. What kinds of functions and scalars would satisfy <m>D(f)= \lambda f</m>?
+    </p>
+  </task>
+  <task>
+    <p>
+      Let's look at <m>T</m>,the integral operator from <m>C^\infty(\mathbb{R})</m> to <m>C^\infty(\mathbb{R})</m>. What kinds of functions and scalars would satisfy <m>T(f)= \lambda f</m>?
+    </p>
+  </task>
+  <task>
+    <p>
+      Let's look at <m>S</m>,the operator from <m>C^\infty(\mathbb{R})</m> to <m>C^\infty(\mathbb{R})</m> with <m>S(f)= \dfrac{d^2f}{dx^2}</m>. What kinds of functions and scalars would satisfy <m>S(f)= \lambda f</m>?
+    </p>
+  </task>
+</activity>
+<p>
+  As you saw in the previous activity, there are infinite number of eigenvalues for many of these differential operators. With many problems related to physical situations there are often some boundary conditions (since we usually study different physicals in a confined setting).
+</p>
+</subsection>
+
+</section>
+
