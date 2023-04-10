@@ -99,7 +99,7 @@
     D=diag(\lambda_1,\lambda_2, \ldots, \lambda_n)=
     \begin{bmatrix} \lambda_1 \amp 0 \amp \cdots \amp 0\\ 0 \amp \lambda_2 \amp \cdots \amp 0\\ \vdots \amp \vdots \amp \ddots \amp \vdots \\ 0 \amp 0 \amp \cdots \amp \lambda_n \end{bmatrix}
   </me>
-  and <m>V=[\vec{v}_1 , \ldots , \vec{v}_n]</m>. From our work on change of coordinates, you should recognize that <m>A = V D V^{-1}</m>. So,
+  and <m>V=[\vec{v}_1 , \ldots , \vec{v}_n]</m>. From our work onj= change of coordinates, you should recognize that <m>A = V D V^{-1}</m>. So,
   <md>
     <mrow>A^k =\amp  (V D V^{-1})(V D V^{-1})\ldots (V D V^{-1})</mrow>
     <mrow> = \amp V D^k V^{-1}</mrow>
@@ -108,14 +108,14 @@
   <me>e^\alpha = \sum_{k=0}^\infty \frac{\alpha^k}{k!}</me>
   Notice that all this requires to apply to a matrix is that powers of the matrices have to make sense and the scalar multiplication by <m>\frac{1}{k!}</m> also needs to make sense. So we can define the matrix exponential as
   <me> e^{At} = V \sum_{k=0}^\infty \frac{D^k}{k!} V^{-1}= V e^{Dt} V^{-1}= V diag(e^{\lambda_1 t},e^{\lambda_2 t}, \ldots, e^{\lambda_n t})</me>
-  Note here that <m>e^{At} \vec{x}_0</m> will be a vector (by matrix vector product) and thus our solution to <m>\dfrac{d \vec{x}}{dt} = A \vec{x}</m> is given by <m>\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} V^{-1} \vec{x}_0</m>.
+  Note here that <m>e^{At} \vec{x}_0</m> will be a vector (by matrix vector product) and thus our solution to <m>\dfrac{d \vec{x}}{dt} = A \vec{x}</m> is given by <m>\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} V^{-1} \vec{x}_0 \: V^{-1}</m>.
 </p>
 <p>
   This looks a bit like our solutions to the discrete dynamical systems but still different. The vector <m>V^{-1} \vec{x}_0</m> is a solution to what matrix equation? If <m>\vec{c}=V^{-1}\vec{x}_0</m>, then <m>\vec{c}</m> is the solution to <m>V \vec{c} =\vec{x}_0</m>!!! You should recognize that <m>\vec{c}</m> is the vector of coefficients for the vector equation <m>c_1 \vec{v_1} +c_2 \vec{v}_2 +\ldots + c_n \vec{v}_n = \vec{x}_0</m>! The vector <m>\vec{c}=V^{-1}\vec{x}_0</m> comes from writing the initial condition of our system as a linear combination of the eigenvectors of <m>A</m>!
 </p>
 <p>
   Our solutions to <m>\dfrac{d \vec{x}}{dt} = A \vec{x}</m> are of the form
-    <me>\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} \vec{c} = \sum_{j=0}^n c_j e^{\lambda_j t} \vec{v}_j</me>
+    <me>\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} \vec{c} = \sum_{j=1}^n c_j e^{\lambda_j t} \vec{v}_j</me>
   Look at how much of this is determined by the algebra of problems you already know how to do. Which parts of this will determine the long term behavior of solutions? When will you have fixed point(s)? When will the fixed point(s) be attractors? repellors? saddles?
 </p>
 <example>
@@ -129,7 +129,7 @@
   <p>
     Using our tools from earlier, we can see that the solutions of this system can be written in the vector form
     <md>
-      <mrow>\vec{x}(t) =\amp \colvec{x_1(t)\\x_2(t)} =\amp \sum_{j=0}^n c_j e^{\lambda_j t} \vec{v}_j</mrow>
+      <mrow>\vec{x}(t) =\amp \colvec{x_1(t)\\x_2(t)} =\amp \sum_{j=1}^n c_j e^{\lambda_j t} \vec{v}_j</mrow>
       <mrow> \amp  \amp c_1 e^{\frac{1}{2}t}\colvec{1\\1}+c_2 e^{2t} \colvec{1 \\-1}</mrow>
     </md>
   </p>

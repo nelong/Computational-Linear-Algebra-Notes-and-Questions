@@ -56,17 +56,17 @@
 <activity>
   <task>
     <p>
-      Let's look at <m>D</m>,the derivative operator from <m>C^\infty(\mathbb{R})</m> to <m>C^\infty(\mathbb{R})</m>. What kinds of functions and scalars would satisfy <m>D(f)= \lambda f</m>?
+      Let's look at <m>D</m>, the derivative operator from <m>C^\infty(\mathbb{R})</m> to <m>C^\infty(\mathbb{R})</m>. What kinds of functions and scalars would satisfy <m>D(f)= \lambda f</m>?
     </p>
   </task>
   <task>
     <p>
-      Let's look at <m>T</m>,the integral operator from <m>C^\infty(\mathbb{R})</m> to <m>C^\infty(\mathbb{R})</m>. What kinds of functions and scalars would satisfy <m>T(f)= \lambda f</m>?
+      Let's look at <m>T</m>, the integral operator from <m>C^\infty(\mathbb{R})</m> to <m>C^\infty(\mathbb{R})</m>. What kinds of functions and scalars would satisfy <m>T(f)= \lambda f</m>?
     </p>
   </task>
   <task>
     <p>
-      Let's look at <m>S</m>,the operator from <m>C^\infty(\mathbb{R})</m> to <m>C^\infty(\mathbb{R})</m> with <m>S(f)= \dfrac{d^2f}{dx^2}</m>. What kinds of functions and scalars would satisfy <m>S(f)= \lambda f</m>?
+      Let's look at <m>S</m>, the operator from <m>C^\infty(\mathbb{R})</m> to <m>C^\infty(\mathbb{R})</m> with <m>S(f)= \dfrac{d^2f}{dx^2}</m>. What kinds of functions and scalars would satisfy <m>S(f)= \lambda f</m>?
     </p>
   </task>
 </activity>
