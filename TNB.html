@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The TNB Frame of Motion in 3D</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="My Great Book">
+<meta property="book:author" content="You">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Evaluate (Sage)'});
+</script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">My Great Book:</span> <span class="subtitle">An example to get you started</span></a></h1>
+<p class="byline">You</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="arclength.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C2.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="driver_road.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="C1.html" class="internal"><span class="codenumber">1</span> <span class="title">Geometry and Preliminaries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="conic_sections.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Conic Sections</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="conic_sections.html#subsection-1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Basic Conic Sections</span></a></div></li>
+<li><div class="toc-item"><a href="conic_sections.html#subsection-2" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Conic Sections Questions</span></a></div></li>
+<li><div class="toc-item"><a href="conic_sections.html#subsection-3" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Ellipse Parametric Equation</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="coord_systems.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Systems of Linear Equations and Matrices</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="coord_systems.html#subsection-4" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear systems of equations</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="C2.html" class="internal"><span class="codenumber">2</span> <span class="title">Vector Valued Functions of One Variable (VVF)</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Curves_3D.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Vector Valued Functions in 3D and Curves in Space</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Curves_3D.html#subsection-5" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Controls and Options for Plotting</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="vvf_calc.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Calculus of Vector Valued Functions of One Variable</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="vvf_calc.html#subsection-6" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Componentwise Calculus</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="arclength.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Properties of Curves in Space</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="arclength.html#subsection-7" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Velocity, Speed, and Arc Length</span></a></div></li>
+<li><div class="toc-item"><a href="arclength.html#subsection-8" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Curvature</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="TNB.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The TNB Frame of Motion in 3D</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="TNB.html#subsection-9" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The TNB Frame</span></a></div></li>
+<li><div class="toc-item"><a href="TNB.html#subsection-10" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Decomposition of Acceleration</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="driver_road.html" class="internal"><span class="codenumber">2.5</span> <span class="title">The Driver or the Road?</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="TNB"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">The TNB Frame of Motion in 3D</span>
+</h2>
+<article class="objectives goal-like" id="objectives-4"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc">
+<li id="li-63"><div class="para" id="p-48">To understand how the unit tangent, unit normal, and binormal vectors are measured for a curve in space</div></li>
+<li id="li-64"><div class="para" id="p-49">To understand how to efficently calculate the unit tangent, unit normal, and binormal vectors in terms of a parameteriation</div></li>
+</ul></article><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.1</span> <span class="title">The TNB Frame</span>
+</h3>
+<figure class="figure figure-like" id="fig_test"><iframe id="sage_cones" width="600" height="660" src="sage_cones-if.html"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.1<span class="period">.</span></span><span class="space"> </span>A three-dimensional plot of some cones</figcaption></figure><figure class="figure figure-like" id="path2d"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/./images/path1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.2<span class="period">.</span></span><span class="space"> </span>A 2D curve with points</figcaption></figure><article class="question example-like" id="question-24"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-24"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-24"><article class="question example-like"><div class="para logical" id="p-50"><ol class="decimal">
+<li id="li-65"><div class="para" id="p-derived-li-65">For each point (labeled sequentially) on the path in <a href="" class="xref" data-knowl="./knowl/path2d.html" title="Figure 2.4.2">Figure 2.4.2</a>, draw and label <span class="process-math">\(\overrightarrow{\textbf{T}}\)</span> and <span class="process-math">\(\overrightarrow{\textbf{N}}\text{.}\)</span>
+</div></li>
+<li id="li-66"><div class="para" id="p-derived-li-66">Give a ranking of the given points in <a href="" class="xref" data-knowl="./knowl/path2d.html" title="Figure 2.4.2">Figure 2.4.2</a> by curvature. In other words, list out the points from <span class="process-math">\(A\)</span> to <span class="process-math">\(F\)</span> in order of increasing curvature.</div></li>
+</ol></div></article></div>
+<article class="question example-like" id="question-25"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-25"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-25"><article class="question example-like"><div class="para logical" id="p-51">
+<div class="para">Mark each of the following as either TRUE or FALSE. If they are false, explain why they are false.</div>
+<ol class="decimal">
+<li id="li-67"><div class="para" id="p-derived-li-67">If a particle travels at constant speed, its acceleration vector is <span class="process-math">\(\vec 0\text{.}\)</span>
+</div></li>
+<li id="li-68"><div class="para" id="p-derived-li-68">If a particle travels at constant speed, its path must be a straight line.</div></li>
+<li id="li-69"><div class="para" id="p-derived-li-69">If a particle is moving along a parameterized curve, then the acceleration vector at a point cannot be parallel to the velocity vector.</div></li>
+<li id="li-70"><div class="para" id="p-derived-li-70">The arc length of a parameterized curve depends on the parameterization used to compute the integral.</div></li>
+<li id="li-71"><div class="para" id="p-derived-li-71">If a particle is moving around a circle, then its acceleration and velocity vectors are orthogonal.</div></li>
+</ol>
+</div></article></div>
+<article class="question example-like" id="question-26"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-26"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-26"><article class="question example-like"><div class="para logical" id="p-52">
+<div class="para">Consider the graph of a helix given by <span class="process-math">\(\overrightarrow{\textbf{r}}(t) = \langle 3\sin(t),  2\cos(t),t \rangle\text{.}\)</span> Calculate the following:</div>
+<ol class="decimal">
+<li id="li-72"><div class="para" id="p-derived-li-72"><span class="process-math">\(\displaystyle \overrightarrow{\textbf{r}}(0) =\)</span></div></li>
+<li id="li-73"><div class="para" id="p-derived-li-73"><span class="process-math">\(\displaystyle \overrightarrow{\textbf{T}}(0) =\)</span></div></li>
+<li id="li-74"><div class="para" id="p-derived-li-74"><span class="process-math">\(\displaystyle \overrightarrow{\textbf{N}}(0) =\)</span></div></li>
+<li id="li-75"><div class="para" id="p-derived-li-75"><span class="process-math">\(\displaystyle \overrightarrow{\textbf{B}}(0) =\)</span></div></li>
+<li id="li-76"><div class="para" id="p-derived-li-76"><span class="process-math">\(\displaystyle \kappa(0)=\)</span></div></li>
+<li id="li-77"><div class="para" id="p-derived-li-77"><span class="process-math">\(\displaystyle \overrightarrow{\textbf{r}}(\frac{\pi}{2}) =\)</span></div></li>
+<li id="li-78"><div class="para" id="p-derived-li-78"><span class="process-math">\(\displaystyle \overrightarrow{\textbf{T}}(\frac{\pi}{2}) =\)</span></div></li>
+<li id="li-79"><div class="para" id="p-derived-li-79"><span class="process-math">\(\displaystyle \overrightarrow{\textbf{N}}(\frac{\pi}{2}) =\)</span></div></li>
+<li id="li-80"><div class="para" id="p-derived-li-80"><span class="process-math">\(\displaystyle \overrightarrow{\textbf{B}}(\frac{\pi}{2}) =\)</span></div></li>
+<li id="li-81"><div class="para" id="p-derived-li-81"><span class="process-math">\(\displaystyle \kappa(\frac{\pi}{2})=\)</span></div></li>
+<li id="li-82"><div class="para" id="p-derived-li-82">Write a few sentences to explain how your calculations make sense for each of the two points examined. Be sure to note what changed and what didn't.</div></li>
+</ol>
+</div></article></div>
+<div class="para logical" id="p-53">
+<div class="para">You can use the sage cell below to help visualize curves in space with the following vectors:</div>
+<ul class="disc">
+<li id="li-83"><div class="para" id="p-derived-li-83">velocity (in orange)</div></li>
+<li id="li-84"><div class="para" id="p-derived-li-84">acceleration (in black)</div></li>
+<li id="li-85"><div class="para" id="p-derived-li-85">unit tangent (in red)</div></li>
+<li id="li-86"><div class="para" id="p-derived-li-86">unit normal (in blue)</div></li>
+</ul>
+<div class="para">Remember that you can change any of the parts of this code and reevaluate to get an updated plot. If you mess something up, simply reload this webpage and the original code will be reloaded. You can also use <a class="external" href="https://www.monroecc.edu/faculty/paulseeburger/calcnsf/CalcPlot3D/" target="_blank">CalcPlot3d</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a> for your visualization needs.</div>
+</div>
+<pre class="ptx-sagecell sagecell-sage" id="sage-1"><script type="text/x-sage">var('t');
+r1= vector([3*cos(t), 1-t^2,3*sin(t)] )
+plot1=parametric_plot3d(r1,(t,0,pi/2),color='green',thickness=5)
+a=pi/6
+v=diff(r1,t)
+acc=diff(v,t)
+T=v/norm(v)
+Tprime=diff(T,t)
+N=Tprime/norm(Tprime)
+point=r1(t=a)
+dot = point3d(point,size=10,rgbcolor="darkblue")
+vplot=  dot    +   arrow3d(point,point+T(t=a), color='red')
+vplot = vplot + arrow3d(point,point+10*N(t=a), color='blue')
+vplot = vplot + arrow3d(point,point+v(t=a), color='orange')
+vplot = vplot + arrow3d(point,point+acc(t=a), color='black')
+show(plot1+vplot,aspect_ratio=1)
+</script></pre></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.2</span> <span class="title">Decomposition of Acceleration</span>
+</h3>
+<article class="question example-like" id="question-27"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-27"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-27"><article class="question example-like"><div class="para logical" id="p-54">
+<div class="para">Find the decomposition of <span class="process-math">\(\overrightarrow{\textbf{a}}(t) \)</span> into tangential and normal components at the point indicated.</div>
+<ol class="decimal">
+<li id="li-87"><div class="para" id="p-derived-li-87">
+<span class="process-math">\(\overrightarrow{\textbf{r}}(t) =\langle t, \frac{t^2}{2}, \frac{t^3}{6} \rangle \)</span> at <span class="process-math">\(t=1\)</span>
+</div></li>
+<li id="li-88"><div class="para" id="p-derived-li-88">
+<span class="process-math">\(\overrightarrow{\textbf{r}}(t) =\langle t, e^t, t e^t \rangle \)</span> at <span class="process-math">\(t=0\)</span>
+</div></li>
+</ol>
+</div> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like">Use Example 7 on page 726 as a guide.</div></div></article></div>
+<article class="question example-like" id="question-28"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-28"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-28"><article class="question example-like"><div class="para logical" id="p-55">
+<div class="para">Let <span class="process-math">\(\overrightarrow{\textbf{r}}(t) =\langle t^2, 4t-3 \rangle\text{.}\)</span> Find <span class="process-math">\(\overrightarrow{\textbf{T}}(t)\)</span> and <span class="process-math">\(\overrightarrow{\textbf{N}}(t)\text{.}\)</span> Also show that the decomposition of <span class="process-math">\(\overrightarrow{\textbf{a}}(t)\)</span> into tangential and normal components is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overrightarrow{\textbf{a}}(t) = \left( \frac{2t}{\sqrt{t^2+4}} \right) \overrightarrow{\textbf{T}}+\left( \frac{4}{\sqrt{t^2+4}} \right) \overrightarrow{\textbf{N}}
+\end{equation*}
+</div>
+</div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">www.monroecc.edu/faculty/paulseeburger/calcnsf/CalcPlot3D/</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="arclength.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="driver_road.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+</div>
+</body>
+</html>

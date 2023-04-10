@@ -404,7 +404,7 @@ D=diag(\lambda_1,\lambda_2, \ldots, \lambda_n)=
 \begin{bmatrix} \lambda_1 \amp 0 \amp \cdots \amp 0\\ 0 \amp \lambda_2 \amp \cdots \amp 0\\ \vdots \amp \vdots \amp \ddots \amp \vdots \\ 0 \amp 0 \amp \cdots \amp \lambda_n \end{bmatrix}
 \end{equation*}
 </div>
-<div class="para">and <span class="process-math">\(V=[\vec{v}_1 , \ldots , \vec{v}_n]\text{.}\)</span> From our work on change of coordinates, you should recognize that <span class="process-math">\(A = V D V^{-1}\text{.}\)</span> So,</div>
+<div class="para">and <span class="process-math">\(V=[\vec{v}_1 , \ldots , \vec{v}_n]\text{.}\)</span> From our work onj= change of coordinates, you should recognize that <span class="process-math">\(A = V D V^{-1}\text{.}\)</span> So,</div>
 <div class="displaymath process-math" id="md-29">
 \begin{align*}
 A^k =\amp  (V D V^{-1})(V D V^{-1})\ldots (V D V^{-1})\\
@@ -423,7 +423,7 @@ e^\alpha = \sum_{k=0}^\infty \frac{\alpha^k}{k!}
 e^{At} = V \sum_{k=0}^\infty \frac{D^k}{k!} V^{-1}= V e^{Dt} V^{-1}= V diag(e^{\lambda_1 t},e^{\lambda_2 t}, \ldots, e^{\lambda_n t})
 \end{equation*}
 </div>
-<div class="para">Note here that <span class="process-math">\(e^{At} \vec{x}_0\)</span> will be a vector (by matrix vector product) and thus our solution to <span class="process-math">\(\dfrac{d \vec{x}}{dt} = A \vec{x}\)</span> is given by <span class="process-math">\(\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} V^{-1} \vec{x}_0\text{.}\)</span>
+<div class="para">Note here that <span class="process-math">\(e^{At} \vec{x}_0\)</span> will be a vector (by matrix vector product) and thus our solution to <span class="process-math">\(\dfrac{d \vec{x}}{dt} = A \vec{x}\)</span> is given by <span class="process-math">\(\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} V^{-1} \vec{x}_0 \: V^{-1}\text{.}\)</span>
 </div>
 </div>
 <div class="para" id="p-437">This looks a bit like our solutions to the discrete dynamical systems but still different. The vector <span class="process-math">\(V^{-1} \vec{x}_0\)</span> is a solution to what matrix equation? If <span class="process-math">\(\vec{c}=V^{-1}\vec{x}_0\text{,}\)</span> then <span class="process-math">\(\vec{c}\)</span> is the solution to <span class="process-math">\(V \vec{c} =\vec{x}_0\text{!!!}\)</span> You should recognize that <span class="process-math">\(\vec{c}\)</span> is the vector of coefficients for the vector equation <span class="process-math">\(c_1 \vec{v_1} +c_2 \vec{v}_2 +\ldots + c_n \vec{v}_n = \vec{x}_0\text{!}\)</span> The vector <span class="process-math">\(\vec{c}=V^{-1}\vec{x}_0\)</span> comes from writing the initial condition of our system as a linear combination of the eigenvectors of <span class="process-math">\(A\text{!}\)</span>
@@ -432,7 +432,7 @@ e^{At} = V \sum_{k=0}^\infty \frac{D^k}{k!} V^{-1}= V e^{Dt} V^{-1}= V diag(e^{\
 <div class="para">Our solutions to <span class="process-math">\(\dfrac{d \vec{x}}{dt} = A \vec{x}\)</span> are of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} \vec{c} = \sum_{j=0}^n c_j e^{\lambda_j t} \vec{v}_j
+\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} \vec{c} = \sum_{j=1}^n c_j e^{\lambda_j t} \vec{v}_j
 \end{equation*}
 </div>
 <div class="para">Look at how much of this is determined by the algebra of problems you already know how to do. Which parts of this will determine the long term behavior of solutions? When will you have fixed point(s)? When will the fixed point(s) be attractors? repellors? saddles?</div>
@@ -451,7 +451,7 @@ e^{At} = V \sum_{k=0}^\infty \frac{D^k}{k!} V^{-1}= V e^{Dt} V^{-1}= V diag(e^{\
 <div class="para">Using our tools from earlier, we can see that the solutions of this system can be written in the vector form</div>
 <div class="displaymath process-math" id="md-31">
 \begin{align*}
-\vec{x}(t) =\amp \colvec{x_1(t)\\x_2(t)} =\amp \sum_{j=0}^n c_j e^{\lambda_j t} \vec{v}_j\\
+\vec{x}(t) =\amp \colvec{x_1(t)\\x_2(t)} =\amp \sum_{j=1}^n c_j e^{\lambda_j t} \vec{v}_j\\
 \amp  \amp c_1 e^{\frac{1}{2}t}\colvec{1\\1}+c_2 e^{2t} \colvec{1 \\-1}
 \end{align*}
 </div>
