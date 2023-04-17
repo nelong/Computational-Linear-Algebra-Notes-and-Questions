@@ -8,5 +8,6 @@
   <xi:include href="C3/Operators.ptx" />
   <xi:include href="C3/VectorSpaces.ptx" />
   <xi:include href="C3/Subspaces.ptx" />
+  <xi:include href="C3/Fourier.ptx" />
 </chapter>
 
