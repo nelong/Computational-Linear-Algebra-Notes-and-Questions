@@ -30,4 +30,36 @@
     There is not just one inner product that we could define on <m>C^0([a,b])</m>. We could give a weighting of the the points in our region of integration and define a weighted integral which will still give an inner product. Specifically, we could define <me>\langle f,g \rangle_{w(x)} =\int_a^b f(x) g(x) w(x) \enspace dx </me> for <m>f,g \in C^0([a,b])</m>. For instance, if <m>f(x)=x</m> and <m>g(x)=^2</m>, then <m>f,g\in C^0(\mathbb{R})</m> but the unweighted inner product <me>\langle f,g\rangle = \int_{-\infty}^\infty f(x) g(x) \enspace dx</me> will not be defined for <m>f</m> and <m>g</m>. The weighted inner product with <m>w(x) = e^{-x^2}</m> exists for <m>f</m> and <m>g</m> because <me>\langle f,g\rangle_{w(x)} = \int_{-\infty}^\infty f(x) g(x) e^{-x^2} \enspace dx</me> converges to a finite value.
   </p>
 </example>
+<p>
+  If we look at a set of of functions, <m>S=\{\phi_k(x)\} \subset C^0(\mathbb{R})</m>, we can still consider the span of that set, <me>Span(S)=\{g(x)|g(x)=\sum_{i=1}^n a_i \phi_i(x)\}</me>
+  While the span of this set is unlikely to be all of our vector space <m>C^0(\mathbb{R})</m>, we can still ask what function from the span is closest to a given function. The inner product (like the dot product) gives us a way to measure how much functions move together, so we can try to find the function from <m>Span(S)</m> that will maximize it's inner product with a given <m>g \in C^0</m>. If this sounds like a projection vector problem, good news, it is!
+</p>
+<p>
+  Let's consider our set <m>S=\{\phi_k(x)=\sin(\frac{k \pi x}{L})\}</m> as a subset of functions/vectors from <m>C^\infty(\mathbb{R})</m>. What kind of functions can we write as a linear combination from <m>S</m>? For one thing, all of the linear combinations of functions from <m>S</m> will be periodic and will have zeros at 0 and <m>L</m>.
+</p>
+<sage>
+  <input>
+    var('x')
+    colors=['red','orange','green','blue','purple']
+    plot1=plot(0,(x,-2,9),color='black')
+    for i in range(1,5):
+      plot1+=plot(sin(i*pi*x/7),(x,-2,9),color=colors[i-1])
+    show(plot1)
+  </input>
+</sage>
+<p>
+  Let's consider <m>h(x)</m>, a function that has nodes at 0 and 1 as shown in the graph below.
+</p>
+<figure >
+  <caption>A plot of $h(x)$</caption>
+  <interactive platform="sage">
+    <slate surface="sage">
+      var('x')
+      @interact
+      def _():
+        plot1=plot(2*sin(pi*x)-3*sin(2*pi*x)+sin(3*pi*x),(x,0,1),color='blue')
+        show(plot1)
+    </slate>
+  </interactive>
+</figure>
 </section>
