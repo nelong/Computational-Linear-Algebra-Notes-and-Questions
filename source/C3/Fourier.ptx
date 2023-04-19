@@ -48,18 +48,167 @@
   </input>
 </sage>
 <p>
-  Let's consider <m>h(x)</m>, a function that has nodes at 0 and 1 as shown in the graph below.
+  Let's consider <m>h(x)</m>, a function that has zeros at 0 and 1 as shown in the graph below.
 </p>
-<figure >
-  <caption>A plot of $h(x)$</caption>
-  <interactive platform="sage">
+<figure>
+  <caption>A plot of <m>h(x)</m></caption>
+  <interactive platform="sage" width="110%">
     <slate surface="sage">
       var('x')
-      @interact
-      def _():
-        plot1=plot(2*sin(pi*x)-3*sin(2*pi*x)+sin(3*pi*x),(x,0,1),color='blue')
-        show(plot1)
+      plot1=plot(2*sin(pi*x)-3*sin(2*pi*x)+sin(3*pi*x),(x,0,1),color='blue')
+      show(plot1)
     </slate>
   </interactive>
 </figure>
+<question>
+  <p>
+    How well can we approximate this function with a linear combination from our set <m>S</m>?
+  </p>
+</question>
+<p>
+  A very useful fact about our set <m>S</m> is that each of the functions, <m>\phi_k(x)=\sin(\frac{k \pi x}{L})</m>, is orthogonal to any other element of <m>S</m>. If <m>k\neq j</m>, then <m>\langle \phi_k , \phi_j \rangle =0</m>. Here we are using the unweighted inner product. Note here that we will consider <m>L=1</m> so that our region of interest is the interval from <m>[0,1]</m>.
+</p>
+<p>
+  What does it mean for our functions to be "orthogonal"? Let's look at the graph of <m>\phi_k(x) \phi_j(x)</m> (with <m>L=0</m>) on the interval from 0 to 1. Change the <m>k</m> and <m>j</m> values to see how the function we are integrating changes.
+</p>
+<sage width="110%">
+  <input>
+    var('x')
+    j = 1
+    k = 2
+    plot1=plot(sin(j*pi*x)*sin(k*pi*x),(x,0,1),color='blue')
+    plot1+=plot(sin(j*pi*x),(x,0,1),color='red')
+    plot1+=plot(sin(k*pi*x),(x,0,1),color='green')
+    show(plot1)
+  </input>
+</sage>
+<p>
+  For our set <m>S</m>, we should also look at what <m>\langle \phi_k, \phi_k</m> would be. Let's calculate <me>\int_0^1 (\sin(k \pi x))^2 \enspace dx </me>.
+</p>
+<sage>
+  <input>
+    var('x,m')
+    integrate(sin(m*pi*x)^2,(x,0,1))
+  </input>
+</sage>
+<p>
+  Let <m>h_N</m> be the approximation of <m>h</m> using <m>\{\phi_0, \phi_1, \ldots , \phi_N\}</m>. For instance, when <m>N=4</m>,
+  <me>h(x) \approx h_N(x) = \sum_{j=0}^4 a_j \phi_j(x)</me>
+  So to figure out each of the <m>a_j</m> coefficents, let's take the inner product with <m>\phi_k</m> on both sides of our <m>h_N(x)</m> linear combination. We get 
+  <me>\langle h(x), \phi_k(x)\rangle \approx \langle h_n(x), \phi_k(x)\rangle = \langle \sum_{j=0}^4 a_j \phi_j(x), \phi_k(x)\rangle </me>
+  But since each of the <m>\phi_k</m> functions is orthogonal to all of the other <m>\phi_j</m> functions (<m>k\neq j</m>), we will get
+  <me>\langle h(x), \phi_k(x)\rangle \approx \langle h_n(x), \phi_k(x)\rangle = \langle  a_k \phi_k(x), \phi_k(x)\rangle</me>
+  Thus our coefficents <m>a_i</m> can be found by 
+  <me>a_i=\frac{\langle h(x), \phi_i(x)\rangle}{\langle \phi_i(x), \phi_i(x)\rangle}</me>
+</p>
+<p>
+  The following sage commands will calculate the coefficents for our approximation of <m>h(x)</m> using a linear combination of functions from <m>S</m>. You can see how we get successively better approximations of <m>h(x)</m> as we increase the number of terms in the linear combination.
+</p>
+<sage>
+  <input>
+    var('x,m')
+    colors=['red','orange','green','blue','purple']
+    h(x)=2*sin(pi*x)-3*sin(2*pi*x)+sin(3*pi*x)
+    plot1=plot(h(x),(x,0,1),color='black')
+    a=[]
+    hn(x)=0
+    for i in range(1,6):
+      avalue=integrate(h(x)*sin(i*pi*x),(x,0,1))/integrate(sin(i*pi*x)*sin(i*pi*x),(x,0,1))
+      a.append(avalue)
+      hn(x)=hn(x)+avalue*sin(i*pi*x)
+      plot1+=plot(hn(x),(x,0,1),color=colors[i-1])
+      show(plot1)
+    print(a)
+  </input>
+</sage>
+<p>
+  If you noticed, the function we used above for <m>h(x)</m> was actually a linear combination from <m>S</m>. What if we considered the same problem but with a function NOT in <m>Span(S)</m>. Consider <m>g(x)=|x-1/2|</m>.
+</p>
+<figure>
+  <caption>A plot of <m>g(x)=|x-1/2|</m></caption>
+  <interactive platform="sage" width="110%">
+    <slate surface="sage">
+      var('x')
+      plot1=plot(abs(x-0.5),(x,0,1),color='blue')
+      show(plot1)
+    </slate>
+  </interactive>
+</figure>
+<p>
+  Let's see what the coefficients will be for our approximation of <m>g(x)</m> with a linear combination from <m>S</m>.
+</p>
+<sage>
+  <input>
+    var('x,m')
+    colors=['red','orange','green','blue','purple']
+    h(x)=abs(x-0.5)
+    plot1=plot(h(x),(x,0,1),color='black')
+    a=[]
+    hn(x)=0
+    for i in range(1,6):
+      avalue=integrate(h(x)*sin(i*pi*x),(x,0,1))/integrate(sin(i*pi*x)*sin(i*pi*x),(x,0,1))
+      a.append(avalue)
+      hn(x)=hn(x)+avalue*sin(i*pi*x)
+      plot1+=plot(hn(x),(x,0,1),color=colors[i-1])
+      show(plot1)
+    print(a)
+  </input>
+</sage>
+<p>
+  What do you notice about where the approximations are getting better and where the approximations are awful? Why do you think this is the case?
+</p>
+<p>
+  Let's consider a larger set of functions, <m>SC=\{\phi_k(x)=\sin(\frac{k \pi x}{L})\} \Cup \{\psi_k(x)=\cos(\frac{k \pi x}{L})\}</m>. Will this set still have the property that each element is orthogonal to all of the others (except itself)?
+</p>
+<sage width="110%">
+  <input>
+    var('x')
+    j = 1
+    k = 2
+    plot1=plot(sin(j*pi*x)*cos(k*pi*x),(x,0,1),color='blue')
+    plot1+=plot(sin(j*pi*x),(x,0,1),color='red')
+    plot1+=plot(cos(k*pi*x),(x,0,1),color='green')
+    show(plot1)
+    integrate(sin(j*pi*x)*cos(k*pi*x),(x,0,1))
+  </input>
+</sage>
+<p>
+  So we probably shouldn't use both the sine and cosine functions unless we have a good way to split up our coefficents since <m>\langle \phi_k, \psi_j \rangle \neq 0</m> for <m> k \neq j</m>. For now, let's consider just the cosine functions <m>C=\{\psi_k(x)=\cos(k \pi x)\}</m> (with <m>L=1</m>) for our problem because our target function does not have a zero output at the boundaries of our interval.
+</p>
+<p>
+  Let <m>g_N</m> be the approximation of <m>g</m> using <m>\{\psi_0, \psi_1, \ldots , \psi_N\}</m>. For instance, when <m>N=4</m>,
+  <me>g(x) \approx g_N(x) = \sum_{j=0}^4 b_j \psi_j(x)</me>
+  So to figure out each of the <m>b_j</m> coefficents, let's take the inner product with <m>\psi_k</m> on both sides of our <m>g_N(x)</m> linear combination. We get
+  <me>\langle g(x), \psi_k(x)\rangle \approx \langle g_n(x), \psi_k(x)\rangle = \langle \sum_{j=0}^4 b_j \psi_j(x), \psi_k(x)\rangle </me>
+  But since each of the <m>\psi_k</m> functions is orthogonal to all of the other <m>\psi_j</m> functions (<m>k\neq j</m>), we will get
+  <me>\langle g(x), \psi_k(x)\rangle \approx \langle g_n(x), \psi_k(x)\rangle = \langle  b_k \psi_k(x), \psi_k(x)\rangle</me>
+  Thus our coefficents <m>a_i</m> can be found by
+  <me>b_i=\frac{\langle g(x), \psi_i(x)\rangle}{\langle \psi_i(x), \psi_i(x)\rangle}</me>
+</p>
+<p>
+  Let's see what the coefficients will be for our approximation of <m>g(x)</m> with a linear combination from <m>C</m>.
+</p>
+<sage>
+  <input>
+    var('x,m')
+    colors=['red','orange','green','blue','purple','red','orange','green','blue','purple']
+    h(x)=abs(x-0.5)
+    plot1=plot(h(x),(x,0,1),color='black')
+    a=[]
+    hn(x)=0
+    for i in range(6):
+      avalue=integrate(h(x)*cos(i*pi*x),(x,0,1))/integrate(cos(i*pi*x)*cos(i*pi*x),(x,0,1))
+      a.append(avalue)
+      hn(x)=hn(x)+avalue*cos(i*pi*x)
+      plot1+=plot(hn(x),(x,0,1),color=colors[i])
+      show(plot1)
+    print(a)
+  </input>
+</sage>
+<p>
+  While our function <m>g(x)=|x-1/2|</m> is not in the span of our set <m>SC</m>, our linear combination approximiation is the closest function to <m>g</m> (where closest is measured using the inner product!). 
+</p>
+<p>
+  We should take a bit of time to list all of the tools we have learned about this semester that are involved in the previous problems: vectors (the bigger idea of vectors as objects that you can work with linear combinations), linear combinations, span, inner products/orthogonality, efficiently solving linear algebraic systems. What others?
+</p>
 </section>

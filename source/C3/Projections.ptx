@@ -1,0 +1,91 @@
+ <section>
+    <title>Motivating Activity</title>
+<activity>
+  <introduction>
+    <p>
+      Let's look at the vector <m>\vec{w}=\colvec{7 \\-2}</m> as a vector in <m>\mathbb{R}^2</m>.
+    </p>
+  </introduction>
+  <task>
+    <p>
+      How much does <m>\vec{w}=\colvec{7 \\-2}</m> move horizontally?
+    </p>
+  </task>
+  <task>
+    <p>
+      How much does <m>\vec{w}=\colvec{7 \\-2}</m> move vertically?
+    </p>
+  </task>
+  <task>
+    <p>
+      Calculate the dot product of <m>\vec{w}=\colvec{7 \\-2}</m> with <m>\colvec{1\\0}</m>. How does this relate to your previous answers?
+    </p>
+  </task>
+  <task>
+    <p>
+      Calculate the dot product of <m>\vec{w}=\colvec{7 \\-2}</m> with <m>\colvec{0\\1}</m>. How does this relate to your previous answers?
+    </p>
+  </task>
+  <task>
+    <p>
+      How can you write <m>\vec{w}=\colvec{7 \\-2}</m> as a linear combination of <m>\colvec{1\\0}</m> and <m>\colvec{1\\0}</m>? 
+    </p>
+  </task>
+  <task>
+    <p>
+      How much does <m>\vec{w}=\colvec{7 \\-2}</m> move in the <m>\colvec{1\\1}</m> direction?
+    </p>
+  </task>
+  <task>
+    <p>
+      How much does <m>\vec{w}=\colvec{7 \\-2}</m> move in the <m>\colvec{-1\\1}</m> direction?
+    </p>
+  </task>
+  <task>
+    <p>
+      Calculate the dot product of <m>\vec{w}=\colvec{7 \\-2}</m> with <m>\colvec{1\\1}</m>. How does this relate to your previous answers?
+    </p>
+  </task>
+  <task>
+    <p>
+      Calculate the dot product of <m>\vec{w}=\colvec{7 \\-2}</m> with <m>\colvec{-1\\1}</m>. How does this relate to your previous answers?
+    </p>
+  </task>
+  <task>
+    <p>
+      How can you write <m>\vec{w}=\colvec{7 \\-2}</m> as a linear combination of <m>\colvec{1\\1}</m> and <m>\colvec{-1\\1}</m>? 
+    </p>
+  </task>
+  <task>
+    <p>
+      How much does <m>\vec{w}=\colvec{7 \\-2}</m> move in the <m>\colvec{1\\1}</m> direction?
+    </p>
+  </task>
+  <task>
+    <p>
+      How much does <m>\vec{w}=\colvec{7 \\-2}</m> move in the <m>\colvec{1\\0}</m> direction?
+    </p>
+  </task>
+  <task>
+    <p>
+      Calculate the dot product of <m>\vec{w}=\colvec{7 \\-2}</m> with <m>\colvec{1\\1}</m>. How does this relate to your previous answers?
+    </p>
+  </task>
+  <task>
+    <p>
+      Calculate the dot product of <m>\vec{w}=\colvec{7 \\-2}</m> with <m>\colvec{1\\0}</m>. How does this relate to your previous answers?
+    </p>
+  </task>
+  <task>
+    <p>
+      How can you write <m>\vec{w}=\colvec{7 \\-2}</m> as a linear combination of <m>\colvec{1\\1}</m> and <m>\colvec{1\\0}</m>? 
+    </p>
+  </task>
+  <task>
+    <p>
+      What is different about the different sets we considered different sets to span <m>\mathbb{R}^2</m>? Be specific about what aspects will make answering the linear combination question easier to answer.
+    </p>
+  </task>
+</activity>
+
+</section>
