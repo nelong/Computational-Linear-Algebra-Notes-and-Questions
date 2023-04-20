@@ -1954,6 +1954,87 @@ var ptx_lunr_docs = [
   "body": "Prove or disprove: The set of quadratic polynomials of the form is a subspace of the vector space of polynomials. "
 },
 {
+  "id": "section-21",
+  "level": "1",
+  "url": "section-21.html",
+  "type": "Section",
+  "number": "3.7",
+  "title": "Motivating Activity",
+  "body": " Motivating Activity    Let's look at the vector as a vector in .   How much does move horizontally?  How much does move vertically?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  How much does move in the direction?  How much does move in the direction?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  How much does move in the direction?  How much does move in the direction?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  What is different about the different sets we considered different sets to span ? Be specific about what aspects will make answering the linear combination question easier to answer.   "
+},
+{
+  "id": "activity-39",
+  "level": "2",
+  "url": "section-21.html#activity-39",
+  "type": "Activity",
+  "number": "3.7.1",
+  "title": "",
+  "body": "  Let's look at the vector as a vector in .   How much does move horizontally?  How much does move vertically?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  How much does move in the direction?  How much does move in the direction?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  How much does move in the direction?  How much does move in the direction?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  What is different about the different sets we considered different sets to span ? Be specific about what aspects will make answering the linear combination question easier to answer.  "
+},
+{
+  "id": "section-22",
+  "level": "1",
+  "url": "section-22.html",
+  "type": "Section",
+  "number": "3.8",
+  "title": "Fourier Series",
+  "body": " Fourier Series  We will formalize some of the work done in Project 3, specifically the generalization of the dot product to vector spaces in general.   Inner Product  An inner product is a bilinear operation (denoted ) from a vector space to that satisifies the following: if and then         , iff  A vector space with a choice of inner product is called an inner product space .    and the dot product  The dot product ( ) is an inner product for our first example of a vector space, .    As we developed in Project 3, we can define an inner product of for . because integrals are lienar with respect to the functions being integrated.  There is not just one inner product that we could define on . We could give a weighting of the the points in our region of integration and define a weighted integral which will still give an inner product. Specifically, we could define for . For instance, if and , then but the unweighted inner product will not be defined for and . The weighted inner product with exists for and because converges to a finite value.   If we look at a set of of functions, , we can still consider the span of that set, While the span of this set is unlikely to be all of our vector space , we can still ask what function from the span is closest to a given function. The inner product (like the dot product) gives us a way to measure how much functions move together, so we can try to find the function from that will maximize it's inner product with a given . If this sounds like a projection vector problem, good news, it is!  Let's consider our set as a subset of functions\/vectors from . What kind of functions can we write as a linear combination from ? For one thing, all of the linear combinations of functions from will be periodic and will have zeros at 0 and .   Let's consider , a function that has zeros at 0 and 1 as shown in the graph below.   A plot of     How well can we approximate this function with a linear combination from our set ?   A very useful fact about our set is that each of the functions, , is orthogonal to any other element of . If , then . Here we are using the unweighted inner product. Note here that we will consider so that our region of interest is the interval from .  What does it mean for our functions to be \"orthogonal\"? Let's look at the graph of (with ) on the interval from 0 to 1. Change the and values to see how the function we are integrating changes.   For our set , we should also look at what would be. Let's calculate .   Let be the approximation of using . For instance, when , So to figure out each of the coefficents, let's take the inner product with on both sides of our linear combination. We get But since each of the functions is orthogonal to all of the other functions ( ), we will get Thus our coefficents can be found by   The following sage commands will calculate the coefficents for our approximation of using a linear combination of functions from . You can see how we get successively better approximations of as we increase the number of terms in the linear combination.   If you noticed, the function we used above for was actually a linear combination from . What if we considered the same problem but with a function NOT in . Consider .   A plot of    Let's see what the coefficients will be for our approximation of with a linear combination from .   What do you notice about where the approximations are getting better and where the approximations are awful? Why do you think this is the case?  Let's consider a larger set of functions, . Will this set still have the property that each element is orthogonal to all of the others (except itself)?   So we probably shouldn't use both the sine and cosine functions unless we have a good way to split up our coefficents since for . For now, let's consider just the cosine functions (with ) for our problem because our target function does not have a zero output at the boundaries of our interval.  Let be the approximation of using . For instance, when , So to figure out each of the coefficents, let's take the inner product with on both sides of our linear combination. We get But since each of the functions is orthogonal to all of the other functions ( ), we will get Thus our coefficents can be found by   Let's see what the coefficients will be for our approximation of with a linear combination from .   While our function is not in the span of our set , our linear combination approximiation is the closest function to (where closest is measured using the inner product!).  We should take a bit of time to list all of the tools we have learned about this semester that are involved in the previous problems: vectors (the bigger idea of vectors as objects that you can work with linear combinations), linear combinations, span, inner products\/orthogonality, efficiently solving linear algebraic systems. What others?  "
+},
+{
+  "id": "definition-19",
+  "level": "2",
+  "url": "section-22.html#definition-19",
+  "type": "Definition",
+  "number": "3.8.1",
+  "title": "Inner Product.",
+  "body": " Inner Product  An inner product is a bilinear operation (denoted ) from a vector space to that satisifies the following: if and then         , iff  A vector space with a choice of inner product is called an inner product space .  "
+},
+{
+  "id": "example-19",
+  "level": "2",
+  "url": "section-22.html#example-19",
+  "type": "Example",
+  "number": "3.8.2",
+  "title": "<span class=\"process-math\">\\(\\mathbb{R}^n\\)<\/span> and the dot product.",
+  "body": " and the dot product  The dot product ( ) is an inner product for our first example of a vector space, .  "
+},
+{
+  "id": "example-20",
+  "level": "2",
+  "url": "section-22.html#example-20",
+  "type": "Example",
+  "number": "3.8.3",
+  "title": "",
+  "body": " As we developed in Project 3, we can define an inner product of for . because integrals are lienar with respect to the functions being integrated.  There is not just one inner product that we could define on . We could give a weighting of the the points in our region of integration and define a weighted integral which will still give an inner product. Specifically, we could define for . For instance, if and , then but the unweighted inner product will not be defined for and . The weighted inner product with exists for and because converges to a finite value.  "
+},
+{
+  "id": "figure-5",
+  "level": "2",
+  "url": "section-22.html#figure-5",
+  "type": "Figure",
+  "number": "3.8.4",
+  "title": "",
+  "body": " A plot of   "
+},
+{
+  "id": "question-9",
+  "level": "2",
+  "url": "section-22.html#question-9",
+  "type": "Question",
+  "number": "3.8.5",
+  "title": "",
+  "body": " How well can we approximate this function with a linear combination from our set ?  "
+},
+{
+  "id": "figure-6",
+  "level": "2",
+  "url": "section-22.html#figure-6",
+  "type": "Figure",
+  "number": "3.8.6",
+  "title": "",
+  "body": " A plot of   "
+},
+{
   "id": "colophon-2",
   "level": "1",
   "url": "colophon-2.html",

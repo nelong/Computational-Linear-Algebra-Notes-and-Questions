@@ -57,7 +57,13 @@ window.MathJax = {
     )}
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Evaluate (Sage)'});
+</script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -305,6 +311,8 @@ window.MathJax = {
 </li>
 <li><div class="toc-item"><a href="section-19.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Vector Spaces: The Big Idea</span></a></div></li>
 <li><div class="toc-item"><a href="section-20.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Subspaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-21.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Motivating Activity</span></a></div></li>
+<li><div class="toc-item"><a href="section-22.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Fourier Series</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -319,6 +327,8 @@ window.MathJax = {
 <li><a href="Operators.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Operators</span></a></li>
 <li><a href="section-19.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Vector Spaces: The Big Idea</span></a></li>
 <li><a href="section-20.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Subspaces</span></a></li>
+<li><a href="section-21.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Motivating Activity</span></a></li>
+<li><a href="section-22.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Fourier Series</span></a></li>
 </ul></nav></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="EigenvaluesEigenvectors.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="DiscreteDS.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
