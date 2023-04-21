@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Diagonalizability.</span></h3> <article class="definition definition-like"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.6.5</span><span class="period">.</span>
+</h4>
+<div class="para">A matrix <span class="process-math">\(A\)</span> is <dfn class="terminology">diagonalizable</dfn> if there exists an invertible matrix <span class="process-math">\(Q\)</span> such that <span class="process-math">\(A=QDQ^{-1}\)</span> where <span class="process-math">\(D\)</span> is a diagonal matrix.</div></article> <div class="para">We will not prove this theorem, but we will make use of it:</div> <article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.6.6</span><span class="period">.</span>
+</h4>
+<div class="para">A matrix <span class="process-math">\(A \in M_{n \times n}\)</span> is diagonalizable iff <span class="process-math">\(A\)</span> has <span class="process-math">\(n\)</span> linearly independent eigenvectors. In fact, the matrix <span class="process-math">\(Q\)</span> that will diagonalize <span class="process-math">\(A\)</span> will have the <span class="process-math">\(n\)</span> linearly independent eigenvectors as its columns.</div></article> <div class="para">The question becomes when can we find <span class="process-math">\(n\)</span> linearly independent eigenvectors for a matrix <span class="process-math">\(A\text{.}\)</span> It turns out that <em class="emphasis">if you can</em> find <span class="process-math">\(n\)</span> linearly independent eigenvectors for <span class="process-math">\(A\text{,}\)</span> then the matrix <span class="process-math">\(Q\)</span> has columns given by these eigenvectors and the diagonal matrix will have the eigenvalues on the diagonal. In particular, if the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(Q\)</span> has eigenvalue <span class="process-math">\(\lambda_i\text{,}\)</span> then <span class="process-math">\(D_{i,i} = \lambda_i\text{.}\)</span>
+</div> <article class="investigation project-like"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.6.10</span><span class="period">.</span>
+</h4>
+<div class="para">Can you diagonalize <span class="process-math">\(A=\begin{bmatrix} -1\amp 2\\-2\amp 4 \end{bmatrix}\text{?}\)</span> If so, give a basis of eigenvectors, give corresponding choices for <span class="process-math">\(Q\text{,}\)</span> <span class="process-math">\(Q^{-1}\text{,}\)</span> and <span class="process-math">\(D\text{,}\)</span> then use these to demonstrate how <span class="process-math">\(A=QDQ^{-1}\text{.}\)</span>
+</div></article> <article class="investigation project-like"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.6.11</span><span class="period">.</span>
+</h4>
+<div class="para">Can you diagonalize <span class="process-math">\(A=\begin{bmatrix} 1\amp -1\\1\amp 1 \end{bmatrix}\text{?}\)</span> If so, give a basis of eigenvectors, give corresponding choices for <span class="process-math">\(Q\text{,}\)</span> <span class="process-math">\(Q^{-1}\text{,}\)</span> and <span class="process-math">\(D\text{,}\)</span> then use these to demonstrate how <span class="process-math">\(A=QDQ^{-1}\text{.}\)</span>
+</div></article> <article class="lemma theorem-like"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.6.7</span><span class="period">.</span>
+</h4>
+<div class="para">If <span class="process-math">\(\vec{v_1}\)</span> is an eigenvector with eigenvalue <span class="process-math">\(\lambda_1\)</span> and <span class="process-math">\(\vec{v_2}\)</span> is an eigenvector with eigenvalue <span class="process-math">\(\lambda_2 \neq \lambda_1\text{,}\)</span> then <span class="process-math">\(\{ \vec{v_1},\vec{v_2} \}\)</span> is linearly independent.</div></article> <div class="para">The following theorem relies on the preceding lemma and the fact that the dimension of every eigenspace is at least 1.</div> <article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.6.8</span><span class="period">.</span>
+</h4>
+<div class="para">If a <span class="process-math">\(n\)</span> by <span class="process-math">\(n\)</span> matrix <span class="process-math">\(A\)</span> has <span class="process-math">\(n\)</span> distinct eigenvalues, then <span class="process-math">\(A\)</span> is diagonalizable.</div></article> <article class="investigation project-like"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.6.12</span><span class="period">.</span>
+</h4>
+<div class="para">The converse of this theorem is not true in that there diagonalizable matrices that do not have distinct eigenvalues. Give an example of a matrix that is diagonalizable but does not have distinct eigenvalues. Remember that diagonal matrices are diagonalizable.</div></article> <article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.6.9</span><span class="period">.</span>
+</h4>
+<div class="para">A <span class="process-math">\(n\)</span> by <span class="process-math">\(n\)</span> matrix <span class="process-math">\(A\)</span> is diagonalizable if and only if the sums of the dimensions of its eigenspaces is <span class="process-math">\(n\text{.}\)</span>
+</div></article> <article class="investigation project-like"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.6.13</span><span class="period">.</span>
+</h4>
+<div class="para">Give an example of a matrix (with real eigenvalues) that is not diagonalizable. Justify your claim.</div></article> <article class="investigation project-like"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.6.14</span><span class="period">.</span>
+</h4>
+<div class="introduction"><div class="para">Let <span class="process-math">\(A\)</span> be a <span class="process-math">\(4\)</span> by <span class="process-math">\(4\)</span> matrix.</div></div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para">How many eigenvalues can <span class="process-math">\(A\)</span> have?</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para">For each of the possible number of eigenvalues in the previous part, write out all of the possible dimensions of each of the eigenspaces. For instance: if <span class="process-math">\(A\)</span> has 4 distinct eigenvalues, then the only possibility is that each eigenspace has dimension 1 (why is that?).</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para">Which of the cases from the previous problem correspond to <span class="process-math">\(A\)</span> being diagonalizable?</div></article></article> <article class="investigation project-like"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.6.15</span><span class="period">.</span>
+</h4>
+<div class="para">Let <span class="process-math">\(A=\begin{bmatrix} 7 \amp -5 \amp 25\\ 10 \amp -8 \amp
+35\\ 0 \amp 0 \amp -1\end{bmatrix}\text{.}\)</span> Diagonalize <span class="process-math">\(A\)</span> and use your diagonalization to compute <span class="process-math">\(A^{10}\text{.}\)</span>
+</div></article></section><span class="incontext"><a href="EigenvaluesEigenvectors.html#paragraphs-1" class="internal">in-context</a></span>
+</body>
+</html>

@@ -8,13 +8,13 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Systems of Linear Equations and Matrices</title>
+<title>Invertible Matrix Theorem</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Computational Linear Algebra">
 <meta property="book:author" content="Nicholas Long">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -26,6 +26,19 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.98,
@@ -177,9 +190,10 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="intro_activity.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="InverseMatrices.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C2.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand\colvec[1]{\begin{bmatrix}#1\end{bmatrix}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -190,144 +204,116 @@ window.MathJax = {
 <div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
 <li><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li>
-<div class="toc-item"><a href="C1.html" class="internal"><span class="codenumber">1</span> <span class="title">Geometry and Preliminaries</span></a></div>
+<div class="toc-item"><a href="C1.html" class="internal"><span class="codenumber">1</span> <span class="title">Solving Linear Systems</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="intro_activity.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Traffic Flow</span></a></div>
+<div class="toc-item"><a href="intro_activity.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Warmup Problems</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="intro_activity.html#subsection-1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Application Warmup Problem</span></a></div></li></ul>
 </li>
-<li class="active">
-<div class="toc-item"><a href="coord_systems.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Systems of Linear Equations and Matrices</span></a></div>
+<li>
+<div class="toc-item"><a href="solving_linear_systems.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Solving Linear Systems</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="solving_linear_systems.html#subsection-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Elementary Operations</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="Conunique.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Consistency and Uniqueness Theorems</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Geo_App.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Geometric Interpretations and Applications</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="coord_systems.html#subsection-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear systems of equations</span></a></div></li>
-<li><div class="toc-item"><a href="coord_systems.html#subsection-3" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Matrix Forms of Linear Systems of Equations</span></a></div></li>
+<li><div class="toc-item"><a href="Geo_App.html#subsection-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Geometric Interpretation of a Solution Set</span></a></div></li>
+<li><div class="toc-item"><a href="Geo_App.html#subsection-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Applications and Linear Algebra</span></a></div></li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="sec_vector_eqns.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Vectors and Vector Equations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-5" class="internal"><span class="codenumber">1.5.1</span> <span class="title">The Dot Product</span></a></div></li>
+<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-6" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Vector Equations</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="span.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Span (both a noun and a verb)</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="span.html#subsection-7" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Span as a Noun</span></a></div></li>
+<li><div class="toc-item"><a href="span.html#subsection-8" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Span as a Verb</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="lin_indep.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Linear Independence</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="C2.html" class="internal"><span class="codenumber">2</span> <span class="title">Matrices</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="MatrixProdEq.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Matrix Products and Equations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="MatrixProdEq.html#subsection-9" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Matrix-Vector Products</span></a></div></li>
+<li><div class="toc-item"><a href="MatrixProdEq.html#subsection-10" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Matrix Equation</span></a></div></li>
+<li><div class="toc-item"><a href="MatrixProdEq.html#subsection-11" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Linear Transformations</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_matrix_ops.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Matrix Operations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_matrix_ops.html#subsection-12" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Addition and Transposition</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix_ops.html#subsection-13" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Matrix Multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="sec_matrix_ops.html#subsection-14" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Special Types of Matrices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="InverseMatrices.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Inverse Matrices</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="InverseMatrices.html#subsection-15" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Computing Inverses</span></a></div></li>
+<li><div class="toc-item"><a href="InverseMatrices.html#subsection-16" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Invertible Matrix Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="InverseMatrices.html#subsection-17" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Elementary Matrices</span></a></div></li>
+</ul>
+</li>
+<li class="active"><div class="toc-item"><a href="IMT.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Invertible Matrix Theorem</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="coord_systems"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Systems of Linear Equations and Matrices</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="IMT"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Invertible Matrix Theorem</span>
 </h2>
-<article class="objectives goal-like" id="objectives-1"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ul class="disc">
-<li id="li-5"><div class="para" id="p-14">To understand reliable and efficent ways of finding solutions to systems of linear equations</div></li>
-<li id="li-6"><div class="para" id="p-15">To understand the terms and methods associated with matrices corresponding to linear systems of equations</div></li>
-</ul></article><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Linear systems of equations</span>
+<article class="investigation project-like" id="investigation-45"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
 </h3>
-<article class="question example-like" id="question-1"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-1"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-1"><article class="question example-like"><div class="para logical" id="p-16">
-<div class="para">How would you solve the following system?</div>
-<div class="displaymath process-math" id="md-4">
-\begin{gather*}
-x+y=4\\
-2x-y=2
-\end{gather*}
-</div>
-</div></article></div>
-<div class="para logical" id="p-17">
-<div class="para">Your answer to the previous problem suggests (at least) two more questions.</div>
-<ul class="disc">
-<li id="li-7"><div class="para" id="p-derived-li-7">How do we interpret solutions? What is the meaning of a solution?</div></li>
-<li id="li-8"><div class="para" id="p-derived-li-8">Is there always a solution to linear system of equations?</div></li>
-</ul>
-</div>
-<article class="question example-like" id="question-2"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-2"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-2"><article class="question example-like"><article class="task exercise-like" id="task-9"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para logical" id="p-18">
-<div class="para">How would you solve the following system?</div>
-<div class="displaymath process-math" id="md-5">
-\begin{gather*}
-x+y=4\\
-3x+3y=7
-\end{gather*}
-</div>
-</div></article> <article class="task exercise-like" id="task-10"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para logical" id="p-19">
-<div class="para">How would you solve the following system?</div>
-<div class="displaymath process-math" id="md-6">
-\begin{gather*}
-x+y=4\\
-3x+3y=12
-\end{gather*}
-</div>
-</div></article> <article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-20">What possibilities do you think are possible for the set of solutions to a linear system?</div></article></article></div></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Matrix Forms of Linear Systems of Equations</span>
+<div class="para" id="p-292">In many texts there is a long list of equivalent conditions for when a square matrix is invertible. Below is a list of some of these conditions that we have talked about or proven. Go back through your notes and questions and cite when we connected two of the ideas in the list. For instance, parts <span class="process-math">\(a)\)</span> and <span class="process-math">\(b)\)</span> are linked by <a href="" class="xref" data-knowl="./knowl/q11.html" title="Theorem 2.3.8">Theorem 2.3.8</a>
+</div></article><div class="para" id="p-293">Before stating this major theorem, we should explain what the phrase “the following are equivalent” (sometimes written “TFAE” in scratchwork or on the board) means. A theorem of this type is essentially a giant if and only if theorem. Specifically, each statement in the theorem is true or each statement in the theorem is false. It is not possible for some to be true and some to be false. In a theorem with, say, three statements, we often prove that statement 1 implies statement 2, statement 2 implies statement 3, and statement three implies statement 1. Then you can start at any statement and reach any other statement, showing that if one is true, all the others must be true. However, with longer lists, we sometimes have to prove things a bit more piecemeal.</div>
+<article class="theorem theorem-like" id="imt"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">The Invertible Matrix Theorem.</span>
 </h3>
-<div class="para logical" id="p-21">
-<div class="para">Consider the linear system with <span class="process-math">\(m\)</span> equations in <span class="process-math">\(n\)</span> unknowns:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{rcrcrcrcr}
-a_{11} x_1  \amp +\amp  a_{12} x_2 \amp +\amp  ... \amp +\amp   a_{1n}x_n \amp =\amp  b_1 \\ % -1  3
-a_{21} x_1  \amp +\amp  a_{22} x_2 \amp +\amp  ... \amp +\amp   a_{2n}x_n \amp =\amp  b_2 \\
-\vdots  \amp  \amp  \vdots \amp  \amp   \amp  \amp   \vdots \amp \amp  \vdots \\
-a_{m1} x_1  \amp +\amp  a_{m2} x_2 \amp +\amp  ... \amp +\amp   a_{mn}x_n \amp =\amp  b_m
-\end{array}
-\end{equation*}
-</div>
-</div>
-<div class="para logical" id="p-22">
-<div class="para">The rectangular array of coefficents <span class="process-math">\(a_{ij}\)</span> given as</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A \equiv \begin{bmatrix} a_{11} \amp  a_{12} \amp  ... \amp   a_{1n} \\
-a_{21}\amp  a_{22}\amp  ... \amp   a_{2n} \\
-\vdots  \amp  \vdots \amp    \amp   \vdots   \\
-a_{m1}\amp  a_{m2} \amp  ... \amp   a_{mn}  \end{bmatrix}
-\end{equation*}
-</div>
-<div class="para">is called the coefficent matrix.</div>
-</div>
-<article class="question example-like" id="question-coefmatrix"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-coefmatrix"><h4 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-coefmatrix"><article class="question example-like"><div class="introduction" id="introduction-1"><div class="para" id="p-23">For each system given, write the coefficent matrix.</div></div> <article class="task exercise-like" id="task-12"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para logical" id="p-24"><div class="displaymath process-math" id="md-7">
-\begin{align*}
-3x_1-2x_2\amp =6\\
-2x_1-2x_2\amp =-2\\
--x_1+x_2\amp =1
-\end{align*}
-</div></div></article> <article class="task exercise-like" id="task-13"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para logical" id="p-25"><div class="displaymath process-math" id="md-8">
-\begin{align*}
-3x_1-2x_2-4x_3\amp =6
-\end{align*}
-</div></div></article> <article class="task exercise-like" id="task-14"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para logical" id="p-26"><div class="displaymath process-math" id="md-9">
-\begin{align*}
-3x_1-2x_2\amp =6\\
-2x_1-2x_2\amp=6\\
--x_1+x_2\amp =1
-\end{align*}
-</div></div></article> <article class="task exercise-like" id="task-15"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para logical" id="p-27"><div class="displaymath process-math" id="md-10">
-\begin{align*}
-x\amp =5\\
-4x\amp =-1\\
--2x\amp =10
-\end{align*}
-</div></div></article> <article class="task exercise-like" id="task-16"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para logical" id="p-28"><div class="displaymath process-math" id="md-11">
-\begin{align*}
-7x\amp =3\\
-2y\amp =1\\
-3z\amp =-2
-\end{align*}
-</div></div></article> <article class="task exercise-like" id="task-17"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para logical" id="p-29"><div class="displaymath process-math" id="md-12">
-\begin{align*}
-3r-5s+t\amp =2\\
--6r+10s-2t\amp =3
-\end{align*}
-</div></div></article></article></div></section></section></div>
+<div class="para logical" id="p-294">
+<div class="para">Let <span class="process-math">\(A\)</span> be a <span class="process-math">\(n\)</span> by <span class="process-math">\(n\)</span> matrix. The following are equivalent:</div>
+<ol class="lower-alpha">
+<li id="li-66"><div class="para" id="p-derived-li-66">
+<span class="process-math">\(A\)</span> is an invertible matrix.</div></li>
+<li id="li-67"><div class="para" id="p-derived-li-67">
+<span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(Id_n\text{.}\)</span>
+</div></li>
+<li id="li-68"><div class="para" id="p-derived-li-68">
+<span class="process-math">\(A\)</span> has <span class="process-math">\(n\)</span> pivots.</div></li>
+<li id="li-69"><div class="para" id="p-derived-li-69">
+<span class="process-math">\(A\vec{x} =\vec{0}\)</span> has only the trivial solution.</div></li>
+<li id="li-70"><div class="para" id="p-derived-li-70">The linear transformation <span class="process-math">\(\vec{x} \rightarrow A\vec{x}\)</span> is one-to-one.</div></li>
+<li id="li-71"><div class="para" id="p-derived-li-71">The linear transformation <span class="process-math">\(\vec{x} \rightarrow A\vec{x}\)</span> is onto.</div></li>
+<li id="li-72"><div class="para" id="p-derived-li-72">
+<span class="process-math">\(A\vec{x}=\vec{b}\)</span> has a solution for every <span class="process-math">\(\vec{b} \in \mathbb{R}^n\text{.}\)</span>
+</div></li>
+<li id="li-73"><div class="para" id="p-derived-li-73">The columns of <span class="process-math">\(A\)</span> form a linearly independent set.</div></li>
+<li id="li-74"><div class="para" id="p-derived-li-74">The columns of <span class="process-math">\(A\)</span> span <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
+</div></li>
+<li id="li-75"><div class="para" id="p-derived-li-75">The rows of <span class="process-math">\(A\)</span> form a linearly independent set.</div></li>
+<li id="li-76"><div class="para" id="p-derived-li-76">The rows of <span class="process-math">\(A\)</span> span <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
+</div></li>
+<li id="li-77"><div class="para" id="p-derived-li-77">
+<span class="process-math">\(A^T\)</span> is invertible.</div></li>
+</ol>
+</div></article><article class="investigation project-like" id="investigation-46"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-295">Two important ideas in this course that have been tied to many different methods or ideas are 1) consistent systems of linear equations and 2) invertible matrices. These two ideas are a bit different though. Give an example of a consistent system of linear equations (in matrix equation form <span class="process-math">\(A\vec{x} = \vec{b}\)</span>) where the coefficient matrix <span class="process-math">\(A\)</span> is a non-invertible square matrix.</div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="intro_activity.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="InverseMatrices.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div class="ptx-page-footer">
