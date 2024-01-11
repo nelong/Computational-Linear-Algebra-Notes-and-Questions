@@ -2,8 +2,29 @@
 
 <section xml:id="solving_linear_systems" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Solving Linear Systems</title>
+
   <subsection>
     <title>Elementary Operations</title>
+    <objectives>
+      <ul>
+        <li>
+          <p>
+            To understand the language and tools of efficently solving linear systems of equations
+          </p>
+        </li>
+        <li>
+          <p>
+            To understand how to use matrices to store information about and solve linear systems
+          </p>
+        </li>
+
+        <li>
+          <p>
+            To understand how echelon forms will give a form for equivalent systems of equations that allow for characterization of the types of solutions to the linear system
+          </p>
+        </li>
+      </ul>
+    </objectives>
     <p>
       Our first discussion of linear algebra will cover the ideas of efficiently solving a system of linear equations and matrix operations.
     </p>
