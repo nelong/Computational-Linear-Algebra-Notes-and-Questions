@@ -43,12 +43,21 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Solving Linear Systems",
-  "body": " Solving Linear Systems   Elementary Operations  Our first discussion of linear algebra will cover the ideas of efficiently solving a system of linear equations and matrix operations.  A system of linear equations in variables can be written: The term is the coefficient of the -th variable (denoted ) in the -th equation. In these notes, we will only consider real values for the coefficients of our linear systems, i.e. . A solution is a choice of variable values that satisfies all equations in the system. A solution is not a particular variable value but must include a choice for all variables in the system. The solution set for a system of equations is the set of all possible solutions. We will have many ways to describe solutions to a system this semester but they all specify the values of , , ..., and , typically as an ordered -tuple ( , , …, ).   Is a solution to the following system?    The previous problem shows how easy it is to check if a set of variable values is a solution. However, finding a solution or the set of all solutions is harder but very important to many problems. Generally speaking, the process of finding the solution set for a system of equations is to trade the system of equations you have for an equivalent system (a system with the same solution set).    For each pair of equations given, state whether is equivalent to .   and  and  and   Hopefully it will be easier to explicitly write the solution set of the new equivalent system.   An elementary operation on a system of equations is an operation of the form:  multiplying an equation by a non-zero scalar  switching two equations  adding a multiple of one equation to another equation       For this question, we will consider the following system of linear equations:    Multiply the second equation in our system by negative three and state the new system of equations.  Write a few sentences about why the new system of equations given in the previous part is equivalent to the original system.  Write a few sentences about why switching the order in which equations are presented in a system does not change the set of solutions.  Write out the equation obtained by multiplying the second equation in the original system by a non-zero scalar (which we will call ) and adding to the first equation.  Replace the second equation in the original system with your answer to the previous part, which we will call System 2. Prove that System 2 is equivalent to the original system. In other words, you need to show that is a solution of the equations :  if and only if  is a solution to System 2.     Solve the following systems just using elementary operations. Remember to show your work.             A system of equations is consistent if there exists at least one solution to the system. In other words, a consistent system of equations has a nonempty solution set. A system that is not consistent is said to be inconsistent .  In , note that you didn't change anything but the coefficients in the system of equations as you traded one system for another. Some of the coefficients probably became zero, but you didn't really eliminate any variables or consider a totally different problem. We will use matrices to efficiently store, and manipulate the coefficients in a system of linear equations, since they are all that matter for now. Matrices will have many uses in this and other courses, and we will use capital letters like and to denote matrices. Matrices will be rectangular arrays with the same number of entries in each row and the same number of entries in each column. The size of a matrix is given (in order) as the number of rows by the number of columns, so a by matrix has rows and columns.  In order to specify what entry we are referring to in a matrix, we need an ordered pair of indices telling us the number of the row and number of the column to look in respectively. For instance, if , then the entry of is in the third row and 2nd column. You could also write this as . The -th row of a matrix will be denoted and the -th column will be denoted .  In order to distinguish vectors (as being more than just by matrices), we will use the arrow notation and lower case symbols like and to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if , then the second component of is the scalar . The size of a vector in is the number of components the vector has. In later work, we will deal with a much more general notion of vectors that will not have components like vectors in .  The coefficient matrix of a linear system of equations in variables is a by matrix whose entry is the coefficient of the -th variable, , in the -th equation of the system. The augmented matrix of a linear system of equations in variables is a by matrix whose first columns are the coefficient matrix of the system and the last column is the constant terms from the right side of each equation.  The system has a coefficient matrix and an augmented matrix of   For some properties of the system of equations, we need only look at the coefficient matrix but others will need the augmented matrix. It is important to know the difference and be able to state which corresponding matrix you are using in your work.    For each system given, write the coefficent matrix.                        For each system given, write the corresponding augmented matrix.                       The elementary operations on equations outlined above will correspond to elementary row operations on matrices as well. Specifically, an elementary row operation on a matrix is an operation of the form:  multiplying a row by a non-zero scalar  switching two rows  adding a multiple of one row to another row  We now have operations to trade our system of equations for an equivalent system, but we have not stated a way to make sure that the solution set will be easy to explicitly state from our new equivalent system. The following matrix forms will be useful for determining solution sets and various other properties of the corresponding system of equations.    A rectangular matrix is in row echelon form if it has the following three properties:  All nonzero rows are above any rows of all zeros.  Each leading entry (being the first non-zero entry) of a row is in a column to the right of the leading entry of the row above it.  All entries in a column below a leading entry are zeros.    If a matrix in row echelon form satisfies the following additional properties, then we say the matrix is in reduced row echelon form :  The leading entry in each nonzero row is 1.  Each leading 1 is the only nonzero entry in its column.      The leading entry in a nonzero row of the row echelon form is called a pivot . The column in which a pivot occurs is called a pivot column and the corresponding variable is a basic variable or pivot variable . A variable corresponding to a column in which the coefficient matrix does not have a pivot are called free variables . While the echelon form is needed to find where pivots will occur, we will sometimes refer to pivot positions of a matrix even when the matrix is not in echelon form.    The reduced row echelon form of a rectangular matrix is unique.    It is important to note that the row echelon form of a matrix is not unique.    Give an example of a matrix that has the following properties. If such a matrix cannot exist, explain why.    satisfies the first two properties of row echelon form but does not satisfy the third.   satisfies the first and third properties of row echelon form but does not satisfy the second.   satisfies the second and third properties of row echelon form but does not satisfy the first.   satisfies the three properties of row echelon form but does not satisfy the first property of reduced row echelon form.   satisfies the properties of row echelon form and the first property of reduced row echelon form but does not satisfy the second property of reduced row echelon form.     List out all possible row echelon forms of 3 by 4 matrices using the symbols for a pivot, for a non-pivot entry (possibly ), and (when an entry must be ). For each of these, list out which variables are pivot variables and which are free variables.   There are 15 possible.     List out all possible reduced row echelon forms of 3 by 4 matrices using the symbols for a pivot, for a non-pivot entry (possibly ), and (when an entry must be ). What value must the entries be? For each of these, list out which variables are pivot variables and which are free variables.      Solve each of the following systems by converting to an augmented matrix and using elementary row operations to reduce the augmented matrix to reduced row echelon form. With each reduced row echelon form, put a box around all pivot entries. Use the system of equations corresponding to the reduced row echelon form to write out the solution set for each system.                     Once you have the augmented matrix for a system of linear equations in reduced row-echelon form, how do you use it to determine the solution set for the system? Write a step-by-step procedure that is general enough to be used on any system of linear equations. Be aware of any implicit assumptions you're making (and try to avoid them).    Two of the most important questions we will consider this semester are:  Is the system consistent?  If a solution exists, is the solution unique?      Look back at your results so far and try to figure out what properties of the system (or corresponding matrices) will help us answer question 1 and which properties of the system will help us answer question 2. Write a conjecture about each question.     "
+  "body": " Solving Linear Systems   Elementary Operations     To understand the language and tools of efficently solving linear systems of equations    To understand how to use matrices to store information about and solve linear systems    To understand how echelon forms will give a form for equivalent systems of equations that allow for characterization of the types of solutions to the linear system     Our first discussion of linear algebra will cover the ideas of efficiently solving a system of linear equations and matrix operations.  A system of linear equations in variables can be written: The term is the coefficient of the -th variable (denoted ) in the -th equation. In these notes, we will only consider real values for the coefficients of our linear systems, i.e. . A solution is a choice of variable values that satisfies all equations in the system. A solution is not a particular variable value but must include a choice for all variables in the system. The solution set for a system of equations is the set of all possible solutions. We will have many ways to describe solutions to a system this semester but they all specify the values of , , ..., and , typically as an ordered -tuple ( , , …, ).   Is a solution to the following system?    The previous problem shows how easy it is to check if a set of variable values is a solution. However, finding a solution or the set of all solutions is harder but very important to many problems. Generally speaking, the process of finding the solution set for a system of equations is to trade the system of equations you have for an equivalent system (a system with the same solution set).    For each pair of equations given, state whether is equivalent to .   and  and  and   Hopefully it will be easier to explicitly write the solution set of the new equivalent system.   An elementary operation on a system of equations is an operation of the form:  multiplying an equation by a non-zero scalar  switching two equations  adding a multiple of one equation to another equation       For this question, we will consider the following system of linear equations:    Multiply the second equation in our system by negative three and state the new system of equations.  Write a few sentences about why the new system of equations given in the previous part is equivalent to the original system.  Write a few sentences about why switching the order in which equations are presented in a system does not change the set of solutions.  Write out the equation obtained by multiplying the second equation in the original system by a non-zero scalar (which we will call ) and adding to the first equation.  Replace the second equation in the original system with your answer to the previous part, which we will call System 2. Prove that System 2 is equivalent to the original system. In other words, you need to show that is a solution of the equations :  if and only if  is a solution to System 2.     Solve the following systems just using elementary operations. Remember to show your work.             A system of equations is consistent if there exists at least one solution to the system. In other words, a consistent system of equations has a nonempty solution set. A system that is not consistent is said to be inconsistent .  In , note that you didn't change anything but the coefficients in the system of equations as you traded one system for another. Some of the coefficients probably became zero, but you didn't really eliminate any variables or consider a totally different problem. We will use matrices to efficiently store, and manipulate the coefficients in a system of linear equations, since they are all that matter for now. Matrices will have many uses in this and other courses, and we will use capital letters like and to denote matrices. Matrices will be rectangular arrays with the same number of entries in each row and the same number of entries in each column. The size of a matrix is given (in order) as the number of rows by the number of columns, so a by matrix has rows and columns.  In order to specify what entry we are referring to in a matrix, we need an ordered pair of indices telling us the number of the row and number of the column to look in respectively. For instance, if , then the entry of is in the third row and 2nd column. You could also write this as . The -th row of a matrix will be denoted and the -th column will be denoted .  In order to distinguish vectors (as being more than just by matrices), we will use the arrow notation and lower case symbols like and to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if , then the second component of is the scalar . The size of a vector in is the number of components the vector has. In later work, we will deal with a much more general notion of vectors that will not have components like vectors in .  The coefficient matrix of a linear system of equations in variables is a by matrix whose entry is the coefficient of the -th variable, , in the -th equation of the system. The augmented matrix of a linear system of equations in variables is a by matrix whose first columns are the coefficient matrix of the system and the last column is the constant terms from the right side of each equation.  The system has a coefficient matrix and an augmented matrix of   For some properties of the system of equations, we need only look at the coefficient matrix but others will need the augmented matrix. It is important to know the difference and be able to state which corresponding matrix you are using in your work.    For each system given, write the coefficent matrix.                        For each system given, write the corresponding augmented matrix.                       The elementary operations on equations outlined above will correspond to elementary row operations on matrices as well. Specifically, an elementary row operation on a matrix is an operation of the form:  multiplying a row by a non-zero scalar  switching two rows  adding a multiple of one row to another row  We now have operations to trade our system of equations for an equivalent system, but we have not stated a way to make sure that the solution set will be easy to explicitly state from our new equivalent system. The following matrix forms will be useful for determining solution sets and various other properties of the corresponding system of equations.    A rectangular matrix is in row echelon form if it has the following three properties:  All nonzero rows are above any rows of all zeros.  Each leading entry (being the first non-zero entry) of a row is in a column to the right of the leading entry of the row above it.  All entries in a column below a leading entry are zeros.    If a matrix in row echelon form satisfies the following additional properties, then we say the matrix is in reduced row echelon form :  The leading entry in each nonzero row is 1.  Each leading 1 is the only nonzero entry in its column.      The leading entry in a nonzero row of the row echelon form is called a pivot . The column in which a pivot occurs is called a pivot column and the corresponding variable is a basic variable or pivot variable . A variable corresponding to a column in which the coefficient matrix does not have a pivot are called free variables . While the echelon form is needed to find where pivots will occur, we will sometimes refer to pivot positions of a matrix even when the matrix is not in echelon form.    The reduced row echelon form of a rectangular matrix is unique.    It is important to note that the row echelon form of a matrix is not unique.    Give an example of a matrix that has the following properties. If such a matrix cannot exist, explain why.    satisfies the first two properties of row echelon form but does not satisfy the third.   satisfies the first and third properties of row echelon form but does not satisfy the second.   satisfies the second and third properties of row echelon form but does not satisfy the first.   satisfies the three properties of row echelon form but does not satisfy the first property of reduced row echelon form.   satisfies the properties of row echelon form and the first property of reduced row echelon form but does not satisfy the second property of reduced row echelon form.     List out all possible row echelon forms of 3 by 4 matrices using the symbols for a pivot, for a non-pivot entry (possibly ), and (when an entry must be ). For each of these, list out which variables are pivot variables and which are free variables.   There are 15 possible.     List out all possible reduced row echelon forms of 3 by 4 matrices using the symbols for a pivot, for a non-pivot entry (possibly ), and (when an entry must be ). What value must the entries be? For each of these, list out which variables are pivot variables and which are free variables.      Solve each of the following systems by converting to an augmented matrix and using elementary row operations to reduce the augmented matrix to reduced row echelon form. With each reduced row echelon form, put a box around all pivot entries. Use the system of equations corresponding to the reduced row echelon form to write out the solution set for each system.                     Once you have the augmented matrix for a system of linear equations in reduced row-echelon form, how do you use it to determine the solution set for the system? Write a step-by-step procedure that is general enough to be used on any system of linear equations. Be aware of any implicit assumptions you're making (and try to avoid them).    Two of the most important questions we will consider this semester are:  Is the system consistent?  If a solution exists, is the solution unique?      Look back at your results so far and try to figure out what properties of the system (or corresponding matrices) will help us answer question 1 and which properties of the system will help us answer question 2. Write a conjecture about each question.     "
 },
 {
-  "id": "p-17",
+  "id": "objectives-1",
   "level": "2",
-  "url": "solving_linear_systems.html#p-17",
+  "url": "solving_linear_systems.html#objectives-1",
+  "type": "Objectives",
+  "number": "1.2.1",
+  "title": "",
+  "body": "   To understand the language and tools of efficently solving linear systems of equations    To understand how to use matrices to store information about and solve linear systems    To understand how echelon forms will give a form for equivalent systems of equations that allow for characterization of the types of solutions to the linear system    "
+},
+{
+  "id": "p-20",
+  "level": "2",
+  "url": "solving_linear_systems.html#p-20",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -64,9 +73,9 @@ var ptx_lunr_docs = [
   "body": " Is a solution to the following system?   "
 },
 {
-  "id": "p-19",
+  "id": "p-22",
   "level": "2",
-  "url": "solving_linear_systems.html#p-19",
+  "url": "solving_linear_systems.html#p-22",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -109,36 +118,36 @@ var ptx_lunr_docs = [
   "body": "  Solve the following systems just using elementary operations. Remember to show your work.            "
 },
 {
-  "id": "p-36",
-  "level": "2",
-  "url": "solving_linear_systems.html#p-36",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "consistent inconsistent "
-},
-{
-  "id": "p-38",
-  "level": "2",
-  "url": "solving_linear_systems.html#p-38",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "entry -th row -th column "
-},
-{
   "id": "p-39",
   "level": "2",
   "url": "solving_linear_systems.html#p-39",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
+  "body": "consistent inconsistent "
+},
+{
+  "id": "p-41",
+  "level": "2",
+  "url": "solving_linear_systems.html#p-41",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "entry -th row -th column "
+},
+{
+  "id": "p-42",
+  "level": "2",
+  "url": "solving_linear_systems.html#p-42",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
   "body": "vectors component "
 },
 {
-  "id": "p-40",
+  "id": "p-43",
   "level": "2",
-  "url": "solving_linear_systems.html#p-40",
+  "url": "solving_linear_systems.html#p-43",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -163,9 +172,9 @@ var ptx_lunr_docs = [
   "body": "  For each system given, write the corresponding augmented matrix.                     "
 },
 {
-  "id": "p-57",
+  "id": "p-60",
   "level": "2",
-  "url": "solving_linear_systems.html#p-57",
+  "url": "solving_linear_systems.html#p-60",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -181,9 +190,9 @@ var ptx_lunr_docs = [
   "body": "  A rectangular matrix is in row echelon form if it has the following three properties:  All nonzero rows are above any rows of all zeros.  Each leading entry (being the first non-zero entry) of a row is in a column to the right of the leading entry of the row above it.  All entries in a column below a leading entry are zeros.    If a matrix in row echelon form satisfies the following additional properties, then we say the matrix is in reduced row echelon form :  The leading entry in each nonzero row is 1.  Each leading 1 is the only nonzero entry in its column.     "
 },
 {
-  "id": "p-60",
+  "id": "p-63",
   "level": "2",
-  "url": "solving_linear_systems.html#p-60",
+  "url": "solving_linear_systems.html#p-63",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -379,9 +388,9 @@ var ptx_lunr_docs = [
   "body": " Vectors and Vector Equations   In order to distinguish vectors (as being more than just by matrices), we will use the arrow notation and lower case symbols like and to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if , then the second component of is the scalar . The size of a vector in is the number of components the vector has. In later work, we will deal with a much more general notion of vectors that will not have components like vectors in . Recall that two vectors in are equal if and only if all of their components are equal.  Geometrically, we will view vectors in as an arrow which change in the -th coordinate being given by the -th component of the vector. For instance, the vector will have a plot in 3-dimensions that looks like    Vectors do not have a particular beginning or ending point so all of the blue vectors in the following plot are representations of .   Vectors can be added together to measure the net change (done by completing one vector, then the other). Algebraically, vector addition is done componentwise. If and , then .   Many other vector operations can be done componentwise, such as scalar multiplication and subtraction. If and , then . If , then . Geometrically, scalar multiplication will stretch (and flip if ) the arrow for a vector.    The Dot Product   Let , then the dot product of with is the scalar value given by    Sometimes we are interested in the total amount of change and not what direction a vector is in. The magnitude (or length) of a vector is given by the following A unit vector is a vector of length 1.   Let , then the vectors and are orthogonal if .     Use the Desmos interact embeded below to change the end points of our two vectors. Based on what you see about the value of the dot product for different configurations of vectors, answer the questions below    How does changing the length of the vectors change the value of the dot product?  How does changing the angle of the vectors change the value of the dot product?    The projection of a vector  onto a vector gives the vector part of that is parallel to and is computed as     If is the angle between two vectors and , then     Let , , and .   Find a unit vector that is in the opposite direction of   Can you choose and such that ?  Does make sense? Why or why not?  What angle does make with ?  What angle does make with the -axis?  How much of is parallel to ?  How much of is parallel to ?  How much of is parallel to ?  How much of is orthogonal to ?  Find a unit vector that is orthogonal to . How many such vectors are there?       Vector Equations    A linear combination of a set is a vector of the form where and . Note that will not usually be in even though .     Prove that the system of equations given by has the same set of solutions as the vector equation . In other words, prove that is a solution to the vector equation iff is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.    Solve the following vector equation:   Give an example of a vector such that the equation has no solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has no solutions or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.    Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.    Write each of the locations given by a red dot as a linear combination of and .    Can you write every location in the plane of as a linear combination of and ? Either explain why you can write every point as a linear combination of and or give a point that cannot be written as a linear combination of and .    "
 },
 {
-  "id": "p-115",
+  "id": "p-118",
   "level": "2",
-  "url": "sec_vector_eqns.html#p-115",
+  "url": "sec_vector_eqns.html#p-118",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -397,9 +406,9 @@ var ptx_lunr_docs = [
   "body": " Let , then the dot product of with is the scalar value given by   "
 },
 {
-  "id": "p-121",
+  "id": "p-124",
   "level": "2",
-  "url": "sec_vector_eqns.html#p-121",
+  "url": "sec_vector_eqns.html#p-124",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -748,9 +757,9 @@ var ptx_lunr_docs = [
   "body": "  For all matrices , .   "
 },
 {
-  "id": "p-206",
+  "id": "p-209",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-206",
+  "url": "sec_matrix_ops.html#p-209",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -775,9 +784,9 @@ var ptx_lunr_docs = [
   "body": "  If is a symmetric matrix, then is symmetric.   "
 },
 {
-  "id": "p-212",
+  "id": "p-215",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-212",
+  "url": "sec_matrix_ops.html#p-215",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -874,9 +883,9 @@ var ptx_lunr_docs = [
   "body": "  For all matrices such that is defined, .   "
 },
 {
-  "id": "p-237",
+  "id": "p-240",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-237",
+  "url": "sec_matrix_ops.html#p-240",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -910,9 +919,9 @@ var ptx_lunr_docs = [
   "body": "  Can a matrix be upper and lower triangular? Either give an example or explain why there cannot exist one.   "
 },
 {
-  "id": "p-241",
+  "id": "p-244",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-241",
+  "url": "sec_matrix_ops.html#p-244",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -928,9 +937,9 @@ var ptx_lunr_docs = [
   "body": "  Give an example of a matrix that is diagonal but not in echelon form.   "
 },
 {
-  "id": "p-243",
+  "id": "p-246",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-243",
+  "url": "sec_matrix_ops.html#p-246",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -973,9 +982,9 @@ var ptx_lunr_docs = [
   "body": " A matrix is invertible if there exists a matrix such that and . The inverse matrix of is denoted .  "
 },
 {
-  "id": "p-248",
+  "id": "p-251",
   "level": "2",
-  "url": "InverseMatrices.html#p-248",
+  "url": "InverseMatrices.html#p-251",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1288,9 +1297,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a square matrix. We have that iff is an eigenvalue of .   "
 },
 {
-  "id": "p-332",
+  "id": "p-335",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#p-332",
+  "url": "EigenvaluesEigenvectors.html#p-335",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1369,9 +1378,9 @@ var ptx_lunr_docs = [
   "body": " Discrete Dynamical Systems   A dynamical system is a pair where is the set of states a system can be in and is a rule for how the system evolves or changes. This can feel like a really abstract and general statement, so let's look at some real life examples and some simple math examples that we can easily work with.   Let our state space be the set of all possible collections of position, velocities, and times of the sun and nine planets (Pluto is still a planet to me...). You might store each planet's position, velocity, and time as a vector then we would say that the ten vectors are the current state of the system and the rule for evolution would be the the force of gravity. In this way, each state leads to the next by following the dynamical rule.  The field of dynamical systems would study questions like 1)if this system always has a solution, 2)what properties solutions typically have, or 3) what is the long term behavior of solution? Another important part of the system above would be an initial condition, or the state of the system at beginning.  You often label this as time zero and state the values for the different planets' position and velocity at time zero. This leads to even more questions like \"If the initial configuration of planets was a bit different, would the long term behavior still be the same?\" This example is a continuous dynamical system since we look how the states of the system evolve in terms of a continuous variable (time in this case). This particular system is quite complicated and has been a focus of science, philosophy, and religion for quite some time.    Let us look at a much simplier example and do some calculations. Let our dynamical system be . This means that our state space is the set of real numbers and our current state evolves according to the rule .  Notice here that we can only apply our rule (apply the function ) in discrete amounts. So if we start with the initial value , then our next state will be . Our study really becomes aboue the sequence . This is called a discrete dynamical system because we can measure the state of the system (and it's evolution) only at discrete values.  Take a few minutes to find the solution sequence for . Try to write out what the long term behavior of this solution sequence is. Will all initial values have this same long term behavior? How many different long term behaviors can you find?    You may think a game like chess is also a dynamical system but that is not the case. You could consider all the different ways that pieces could be configured on the board as a state space for the game, there is no rule for how the configuration must change. This is what makes chess an interesting game.     Predator-Prey Systems  In this section we will look at a basic type of two dimensional discrete dynamical system that models the populations of a predator and a prey, which we will call foxes ( ) and rabbits, . We will construct a discrete dynamcial system that describe the amount of foxes and rabbits in the next year based on the amount of foxes and rabbits in the current year. In other words,    Let's figure out reasonable functions for and under the following ideas:  If there are no rabbits, then some of the foxes will die in the next year (starvation)  If there are rabbits, then the fox populations grows in the next year based on the interaction of the species (predation)  If there are no foxes, the rabbit population will grow by some proportion in the next year  If there are foxes, then the rabbit population will decrease based on the interaction of the species (being eaten)  Functions that fit these simple rules might be of the form  So choosing coefficients would give the relative weight of each of these rules on the change in each population. For instance,  Note here that we can use linear algebra to analyse this type of problem because our sequence now looks like where . In other words, the solution to this two dimensional, discrete dynamical system is of the form .    Difference Equations and Linear Algebra  A dynamical system with an n-dimensional vector for the state and dynamical rule given by is called a linear difference equation .  Let examine how eigenvalues and eigenvectors could help us easily understand the long term behavior of a linear difference equation. In particular, we will assume that we have a difference equation given by a by matrix and that we can find a set of linearly independent eigenvectors, , with eigenvalues . This is actually a really big assumption and is NOT true in general, so the discussion below will not be enough to analyze the general case. Because we have a set of linearly independent vectors from , we can put them as columns of a matrix and apply the Invertible Matrix Theorem to demonstrate that this set will also span all of . This means that no matter what initial values we take for our system, we can write that initial value as a linear combination of the set . In other words, there is a solution to the vector equation for every . Because these vectors in our spanning set are not just some vectors, but rather are eigenvectors of , we will be able to write out the rest of the sequence and understand the long term behavior regardless of initial values of our system.  Looking at we get the following:  Since each of the are eigenvectors, . Thus,   In this same way, we can look at the -th iteration of our system and get    Notice that the only thing changing under iteration is the power of the eigenvalue. Once we figure out how much of our inital value vector is in the direction of each of our eigenvectors, then that amount does NOT change during the evolution of our system! The only thing changing is that each eigenvector direction is getting stretched or shrunk by the eigenvalue at each step. So when will these different parts grow or shrink?    In this activity, we want to go through all of the parts of the argument above and its geometric meaning for the difference equation described by .   What are the eigenvalues and eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  Show that if , then .  What is the long term behavior of the solution with initial value ?     In this activity, we want to go through all of the parts of the argument above and its geometric meaning for the difference equation described by .   What are the eigenvalues and eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  Show that if , then .  What is the long term behavior of the solution with initial value ?     Types of Solutions to Two Dimensional Linear Difference Equations   What are the fixed points of the difference equation where .    What are the fixed points of the difference equation where .   Since the long term behavior of these type of systems depends on the eigenvalues, we wil try to talk about all of the possible cases of eigenvalues and the corresponding behaviors. Remember that we need to pay attention to how changes as increases.  and  and  and  and  and  and  and  What other possibilities are there?      Use your new found appreaciation of eigenvalues and eigenvectors to describe the general solution and behavior of solutions to the difference equation with each of the following .                             An attractor or attracting fixed point is a fixed point of a dynamical system where all nearby points converge to the fixed point. These are also called sinks .  A repeller or repelling fixed point is a fixed point of a dynamical system where all nearby points move away from the fixed point. These are also called sources .  A saddle fixed point is a fixed point of a dynamical system where some nearby points converge to the fixed point and other nearby points move away from the fixed point.    If we consider the dynamical system given by , what are the fixed points of this system and what behaviors do they exhibit?     Use your work from the earlier activity to describe the fixed points and thier behavior for the difference equation with each of the following .                             "
 },
 {
-  "id": "p-361",
+  "id": "p-364",
   "level": "2",
-  "url": "DiscreteDS.html#p-361",
+  "url": "DiscreteDS.html#p-364",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1405,9 +1414,9 @@ var ptx_lunr_docs = [
   "body": " You may think a game like chess is also a dynamical system but that is not the case. You could consider all the different ways that pieces could be configured on the board as a state space for the game, there is no rule for how the configuration must change. This is what makes chess an interesting game.  "
 },
 {
-  "id": "p-371",
+  "id": "p-374",
   "level": "2",
-  "url": "DiscreteDS.html#p-371",
+  "url": "DiscreteDS.html#p-374",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1522,9 +1531,9 @@ var ptx_lunr_docs = [
   "body": " Continuous Dynamical Systems   A dynamical system is a pair where is the set of states a system can be in and is a rule for how the system evolves or changes. We will look at some dynamical systems where the rule of evolution will describe how the state of the system changes in terms of a continuous parameter. Let's look at some examples.   When examining an electrical circuit with a resistor, capacitor, and an inductor, it is useful to look at how the current (a measure of the flow of electricity) changes as a function of time. The dynamical system in this case would consist of where is the set of possible functions with input and is the rule given by the differential equation . In this equation the current is and the constants , , and are the resistance, inductance, and capacitance of the individual components of the circuit.    If you are looking at the position of an object moving under the force of gravity and under air-resistence, your dynamical system would consist of where  is the set of vectors of the form where are continuous functions of  is the rule of evolution given by      Wave Equation  Many different physical phenomena satisfy a very famous differential equation: The state of the system is given by some function that may vary in both space and time coordinates. This kind of system is called a partial differential equation since there is not A derivative for a multivariable function and the change in our system depends on the various partial derivatives of our function.    Heat Equation  Many different physical phenomena satisfy another very famous differential equation: The state of the system is given by some function that may vary in both space and time coordinates. This is another partial differential equation.      For this activity, we want to look at the following 2D continuous dynamical system.     What would a solution look like to this system?  Give a solution to this system.  Give all possible solutions to this system.  What is the solution with and ?   None of the stuff in the previous problem seems like linear algebra, so why are we doing this stuff? The answer is that we can expand our notion of what a vector is and use the idea that we would like to express solutions to these systems as linear combinations of our nice solutions.   Linear Systems of Ordinary Differential Equations  In this subsection, we will look at systems of Linear ODEs of the form: with initial values given by .  Notice that this system has the following properties:  no forcing term (the right hand side of the system does not explicitly depend on )  constant coefficients  linear solutions (solutions are linear combinations of each other)    If you look around at other books and online resources, you will see that the solution to the system given by where , will be of the form: . The term is called the matrix exponential of .  The solution to a linear continuous dynamical system involves evaluating a matrix exponential. This is not a straightforward task and the evaluation algorithm is highly suspect in many situations. In fact, one of the most cited papers in all of applied mathematics is written by Van Loan and Moler (founder of Matlab) titled 19 Dubious Ways to Compute the Exponential of a Matrix written in 1978. This paper and idea was so important in computational science and applied mathematics that it was revised by the same authors and updated 25 years later titled appropriately 19 Dubious Ways to Compute the Exponential of a Matrix, Twenty-Five Years Later . In short, the papers primary contribution is to show that there is no accepted way to evaluate a matrix exponential for all matrices and the algorithm choice is matrix dependent. Dr. Beauregard's research takes a particular interest in symplectic approximations as they preserve fundamental physical quantities.  Let's start with the same assumption we did for discrete dynamical systems: We will assume that we have continuous dynamical system given by a by matrix (with rule given by ) and that we can find a set of linearly independent eigenvectors of , , with eigenvalues . Further, let's define two matrices and . From our work onj= change of coordinates, you should recognize that . So, where . We can use our knowledge of power series to write exponentials using Notice that all this requires to apply to a matrix is that powers of the matrices have to make sense and the scalar multiplication by also needs to make sense. So we can define the matrix exponential as Note here that will be a vector (by matrix vector product) and thus our solution to is given by .  This looks a bit like our solutions to the discrete dynamical systems but still different. The vector is a solution to what matrix equation? If , then is the solution to !!! You should recognize that is the vector of coefficients for the vector equation ! The vector comes from writing the initial condition of our system as a linear combination of the eigenvectors of !  Our solutions to are of the form Look at how much of this is determined by the algebra of problems you already know how to do. Which parts of this will determine the long term behavior of solutions? When will you have fixed point(s)? When will the fixed point(s) be attractors? repellors? saddles?   Let . As we have seen in our previous work, has eigenvalues of and with a choice of eigenvectors given by and . The system of differential equations that corresponds to this matrix is given by:   Using our tools from earlier, we can see that the solutions of this system can be written in the vector form     To arouse a deeper interest into the study of linear systems, let us borrow from a classic example of relationships, first presented by Steven Strogatz in 1988 and then further illustrated by J.C. Sprott in 2004.  Now we know the story of Romeo and Juliet. In our situation, Romeo is desperately in love with Juliet, but Juliet is more fickle than what Shakespeare had in mind. In fact, the more Romeo loves Juliet, the more Juliet wants to run away and hide. This discourages Romeo and he starts to love Juliet less, strangely this is exactly the moment that Juliet finds Romeo more attractive and she begins to love him. On the other hand, Romeo notices again that Juliet is warming up to Romeo and he begins to warm up to her as well. Will the eager beaver (Romeo) ever find true love with the ever fickle and cautious lover (Juliet)?  Let and be the love (or hate, when negative) that each person has for each other, respectively, at time . Let . The love\/hate relationship is governed by the dynamical system: Consider the case where , and answer the following:  Determine the eigenvalues and eigenvectors for the coefficient matrix.  Write down the general solution using the eigenvalues and eigenvectors.  Use Euler's formula to simplify the result completely to determine the real-valued solution to the position function.  Plot and over time. Plot versus . Contrast this to a phase portrait.  How does the situation change if ? What of ?      For each of the matrices below, state the general solution for the system of differential equations given by and find the particular solution with            Converting Higher Order DEs to Systems  Since we have such a nice description and clean algebra to solve systems of differential equations of the form , it is common to write other types of questions in terms of a system of first order differential equations. For example, if we consider the damped harmonic oscillator (an object moving on a spring with some friction), then the system follows the differential equation where is the function of time that measures the position of the object (as measured from the rest length of the spring), is the mass of the object, is the spring constant, and is the coefficent of friction for the object. This is called a second order differential equation because it involves a second derivative of the objective function, but we can rewrite this as first oder differential equation of . In particular, Which takes the form for . Thus by analyzing the second component of our solution, , we can give the solution to    "
 },
 {
-  "id": "p-421",
+  "id": "p-424",
   "level": "2",
-  "url": "ContinuousDynamicalSystems.html#p-421",
+  "url": "ContinuousDynamicalSystems.html#p-424",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1648,9 +1657,9 @@ var ptx_lunr_docs = [
   "body": " So what would the analog be of matrices with vector spaces of functions?  "
 },
 {
-  "id": "p-454",
+  "id": "p-457",
   "level": "2",
-  "url": "Operators.html#p-454",
+  "url": "Operators.html#p-457",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1675,9 +1684,9 @@ var ptx_lunr_docs = [
   "body": " Let's look at , the derivative operator from to . What kinds of functions and scalars would satisfy ?  Let's look at , the integral operator from to . What kinds of functions and scalars would satisfy ?  Let's look at , the operator from to with . What kinds of functions and scalars would satisfy ?  "
 },
 {
-  "id": "p-462",
+  "id": "p-465",
   "level": "2",
-  "url": "Operators.html#p-462",
+  "url": "Operators.html#p-465",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1819,9 +1828,9 @@ var ptx_lunr_docs = [
   "body": " Subspaces  As shows, it can be very tedious to prove that a set is indeed a vector space. A subspace of a vector space is a subset that is itself a vector space. Since most of the properties of the vector spaces we look at get inherited from some larger vector space, it is often easier to show that a set is a vector space by showing it is a subspace of the appropriate parent vector space.    A subset of a vector space is a subspace if and only if the following are true:  The zero vector of is in ; .  H is closed under vector addition; if , then .  H is closed under scalar multiplication; if and , then .      We first assume that is a subspace of . Item (a) of the theorem follows from axiom 4 of being a vector space. Item (b) of the theorem follows from axiom 1 of being a vector space. Item (c) of the theorem follows from axiom 6 of being a vector space.  For the converse, we assume that and the three items of the theorem satement are satisfied. We must verify the 10 vector space axioms:  This follows from item (b) of the theorem statement.  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  This follows from item (a) of the theorem statement.  This requires proof. Since , item (c) of the theorem statement tells us that for all , . Thus, this axiom is verified.  This follows from item (c) of the theorem statement.  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .     This theorem is so useful because we can prove a set is a vector space by checking only three properties instead of the ten that are involved in the definition. The reason that we do not need to check these other properties is that by using this subspace, we already have proven the proper rules of arithmetic from the parent space. Additionally, since we are using the same rules for scalar multiplication and vector addition as the parent space, we must also have the same scalars as the parent space.  Use the preceding theorem to prove that is a subspace of .   Is a subspace of ? Why or why not?  Is a subspace of ? Why or why not?  Is the set of points on the plane given by a subspace of ? Why or why not?  Is the set of points on the plane given by a subspace of ? Why or why not?  Draw a plot of the points in given by . Is a subspace of ? Why or why not?  Is , the set of symmetric by matrices a subspace of ? Why or why not?  Prove or disprove: The set of odd functions on (i.e., those for which for every ) a subspace of .   The statement is true. We use Theorem 3.6 to prove this. First note that the function is the zero vector for this vector space, as for any function , . To see that is odd, we have . Now suppose that are odd functions. We have , verifying the second part of the theorem is satisfied. Finally, let . Now . Thus, the set of odd functions are a subspace of the vector space of functions from to .   If is a by matrix, the solution set to the homogeneous equation is a subspace of .  If and are subspaces of some vector space , then the set is a subspace of as well.  Prove or Disprove: the set of by matrices with at least one zero entry is a subspace of .  Prove or Disprove: the set of matrices of the form is a subspace of .  Prove or disprove: The set of quadratic polynomials of the form is a subspace of the vector space of polynomials.  "
 },
 {
-  "id": "p-500",
+  "id": "p-503",
   "level": "2",
-  "url": "section-20.html#p-500",
+  "url": "section-20.html#p-503",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2049,6 +2058,7 @@ var ptx_lunr_idx = lunr(function () {
   this.ref('id')
   this.field('title')
   this.field('body')
+  this.metadataWhitelist = ['position']
 
   ptx_lunr_docs.forEach(function (doc) {
     this.add(doc)
