@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Matrix Operations</title>
@@ -14,20 +14,38 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Computational Linear Algebra">
 <meta property="book:author" content="Nicholas Long">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
-    renderActions: {
-        findScript: [10, function (doc) {
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
             document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
                 var display = !!node.type.match(/; *mode=display/);
                 var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
@@ -37,162 +55,75 @@ window.MathJax = {
                 math.end = {node: text, delim: '', n: 0};
                 doc.math.push(math);
             });
-        }, '']
-    },
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" href=""></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="my-great-book.html"><span class="title">Computational Linear Algebra:</span> <span class="subtitle">Notes and Questions for MATH 3325</span></a></h1>
 <p class="byline">Nicholas Long</p>
 </div>
-<div id="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
-</h2>
-<div id="searchempty"><span>No results.</span></div>
-<ol id="searchresults"></ol>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
 </div>
-</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
-<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden avatar">
-<li data-val="You!" tabindex="-1">
-<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
-<li data-val="😺" tabindex="-1">
-<span id="the😺" class="avatarcheck"></span>😺</li>
-<li data-val="👤" tabindex="-1">
-<span id="the👤" class="avatarcheck"></span>👤</li>
-<li data-val="👽" tabindex="-1">
-<span id="the👽" class="avatarcheck"></span>👽</li>
-<li data-val="🐶" tabindex="-1">
-<span id="the🐶" class="avatarcheck"></span>🐶</li>
-<li data-val="🐼" tabindex="-1">
-<span id="the🐼" class="avatarcheck"></span>🐼</li>
-<li data-val="🌈" tabindex="-1">
-<span id="the🌈" class="avatarcheck"></span>🌈</li>
-</ol>
-</li>
-<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fontfamily">
-<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
-<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
-<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-</ol>
-</li>
-<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fonts">
-<li>Size</li>
-<li><span id="thesize">12</span></li>
-<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
-<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
-<li>Width</li>
-<li><span id="thewdth">100</span></li>
-<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
-<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
-<li>Weight</li>
-<li><span id="thewght">400</span></li>
-<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
-<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
-<li>Letter spacing</li>
-<li>
-<span id="thelspace">0</span><span class="byunits">/200</span>
-</li>
-<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
-<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
-<li>Word spacing</li>
-<li>
-<span id="thewspace">0</span><span class="byunits">/50</span>
-</li>
-<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
-<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
-<li>Line Spacing</li>
-<li>
-<span id="theheight">135</span><span class="byunits">/100</span>
-</li>
-<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
-<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
-</ol>
-</li>
-<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden atmosphere">
-<li data-val="default" tabindex="-1">
-<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
-<li data-val="pastel" tabindex="-1">
-<span id="thepastel" class="atmospherecheck"></span>pastel</li>
-<li data-val="darktwilight" tabindex="-1">
-<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
-<li data-val="dark" tabindex="-1">
-<span id="thedark" class="atmospherecheck"></span>dark</li>
-<li data-val="darkmidnight" tabindex="-1">
-<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
-</ol>
-</li>
-<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden ruler">
-<li data-val="none" tabindex="-1">
-<span id="thenone" class="rulercheck">✔️</span>none</li>
-<li data-val="underline" tabindex="-1">
-<span id="theunderline" class="rulercheck"></span>underline</li>
-<li data-val="lunderline" tabindex="-1">
-<span id="thelunderline" class="rulercheck"></span>L-underline</li>
-<li data-val="greybar" tabindex="-1">
-<span id="thegreybar" class="rulercheck"></span>grey bar</li>
-<li data-val="lightbox" tabindex="-1">
-<span id="thelightbox" class="rulercheck"></span>light box</li>
-<li data-val="sunrise" tabindex="-1">
-<span id="thesunrise" class="rulercheck"></span>sunrise</li>
-<li data-val="sunriseunderline" tabindex="-1">
-<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
-<li class="moveQ">Motion by:</li>
-<li data-val="mouse" tabindex="-1">
-<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
-<li data-val="arrow" tabindex="-1">
-<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
-<li data-val="eye" tabindex="-1">
-<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
-</ol>
-</li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="MatrixProdEq.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="C2.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="InverseMatrices.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="MatrixProdEq.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="C2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="InverseMatrices.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand\colvec[1]{\begin{bmatrix}#1\end{bmatrix}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -201,190 +132,167 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
-<li><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
-<li>
-<div class="toc-item"><a href="C1.html" class="internal"><span class="codenumber">1</span> <span class="title">Solving Linear Systems</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="intro_activity.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Warmup Problems</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="intro_activity.html#subsection-1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Application Warmup Problem</span></a></div></li></ul>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="C1.html" class="internal"><span class="codenumber">1</span> <span class="title">Solving Linear Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="intro_activity.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Warmup Problems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="intro_activity.html#intro_activity-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Application Warmup Problem</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="solving_linear_systems.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Solving Linear Systems</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="solving_linear_systems.html#subsection-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Elementary Operations</span></a></div></li></ul>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="solving_linear_systems.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Solving Linear Systems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="solving_linear_systems.html#solving_linear_systems-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Elementary Operations</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="Conunique.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Consistency and Uniqueness Theorems</span></a></div></li>
-<li>
-<div class="toc-item"><a href="Geo_App.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Geometric Interpretations and Applications</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Geo_App.html#subsection-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Geometric Interpretation of a Solution Set</span></a></div></li>
-<li><div class="toc-item"><a href="Geo_App.html#subsection-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Applications and Linear Algebra</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="sec_vector_eqns.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Vectors and Vector Equations</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-5" class="internal"><span class="codenumber">1.5.1</span> <span class="title">The Dot Product</span></a></div></li>
-<li><div class="toc-item"><a href="sec_vector_eqns.html#subsection-6" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Vector Equations</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="C2.html" class="internal"><span class="codenumber">2</span> <span class="title">Matrices</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="MatrixProdEq.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Matrix Products and Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MatrixProdEq.html#MatrixProdEq-2" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Matrix-Vector Products</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MatrixProdEq.html#MatrixProdEq-3" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Matrix Equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="MatrixProdEq.html#MatrixProdEq-4" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Linear Transformations</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="span.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Span (both a noun and a verb)</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="span.html#subsection-7" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Span as a Noun</span></a></div></li>
-<li><div class="toc-item"><a href="span.html#subsection-8" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Span as a Verb</span></a></div></li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec_matrix_ops.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Matrix Operations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_matrix_ops.html#sec_matrix_ops-2" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Addition and Transposition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_matrix_ops.html#sec_matrix_ops-3" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Matrix Multiplication</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_matrix_ops.html#sec_matrix_ops-4" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Special Types of Matrices</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="lin_indep.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Linear Independence</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="InverseMatrices.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Inverse Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="InverseMatrices.html#InverseMatrices-3" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Computing Inverses</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IvertibleMatrixThm.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Invertible Matrix Theorem</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="determinants.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Determinants</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="determinants.html#determinants-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Computing Determinants</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="determinants.html#determinants-4" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Properties of Determinants</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="C2.html" class="internal"><span class="codenumber">2</span> <span class="title">Matrices</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="MatrixProdEq.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Matrix Products and Equations</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="MatrixProdEq.html#subsection-9" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Matrix-Vector Products</span></a></div></li>
-<li><div class="toc-item"><a href="MatrixProdEq.html#subsection-10" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Matrix Equation</span></a></div></li>
-<li><div class="toc-item"><a href="MatrixProdEq.html#subsection-11" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Linear Transformations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="NatureofaMatrix.html" class="internal"><span class="codenumber">2.6</span> <span class="title">A Motivating Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="EigenvaluesEigenvectors.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div></li>
 </ul>
 </li>
-<li class="active">
-<div class="toc-item"><a href="sec_matrix_ops.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Matrix Operations</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec_matrix_ops.html#subsection-12" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Addition and Transposition</span></a></div></li>
-<li><div class="toc-item"><a href="sec_matrix_ops.html#subsection-13" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Matrix Multiplication</span></a></div></li>
-<li><div class="toc-item"><a href="sec_matrix_ops.html#subsection-14" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Special Types of Matrices</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="C3.html" class="internal"><span class="codenumber">3</span> <span class="title">Applications of Linear Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="DiscreteDS.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Discrete Dynamical Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="DiscreteDS.html#DiscreteDS-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Predator-Prey Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="DiscreteDS.html#DiscreteDS-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Difference Equations and Linear Algebra</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="DiscreteDS.html#DiscreteDS-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Types of Solutions to Two Dimensional Linear Difference Equations</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="InverseMatrices.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Inverse Matrices</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="InverseMatrices.html#subsection-15" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Computing Inverses</span></a></div></li></ul>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ChangeofCoordinates.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Change of Coordinates</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ChangeofCoordinates.html#ChangeofCoordinates-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Same Eigenvalues, Different Eigenvectors</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="IvertibleMatrixThm.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Invertible Matrix Theorem</span></a></div></li>
-<li>
-<div class="toc-item"><a href="determinants.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Determinants</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="determinants.html#subsection-16" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Computing Determinants</span></a></div></li>
-<li><div class="toc-item"><a href="determinants.html#subsection-17" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Properties of Determinants</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ContinuousDynamicalSystems.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Continuous Dynamical Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ContinuousDynamicalSystems.html#ContinuousDynamicalSystems-5" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Linear Systems of Ordinary Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ContinuousDynamicalSystems.html#ContinuousDynamicalSystems-6" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Converting Higher Order DEs to Systems</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="NatureofaMatrix.html" class="internal"><span class="codenumber">2.6</span> <span class="title">A Motivating Example</span></a></div></li>
-<li><div class="toc-item"><a href="EigenvaluesEigenvectors.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Operators.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Operators</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Operators.html#Operators-3" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Linear Operators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Operators.html#Operators-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Boundary Value Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="C3.html" class="internal"><span class="codenumber">3</span> <span class="title">Applications of Linear Algebra</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="DiscreteDS.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Discrete Dynamical Systems</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="DiscreteDS.html#subsection-18" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Predator-Prey Systems</span></a></div></li>
-<li><div class="toc-item"><a href="DiscreteDS.html#subsection-19" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Difference Equations and Linear Algebra</span></a></div></li>
-<li><div class="toc-item"><a href="DiscreteDS.html#subsection-20" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Types of Solutions to Two Dimensional Linear Difference Equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="C3-6.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Vector Spaces: The Big Idea</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="C3-7.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Subspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="C3-8.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Motivating Activity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="C3-9.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Fourier Series</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="ChangeofCoordinates.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Change of Coordinates</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="ChangeofCoordinates.html#subsection-21" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Same Eigenvalues, Different Eigenvectors</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="ContinuousDynamicalSystems.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Continuous Dynamical Systems</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="ContinuousDynamicalSystems.html#subsection-22" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Linear Systems of Ordinary Differential Equations</span></a></div></li>
-<li><div class="toc-item"><a href="ContinuousDynamicalSystems.html#subsection-23" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Converting Higher Order DEs to Systems</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="Operators.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Operators</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Operators.html#subsection-24" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Linear Operators</span></a></div></li>
-<li><div class="toc-item"><a href="Operators.html#subsection-25" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Boundary Value Problems</span></a></div></li>
-</ul>
-</li>
-<li><div class="toc-item"><a href="section-19.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Vector Spaces: The Big Idea</span></a></div></li>
-<li><div class="toc-item"><a href="section-20.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Subspaces</span></a></div></li>
-<li><div class="toc-item"><a href="section-21.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Motivating Activity</span></a></div></li>
-<li><div class="toc-item"><a href="section-22.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Fourier Series</span></a></div></li>
-</ul>
-</li>
-<li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_matrix_ops"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Matrix Operations</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Matrix Operations</span>
 </h2>
-<section class="subsection" id="subsection-12"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">Addition and Transposition</span>
+<section class="subsection" id="sec_matrix_ops-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="space"> </span><span class="title">Addition and Transposition</span>
 </h3>
-<article class="investigation project-like" id="investigation-11"><h4 class="heading">
+<article class="investigation project-like" id="sec_matrix_ops-2-2"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="introduction-16"><div class="para" id="p-182">Finish the following sentences.</div></div>
-<article class="task exercise-like" id="task-76"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-183">Vectors are equal if…</div></article><article class="task exercise-like" id="task-77"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-184">Matrices are equal if…</div></article><article class="task exercise-like" id="task-78"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-185">A scalar is…</div></article></article><div class="para" id="p-186">Just as you can add two vectors in <span class="process-math">\(\mathbb{R}^n\)</span> componentwise, you can add two matrices entry-wise. For this reason, it only makes sense to add two matrices if they are the same size. You can also define scalar multiplication of a matrix entry-wise.</div>
-<article class="investigation project-like" id="investigation-12"><h4 class="heading">
+<div class="introduction" id="sec_matrix_ops-2-2-1"><div class="para" id="sec_matrix_ops-2-2-1-1">Finish the following sentences.</div></div>
+<article class="task exercise-like" id="sec_matrix_ops-2-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec_matrix_ops-2-2-2-1-1">Vectors are equal if…</div></article><article class="task exercise-like" id="sec_matrix_ops-2-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec_matrix_ops-2-2-3-1-1">Matrices are equal if…</div></article><article class="task exercise-like" id="sec_matrix_ops-2-2-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="sec_matrix_ops-2-2-4-1-1">A scalar is…</div></article></article><div class="para" id="sec_matrix_ops-2-3">Just as you can add two vectors in <span class="process-math">\(\mathbb{R}^n\)</span> componentwise, you can add two matrices entry-wise. For this reason, it only makes sense to add two matrices if they are the same size. You can also define scalar multiplication of a matrix entry-wise.</div>
+<article class="investigation project-like" id="sec_matrix_ops-2-4"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="introduction-17"><div class="para" id="p-187">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp -1\amp 0 \\2\amp 0\amp -7 \\ 4\amp 2\amp 6 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \\ 4\amp 2\amp 6 \end{bmatrix}\text{,}\)</span> and <span class="process-math">\(C=\begin{bmatrix} 1\amp 0\amp 0 \\0\amp 1\amp 0\\1\amp 1\amp 1 \end{bmatrix}\text{.}\)</span>
+<div class="introduction" id="sec_matrix_ops-2-4-1"><div class="para" id="sec_matrix_ops-2-4-1-1">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp -1\amp 0 \\2\amp 0\amp -7 \\ 4\amp 2\amp 6 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \\ 4\amp 2\amp 6 \end{bmatrix}\text{,}\)</span> and <span class="process-math">\(C=\begin{bmatrix} 1\amp 0\amp 0 \\0\amp 1\amp 0\\1\amp 1\amp 1 \end{bmatrix}\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="task-79"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-188">Is <span class="process-math">\(B\)</span> a scalar multiple of <span class="process-math">\(A\text{?}\)</span> Why or why not?</div></article><article class="task exercise-like" id="task-80"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-189"><span class="process-math">\(2A-3C=\)</span></div></article><article class="task exercise-like" id="task-81"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-190"><span class="process-math">\(-(A+C)+2B=\)</span></div></article><article class="task exercise-like" id="task-82"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="p-191"><span class="process-math">\((84A+16B-12C)_{2,1}=\)</span></div></article></article><article class="investigation project-like" id="investigation-13"><h4 class="heading">
+<article class="task exercise-like" id="sec_matrix_ops-2-4-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec_matrix_ops-2-4-2-1">Is <span class="process-math">\(B\)</span> a scalar multiple of <span class="process-math">\(A\text{?}\)</span> Why or why not?</div></article><article class="task exercise-like" id="sec_matrix_ops-2-4-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec_matrix_ops-2-4-3-1"><span class="process-math">\(2A-3C=\)</span></div></article><article class="task exercise-like" id="sec_matrix_ops-2-4-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="sec_matrix_ops-2-4-4-1"><span class="process-math">\(-(A+C)+2B=\)</span></div></article><article class="task exercise-like" id="sec_matrix_ops-2-4-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="sec_matrix_ops-2-4-5-1"><span class="process-math">\((84A+16B-12C)_{2,1}=\)</span></div></article></article><article class="investigation project-like" id="sec_matrix_ops-2-5"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-192">Symbolically, <span class="process-math">\((A+B)_{i,j}=\fillinmath{XXXXXXXXXX}\)</span> and <span class="process-math">\((k A)_{i,j}=\fillinmath{XXXXXXXXXX}\)</span>
-</div></article><article class="definition definition-like" id="definition-12"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-2-5-1-1">Symbolically, <span class="process-math">\((A+B)_{i,j}=\fillinmath{XXXXXXXXXX}\)</span> and <span class="process-math">\((k A)_{i,j}=\fillinmath{XXXXXXXXXX}\)</span>
+</div></article><article class="definition definition-like" id="sec_matrix_ops-2-6"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-193">Let <span class="process-math">\(A\)</span> be a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix. The transpose of <span class="process-math">\(A\text{,}\)</span> denoted <span class="process-math">\(A^T\text{,}\)</span> is a <span class="process-math">\(n\)</span> by <span class="process-math">\(m\)</span> matrix such that <span class="process-math">\((A^T)_{ij}= (A)_{ji}\text{.}\)</span>
-</div></article><div class="para" id="p-194">There are a couple of ways to think about the transpose. First, you can think about flipping the matrix across the main diagonal (the elements of the form <span class="process-math">\(A_{i,i}\)</span>). You can also view the transpose of a matrix as switching the rows and columns (but preserving the order). In other words, the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A^T\)</span> is the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(A\text{.}\)</span>
+<div class="para" id="sec_matrix_ops-2-6-1-1">Let <span class="process-math">\(A\)</span> be a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix. The transpose of <span class="process-math">\(A\text{,}\)</span> denoted <span class="process-math">\(A^T\text{,}\)</span> is a <span class="process-math">\(n\)</span> by <span class="process-math">\(m\)</span> matrix such that <span class="process-math">\((A^T)_{ij}= (A)_{ji}\text{.}\)</span>
+</div></article><div class="para" id="sec_matrix_ops-2-7">There are a couple of ways to think about the transpose. First, you can think about flipping the matrix across the main diagonal (the elements of the form <span class="process-math">\(A_{i,i}\)</span>). You can also view the transpose of a matrix as switching the rows and columns (but preserving the order). In other words, the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A^T\)</span> is the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(A\text{.}\)</span>
 </div>
-<article class="investigation project-like" id="investigation-14"><h4 class="heading">
+<article class="investigation project-like" id="sec_matrix_ops-2-8"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="introduction-18"><div class="para" id="p-195">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp -1 \\2\amp 0 \\ 4\amp 2 \end{bmatrix}\)</span> and <span class="process-math">\(B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \end{bmatrix}\)</span>
+<div class="introduction" id="sec_matrix_ops-2-8-1"><div class="para" id="sec_matrix_ops-2-8-1-1">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp -1 \\2\amp 0 \\ 4\amp 2 \end{bmatrix}\)</span> and <span class="process-math">\(B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \end{bmatrix}\)</span>
 </div></div>
-<article class="task exercise-like" id="task-83"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-196"><span class="process-math">\(A^T=\)</span></div></article><article class="task exercise-like" id="task-84"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-197"><span class="process-math">\(B^T=\)</span></div></article><article class="task exercise-like" id="task-85"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-198"><span class="process-math">\(A^T+B=\)</span></div></article><article class="task exercise-like" id="task-86"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="p-199"><span class="process-math">\(B^T+A=\)</span></div></article></article><article class="investigation project-like" id="investigation-15"><h4 class="heading">
+<article class="task exercise-like" id="sec_matrix_ops-2-8-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec_matrix_ops-2-8-2-1"><span class="process-math">\(A^T=\)</span></div></article><article class="task exercise-like" id="sec_matrix_ops-2-8-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec_matrix_ops-2-8-3-1"><span class="process-math">\(B^T=\)</span></div></article><article class="task exercise-like" id="sec_matrix_ops-2-8-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="sec_matrix_ops-2-8-4-1"><span class="process-math">\(A^T+B=\)</span></div></article><article class="task exercise-like" id="sec_matrix_ops-2-8-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="sec_matrix_ops-2-8-5-1"><span class="process-math">\(B^T+A=\)</span></div></article></article><article class="investigation project-like" id="sec_matrix_ops-2-9"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="introduction-19"><div class="para" id="p-200">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp -1\amp 0 \\2\amp 0\amp -7 \\ 4\amp 2\amp 6 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \\ 4\amp 2\amp 6 \end{bmatrix}\text{,}\)</span> and <span class="process-math">\(C=\begin{bmatrix} 1\amp 0\amp 0 \\0\amp 1\amp 0\\1\amp 1\amp 1 \end{bmatrix}\text{.}\)</span>
+<div class="introduction" id="sec_matrix_ops-2-9-1"><div class="para" id="sec_matrix_ops-2-9-1-1">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp -1\amp 0 \\2\amp 0\amp -7 \\ 4\amp 2\amp 6 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(B=\begin{bmatrix} 6\amp -2\amp 0 \\3\amp 0\amp -21 \\ 4\amp 2\amp 6 \end{bmatrix}\text{,}\)</span> and <span class="process-math">\(C=\begin{bmatrix} 1\amp 0\amp 0 \\0\amp 1\amp 0\\1\amp 1\amp 1 \end{bmatrix}\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="task-87"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-201"><span class="process-math">\(A+B^T=\)</span></div></article><article class="task exercise-like" id="task-88"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-202"><span class="process-math">\(((C-B)^T+A)^T=\)</span></div></article></article><article class="theorem theorem-like" id="theorem-5"><h4 class="heading">
+<article class="task exercise-like" id="sec_matrix_ops-2-9-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec_matrix_ops-2-9-2-1"><span class="process-math">\(A+B^T=\)</span></div></article><article class="task exercise-like" id="sec_matrix_ops-2-9-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec_matrix_ops-2-9-3-1"><span class="process-math">\(((C-B)^T+A)^T=\)</span></div></article></article><article class="theorem theorem-like" id="sec_matrix_ops-2-10"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-203">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrices, then <span class="process-math">\((A+B)^T=A^T+B^T\text{.}\)</span>
-</div></article><article class="investigation project-like" id="investigation-16"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-2-10-1-1">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrices, then <span class="process-math">\((A+B)^T=A^T+B^T\text{.}\)</span>
+</div></article><article class="investigation project-like" id="sec_matrix_ops-2-11"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-204">What dimensions should <span class="process-math">\(A\)</span> have in order to be able to add <span class="process-math">\(A\)</span> to <span class="process-math">\(A^T\text{?}\)</span>
-</div></article><article class="theorem theorem-like" id="theorem-6"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-2-11-1-1">What dimensions should <span class="process-math">\(A\)</span> have in order to be able to add <span class="process-math">\(A\)</span> to <span class="process-math">\(A^T\text{?}\)</span>
+</div></article><article class="theorem theorem-like" id="sec_matrix_ops-2-12"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-205">For all matrices <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\((A^T)^T=A\text{.}\)</span>
-</div></article><div class="para" id="p-206">A matrix <span class="process-math">\(A\)</span> is <dfn class="terminology">symmetric</dfn> if <span class="process-math">\(A^T=A\text{.}\)</span>
+<div class="para" id="sec_matrix_ops-2-12-1-1">For all matrices <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\((A^T)^T=A\text{.}\)</span>
+</div></article><div class="para" id="sec_matrix_ops-2-13">A matrix <span class="process-math">\(A\)</span> is <dfn class="terminology">symmetric</dfn> if <span class="process-math">\(A^T=A\text{.}\)</span>
 </div>
-<article class="theorem theorem-like" id="theorem-7"><h4 class="heading">
+<article class="theorem theorem-like" id="sec_matrix_ops-2-14"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-207">The sum of two symmetric <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrices is symmetric.</div></article><article class="theorem theorem-like" id="theorem-8"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-2-14-1-1">The sum of two symmetric <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrices is symmetric.</div></article><article class="theorem theorem-like" id="sec_matrix_ops-2-15"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-208">If <span class="process-math">\(A\)</span> is a symmetric matrix, then <span class="process-math">\(kA\)</span> is symmetric.</div></article></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.2</span> <span class="title">Matrix Multiplication</span>
+<div class="para" id="sec_matrix_ops-2-15-1-1">If <span class="process-math">\(A\)</span> is a symmetric matrix, then <span class="process-math">\(kA\)</span> is symmetric.</div></article></section><section class="subsection" id="sec_matrix_ops-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="space"> </span><span class="title">Matrix Multiplication</span>
 </h3>
-<div class="para" id="p-209">Earlier we saw how to multiply a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix by a vector from <span class="process-math">\(\mathbb{R}^n\text{.}\)</span> We will discuss how to define matrix multiplication with multiple interpretations.</div>
-<div class="para logical" id="p-210">
+<div class="para" id="sec_matrix_ops-3-2">Earlier we saw how to multiply a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix by a vector from <span class="process-math">\(\mathbb{R}^n\text{.}\)</span> We will discuss how to define matrix multiplication with multiple interpretations.</div>
+<div class="para logical" id="sec_matrix_ops-3-3">
 <div class="para">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix and let <span class="process-math">\(\vec{x_1}\)</span> and <span class="process-math">\(\vec{x_2}\)</span> be vectors from <span class="process-math">\(\mathbb{R}^n\text{.}\)</span> Earlier we defined what <span class="process-math">\(A\vec{x_1}\)</span> and <span class="process-math">\(A\vec{x_2}\)</span> meant. If we build a <span class="process-math">\(n\)</span> by <span class="process-math">\(2\)</span> matrix <span class="process-math">\(B\)</span> using <span class="process-math">\(\vec{x_1}\)</span> and <span class="process-math">\(\vec{x_2}\)</span> as the columns, then we can define <span class="process-math">\(AB\text{,}\)</span> read as “<span class="process-math">\(A\)</span> times <span class="process-math">\(B\)</span>”, to be</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -406,7 +314,7 @@ AB=[A\vec{b_1}  \quad A\vec{b_2}  \quad \cdots  \quad A\vec{b_k}]
 <div class="para">In particular, this means that if <span class="process-math">\(AB\)</span> makes sense, then we can calculate just the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(AB\)</span> without calculating all of <span class="process-math">\(AB\text{.}\)</span> Namely, the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(AB\)</span> is <span class="process-math">\(A column_i(B)\text{,}\)</span> which is written symbolically as <span class="process-math">\(column_i(AB)=A column_i(B)\text{.}\)</span>
 </div>
 </div>
-<div class="para logical" id="p-211">
+<div class="para logical" id="sec_matrix_ops-3-4">
 <div class="para">Formally, we can define the product of a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix <span class="process-math">\(A\)</span> with a <span class="process-math">\(n\)</span> by <span class="process-math">\(k\)</span> matrix <span class="process-math">\(B\)</span> to be the <span class="process-math">\(m\)</span> by <span class="process-math">\(k\)</span> matrix <span class="process-math">\(AB\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -414,7 +322,7 @@ AB=[A\vec{b_1}  \quad A\vec{b_2}  \quad \cdots  \quad A\vec{b_k}]
 \end{equation*}
 </div>
 </div>
-<div class="para logical" id="p-212">
+<div class="para logical" id="sec_matrix_ops-3-5">
 <div class="para">This formula looks difficult, but what it really tells us is that the <span class="process-math">\((i,j)\)</span> entry of <span class="process-math">\(AB\)</span> is really the dot product of the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\)</span> with the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\text{.}\)</span> Remember the <dfn class="terminology">dot product</dfn> of <span class="process-math">\(\vec{v} =\colvec{v_1\\ v_2\\ \vdots\\ v_n} \in \mathbb{R}^n\)</span> and <span class="process-math">\(\vec{w} =\colvec{w_1\\ w_2\\ \vdots\\ w_n} \in \mathbb{R}^n\)</span> is just the sum of the products of the components. Namely,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -424,92 +332,92 @@ AB=[A\vec{b_1}  \quad A\vec{b_2}  \quad \cdots  \quad A\vec{b_k}]
 <div class="para">This idea lets us calculate the matrix product <span class="process-math">\(AB\)</span> one entry at a time. Continuing this idea will lead us to see that the <span class="process-math">\(i\)</span>-th row of the product <span class="process-math">\(AB\)</span> can be calculated as <span class="process-math">\(row_i(AB)=row_i(A) B\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-213">Note that in general <span class="process-math">\(AB \neq BA\text{,}\)</span> even when both products make sense.</div>
-<article class="investigation project-like" id="investigation-17"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-3-6">Note that in general <span class="process-math">\(AB \neq BA\text{,}\)</span> even when both products make sense.</div>
+<article class="investigation project-like" id="sec_matrix_ops-3-7"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
 </h4>
-<article class="task exercise-like" id="task-89"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-214">What sizes of matrices can you add to a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix?</div></article><article class="task exercise-like" id="task-90"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-215">What sizes of matrices can you multiply on the right of a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix?</div></article><article class="task exercise-like" id="task-91"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-216">What sizes of matrices can you multiply on the left of a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix?</div></article></article><article class="investigation project-like" id="investigation-18"><h4 class="heading">
+<article class="task exercise-like" id="sec_matrix_ops-3-7-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec_matrix_ops-3-7-1-1">What sizes of matrices can you add to a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix?</div></article><article class="task exercise-like" id="sec_matrix_ops-3-7-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec_matrix_ops-3-7-2-1">What sizes of matrices can you multiply on the right of a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix?</div></article><article class="task exercise-like" id="sec_matrix_ops-3-7-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="sec_matrix_ops-3-7-3-1">What sizes of matrices can you multiply on the left of a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix?</div></article></article><article class="investigation project-like" id="sec_matrix_ops-3-8"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-217">If <span class="process-math">\(A\in M_{m \times n}\text{,}\)</span> when does it make sense to multiply by <span class="process-math">\(A^T\text{?}\)</span>
-</div></article><article class="investigation project-like" id="investigation-19"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-3-8-1-1">If <span class="process-math">\(A\in M_{m \times n}\text{,}\)</span> when does it make sense to multiply by <span class="process-math">\(A^T\text{?}\)</span>
+</div></article><article class="investigation project-like" id="sec_matrix_ops-3-9"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="introduction-20"><div class="para" id="p-218">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp 1\\-1\amp 2 \end{bmatrix}\)</span> and <span class="process-math">\(B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp-2  \end{bmatrix}\text{.}\)</span>
+<div class="introduction" id="sec_matrix_ops-3-9-1"><div class="para" id="sec_matrix_ops-3-9-1-1">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp 1\\-1\amp 2 \end{bmatrix}\)</span> and <span class="process-math">\(B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp-2  \end{bmatrix}\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="task-92"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-219">What is the size of <span class="process-math">\(AB\text{?}\)</span>
-</div></article><article class="task exercise-like" id="task-93"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-220">Compute just the first column of <span class="process-math">\(AB\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-94"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-221">Write the first column of <span class="process-math">\(AB\)</span> as a linear combination of the columns of A. Be sure to check your work.</div></article><article class="task exercise-like" id="task-95"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="p-222">Solve the matrix equation <span class="process-math">\(A\vec{x} = \colvec{-2\\ 3}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-96"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="p-223">Compute just the second row of <span class="process-math">\(AB\)</span>
-</div></article></article><article class="investigation project-like" id="investigation-20"><h4 class="heading">
+<article class="task exercise-like" id="sec_matrix_ops-3-9-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec_matrix_ops-3-9-2-1">What is the size of <span class="process-math">\(AB\text{?}\)</span>
+</div></article><article class="task exercise-like" id="sec_matrix_ops-3-9-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec_matrix_ops-3-9-3-1">Compute just the first column of <span class="process-math">\(AB\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec_matrix_ops-3-9-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="sec_matrix_ops-3-9-4-1">Write the first column of <span class="process-math">\(AB\)</span> as a linear combination of the columns of A. Be sure to check your work.</div></article><article class="task exercise-like" id="sec_matrix_ops-3-9-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="sec_matrix_ops-3-9-5-1">Solve the matrix equation <span class="process-math">\(A\vec{x} = \colvec{-2\\ 3}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec_matrix_ops-3-9-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="sec_matrix_ops-3-9-6-1">Compute just the second row of <span class="process-math">\(AB\)</span>
+</div></article></article><article class="investigation project-like" id="sec_matrix_ops-3-10"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="introduction-21"><div class="para" id="p-224">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp 2\amp 1\amp 5\amp 6\\4\amp 1\amp 3\amp 2\amp -1\\0\amp 2\amp 5\amp 6\amp 7\\8\amp 2\amp 3\amp 1\amp 4 \end{bmatrix}\)</span> and <span class="process-math">\(B=\begin{bmatrix} 5\amp -2\amp 2\amp 4\\6\amp 2\amp 3\amp 6\\4\amp -1\amp 7\amp 14\\2\amp 0\amp -2\amp -4\\1\amp 1\amp 2\amp 4 \end{bmatrix}\)</span>
+<div class="introduction" id="sec_matrix_ops-3-10-1"><div class="para" id="sec_matrix_ops-3-10-1-1">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp 2\amp 1\amp 5\amp 6\\4\amp 1\amp 3\amp 2\amp -1\\0\amp 2\amp 5\amp 6\amp 7\\8\amp 2\amp 3\amp 1\amp 4 \end{bmatrix}\)</span> and <span class="process-math">\(B=\begin{bmatrix} 5\amp -2\amp 2\amp 4\\6\amp 2\amp 3\amp 6\\4\amp -1\amp 7\amp 14\\2\amp 0\amp -2\amp -4\\1\amp 1\amp 2\amp 4 \end{bmatrix}\)</span>
 </div></div>
-<article class="task exercise-like" id="task-97"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-225"><span class="process-math">\(A_{2,3}=\)</span></div></article><article class="task exercise-like" id="task-98"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-226"><span class="process-math">\(B_{1,4}=\)</span></div></article><article class="task exercise-like" id="task-99"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-227"><span class="process-math">\((AB)_{2,3}=\)</span></div></article><article class="task exercise-like" id="task-100"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="p-228"><span class="process-math">\(row_2 (AB)=\)</span></div></article><article class="task exercise-like" id="task-101"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="p-229"><span class="process-math">\(column_3 (AB)=\)</span></div></article></article><article class="investigation project-like" id="investigation-21"><h4 class="heading">
+<article class="task exercise-like" id="sec_matrix_ops-3-10-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec_matrix_ops-3-10-2-1"><span class="process-math">\(A_{2,3}=\)</span></div></article><article class="task exercise-like" id="sec_matrix_ops-3-10-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec_matrix_ops-3-10-3-1"><span class="process-math">\(B_{1,4}=\)</span></div></article><article class="task exercise-like" id="sec_matrix_ops-3-10-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="sec_matrix_ops-3-10-4-1"><span class="process-math">\((AB)_{2,3}=\)</span></div></article><article class="task exercise-like" id="sec_matrix_ops-3-10-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="sec_matrix_ops-3-10-5-1"><span class="process-math">\(row_2 (AB)=\)</span></div></article><article class="task exercise-like" id="sec_matrix_ops-3-10-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="sec_matrix_ops-3-10-6-1"><span class="process-math">\(column_3 (AB)=\)</span></div></article></article><article class="investigation project-like" id="sec_matrix_ops-3-11"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-230">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp 1\\-1\amp 2  \end{bmatrix}\)</span> and <span class="process-math">\(B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp -2  \end{bmatrix}\text{.}\)</span> Compute <span class="process-math">\(AB\)</span> and <span class="process-math">\(BA\text{.}\)</span>
-</div></article><article class="investigation project-like" id="investigation-22"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-3-11-1-1">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp 1\\-1\amp 2  \end{bmatrix}\)</span> and <span class="process-math">\(B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp -2  \end{bmatrix}\text{.}\)</span> Compute <span class="process-math">\(AB\)</span> and <span class="process-math">\(BA\text{.}\)</span>
+</div></article><article class="investigation project-like" id="sec_matrix_ops-3-12"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-231">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp 1\\-1\amp 2 \\-2 \amp  0 \end{bmatrix}\)</span> and <span class="process-math">\(B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp -2  \end{bmatrix}\text{.}\)</span> Compute <span class="process-math">\(AB\)</span> and <span class="process-math">\(BA\text{.}\)</span>
-</div></article><div class="para" id="p-232">You can approach proving the following theorem by showing matrix equality entry-wise or column-wise or row-wise.</div>
-<article class="theorem theorem-like" id="theorem-9"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-3-12-1-1">Let <span class="process-math">\(A=\begin{bmatrix} 3\amp 1\\-1\amp 2 \\-2 \amp  0 \end{bmatrix}\)</span> and <span class="process-math">\(B=\begin{bmatrix} -1\amp 2\amp 3\\1\amp 0\amp -2  \end{bmatrix}\text{.}\)</span> Compute <span class="process-math">\(AB\)</span> and <span class="process-math">\(BA\text{.}\)</span>
+</div></article><div class="para" id="sec_matrix_ops-3-13">You can approach proving the following theorem by showing matrix equality entry-wise or column-wise or row-wise.</div>
+<article class="theorem theorem-like" id="sec_matrix_ops-3-14"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-233">
+<div class="para logical" id="sec_matrix_ops-3-14-1-1">
 <div class="para">For all matrices <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> such that the addition and multiplication of matrices below makes sense,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (A+B)C=AC+BC\text{.}
 \end{equation*}
 </div>
-</div></article><article class="investigation project-like" id="investigation-23"><h4 class="heading">
+</div></article><article class="investigation project-like" id="sec_matrix_ops-3-15"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.13</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-234">Give 2 different examples of 3 by 3 matrices <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> such that <span class="process-math">\(AB=BA\text{.}\)</span>
-</div></article><article class="investigation project-like" id="investigation-24"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-3-15-1-1">Give 2 different examples of 3 by 3 matrices <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> such that <span class="process-math">\(AB=BA\text{.}\)</span>
+</div></article><article class="investigation project-like" id="sec_matrix_ops-3-16"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-235">Give 2 different examples of 3 by 3 matrices <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> such that <span class="process-math">\(AB \neq BA\text{.}\)</span>
-</div></article><article class="theorem theorem-like" id="theorem-10"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-3-16-1-1">Give 2 different examples of 3 by 3 matrices <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> such that <span class="process-math">\(AB \neq BA\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="sec_matrix_ops-3-17"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-236">For all matrices <span class="process-math">\(A,B\)</span> such that <span class="process-math">\(AB\)</span> is defined, <span class="process-math">\((AB)^T=B^T A^T\text{.}\)</span>
-</div></article></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.2.3</span> <span class="title">Special Types of Matrices</span>
+<div class="para" id="sec_matrix_ops-3-17-1-1">For all matrices <span class="process-math">\(A,B\)</span> such that <span class="process-math">\(AB\)</span> is defined, <span class="process-math">\((AB)^T=B^T A^T\text{.}\)</span>
+</div></article></section><section class="subsection" id="sec_matrix_ops-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="space"> </span><span class="title">Special Types of Matrices</span>
 </h3>
-<div class="para" id="p-237">A <dfn class="terminology">square</dfn> matrix is a matrix that has the same number of rows and columns. A <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix <span class="process-math">\(A\)</span> is said to be <dfn class="terminology">upper triangular</dfn> if <span class="process-math">\(A_{i,j}=0\)</span> whenever <span class="process-math">\(i \gt j\text{.}\)</span> Similarly, a matrix <span class="process-math">\(A\)</span> is <dfn class="terminology">lower triangular</dfn> if <span class="process-math">\(A_{i,j}=0\)</span> whenever <span class="process-math">\(i\lt j\text{.}\)</span> We usually consider square matrices when we talk about upper or lower triangular, but it may be helpful to consider non-square cases.</div>
-<article class="investigation project-like" id="investigation-25"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-4-2">A <dfn class="terminology">square</dfn> matrix is a matrix that has the same number of rows and columns. A <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix <span class="process-math">\(A\)</span> is said to be <dfn class="terminology">upper triangular</dfn> if <span class="process-math">\(A_{i,j}=0\)</span> whenever <span class="process-math">\(i \gt j\text{.}\)</span> Similarly, a matrix <span class="process-math">\(A\)</span> is <dfn class="terminology">lower triangular</dfn> if <span class="process-math">\(A_{i,j}=0\)</span> whenever <span class="process-math">\(i\lt j\text{.}\)</span> We usually consider square matrices when we talk about upper or lower triangular, but it may be helpful to consider non-square cases.</div>
+<article class="investigation project-like" id="sec_matrix_ops-4-3"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.15</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-238">Give an example of a matrix that is upper triangular but is not in echelon form. If one does not exist, explain why.</div></article><article class="investigation project-like" id="investigation-26"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-4-3-1-1">Give an example of a matrix that is upper triangular but is not in echelon form. If one does not exist, explain why.</div></article><article class="investigation project-like" id="sec_matrix_ops-4-4"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-239">Give an example of a matrix that is in echelon form but is not upper triangular. If one does not exist, explain why.</div></article><article class="investigation project-like" id="investigation-27"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-4-4-1-1">Give an example of a matrix that is in echelon form but is not upper triangular. If one does not exist, explain why.</div></article><article class="investigation project-like" id="sec_matrix_ops-4-5"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.17</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-240">Can a matrix be upper <em class="emphasis">and</em> lower triangular? Either give an example or explain why there cannot exist one.</div></article><div class="para" id="p-241">
+<div class="para" id="sec_matrix_ops-4-5-1-1">Can a matrix be upper <em class="emphasis">and</em> lower triangular? Either give an example or explain why there cannot exist one.</div></article><div class="para" id="sec_matrix_ops-4-6">
 <dfn class="terminology">Diagonal</dfn> matrices are matrices whose only nonzero entries are on the diagonal. Specifically, a matrix <span class="process-math">\(A\)</span> is diagonal if <span class="process-math">\(A_{i,j}=0\)</span> whenever <span class="process-math">\(i \neq j\text{.}\)</span>
 </div>
-<article class="investigation project-like" id="investigation-28"><h4 class="heading">
+<article class="investigation project-like" id="sec_matrix_ops-4-7"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.18</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-242">Give an example of a matrix that is diagonal but not in echelon form.</div></article><div class="para logical" id="p-243">
+<div class="para" id="sec_matrix_ops-4-7-1-1">Give an example of a matrix that is diagonal but not in echelon form.</div></article><div class="para logical" id="sec_matrix_ops-4-8">
 <div class="para">The <span class="process-math">\(n\)</span> by <span class="process-math">\(n\)</span> <dfn class="terminology">identity matrix</dfn>, denoted <span class="process-math">\(Id_n\text{,}\)</span> is the unique matrix such that <span class="process-math">\(Id_n \vec{x}= \vec{x}\)</span> for every <span class="process-math">\(\vec{x} \in \mathbb{R}^n\text{.}\)</span> In fact the entries of <span class="process-math">\(Id_n\)</span> are easily computed in terms of the Dirac delta function. Specifically <span class="process-math">\((Id_n)_{i,j}=\delta_{i,j}\text{,}\)</span> where</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -517,22 +425,20 @@ AB=[A\vec{b_1}  \quad A\vec{b_2}  \quad \cdots  \quad A\vec{b_k}]
 \end{equation*}
 </div>
 </div>
-<article class="investigation project-like" id="investigation-29"><h4 class="heading">
+<article class="investigation project-like" id="sec_matrix_ops-4-9"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.19</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-244">Write out <span class="process-math">\(Id_5\)</span> and use it to prove that for any <span class="process-math">\(\vec{v} \in \mathbb{R}^5\)</span> the product of <span class="process-math">\(Id_5\)</span> and <span class="process-math">\(\vec{v}\)</span> will always be <span class="process-math">\(\vec{v}\text{.}\)</span>
-</div></article><article class="investigation project-like" id="investigation-30"><h4 class="heading">
+<div class="para" id="sec_matrix_ops-4-9-1-1">Write out <span class="process-math">\(Id_5\)</span> and use it to prove that for any <span class="process-math">\(\vec{v} \in \mathbb{R}^5\)</span> the product of <span class="process-math">\(Id_5\)</span> and <span class="process-math">\(\vec{v}\)</span> will always be <span class="process-math">\(\vec{v}\text{.}\)</span>
+</div></article><article class="investigation project-like" id="sec_matrix_ops-4-10"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.20</span><span class="period">.</span><span class="space"> </span><span class="title">Superstar Bonus Question.</span>
 </h4>
-<div class="para" id="p-245">Prove that <span class="process-math">\(Id_5\)</span> is the only matrix that has the property from the problem above.</div></article></section></section></div>
+<div class="para" id="sec_matrix_ops-4-10-2-1">Prove that <span class="process-math">\(Id_5\)</span> is the only matrix that has the property from the problem above.</div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="MatrixProdEq.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="InverseMatrices.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="MatrixProdEq.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="InverseMatrices.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
-<div class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
-<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
-<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>
