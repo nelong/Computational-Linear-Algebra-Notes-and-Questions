@@ -1,5 +1,25 @@
 <section xml:id="Conunique">
   <title>Consistency and Uniqueness Theorems</title>
+  <objectives>
+    <ul>
+      <li>
+        <p>
+          To understand when a system of equations will be consistent in terms of the number of pivot variables
+        </p>
+      </li>
+      <li>
+        <p>
+          To understand when a system of equations will have a unique solution in terms of the number of pivot variables
+        </p>
+      </li>
+
+      <li>
+        <p>
+          To understand how to use the reduced row echelon form of the augmented matrix for a linear system to easily write out the solution set
+        </p>
+      </li>
+    </ul>
+  </objectives>
 <introduction>
   <p>
   In class, we came up with statements of the following two theorems:
@@ -23,6 +43,44 @@
   </statement>
 </theorem>
 </introduction>
+<subsection> 
+  <title>Writing Solution Sets</title>
+  
+  
+<activity>
+  <statement>
+    <p>For the matrix below, verify that the matrix is in rref (reduced row echelon form) and treat the matrix as an augmented matrix for a system of linear equations. Write out the corresponding system of equations. Use this system of equations to write each variable in terms of just free variables and constants.
+      <me>
+        \begin{bmatrix}
+          1 \amp 0 \amp 3 \amp 0 \amp -4 \amp 0 \amp -1 \amp 5 \\ 
+          0 \amp 1 \amp 4 \amp 0 \amp 3 \amp 0 \amp 2 \amp -6 \\ 
+          0 \amp 0 \amp 0 \amp 1 \amp -2 \amp 0 \amp 1 \amp 2 \\ 
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 3 \amp 0 \\ 
+        \end{bmatrix}
+      </me>
+    </p>
+  </statement>
+</activity>
+<question>
+  <p>
+    Under what conditions would your process for the previous activity not work? In other words, when would it not be possible to write each variable in terms of just free variables and constants.
+  </p>
+</question>
+</subsection>
+<subsection>
+  <title>Determining Consistency/Uniqueness of Solutions</title>
+  <activity>
+    <statement>
+      <p>
+        Give an example matrix that fits each of the following conditions:
+        <ol>
+          <li>A 3 by 4 augmented matrix corresponding to a linear system with a unique solution </li>
+          <li>A 3 by 4 augmented matrix corresponding to a consistent linear system of equations that does NOT have a unique solution </li>
+          <li>A 3 by 4 augmented matrix corresponding to an inconsistent system of linear equations </li>
+        </ol>
+      </p>
+    </statement>
+  </activity>
 <activity>
   <statement>
     <p>
@@ -33,7 +91,8 @@
       </ol>
     </p>
   </statement>
-</activity>
+</activity>  
+
 
 <activity>
   <statement>
@@ -50,8 +109,7 @@
     how coefficient matrices are different to augmented matrices!</p>
   </hint>
 </activity>
-
-
+</subsection>
 
 </section>
 

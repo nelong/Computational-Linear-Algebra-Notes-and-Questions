@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec_vector_eqns" xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Vectors and Vector Equations</title>
+<section xml:id="sec_vector_calc" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Vectors and Vector Calculations</title>
 
 <introduction>
   <p>
@@ -80,22 +80,27 @@
 <subsection>
   <title>The Dot Product</title>
 <definition>
+  <statement>
   <p>
     Let <m>\vec{v},\vec{w}\in\mathbb{R}^n</m>, then the <term>dot product</term> of <m>\vec{v}</m> with <m>\vec{w}</m> is the scalar value given by
     <me>
       \vec{v}\cdot\vec{w}= v_1 w_1+v_2 w_2+\ldots+v_n w_n
     </me>
   </p>
+</statement>
 </definition>
-  <p>
-    Sometimes we are interested in the total amount of change and not what direction a vector is in. The <term>magnitude</term> (or length) of a vector <m>\vec{v}\in\mathbb{R}^n</m> is given by the following
-    <me>\Vert{\vec{v}}\Vert=\sqrt{\sum_{j=1}^{n} (v_i)^2}= \sqrt{\vec{v}\cdot\vec{v}}</me>
-    A <term>unit vector</term> is a vector of length 1.
-  </p>
+    <p>
+      Sometimes we are interested in the total amount of change and not what direction a vector is in. The <term>magnitude</term> (or length) of a vector <m>\vec{v}\in\mathbb{R}^n</m> is given by the following
+      <me>\Vert{\vec{v}}\Vert=\sqrt{\sum_{j=1}^{n} (v_i)^2}= \sqrt{\vec{v}\cdot\vec{v}}</me>
+      A <term>unit vector</term> is a vector of length 1.
+    </p>
+
 <definition>
+<statement>
   <p>
     Let <m>\vec{v},\vec{w}\in\mathbb{R}^n</m>, then the vectors <m>\vec{v}</m> and <m>\vec{w}</m> are <term>orthogonal</term> if <m>\vec{v} \cdot \vec{w} =0</m>.
   </p>
+</statement>
 </definition>
 <activity>
   <introduction>
@@ -116,12 +121,14 @@
   </task>
 </activity>
 <definition>
+  <statement>
   <p>
     The <term>projection of a vector</term> <m>\vec{v}</m> onto a vector <m>\vec{w}</m> gives the vector part of <m>\vec{v}</m> that is parallel to <m>\vec{w}</m> and is computed as
     <me>
       proj_{\vec{w}} \vec{v} = \frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}} \vec{w} = \frac{\vec{v}\cdot\vec{w}}{\Vert\vec{w}\Vert} \left(\frac{\vec{w}}{\Vert\vec{w}\Vert}\right)
     </me>
   </p>
+</statement>
 </definition>
 <theorem>
   <p>

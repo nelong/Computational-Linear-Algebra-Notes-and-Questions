@@ -20,7 +20,7 @@
 
         <li>
           <p>
-            To understand how echelon forms will give a form for equivalent systems of equations that allow for characterization of the types of solutions to the linear system
+            To understand how echelon forms will give a form for equivalent systems of equations that will allow us to characterize the types of solutions to the system
           </p>
         </li>
       </ul>
@@ -48,7 +48,7 @@
         \begin{array}{rcrcrcrcr}
           1 x_1  \amp +\amp  2 x_2 \amp +\amp  3 x_3 \amp =\amp  14 \\ % -1  3
           2 x_1  \amp -\amp  3 x_2 \amp +\amp  2 x_3 \amp =\amp  0 \\
-           x_1   \amp  \amp        \amp +\amp  7 x_3 \amp =\amp  0
+           x_1   \amp  \amp        \amp +\amp  7 x_3 \amp =\amp  22
         \end{array}
       </me>
     </p>
@@ -77,6 +77,7 @@
     Hopefully it will be easier to explicitly write the solution set of the new equivalent system. 
   </p>
   <definition>
+    <statement>
     <p>
       An <term>elementary operation</term> on a system of equations is an operation of the form:
       <ol>
@@ -85,6 +86,7 @@
         <li>adding a multiple of one equation to another equation</li>
       </ol>
     </p>
+    </statement>
   </definition>
   <activity>
     <introduction>
@@ -106,11 +108,11 @@
       Write a few sentences about why the new system of equations given in the previous part is equivalent to the original system.
     </p>
   </task>
-  <task>
+  <!-- <task>
     <p>
       Write a few sentences about why switching the order in which equations are presented in a system does not change the set of solutions.
     </p>
-  </task>
+  </task> -->
   <task>
     <p>
       Write out the equation obtained by multiplying the second equation in the original system by a non-zero scalar (which we will call <m>k</m>) and adding to the first equation.
@@ -198,10 +200,10 @@
     a_{m1}\amp  a_{m2} \amp  ... \amp   a_{mn}  \end{bmatrix}
   </me>
   and an augmented matrix of
-  <me>[A|b]=\begin{bmatrix} a_{11} \amp  a_{12} \amp  ... \amp   a_{1n} \amp |\amp b_1\\
-    a_{21}\amp  a_{22}\amp  ... \amp   a_{2n} \amp |\amp b_2\\
-    \vdots  \amp  \vdots \amp    \amp   \vdots \amp |\amp  \vdots  \\
-    a_{m1}\amp  a_{m2} \amp  ... \amp   a_{mn} \amp |\amp b_m \end{bmatrix}
+  <me>[A|b]=\begin{bmatrix} a_{11} \amp  a_{12} \amp  ... \amp   a_{1n} \amp \bigm| b_1\\
+    a_{21}\amp  a_{22}\amp  ... \amp   a_{2n} \amp \bigm| b_2\\
+    \vdots  \amp  \vdots \amp    \amp   \vdots \amp \bigm|  \vdots  \\
+    a_{m1}\amp  a_{m2} \amp  ... \amp   a_{mn} \amp \bigm| b_m \end{bmatrix}
   </me>
 </p>
 
@@ -351,32 +353,104 @@
     <li>switching two rows</li>
     <li>adding a multiple of one row to another row</li>
   </ul>
+  </p>
+<question>
+  <statement>
+    <p>
+      Using the matrix <m>A</m> given below, perform each of the following row operations:
+      <me> 
+        A=\begin{bmatrix}
+        1 \amp 2 \amp 3 \amp 4 \\
+        -2 \amp 3 \amp 0 \amp -1 \\
+        0 \amp 5 \amp -1 \amp 2
+        \end{bmatrix}
+      </me>
+    </p>
+    <p>
+      <ol>
+        <li>
+          <m> R_1 \leftrightarrow R_3</m>
+        </li>
+        <li>
+          <m> -3 R_2 \rightarrow R_2</m>
+        </li><li>
+          <m> 2 R_2 +R_1 \rightarrow R_1</m>
+        </li>
+      </ol>
+    </p>
+  </statement>
+</question>
+  <p>
   We now have operations to trade our system of equations for an equivalent system, but we have not stated a way to make sure that the solution set will be easy to explicitly state from our new equivalent system. The following matrix forms will be useful for determining solution sets and various other properties of the corresponding system of equations.
 </p>
 
 <definition>
   <statement>
   <p>
-A rectangular matrix is in <term>row echelon form</term> if it has the following three properties:
-<ul>
-<li>All nonzero rows are above any rows of all zeros.</li>
-<li>Each <term>leading entry</term> (being the first non-zero entry) of a row is in a column to the right of the leading entry of the row above it.</li>
-<li>All entries in a column below a leading entry are zeros.</li>
-</ul>
+    A rectangular matrix is in <term>row echelon form</term> if it has the following three properties:
+    <ul>
+    <li>All nonzero rows are above any rows of all zeros.</li>
+    <li>Each <term>leading entry</term> (being the first non-zero entry) of a row is in a column to the right of the leading entry of the row above it.</li>
+    <li>All entries in a column below a leading entry are zeros.</li>
+    </ul>
+      </p>
+    <p>If a matrix in row echelon form satisfies the following additional properties, then we say the matrix is in <term>reduced row echelon form</term>:
+    <ul>
+      <li>The leading entry in each nonzero row is 1.</li>
+      <li>Each leading 1 is the only nonzero entry in its column.</li>
+    </ul>
   </p>
-<p>If a matrix in row echelon form satisfies the following additional properties, then we say the matrix is in <term>reduced row echelon form</term>:
-<ul>
-  <li>The leading entry in each nonzero row is 1.</li>
-  <li>Each leading 1 is the only nonzero entry in its column.</li>
-</ul>
-</p>
   </statement>
 </definition>
 
 <p>
   The leading entry in a nonzero row of the row echelon form is called a <term>pivot</term>. The column in which a pivot occurs is called a <term>pivot column</term> and the corresponding variable is a <term>basic variable</term> or <term>pivot variable</term>. A variable corresponding to a column in which the coefficient matrix does <em>not</em> have a pivot are called <term>free variables</term>. While the echelon form is needed to find where pivots will occur, we will sometimes refer to pivot positions of a matrix even when the matrix is not in echelon form.
 </p>
-
+<question>
+  <statement>
+    <p>
+      For each of the following matrices, determine if the matrix is in row echelon form, reduced row echelon form, or neither. If the matrix is in row echelon or reduced row echelon form, treat the matrix like an augmented matrix and describe each variable as either a free variable or a pivot variable.
+    
+    <ol>
+      <li>
+        <me> A_1=\begin{bmatrix}
+          1 \amp 2 \amp 3 \\ 
+          0 \amp 1 \amp 4
+          \end{bmatrix} 
+        </me>
+      </li>
+      <li>
+        <me> A_2=\begin{bmatrix}
+          -3 \amp 2 \amp 1 \\ 
+          1 \amp 0 \amp 1 \\
+          0 \amp 2 \amp 0
+          \end{bmatrix} </me>
+      </li>
+      <li>
+        <me> A_3=\begin{bmatrix}
+          1 \amp 2 \amp 1 \\ 
+          0 \amp 1 \amp 1 \\
+          0 \amp 0 \amp 1
+          \end{bmatrix} </me>
+      </li>
+      <li>
+        <me> A_4=\begin{bmatrix}
+          1 \amp 2 \amp 3 \\ 
+            0 \amp 0 \amp 1 \\
+            0 \amp 0 \amp 0
+          \end{bmatrix} </me>
+      </li>
+      <li>
+        <me> A_5=\begin{bmatrix}
+          0 \amp 1 \amp 2 \amp -1 \\ 
+          1 \amp 0 \amp 3 \amp 2 \\
+          0 \amp 0 \amp 1 \amp 3 
+          \end{bmatrix} </me>
+      </li>
+    </ol>
+    </p>
+  </statement>
+</question>
 <theorem>
   <statement>
     <p>The reduced row echelon form of a rectangular matrix is unique.
@@ -419,7 +493,26 @@ A rectangular matrix is in <term>row echelon form</term> if it has the following
     </p>
   </task>
 </activity>
-
+<example>
+  <task>
+    <p>
+      In this example, we will list out ALL of the possible row echelon forms of a two by two matrix. We will use the symbols <m>\blacksquare</m> for a non-zero entry and <m>*</m> for an entry that can be any real number. We will also use <m>0</m> and <m>1</m> for entries that must be <m>0</m> and <m>1</m>.
+      <me>
+        \begin{bmatrix} \blacksquare \amp * \\0 \amp \blacksquare \end{bmatrix} ,  \begin{bmatrix} \blacksquare \amp * \\0 \amp 0 \end{bmatrix} ,  \begin{bmatrix} 0 \amp \blacksquare \\0 \amp 0 \end{bmatrix} ,  \begin{bmatrix} 0 \amp 0 \\0 \amp 0 \end{bmatrix}
+      </me>
+      You should think carefully to see if there are any possibilities missing here.
+    </p>
+  </task>
+  <task>
+    <p>
+      In this example, we will list out ALL of the possible reduced row echelon forms of a two by two matrix. We will use the symbols <m>\blacksquare</m> for a non-zero entry and <m>*</m> for an entry that can be any real number. We will also use <m>0</m> and <m>1</m> for entries that must be <m>0</m> and <m>1</m>.
+      <me>
+        \begin{bmatrix} 1 \amp 0 \\0 \amp 1 \end{bmatrix} ,  \begin{bmatrix} 1 \amp * \\0 \amp 0 \end{bmatrix} ,  \begin{bmatrix} 0 \amp 1 \\0 \amp 0 \end{bmatrix} ,  \begin{bmatrix} 0 \amp 0 \\0 \amp 0 \end{bmatrix}
+      </me>
+      You should think carefully to see if there are any possibilities missing here.
+    </p>
+  </task>
+</example>
 <activity xml:id="ex_3x4_REF">
   <statement>
     <p>

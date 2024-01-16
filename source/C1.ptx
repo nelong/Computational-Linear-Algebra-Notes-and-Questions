@@ -4,10 +4,11 @@
   <title>Solving Linear Systems</title>
   <xi:include href="C1/introductiontoLA.ptx" />
   <xi:include href="C1/LinearSystems.ptx" />
-  <xi:include href="C1/ConUnique.ptx" />
+  <!-- <xi:include href="C1/ConUnique.ptx" />
   <xi:include href="C1/Geometry_Applications.ptx" />
-  <xi:include href="C1/VectorMatrixEQ.ptx" />
+  <xi:include href="C1/VectorCalc.ptx" />
+  <xi:include href="C1/VectorEqns.ptx" />
   <xi:include href="C1/span.ptx" />
-  <xi:include href="C1/linear_independence.ptx" />
+  <xi:include href="C1/linear_independence.ptx" /> -->
 </chapter>
 

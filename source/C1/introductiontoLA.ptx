@@ -59,12 +59,12 @@
   </task>
   <task>
     <p>
-      Wait, what just happened? Explain the results of the previous two activities. What do the graphs of the corresponding solution sets look like in relation to the graphs of the equations?
+      Wait, what just happened? Explain the results of the previous two parts. What do the graphs of the corresponding solution sets look like in relation to the graphs of the equations?
     </p>
   </task>
   <task>
     <p>
-      What are the possible intersections of two lines? Clearly state your conjecture.
+      What are the possible intersections of two lines? Clearly state your conjecture which adresses ALL possibilities.
     </p>
   </task>
 </activity>
@@ -85,8 +85,8 @@
         Consider the following diagram of a network with the flows indicated:
       </p>
       <figure>
-        <image width = "80%" source = "./TrafficFlowExample.png" />
         <caption>A network with directions of flow</caption>
+        <image width = "80%" source = "./TrafficFlowExample.png" />
       </figure>
       <p>
         If all the flows, <m>x_1</m>, <m>x_2</m>, <m>x_3</m>, <m>x_4</m>, and <m>x_5</m>, are all nonnegative, what is the <alert>largest possible value</alert> for <m>x_3</m>?
