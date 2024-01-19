@@ -127,6 +127,10 @@
     <me>
       proj_{\vec{w}} \vec{v} = \frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}} \vec{w} = \frac{\vec{v}\cdot\vec{w}}{\Vert\vec{w}\Vert} \left(\frac{\vec{w}}{\Vert\vec{w}\Vert}\right)
     </me>
+    This is sometimes called the vector projection. The right most part of the definition of the projection vector shows that the projection of <m>\vec{v}</m> onto <m>\vec{w}</m> will be a scalar (<m>\frac{\vec{v}\cdot\vec{w}}{\Vert\vec{w}\Vert} </m>)times the unit vector in the direction of <m>\vec{w}</m>. The scalar <m>\frac{\vec{v}\cdot\vec{w}}{\Vert\vec{w}\Vert} </m> is referred to as the scalar projection of <m>\vec{v}</m> onto <m>\vec{w}</m>. 
+  </p>
+  <p>
+    The vector projection of <m>\vec{v}</m> onto <m>\vec{w}</m> measures the vector part of <m>\vec{v}</m> that is parallel to <m>\vec{w}</m>, where as the scalar projection of <m>\vec{v}</m> onto <m>\vec{w}</m> measures the length of <m>\vec{v}</m> that is parallel to <m>\vec{w}</m>. If you subtract the projection of <m>\vec{v}</m> onto <m>\vec{w}</m> from <m>\vec{v}</m> (<m>\vec{v} -proj_{\vec{w}} \vec{v}</m>), the result will the part of <m>\vec{v}</m> that is orthogonal to <m>\vec{w}</m> because <m>\vec{v} -proj_{\vec{w}} \vec{v}</m> has subtracted out ALL of <m>\vec{v}</m> that is parallel to <m>\vec{w}</m>.
   </p>
 </statement>
 </definition>

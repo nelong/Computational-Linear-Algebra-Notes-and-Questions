@@ -47,7 +47,7 @@
   <title>Writing Solution Sets</title>
   
   
-<activity>
+<activity xml:id="writefreevar">
   <statement>
     <p>For the matrix below, verify that the matrix is in rref (reduced row echelon form) and treat the matrix as an augmented matrix for a system of linear equations. Write out the corresponding system of equations. Use this system of equations to write each variable in terms of just free variables and constants.
       <me>

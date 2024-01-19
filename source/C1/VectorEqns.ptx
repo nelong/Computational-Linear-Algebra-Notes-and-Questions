@@ -84,6 +84,22 @@
     </p>
   </task>
 </activity>
+<p>
+  You can use the idea from <xref ref="writefreevar" /> to write the solution set as a vector of the variables <m>x_1, \ldots , x_n</m> where each variable is written in terms of the free variables and constants. This vector form in terms of the free variables is called the parametric form of the solution set.
+</p>
+<question>
+  <p>
+    Give the parametric form of the solution set for the system given by the augmented matrix below.
+    <me>
+      \begin{bmatrix}
+        1 \amp 0 \amp 3 \amp 0 \amp -4 \amp 0 \amp -1 \amp 5 \\ 
+        0 \amp 1 \amp 4 \amp 0 \amp 3 \amp 0 \amp 2 \amp -6 \\ 
+        0 \amp 0 \amp 0 \amp 1 \amp -2 \amp 0 \amp 1 \amp 2 \\ 
+        0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 3 \amp 0 \\ 
+      \end{bmatrix}
+    </me>
+  </p>
+</question>
 <activity>
   <task>
   <p>
