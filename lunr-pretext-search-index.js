@@ -457,7 +457,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.5",
   "title": "Vectors and Vector Calculations",
-  "body": " Vectors and Vector Calculations   In order to distinguish vectors (as being more than just by matrices), we will use the arrow notation and lower case symbols like and to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if , then the second component of is the scalar . The size of a vector in is the number of components the vector has. In later work, we will deal with a much more general notion of vectors that will not have components like vectors in . Recall that two vectors in are equal if and only if all of their components are equal.  Geometrically, we will view vectors in as an arrow which change in the -th coordinate being given by the -th component of the vector. For instance, the vector will have a plot in 3-dimensions that looks like    Vectors do not have a particular beginning or ending point so all of the blue vectors in the following plot are representations of .   Vectors can be added together to measure the net change (done by completing one vector, then the other). Algebraically, vector addition is done componentwise. If and , then .   Many other vector operations can be done componentwise, such as scalar multiplication and subtraction. If and , then . If , then . Geometrically, scalar multiplication will stretch (and flip if ) the arrow for a vector.    The Dot Product    Let , then the dot product of with is the scalar value given by     Sometimes we are interested in the total amount of change and not what direction a vector is in. The magnitude (or length) of a vector is given by the following A unit vector is a vector of length 1.    Let , then the vectors and are orthogonal if .      Use the Desmos interact embeded below to change the end points of our two vectors. Based on what you see about the value of the dot product for different configurations of vectors, answer the questions below    How does changing the length of the vectors change the value of the dot product?  How does changing the angle of the vectors change the value of the dot product?     The projection of a vector  onto a vector gives the vector part of that is parallel to and is computed as This is sometimes called the vector projection. The right most part of the definition of the projection vector shows that the projection of onto will be a scalar ( )times the unit vector in the direction of . The scalar is referred to as the scalar projection of onto .  The vector projection of onto measures the vector part of that is parallel to , where as the scalar projection of onto measures the length of that is parallel to . If you subtract the projection of onto from ( ), the result will the part of that is orthogonal to because has subtracted out ALL of that is parallel to .     If is the angle between two vectors and , then     Let , , and .   Find a unit vector that is in the opposite direction of   Can you choose and such that ?  Does make sense? Why or why not?  What angle does make with ?  What angle does make with the -axis?  How much of is parallel to ?  How much of is parallel to ?  How much of is parallel to ?  How much of is orthogonal to ?  Find a unit vector that is orthogonal to . How many such vectors are there?       Vector Equations    A linear combination of a set is a vector of the form where and . Note that will not usually be in even though .     Prove that the system of equations given by has the same set of solutions as the vector equation . In other words, prove that is a solution to the vector equation iff is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.    Solve the following vector equation:   Give an example of a vector such that the equation has no solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has no solutions or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.    Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.    Write each of the locations given by a red dot as a linear combination of and .    Can you write every location in the plane of as a linear combination of and ? Either explain why you can write every point as a linear combination of and or give a point that cannot be written as a linear combination of and .    "
+  "body": " Vectors and Vector Calculations   In order to distinguish vectors (as being more than just by matrices), we will use the arrow notation and lower case symbols like and to denote vectors. Unless otherwise stated, we will use column vectors. For instance, if , then the second component of is the scalar . The size of a vector in is the number of components the vector has. In later work, we will deal with a much more general notion of vectors that will not have components like vectors in . Recall that two vectors in are equal if and only if all of their components are equal.  Geometrically, we will view vectors in as an arrow which change in the -th coordinate being given by the -th component of the vector. For instance, the vector will have a plot in 3-dimensions that looks like    Vectors do not have a particular beginning or ending point so all of the blue vectors in the following plot are representations of .   Vectors can be added together to measure the net change (done by completing one vector, then the other). Algebraically, vector addition is done componentwise. If and , then .   Many other vector operations can be done componentwise, such as scalar multiplication and subtraction. If and , then . If , then . Geometrically, scalar multiplication will stretch (and flip if ) the arrow for a vector.    The Dot Product    Let , then the dot product of with is the scalar value given by     Sometimes we are interested in the total amount of change and not what direction a vector is in. The magnitude (or length) of a vector is given by the following A unit vector is a vector of length 1.    Let , then the vectors and are orthogonal if .      Use the Desmos interact embeded below to change the end points of our two vectors. Based on what you see about the value of the dot product for different configurations of vectors, answer the questions below    How does changing the length of the vectors change the value of the dot product?  How does changing the angle of the vectors change the value of the dot product?     The projection of a vector  onto a vector gives the vector part of that is parallel to and is computed as This is sometimes called the vector projection. The right most part of the definition of the projection vector shows that the projection of onto will be a scalar ( )times the unit vector in the direction of . The scalar is referred to as the scalar projection of onto .  The vector projection of onto measures the vector part of that is parallel to , where as the scalar projection of onto measures the length of that is parallel to . If you subtract the projection of onto from ( ), the result will the part of that is orthogonal to because has subtracted out ALL of that is parallel to .     If is the angle between two vectors and , then     Let , , and .   Find a unit vector that is in the opposite direction of   Can you choose and such that ?  Does make sense? Why or why not?  What angle does make with ?  What angle does make with the -axis?  How much of is parallel to ?  How much of is parallel to ?  How much of is parallel to ?  How much of is orthogonal to ?  Find a unit vector that is orthogonal to . How many such vectors are there?      "
 },
 {
   "id": "p-130",
@@ -532,51 +532,6 @@ var ptx_lunr_docs = [
   "body": " Let , , and .   Find a unit vector that is in the opposite direction of   Can you choose and such that ?  Does make sense? Why or why not?  What angle does make with ?  What angle does make with the -axis?  How much of is parallel to ?  How much of is parallel to ?  How much of is parallel to ?  How much of is orthogonal to ?  Find a unit vector that is orthogonal to . How many such vectors are there?    "
 },
 {
-  "id": "definition-6",
-  "level": "2",
-  "url": "sec_vector_calc.html#definition-6",
-  "type": "Definition",
-  "number": "1.5.6",
-  "title": "",
-  "body": "  A linear combination of a set is a vector of the form where and . Note that will not usually be in even though .   "
-},
-{
-  "id": "q41",
-  "level": "2",
-  "url": "sec_vector_calc.html#q41",
-  "type": "Investigation",
-  "number": "1.5.2",
-  "title": "",
-  "body": " Prove that the system of equations given by has the same set of solutions as the vector equation . In other words, prove that is a solution to the vector equation iff is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.  "
-},
-{
-  "id": "s1act",
-  "level": "2",
-  "url": "sec_vector_calc.html#s1act",
-  "type": "Activity",
-  "number": "1.5.3",
-  "title": "",
-  "body": " Solve the following vector equation:   Give an example of a vector such that the equation has no solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has no solutions or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  "
-},
-{
-  "id": "s2act",
-  "level": "2",
-  "url": "sec_vector_calc.html#s2act",
-  "type": "Activity",
-  "number": "1.5.4",
-  "title": "",
-  "body": " Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  "
-},
-{
-  "id": "activity-22",
-  "level": "2",
-  "url": "sec_vector_calc.html#activity-22",
-  "type": "Activity",
-  "number": "1.5.5",
-  "title": "",
-  "body": " Write each of the locations given by a red dot as a linear combination of and .    Can you write every location in the plane of as a linear combination of and ? Either explain why you can write every point as a linear combination of and or give a point that cannot be written as a linear combination of and .  "
-},
-{
   "id": "sec_vector_eqns",
   "level": "1",
   "url": "sec_vector_eqns.html",
@@ -586,9 +541,9 @@ var ptx_lunr_docs = [
   "body": " Vector Equations    A linear combination of a set is a vector of the form where and . Note that will not usually be in even though .     Prove that the system of equations given by has the same set of solutions as the vector equation . In other words, prove that is a solution to the vector equation iff is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.    Solve the following vector equation:   Give an example of a vector such that the equation has no solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.  Give an example of a vector such that the equation has no solutions or explain why no such vector exists.  Give an example of a vector such that the equation has exactly 1 solution or explain why no such vector exists.    Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.  Can you write as a linear combination of and ? Justify your answer.   You can use the idea from to write the solution set as a vector of the variables where each variable is written in terms of the free variables and constants. This vector form in terms of the free variables is called the parametric form of the solution set.   Give the parametric form of the solution set for the system given by the augmented matrix below.     Write each of the locations given by a red dot as a linear combination of and .    Can you write every location in the plane of as a linear combination of and ? Either explain why you can write every point as a linear combination of and or give a point that cannot be written as a linear combination of and .   "
 },
 {
-  "id": "definition-7",
+  "id": "definition-6",
   "level": "2",
-  "url": "sec_vector_eqns.html#definition-7",
+  "url": "sec_vector_eqns.html#definition-6",
   "type": "Definition",
   "number": "1.6.1",
   "title": "",
@@ -631,9 +586,9 @@ var ptx_lunr_docs = [
   "body": " Give the parametric form of the solution set for the system given by the augmented matrix below.   "
 },
 {
-  "id": "activity-25",
+  "id": "activity-22",
   "level": "2",
-  "url": "sec_vector_eqns.html#activity-25",
+  "url": "sec_vector_eqns.html#activity-22",
   "type": "Activity",
   "number": "1.6.4",
   "title": "",
@@ -649,36 +604,36 @@ var ptx_lunr_docs = [
   "body": " Span (both a noun and a verb)   Span as a Noun   Let be a set of vectors, . We define the span of , denoted , as the set of all linear combinations of vectors from . That is,     Look back at and and restate each of the questions in terms of span. For instance, part 1 of could be stated as \"Show that is in the span of .\"   Note that the set might not be finite but the number of vectors involved in the summation for a linear combination is finite. Also, remember to treat as a set and not a vector. Remember that the use of span in is a noun.  The following are equivalent questions:  Is a vector in ?  Does have a solution?  A few other related questions are:  When will there be a solution to ?  When will there be a UNIQUE solution to ?  How can we describe as a collection of vectors?      Span as a Verb   A set of vectors spans a vector space if . In other words, spans a vector space if every vector in can be written as a linear combination from the set .    Does span ?  Does span ?  Does span ?  Does span ?    "
 },
 {
-  "id": "definition-8",
+  "id": "definition-7",
   "level": "2",
-  "url": "span.html#definition-8",
+  "url": "span.html#definition-7",
   "type": "Definition",
   "number": "1.7.1",
   "title": "",
   "body": " Let be a set of vectors, . We define the span of , denoted , as the set of all linear combinations of vectors from . That is,   "
 },
 {
-  "id": "activity-26",
+  "id": "activity-23",
   "level": "2",
-  "url": "span.html#activity-26",
+  "url": "span.html#activity-23",
   "type": "Activity",
   "number": "1.7.1",
   "title": "",
   "body": " Look back at and and restate each of the questions in terms of span. For instance, part 1 of could be stated as \"Show that is in the span of .\"  "
 },
 {
-  "id": "definition-9",
+  "id": "definition-8",
   "level": "2",
-  "url": "span.html#definition-9",
+  "url": "span.html#definition-8",
   "type": "Definition",
   "number": "1.7.2",
   "title": "",
   "body": " A set of vectors spans a vector space if . In other words, spans a vector space if every vector in can be written as a linear combination from the set .  "
 },
 {
-  "id": "activity-27",
+  "id": "activity-24",
   "level": "2",
-  "url": "span.html#activity-27",
+  "url": "span.html#activity-24",
   "type": "Activity",
   "number": "1.7.2",
   "title": "",
@@ -694,29 +649,38 @@ var ptx_lunr_docs = [
   "body": " Linear Independence  We have seen how vector equations relate to a system of equations and how to frame different questions in terms of whether it is possible to find a linear combination from a set that equals a target vector. This was the same as asking if our target vector was in the span of . When we looked at vector equations, we also looked at whether there was a unique linear combination or whether there are many ways to write a target vector as a linear combination.  In this section we will introduce the idea of linear independence and how that relates to the uniqueness of these linear combinations. Let's consider the homogeneous vector equation: Notice that this always has a solution. What is it?  Is it possible to have another solution to this equation? Let's generate a couple of examples.   Give a set of two vectors from , and , such that has more than one solution. Justify your answer.  Give a set of two vectors from , and , such that has only one solution. How do you know there is only one solution?     A set of vectors is linearly independent if the only linear combination of elements of that equals the zero vector is the trivial linear combination. In other words, being a linear independent set implies that if where , then all .  A set of vectors is linearly dependent if the set is not linearly independent. More specifically, there exists a solution to where and at least one of the .      Is the set linearly independent?      Is the set linearly independent?     Choose a vector so that the set is linearly independent, where .  Is your choice of in ? Show why or why not.   "
 },
 {
-  "id": "activity-28",
+  "id": "activity-25",
   "level": "2",
-  "url": "lin_indep.html#activity-28",
+  "url": "lin_indep.html#activity-25",
   "type": "Activity",
   "number": "1.8.1",
   "title": "",
   "body": " Give a set of two vectors from , and , such that has more than one solution. Justify your answer.  Give a set of two vectors from , and , such that has only one solution. How do you know there is only one solution?  "
 },
 {
-  "id": "definition-10",
+  "id": "definition-9",
   "level": "2",
-  "url": "lin_indep.html#definition-10",
+  "url": "lin_indep.html#definition-9",
   "type": "Definition",
   "number": "1.8.1",
   "title": "",
   "body": "  A set of vectors is linearly independent if the only linear combination of elements of that equals the zero vector is the trivial linear combination. In other words, being a linear independent set implies that if where , then all .  A set of vectors is linearly dependent if the set is not linearly independent. More specifically, there exists a solution to where and at least one of the .   "
 },
 {
+  "id": "investigation-5",
+  "level": "2",
+  "url": "lin_indep.html#investigation-5",
+  "type": "Investigation",
+  "number": "1.8.2",
+  "title": "",
+  "body": "  Is the set linearly independent?   "
+},
+{
   "id": "investigation-6",
   "level": "2",
   "url": "lin_indep.html#investigation-6",
   "type": "Investigation",
-  "number": "1.8.2",
+  "number": "1.8.3",
   "title": "",
   "body": "  Is the set linearly independent?   "
 },
@@ -724,15 +688,6 @@ var ptx_lunr_docs = [
   "id": "investigation-7",
   "level": "2",
   "url": "lin_indep.html#investigation-7",
-  "type": "Investigation",
-  "number": "1.8.3",
-  "title": "",
-  "body": "  Is the set linearly independent?   "
-},
-{
-  "id": "investigation-8",
-  "level": "2",
-  "url": "lin_indep.html#investigation-8",
   "type": "Investigation",
   "number": "1.8.4",
   "title": "",

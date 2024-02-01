@@ -173,17 +173,14 @@ sagecell.makeSagecell({
 </li>
 <li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="sec_vector_calc.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Vectors and Vector Calculations</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_vector_calc.html#subsection-7" class="internal"><span class="codenumber">1.5.1</span> <span class="title">The Dot Product</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_vector_calc.html#subsection-8" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Vector Equations</span></a></div></li>
-</ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_vector_calc.html#subsection-7" class="internal"><span class="codenumber">1.5.1</span> <span class="title">The Dot Product</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_vector_eqns.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Vector Equations</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="span.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Span (both a noun and a verb)</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="span.html#subsection-9" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Span as a Noun</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="span.html#subsection-10" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Span as a Verb</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="span.html#subsection-8" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Span as a Noun</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="span.html#subsection-9" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Span as a Verb</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="lin_indep.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Linear Independence</span></a></div></li>
@@ -308,122 +305,7 @@ proj_{\vec{w}} \vec{v} = \frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}} \vec{w}
 </div></li>
 <li id="li-56"><div class="para" id="p-derived-li-56">Find a unit vector that is orthogonal to <span class="process-math">\(\vec{v}= \langle-1,2,5\rangle\text{.}\)</span> How many such vectors are there?</div></li>
 </ol>
-</div></article></details></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="space"> </span><span class="title">Vector Equations</span>
-</h3>
-<article class="definition definition-like" id="definition-6"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5.6</span><span class="period">.</span>
-</h4>
-<div class="para logical" id="p-145">
-<div class="para">A <dfn class="terminology">linear combination</dfn> of a set <span class="process-math">\(S\)</span> is a vector of the form</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\sum_{i=1}^n c_i \vec{v_i} = c_1 \vec{v_1} + c_2 \vec{v_2}+...+c_k \vec{v_k}
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(\vec{v}_i \in S\)</span> and <span class="process-math">\(c_i \in \mathbb{R}\text{.}\)</span> Note that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\sum_{i=1}^n c_i \vec{v_i}
-\end{equation*}
-</div>
-<div class="para">will not usually be in <span class="process-math">\(S\)</span> even though <span class="process-math">\(\vec{v}_i \in S\text{.}\)</span>
-</div>
-</div></article><article class="investigation project-like" id="q41"><h4 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span>
-</h4>
-<div class="para logical" id="p-146">
-<div class="para">Prove that the system of equations given by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{rcrcrcrcr}
-a_{11} x_1  \amp +\amp  a_{12} x_2 \amp +\amp  ... \amp +\amp   a_{1n}x_n \amp =\amp  b_1 \\ % -1  3
-a_{21} x_1  \amp +\amp  a_{22} x_2 \amp +\amp  ... \amp +\amp   a_{2n}x_n \amp =\amp  b_2 \\
-\vdots  \amp  \amp  \vdots \amp  \amp   \amp  \amp   \vdots \amp \amp  \vdots \\
-a_{m1} x_1  \amp +\amp  a_{m2} x_2 \amp +\amp  ... \amp +\amp   a_{mn}x_n \amp =\amp  b_m
-\end{array}
-\end{equation*}
-</div>
-<div class="para">has the same set of solutions as the vector equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x_1 \begin{bmatrix}a_{11}\\a_{21}\\\vdots\\a_{m1}\end{bmatrix}+x_2 \begin{bmatrix}a_{12}\\a_{22}\\\vdots\\a_{m2}\end{bmatrix}+ \cdots x_n \begin{bmatrix}a_{1n}\\a_{2n}\\\vdots\\a_{mn}\end{bmatrix}=\begin{bmatrix}b_1\\b_2\\\vdots\\b_m\end{bmatrix}\text{.}
-\end{equation*}
-</div>
-<div class="para">In other words, prove that <span class="process-math">\((c_1,c_2,...,c_n)\)</span> is a solution to the vector equation iff <span class="process-math">\((c_1,c_2,...,c_n)\)</span> is a solution to the system of linear equations. Make sure you clearly connect the ideas in your proof and do not make an argument that these equations look similar.</div>
-</div></article><article class="activity project-like" id="s1act"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span>
-</h4>
-<article class="task exercise-like" id="task-51"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para logical" id="p-147">
-<div class="para">Solve the following vector equation:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x_1 \colvec{1\\1}+x_2 \colvec{-1\\1} = \colvec{3\\-4}
-\end{equation*}
-</div>
-</div></article><article class="task exercise-like" id="task-52"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para logical" id="p-148">
-<div class="para">Give an example of a vector <span class="process-math">\(\colvec{a\\b\\c}\)</span> such that the equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x_1\colvec{1\\1\\0}+x_2 \colvec{0\\0\\1}=\colvec{a\\b\\c}
-\end{equation*}
-</div>
-<div class="para">has no solution or explain why no such vector exists.</div>
-</div></article><article class="task exercise-like" id="task-53"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para logical" id="p-149">
-<div class="para">Give an example of a vector <span class="process-math">\(\colvec{a\\b\\c}\)</span> such that the equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x_1\colvec{1\\1\\0}+x_2 \colvec{0\\0\\1}=\colvec{a\\b\\c}
-\end{equation*}
-</div>
-<div class="para">has exactly 1 solution or explain why no such vector exists.</div>
-</div></article><article class="task exercise-like" id="task-54"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para logical" id="p-150">
-<div class="para">Give an example of a vector <span class="process-math">\(\colvec{a\\b\\c}\)</span> such that the equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x_1\colvec{1\\1\\0}+x_2 \colvec{0\\0\\1}+x_3 \colvec{1\\1\\1}=\colvec{a\\b\\c}
-\end{equation*}
-</div>
-<div class="para">has exactly 1 solution or explain why no such vector exists.</div>
-</div></article><article class="task exercise-like" id="task-55"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para logical" id="p-151">
-<div class="para">Give an example of a vector <span class="process-math">\(\colvec{a\\b\\c}\)</span> such that the equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x_1\colvec{1\\1\\0}+x_2 \colvec{0\\0\\1}+x_3 \colvec{1\\1\\1}=\colvec{a\\b\\c}
-\end{equation*}
-</div>
-<div class="para">has no solutions or explain why no such vector exists.</div>
-</div></article><article class="task exercise-like" id="task-56"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para logical" id="p-152">
-<div class="para">Give an example of a vector <span class="process-math">\(\colvec{a\\b\\c}\)</span> such that the equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x_1\colvec{1\\1\\0}+x_2 \colvec{0\\0\\1}+x_3 \colvec{a\\b\\c}=\colvec{7\\0\\-2}
-\end{equation*}
-</div>
-<div class="para">has exactly 1 solution or explain why no such vector exists.</div>
-</div></article></article><article class="activity project-like" id="s2act"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span>
-</h4>
-<article class="task exercise-like" id="task-57"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-153">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\2\\4}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{2\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{2\\-1\\1}\text{?}\)</span> Justify your answer.</div></article><article class="task exercise-like" id="task-58"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-154">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\0\\0}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{2\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{2\\-1\\1}\text{?}\)</span> Justify your answer.</div></article><article class="task exercise-like" id="task-59"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-155">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\3\\-1}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{2\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{2\\-1\\1}\text{?}\)</span> Justify your answer.</div></article><article class="task exercise-like" id="task-60"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="p-156">Can you write <span class="process-math">\(\vec{b}=\colvec{2\\0\\4}\)</span> as a linear combination of <span class="process-math">\(\vec{v_1}=\colvec{1\\1\\1}\)</span> and <span class="process-math">\(\vec{v_2}=\colvec{-1\\1\\1}\text{?}\)</span> Justify your answer.</div></article></article><article class="activity project-like" id="activity-22"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="period">.</span>
-</h4>
-<article class="task exercise-like" id="task-61"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-157">Write each of the locations given by a red dot as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\text{.}\)</span>
-</div>
-<figure class="figure figure-like" id="lincombplot"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/./LinearComboMesh.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article><article class="task exercise-like" id="task-62"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-158">Can you write every location in the plane of <a href="" class="xref" data-knowl="./knowl/xref/lincombplot.html" title="Figure 1.5.7">Figure 1.5.7</a> as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\text{?}\)</span> Either explain why you can write every point as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\)</span> or give a point that cannot be written as a linear combination of <span class="process-math">\(\vec{u}\)</span> and <span class="process-math">\(\vec{v}\text{.}\)</span>
-</div></article></article></section></section></div>
+</div></article></details></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="Geo_App.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_vector_eqns.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
