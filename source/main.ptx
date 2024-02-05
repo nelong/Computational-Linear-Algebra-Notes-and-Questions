@@ -38,8 +38,8 @@
     </frontmatter>
 
     <xi:include href="./C1.ptx" />
-    <!-- <xi:include href="./C2.ptx" />
-    <xi:include href="./C3.ptx" /> -->
+    <xi:include href="./C2.ptx" />
+    <!-- <xi:include href="./C3.ptx" /> -->
 
     <backmatter xml:id="backmatter">
       <title>Backmatter</title>
