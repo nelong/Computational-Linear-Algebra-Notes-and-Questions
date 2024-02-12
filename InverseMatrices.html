@@ -228,11 +228,11 @@ window.MathJax = {
 </div></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="space"> </span><span class="title">Computing Inverses</span>
 </h3>
-<article class="investigation project-like" id="investigation-31"><h4 class="heading">
+<article class="investigation project-like" id="investigation-28"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="introduction-23"><div class="para" id="p-269">We will look at a way to find the inverse matrix of <span class="process-math">\(A\)</span> in terms of the matrix-vector product and how that can be used as a representation of matrix multiplication.</div></div>
-<article class="task exercise-like" id="task-103"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<article class="task exercise-like" id="task-105"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="p-270">
 <div class="para">We want to find a matrix <span class="process-math">\(C\)</span> such that <span class="process-math">\(AC=Id\text{.}\)</span> So let’s expand <span class="process-math">\(C\)</span> as columns.</div>
 <div class="displaymath process-math">
@@ -247,7 +247,7 @@ A\vec{c}_1=\colvec{1 \\ 0\\0\\\vdots\\0}, \; A\vec{c}_2=\colvec{0 \\ 1\\0\\\vdot
 \end{equation*}
 </div>
 <div class="para">How would we find out if there were any solutions to these matrix equations?</div>
-</div></article><article class="task exercise-like" id="task-104"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+</div></article><article class="task exercise-like" id="task-106"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="p-271">How could you find solutions to all of these matrix equations all at once?</div></article></article><div class="para" id="p-272">In general computing the inverse of a matrix takes more time and operations than solving a system of equations. For this reason, it is generally easier to find and solve a related system of equations problem than to compute the inverse matrix. We will outline a few ways to find inverse matrices and compute a few small examples.</div>
 <article class="investigation project-like" id="q11"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
@@ -255,28 +255,28 @@ A\vec{c}_1=\colvec{1 \\ 0\\0\\\vdots\\0}, \; A\vec{c}_2=\colvec{0 \\ 1\\0\\\vdot
 <div class="para" id="p-273">Any sequence of elementary row operations that reduces <span class="process-math">\(A\)</span> to <span class="process-math">\(Id_n\)</span> also transforms <span class="process-math">\(Id_n\)</span> into <span class="process-math">\(A^{-1}\text{.}\)</span>
 </div></article><div class="para" id="p-274">The previous result shows that computing inverses is equivalent to a row reduction problem. In particular, if <span class="process-math">\(A\)</span> is invertible, then reducing <span class="process-math">\([ A \quad | \quad Id_n]\)</span> to reduced row echelon form will produce the matrix <span class="process-math">\([ Id_n \;| \; A^{-1}]\text{.}\)</span>
 </div>
-<article class="activity project-like" id="activity-28"><h4 class="heading">
+<article class="activity project-like" id="activity-29"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
 </h4>
-<article class="task exercise-like" id="task-105"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<article class="task exercise-like" id="task-107"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="p-275">Use the result of the previous investigation to find the inverse of the matrix <span class="process-math">\(\begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}\text{.}\)</span> Check your work by computing <span class="process-math">\(AB=Id_n\)</span> and <span class="process-math">\(BA=Id_n\)</span> for the matrix you think is the inverse of <span class="process-math">\(A\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-106"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+</div></article><article class="task exercise-like" id="task-108"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="p-276">Use the result of the previous investigation to find the inverse of the matrix <span class="process-math">\(\begin{bmatrix} 1 \amp 2 \\ 2 \amp 4 \end{bmatrix}\text{.}\)</span> Check your work by computing <span class="process-math">\(AB=Id_n\)</span> and <span class="process-math">\(BA=Id_n\)</span> for the matrix you think is the inverse of <span class="process-math">\(A\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-107"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+</div></article><article class="task exercise-like" id="task-109"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="p-277">Use the idea above to compute the inverse of <span class="process-math">\(\begin{bmatrix} a\amp b\\c\amp d \end{bmatrix}\text{.}\)</span> Be sure to note any assumptions you will need to make in order to reduce <span class="process-math">\([ A \; | \; Id_n]\)</span> to <span class="process-math">\([ Id_n \; | \; A^{-1}]\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-108"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+</div></article><article class="task exercise-like" id="task-110"><h5 class="heading"><span class="codenumber">(d)</span></h5>
 <div class="para" id="p-278">If <span class="process-math">\(A=\begin{bmatrix}1\amp  0\amp  1 \\0\amp 2\amp -1 \\ 0\amp 6\amp -1\end{bmatrix}\text{,}\)</span> find <span class="process-math">\(A^{-1}\)</span> and check that <span class="process-math">\(A A^{-1}=Id_3\text{.}\)</span>
 </div></article></article><details id="exercise-1" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h4></summary><article class="exercise exercise-like"><div class="introduction" id="introduction-24"><div class="para" id="p-279">If <span class="process-math">\(A=\begin{bmatrix} 0\amp -1\\3\amp 4 \end{bmatrix}\text{,}\)</span> find <span class="process-math">\(A^{-1}\)</span> and use your answer to solve <span class="process-math">\(A\vec{x} = \vec{b}\)</span> if:</div></div>
-<article class="task exercise-like" id="task-109"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-280"><span class="process-math">\(\vec{b} =\colvec{3\\ 1}\)</span></div></article><article class="task exercise-like" id="task-110"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-281"><span class="process-math">\(\vec{b} =\colvec{-1\\ -2}\)</span></div></article><article class="task exercise-like" id="task-111"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-282"><span class="process-math">\(\vec{b} =\colvec{0\\ 5}\)</span></div></article><article class="task exercise-like" id="task-112"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="p-283"><span class="process-math">\(\vec{b} =\colvec{\alpha\\ \beta}\)</span></div></article></article></details><article class="investigation project-like" id="investigation-33"><h4 class="heading">
+<article class="task exercise-like" id="task-111"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-280"><span class="process-math">\(\vec{b} =\colvec{3\\ 1}\)</span></div></article><article class="task exercise-like" id="task-112"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-281"><span class="process-math">\(\vec{b} =\colvec{-1\\ -2}\)</span></div></article><article class="task exercise-like" id="task-113"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-282"><span class="process-math">\(\vec{b} =\colvec{0\\ 5}\)</span></div></article><article class="task exercise-like" id="task-114"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-283"><span class="process-math">\(\vec{b} =\colvec{\alpha\\ \beta}\)</span></div></article></article></details><article class="investigation project-like" id="investigation-30"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-284">Your friend Nick, who thinks he knows everything, claims that <span class="process-math">\((AB)^{-1}=A^{-1}B^{-1}\)</span> because that’s how exponents work. Is he right? Justify your answer like you are going to have to convince Nick.</div> <details id="hint-6" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-285">Mulitply Nick’s Result on both sides by the matrix <span class="process-math">\((AB)\)</span> and simplify.</div></div></details></article><article class="investigation project-like" id="investigation-34"><h4 class="heading">
+<div class="para" id="p-284">Your friend Nick, who thinks he knows everything, claims that <span class="process-math">\((AB)^{-1}=A^{-1}B^{-1}\)</span> because that’s how exponents work. Is he right? Justify your answer like you are going to have to convince Nick.</div> <details id="hint-6" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-285">Mulitply Nick’s Result on both sides by the matrix <span class="process-math">\((AB)\)</span> and simplify.</div></div></details></article><article class="investigation project-like" id="investigation-31"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
 </h4>
 <div class="para" id="p-286">Nick makes another concerning statement about how algebra works with matrices. Specifically, he claims that if the product of two matrices is zero, then one of the two matrices must be the zero matrix. He writes <span class="process-math">\(A B =0 \Rightarrow A=0\)</span> or <span class="process-math">\(B=0\)</span> on the board to justify his idea. Is he wrong again or do matrices work like this?</div> <details id="hint-7" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-287">Come up with an example of matrices <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> that will demonstrate is claim his false.</div></div></details></article></section></section></div>

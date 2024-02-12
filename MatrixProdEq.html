@@ -234,12 +234,12 @@ A\vec{x} = x_1 \colvec{a_{11}\\a_{21}\\\vdots\\a_{m1}}+x_2 \colvec{a_{12}\\a_{22
 \end{equation*}
 </div>
 <div class="para"><span class="process-math">\(\mathbb{R}^m\text{.}\)</span></div>
-</div></article><article class="investigation project-like" id="investigation-8"><h4 class="heading">
+</div></article><article class="investigation project-like" id="investigation-5"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
 </h4>
 <div class="para" id="p-183">If <span class="process-math">\(A\)</span> is a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix, then <span class="process-math">\(A\vec{x} \in \mathbb{R}^\diamondsuit\)</span> for what value of <span class="process-math">\(\diamondsuit\text{?}\)</span>
 </div></article><div class="para" id="p-184">It should not surprise you that you can multiply a scalar multiple of a vector by a matrix by factoring out the scalar. In mathematical notation, <span class="process-math">\(A (k \vec{v}) = k (A\vec{v})\text{.}\)</span> Additionally, you can apply the scalar multiplication to the matrix. In other words, <span class="process-math">\(A (k \vec{v}) = k (A\vec{v}) = (kA)\vec{v}\text{.}\)</span> These kind of manipulations will be discussed more when we work with matrix operations later, but you may find these facts useful in your work right now. You should take time to write out the details of any of these arithmetic ideas that you think would be useful in your work.</div>
-<article class="activity project-like" id="activity-27"><h4 class="heading">
+<article class="activity project-like" id="activity-28"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="p-185">
@@ -253,10 +253,10 @@ A=\begin{bmatrix} 1\amp 3 \amp 4 \amp 5\\2 \amp 1 \amp 0 \amp 1\end{bmatrix} \te
 </div>
 </div></article><div class="para" id="p-186">The matrix <span class="process-math">\(A\)</span> can be seen from a column vector form as <span class="process-math">\(A=[ \vec{a}_1 \; \vec{a}_2 \; \ldots \; \vec{a}_n]\)</span> which means that we can think of the product of <span class="process-math">\(A\)</span> and <span class="process-math">\(\vec{x}\)</span> as <span class="process-math">\(A\vec{x}= [ \vec{a}_1 \; \vec{a}_2 \; \ldots \; \vec{a}_n] \colvec{x_1 \\x_2\\ \vdots \\x_n}=x_1\vec{a}_1+x_2 \vec{a}_2 +\ldots+x_n\vec{a}_n\text{.}\)</span>
 </div>
-<article class="investigation project-like" id="investigation-9"><h4 class="heading">
+<article class="investigation project-like" id="investigation-6"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
 </h4>
-<article class="task exercise-like" id="task-71"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<article class="task exercise-like" id="task-73"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="p-187">
 <div class="para">Write out the <span class="process-math">\(k\)</span>-th component of the resulting vector of the product</div>
 <div class="displaymath process-math">
@@ -265,11 +265,11 @@ A=\begin{bmatrix} 1\amp 3 \amp 4 \amp 5\\2 \amp 1 \amp 0 \amp 1\end{bmatrix} \te
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="solution-1" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-188"><span class="process-math">\(a_{k1}x_1+a_{k2}x_2+\cdots + a_{kn}x_n\)</span></div></div></details></div></article><article class="task exercise-like" id="task-72"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="solutions"><details id="solution-1" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-188"><span class="process-math">\(a_{k1}x_1+a_{k2}x_2+\cdots + a_{kn}x_n\)</span></div></div></details></div></article><article class="task exercise-like" id="task-74"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="p-189">How can you express the result of the matrix-vector product in terms of <span class="process-math">\(\vec{x}\)</span> and the rows of <span class="process-math">\(A\text{?}\)</span>
 </div>
 <div class="solutions"><details id="solution-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-190">The <span class="process-math">\(k\)</span>-th component of the matrix-vector product is the dot product of row <span class="process-math">\(k\)</span> of <span class="process-math">\(A\)</span> with <span class="process-math">\(\vec{x}\text{.}\)</span>
-</div></div></details></div></article><article class="task exercise-like" id="task-73"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+</div></div></details></div></article><article class="task exercise-like" id="task-75"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="p-191">How can you express the result of the matrix-vector product in terms of <span class="process-math">\(\vec{x}\)</span> and the columns of <span class="process-math">\(A\text{?}\)</span>
 </div>
 <div class="solutions"><details id="solution-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-192">One way to view this is as a linear combination of the columns of <span class="process-math">\(A\)</span> with the coefficient on the <span class="process-math">\(k\)</span>-th column of <span class="process-math">\(A\)</span> being <span class="process-math">\(x_k\text{.}\)</span>
@@ -296,13 +296,13 @@ a_{m1} x_1  \amp +\amp  a_{m2} x_2 \amp +\amp  ... \amp +\amp   a_{mn}x_n \amp =
 \end{equation*}
 </div>
 </div>
-<article class="investigation project-like" id="investigation-10"><h4 class="heading">
+<article class="investigation project-like" id="investigation-7"><h4 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="introduction-15"><div class="para" id="p-194">Write each of the following as a matrix equation, a vector equation, and system of equations. You need to write out the exact corresponding vector equation, matrix equation, and system of equations, <em class="emphasis">not</em> some equivalent form.</div></div>
-<article class="task exercise-like" id="task-74"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-195"><span class="process-math">\(\begin{bmatrix} 1 \amp  2\amp  3\\4\amp 5\amp 6\\7\amp 8\amp 9 \end{bmatrix} \colvec{x_1\\x_2\\x_3} =\colvec{a\\b\\c}\)</span></div></article><article class="task exercise-like" id="task-75"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-196"><span class="process-math">\(a_1 \colvec{1\\2\\5}+\colvec{3\\0\\-1}+a_2 \colvec{-1\\0\\2} =\colvec{4\\5\\0}\)</span></div></article><article class="task exercise-like" id="task-76"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<article class="task exercise-like" id="task-76"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-195"><span class="process-math">\(\begin{bmatrix} 1 \amp  2\amp  3\\4\amp 5\amp 6\\7\amp 8\amp 9 \end{bmatrix} \colvec{x_1\\x_2\\x_3} =\colvec{a\\b\\c}\)</span></div></article><article class="task exercise-like" id="task-77"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-196"><span class="process-math">\(a_1 \colvec{1\\2\\5}+\colvec{3\\0\\-1}+a_2 \colvec{-1\\0\\2} =\colvec{4\\5\\0}\)</span></div></article><article class="task exercise-like" id="task-78"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para logical" id="p-197"><div class="displaymath process-math" id="md-26">
 \begin{align*}
 2x_1+3x_2\phantom{+3x_3}\amp =7\\
