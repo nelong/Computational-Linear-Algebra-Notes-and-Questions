@@ -1,5 +1,25 @@
 <section xml:id="MatrixProdEq">
   <title>Matrix Products and Equations</title>
+  <objectives>
+    <ul>
+      <li>
+        <p>
+          To compute matrix-vector products and understand how this relates to linear combinations
+        </p>
+      </li>
+      <li>
+        <p>
+          To understand how to convert between systems of linear equations, vector equations, and matrix equations
+        </p>
+      </li>
+
+      <li>
+        <p>
+          To understand how the matrix-vector product gives rise to linear transformations
+        </p>
+      </li>
+    </ul>
+  </objectives>
 <subsection>
 <title>Matrix-Vector Products</title>
 <definition xml:id="MVProd">
@@ -21,11 +41,27 @@
   It should not surprise you that you can multiply a scalar multiple of a vector by a matrix by factoring out the scalar. In mathematical notation, <m>A (k \vec{v}) = k (A\vec{v})</m>. Additionally, you can apply the scalar multiplication to the matrix. In other words, <m>A (k \vec{v}) = k (A\vec{v}) = (kA)\vec{v}</m>. These kind of manipulations will be discussed more when we work with matrix operations later, but you may find these facts useful in your work right now. You should take time to write out the details of any of these arithmetic ideas that you think would be useful in your work.
 </p>
 <activity>
+  <introduction>
   <p>
     Let
     <me>A=\begin{bmatrix} 1\amp 3 \amp 4 \amp 5\\2 \amp 1 \amp 0 \amp 1\end{bmatrix} \text{ and } \vec{x}=\colvec{4\\3\\2\\1}</me>
-    Find <m>A\vec{x}</m>
+    
   </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Write out the matrix vector product of <m>A</m> and <m>\vec{x}</m> as a linear combination of the columns of <m>A</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Find <m>A\vec{x}</m>
+      </p>
+    </statement>
+  </task>
 </activity>
 
 <p>
@@ -115,6 +151,11 @@
     </p>
   </task>
 </investigation>
+<investigation>
+  <p>
+    Rephrase <xref ref="s1act" /> as matrix equations. 
+  </p>
+</investigation>
 </subsection>
 <subsection>
   <title>Linear Transformations</title>
@@ -134,7 +175,97 @@
     <li>If whenever a solution exists, the solution is unique, then we say that the map <m>T_A</m> is one-to-one.</li>
   </ul>
 </p>
-
+<p>
+  Linear Transformations are very important ways to understand how a vector space is changed under the operation given. Linear transformations are important because they preserve linear combinations. In other words,
+  <me>
+    T_A(a_1\vec{v}_1 +a_2 \vec{v}_2)= a_1 T_A(\vec{v}_1) +a_2 T_A(\vec{v}_2)
+  </me>
+    
+</p>
+<activity>
+  <introduction>
+    <p>
+      Let <m>A=\begin{bmatrix} 2 \amp 0 \amp 0 \\0 \amp -1 \amp 1 \end{bmatrix}</m>.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        The linear transformation <m>T_A</m> takes <m>\mathbb{R}^{m}</m> to <m>\mathbb{R}^{n}</m> for what values of <m>m</m> and <m>n</m>?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Compute <m>T_A \left( \colvec{1\\0\\0 } \right)</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Compute <m>T_A \left( \colvec{1\\1\\0} \right)</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Compute <m>T_A \left( \colvec{a\\b\\c} \right)</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Compute <m>T_A</m> for any other vectors you might want to and write a few sentences about how vectors are transformed by <m>T_A</m>.
+      </p>
+    </statement>
+  </task>
+</activity>
+<activity>
+  <introduction>
+    <p>
+      Let <m>B=\begin{bmatrix} 1 \amp 1 \\ 0 \amp -1 \\ 2 \amp 1  \end{bmatrix}</m>.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        The linear transformation <m>T_B</m> takes <m>\mathbb{R}^{m}</m> to <m>\mathbb{R}^{n}</m> for what values of <m>m</m> and <m>n</m>?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Compute <m>T_B \left( \colvec{1\\0 } \right)</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Compute <m>T_B \left( \colvec{1\\1} \right)</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Compute <m>T_B \left( \colvec{a\\b} \right)</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Compute <m>T_B</m> for any other vectors you might want to and write a few sentences about how vectors are transformed by <m>T_B</m>. 
+      </p>
+    </statement>
+  </task>
+</activity>
 </subsection>
 
 </section>
