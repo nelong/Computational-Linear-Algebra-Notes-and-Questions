@@ -44,8 +44,12 @@
   <introduction>
   <p>
     Let
-    <me>A=\begin{bmatrix} 1\amp 3 \amp 4 \amp 5\\2 \amp 1 \amp 0 \amp 1\end{bmatrix} \text{ and } \vec{x}=\colvec{4\\3\\2\\1}</me>
-    
+    <me>A=\begin{bmatrix} 1\amp 3 \amp 4 \amp 5\\2 \amp 1 \amp 0 \amp 1\end{bmatrix} </me>
+    <me>B=\begin{bmatrix} 1\amp 3 \amp 4 \\ 5 \amp 1 \amp 1 \\ -2 \amp 0 \amp 1\end{bmatrix} </me>
+    <me>C=\begin{bmatrix} 1\amp 3 \\ 5  \amp 1 \\ -2 \amp 0 \end{bmatrix} </me>
+    <me> \vec{x} =\colvec{ 4 \\ 2 \\ 2 \\ 1} </me>
+    <me> \vec{y} =\colvec{ -5 \\ 1 \\ 2} </me>
+    <me> \vec{z} =\colvec{ -3 \\ 2 } </me>
   </p>
   </introduction>
   <task>
@@ -59,6 +63,13 @@
     <statement>
       <p>
         Find <m>A\vec{x}</m>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Compute all of the other matrix vector products that will be allowed with the matrices <m>A,B,C</m> and <m>\vec{x},\vec{y},\vec{z}</m>.
       </p>
     </statement>
   </task>
