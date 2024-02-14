@@ -691,7 +691,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Matrix Products and Equations",
-  "body": " Matrix Products and Equations   Matrix-Vector Products    We define a matrix-vector product as follows: If is a by matrix, and , then the matrix-vector product is given by  .     If is a by matrix, then for what value of ?   It should not surprise you that you can multiply a scalar multiple of a vector by a matrix by factoring out the scalar. In mathematical notation, . Additionally, you can apply the scalar multiplication to the matrix. In other words, . These kind of manipulations will be discussed more when we work with matrix operations later, but you may find these facts useful in your work right now. You should take time to write out the details of any of these arithmetic ideas that you think would be useful in your work.   Let Find    The matrix can be seen from a column vector form as which means that we can think of the product of and as .    Write out the -th component of the resulting vector of the product       How can you express the result of the matrix-vector product in terms of and the rows of ?   The -th component of the matrix-vector product is the dot product of row of with .    How can you express the result of the matrix-vector product in terms of and the columns of ?   One way to view this is as a linear combination of the columns of with the coefficient on the -th column of being .      The Matrix Equation  Based on the above definition of the matrix vector product, if and , then by , has the same solution set as the system     Write each of the following as a matrix equation, a vector equation, and system of equations. You need to write out the exact corresponding vector equation, matrix equation, and system of equations, not some equivalent form.               Linear Transformations  Our definition of a matrix vector product suggests that the matrix-vector product of a by matrix will transform vectors from to vectors in . In this way, we can define a function as follows.   Let be a by matrix. Then we define , where .   Using what we know of solving linear systems, vector equations, and thier relationship to matrix vector products, we note the following:  If there is no soltuion to the matrix equation , then we say that is NOT in the range of the linear transformation .  If there is always a solution to the matrix equation , then we say that the map completely covers . In other words, the range of is all of .  If whenever a solution exists, the solution is unique, then we say that the map is one-to-one.     "
+  "body": " Matrix Products and Equations     To compute matrix-vector products and understand how this relates to linear combinations    To understand how to convert between systems of linear equations, vector equations, and matrix equations    To understand how the matrix-vector product gives rise to linear transformations      Matrix-Vector Products    We define a matrix-vector product as follows: If is a by matrix, and , then the matrix-vector product is given by  .     If is a by matrix, then for what value of ?   It should not surprise you that you can multiply a scalar multiple of a vector by a matrix by factoring out the scalar. In mathematical notation, . Additionally, you can apply the scalar multiplication to the matrix. In other words, . These kind of manipulations will be discussed more when we work with matrix operations later, but you may find these facts useful in your work right now. You should take time to write out the details of any of these arithmetic ideas that you think would be useful in your work.    Let          Write out the matrix vector product of and as a linear combination of the columns of .    Find     Compute all of the other matrix vector products that will be allowed with the matrices and .    The matrix can be seen from a column vector form as which means that we can think of the product of and as .    Write out the -th component of the resulting vector of the product       How can you express the result of the matrix-vector product in terms of and the rows of ?   The -th component of the matrix-vector product is the dot product of row of with .    How can you express the result of the matrix-vector product in terms of and the columns of ?   One way to view this is as a linear combination of the columns of with the coefficient on the -th column of being .      The Matrix Equation  Based on the above definition of the matrix vector product, if and , then by , has the same solution set as the system     Write each of the following as a matrix equation, a vector equation, and system of equations. You need to write out the exact corresponding vector equation, matrix equation, and system of equations, not some equivalent form.              Rephrase as matrix equations.     Linear Transformations  Our definition of a matrix vector product suggests that the matrix-vector product of a by matrix will transform vectors from to vectors in . In this way, we can define a function as follows.   Let be a by matrix. Then we define , where .   Using what we know of solving linear systems, vector equations, and thier relationship to matrix vector products, we note the following:  If there is no soltuion to the matrix equation , then we say that is NOT in the range of the linear transformation .  If there is always a solution to the matrix equation , then we say that the map completely covers . In other words, the range of is all of .  If whenever a solution exists, the solution is unique, then we say that the map is one-to-one.    Linear Transformations are very important ways to understand how a vector space is changed under the operation given. Linear transformations are important because they preserve linear combinations. In other words,     Let .    The linear transformation takes to for what values of and ?    Compute .    Compute .    Compute .    Compute for any other vectors you might want to and write a few sentences about how vectors are transformed by .      Let .    The linear transformation takes to for what values of and ?    Compute .    Compute .    Compute .    Compute for any other vectors you might want to and write a few sentences about how vectors are transformed by .     "
+},
+{
+  "id": "objectives-3",
+  "level": "2",
+  "url": "MatrixProdEq.html#objectives-3",
+  "type": "Objectives",
+  "number": "2.1",
+  "title": "",
+  "body": "   To compute matrix-vector products and understand how this relates to linear combinations    To understand how to convert between systems of linear equations, vector equations, and matrix equations    To understand how the matrix-vector product gives rise to linear transformations    "
 },
 {
   "id": "MVProd",
@@ -718,7 +727,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "2.1.2",
   "title": "",
-  "body": " Let Find   "
+  "body": "  Let          Write out the matrix vector product of and as a linear combination of the columns of .    Find     Compute all of the other matrix vector products that will be allowed with the matrices and .   "
 },
 {
   "id": "investigation-6",
@@ -739,6 +748,15 @@ var ptx_lunr_docs = [
   "body": "  Write each of the following as a matrix equation, a vector equation, and system of equations. You need to write out the exact corresponding vector equation, matrix equation, and system of equations, not some equivalent form.            "
 },
 {
+  "id": "investigation-8",
+  "level": "2",
+  "url": "MatrixProdEq.html#investigation-8",
+  "type": "Investigation",
+  "number": "2.1.5",
+  "title": "",
+  "body": " Rephrase as matrix equations.  "
+},
+{
   "id": "MatrixTransformation",
   "level": "2",
   "url": "MatrixProdEq.html#MatrixTransformation",
@@ -746,6 +764,24 @@ var ptx_lunr_docs = [
   "number": "2.1.2",
   "title": "",
   "body": " Let be a by matrix. Then we define , where .  "
+},
+{
+  "id": "activity-29",
+  "level": "2",
+  "url": "MatrixProdEq.html#activity-29",
+  "type": "Activity",
+  "number": "2.1.6",
+  "title": "",
+  "body": "  Let .    The linear transformation takes to for what values of and ?    Compute .    Compute .    Compute .    Compute for any other vectors you might want to and write a few sentences about how vectors are transformed by .   "
+},
+{
+  "id": "activity-30",
+  "level": "2",
+  "url": "MatrixProdEq.html#activity-30",
+  "type": "Activity",
+  "number": "2.1.7",
+  "title": "",
+  "body": "  Let .    The linear transformation takes to for what values of and ?    Compute .    Compute .    Compute .    Compute for any other vectors you might want to and write a few sentences about how vectors are transformed by .   "
 },
 {
   "id": "sec_matrix_ops",
@@ -757,27 +793,27 @@ var ptx_lunr_docs = [
   "body": " Matrix Operations   Addition and Transposition    Finish the following sentences.    Vectors are equal if…    Matrices are equal if…    A scalar is…    Just as you can add two vectors in componentwise, you can add two matrices entry-wise. For this reason, it only makes sense to add two matrices if they are the same size. You can also define scalar multiplication of a matrix entry-wise.   Let , , and .   Is a scalar multiple of ? Why or why not?              Symbolically, and       Let be a by matrix. The transpose of , denoted , is a by matrix such that .    There are a couple of ways to think about the transpose. First, you can think about flipping the matrix across the main diagonal (the elements of the form ). You can also view the transpose of a matrix as switching the rows and columns (but preserving the order). In other words, the -th row of is the -th column of .    Let and                   Let , , and .            If and are by matrices, then .      What dimensions should have in order to be able to add to ?      For all matrices , .    A matrix is symmetric if .    The sum of two symmetric by matrices is symmetric.      If is a symmetric matrix, then is symmetric.      Matrix Multiplication  Earlier we saw how to multiply a by matrix by a vector from . We will discuss how to define matrix multiplication with multiple interpretations.  Let be an by matrix and let and be vectors from . Earlier we defined what and meant. If we build a by matrix using and as the columns, then we can define , read as times , to be The above definition is just distributing our matrix-vector product across the columns of . In a similar fashion, given any by matrix where is the -th column of , we can define In particular, this means that if makes sense, then we can calculate just the -th column of without calculating all of . Namely, the -th column of is , which is written symbolically as .  Formally, we can define the product of a by matrix with a by matrix to be the by matrix such that   This formula looks difficult, but what it really tells us is that the entry of is really the dot product of the -th row of with the -th column of . Remember the dot product of and is just the sum of the products of the components. Namely, This idea lets us calculate the matrix product one entry at a time. Continuing this idea will lead us to see that the -th row of the product can be calculated as .  Note that in general , even when both products make sense.   What sizes of matrices can you add to a by matrix?  What sizes of matrices can you multiply on the right of a by matrix?  What sizes of matrices can you multiply on the left of a by matrix?     If , when does it make sense to multiply by ?      Let and .   What is the size of ?  Compute just the first column of .  Write the first column of as a linear combination of the columns of A. Be sure to check your work.  Solve the matrix equation .  Compute just the second row of      Let and                      Let and . Compute and .      Let and . Compute and .    You can approach proving the following theorem by showing matrix equality entry-wise or column-wise or row-wise.    For all matrices , , and such that the addition and multiplication of matrices below makes sense, .      Give 2 different examples of 3 by 3 matrices and such that .      Give 2 different examples of 3 by 3 matrices and such that .      For all matrices such that is defined, .      Special Types of Matrices  A square matrix is a matrix that has the same number of rows and columns. A by matrix is said to be upper triangular if whenever . Similarly, a matrix is lower triangular if whenever . We usually consider square matrices when we talk about upper or lower triangular, but it may be helpful to consider non-square cases.    Give an example of a matrix that is upper triangular but is not in echelon form. If one does not exist, explain why.      Give an example of a matrix that is in echelon form but is not upper triangular. If one does not exist, explain why.      Can a matrix be upper and lower triangular? Either give an example or explain why there cannot exist one.     Diagonal matrices are matrices whose only nonzero entries are on the diagonal. Specifically, a matrix is diagonal if whenever .    Give an example of a matrix that is diagonal but not in echelon form.    The by  identity matrix , denoted , is the unique matrix such that for every . In fact the entries of are easily computed in terms of the Dirac delta function. Specifically , where     Write out and use it to prove that for any the product of and will always be .     Superstar Bonus Question   Prove that is the only matrix that has the property from the problem above.     "
 },
 {
-  "id": "investigation-8",
+  "id": "investigation-9",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-8",
+  "url": "sec_matrix_ops.html#investigation-9",
   "type": "Investigation",
   "number": "2.2.1",
   "title": "",
   "body": "  Finish the following sentences.    Vectors are equal if…    Matrices are equal if…    A scalar is…   "
 },
 {
-  "id": "investigation-9",
+  "id": "investigation-10",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-9",
+  "url": "sec_matrix_ops.html#investigation-10",
   "type": "Investigation",
   "number": "2.2.2",
   "title": "",
   "body": " Let , , and .   Is a scalar multiple of ? Why or why not?           "
 },
 {
-  "id": "investigation-10",
+  "id": "investigation-11",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-10",
+  "url": "sec_matrix_ops.html#investigation-11",
   "type": "Investigation",
   "number": "2.2.3",
   "title": "",
@@ -793,18 +829,18 @@ var ptx_lunr_docs = [
   "body": "  Let be a by matrix. The transpose of , denoted , is a by matrix such that .   "
 },
 {
-  "id": "investigation-11",
+  "id": "investigation-12",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-11",
+  "url": "sec_matrix_ops.html#investigation-12",
   "type": "Investigation",
   "number": "2.2.4",
   "title": "",
   "body": "  Let and                "
 },
 {
-  "id": "investigation-12",
+  "id": "investigation-13",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-12",
+  "url": "sec_matrix_ops.html#investigation-13",
   "type": "Investigation",
   "number": "2.2.5",
   "title": "",
@@ -820,9 +856,9 @@ var ptx_lunr_docs = [
   "body": "  If and are by matrices, then .   "
 },
 {
-  "id": "investigation-13",
+  "id": "investigation-14",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-13",
+  "url": "sec_matrix_ops.html#investigation-14",
   "type": "Investigation",
   "number": "2.2.6",
   "title": "",
@@ -838,9 +874,9 @@ var ptx_lunr_docs = [
   "body": "  For all matrices , .   "
 },
 {
-  "id": "p-225",
+  "id": "p-245",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-225",
+  "url": "sec_matrix_ops.html#p-245",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -865,63 +901,63 @@ var ptx_lunr_docs = [
   "body": "  If is a symmetric matrix, then is symmetric.   "
 },
 {
-  "id": "p-231",
+  "id": "p-251",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-231",
+  "url": "sec_matrix_ops.html#p-251",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "dot product "
 },
 {
-  "id": "investigation-14",
+  "id": "investigation-15",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-14",
+  "url": "sec_matrix_ops.html#investigation-15",
   "type": "Investigation",
   "number": "2.2.7",
   "title": "",
   "body": " What sizes of matrices can you add to a by matrix?  What sizes of matrices can you multiply on the right of a by matrix?  What sizes of matrices can you multiply on the left of a by matrix?  "
 },
 {
-  "id": "investigation-15",
+  "id": "investigation-16",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-15",
+  "url": "sec_matrix_ops.html#investigation-16",
   "type": "Investigation",
   "number": "2.2.8",
   "title": "",
   "body": "  If , when does it make sense to multiply by ?   "
 },
 {
-  "id": "investigation-16",
+  "id": "investigation-17",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-16",
+  "url": "sec_matrix_ops.html#investigation-17",
   "type": "Investigation",
   "number": "2.2.9",
   "title": "",
   "body": "  Let and .   What is the size of ?  Compute just the first column of .  Write the first column of as a linear combination of the columns of A. Be sure to check your work.  Solve the matrix equation .  Compute just the second row of   "
 },
 {
-  "id": "investigation-17",
+  "id": "investigation-18",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-17",
+  "url": "sec_matrix_ops.html#investigation-18",
   "type": "Investigation",
   "number": "2.2.10",
   "title": "",
   "body": "  Let and                   "
 },
 {
-  "id": "investigation-18",
+  "id": "investigation-19",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-18",
+  "url": "sec_matrix_ops.html#investigation-19",
   "type": "Investigation",
   "number": "2.2.11",
   "title": "",
   "body": "  Let and . Compute and .   "
 },
 {
-  "id": "investigation-19",
+  "id": "investigation-20",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-19",
+  "url": "sec_matrix_ops.html#investigation-20",
   "type": "Investigation",
   "number": "2.2.12",
   "title": "",
@@ -937,18 +973,18 @@ var ptx_lunr_docs = [
   "body": "  For all matrices , , and such that the addition and multiplication of matrices below makes sense, .   "
 },
 {
-  "id": "investigation-20",
+  "id": "investigation-21",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-20",
+  "url": "sec_matrix_ops.html#investigation-21",
   "type": "Investigation",
   "number": "2.2.13",
   "title": "",
   "body": "  Give 2 different examples of 3 by 3 matrices and such that .   "
 },
 {
-  "id": "investigation-21",
+  "id": "investigation-22",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-21",
+  "url": "sec_matrix_ops.html#investigation-22",
   "type": "Investigation",
   "number": "2.2.14",
   "title": "",
@@ -964,81 +1000,81 @@ var ptx_lunr_docs = [
   "body": "  For all matrices such that is defined, .   "
 },
 {
-  "id": "p-256",
+  "id": "p-276",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-256",
+  "url": "sec_matrix_ops.html#p-276",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "square upper triangular lower triangular "
 },
 {
-  "id": "investigation-22",
+  "id": "investigation-23",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-22",
+  "url": "sec_matrix_ops.html#investigation-23",
   "type": "Investigation",
   "number": "2.2.15",
   "title": "",
   "body": "  Give an example of a matrix that is upper triangular but is not in echelon form. If one does not exist, explain why.   "
 },
 {
-  "id": "investigation-23",
+  "id": "investigation-24",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-23",
+  "url": "sec_matrix_ops.html#investigation-24",
   "type": "Investigation",
   "number": "2.2.16",
   "title": "",
   "body": "  Give an example of a matrix that is in echelon form but is not upper triangular. If one does not exist, explain why.   "
 },
 {
-  "id": "investigation-24",
+  "id": "investigation-25",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-24",
+  "url": "sec_matrix_ops.html#investigation-25",
   "type": "Investigation",
   "number": "2.2.17",
   "title": "",
   "body": "  Can a matrix be upper and lower triangular? Either give an example or explain why there cannot exist one.   "
 },
 {
-  "id": "p-260",
+  "id": "p-280",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-260",
+  "url": "sec_matrix_ops.html#p-280",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Diagonal "
 },
 {
-  "id": "investigation-25",
+  "id": "investigation-26",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-25",
+  "url": "sec_matrix_ops.html#investigation-26",
   "type": "Investigation",
   "number": "2.2.18",
   "title": "",
   "body": "  Give an example of a matrix that is diagonal but not in echelon form.   "
 },
 {
-  "id": "p-262",
+  "id": "p-282",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-262",
+  "url": "sec_matrix_ops.html#p-282",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "identity matrix "
 },
 {
-  "id": "investigation-26",
+  "id": "investigation-27",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-26",
+  "url": "sec_matrix_ops.html#investigation-27",
   "type": "Investigation",
   "number": "2.2.19",
   "title": "",
   "body": "  Write out and use it to prove that for any the product of and will always be .   "
 },
 {
-  "id": "investigation-27",
+  "id": "investigation-28",
   "level": "2",
-  "url": "sec_matrix_ops.html#investigation-27",
+  "url": "sec_matrix_ops.html#investigation-28",
   "type": "Investigation",
   "number": "2.2.20",
   "title": "Superstar Bonus Question.",
@@ -1063,18 +1099,18 @@ var ptx_lunr_docs = [
   "body": " A matrix is invertible if there exists a matrix such that and . The inverse matrix of is denoted .  "
 },
 {
-  "id": "p-267",
+  "id": "p-287",
   "level": "2",
-  "url": "InverseMatrices.html#p-267",
+  "url": "InverseMatrices.html#p-287",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "singular matrix non-singular matrix "
 },
 {
-  "id": "investigation-28",
+  "id": "investigation-29",
   "level": "2",
-  "url": "InverseMatrices.html#investigation-28",
+  "url": "InverseMatrices.html#investigation-29",
   "type": "Investigation",
   "number": "2.3.1",
   "title": "",
@@ -1090,9 +1126,9 @@ var ptx_lunr_docs = [
   "body": "  Any sequence of elementary row operations that reduces to also transforms into .   "
 },
 {
-  "id": "activity-29",
+  "id": "activity-31",
   "level": "2",
-  "url": "InverseMatrices.html#activity-29",
+  "url": "InverseMatrices.html#activity-31",
   "type": "Activity",
   "number": "2.3.3",
   "title": "",
@@ -1108,18 +1144,18 @@ var ptx_lunr_docs = [
   "body": " If , find and use your answer to solve if:  "
 },
 {
-  "id": "investigation-30",
+  "id": "investigation-31",
   "level": "2",
-  "url": "InverseMatrices.html#investigation-30",
+  "url": "InverseMatrices.html#investigation-31",
   "type": "Investigation",
   "number": "2.3.4",
   "title": "",
   "body": " Your friend Nick, who thinks he knows everything, claims that because that's how exponents work. Is he right? Justify your answer like you are going to have to convince Nick.   Mulitply Nick's Result on both sides by the matrix and simplify.   "
 },
 {
-  "id": "investigation-31",
+  "id": "investigation-32",
   "level": "2",
-  "url": "InverseMatrices.html#investigation-31",
+  "url": "InverseMatrices.html#investigation-32",
   "type": "Investigation",
   "number": "2.3.5",
   "title": "",
@@ -1135,9 +1171,9 @@ var ptx_lunr_docs = [
   "body": " Invertible Matrix Theorem    In many texts there is a long list of equivalent conditions for when a square matrix is invertible. Below is a list of some of these conditions that we have talked about or proven. Go back through your notes and questions and cite when we connected two of the ideas in the list. For instance, parts and are linked by     Before stating this major theorem, we should explain what the phrase the following are equivalent (sometimes written TFAE in scratchwork or on the board) means. A theorem of this type is essentially a giant if and only if theorem. Specifically, each statement in the theorem is true or each statement in the theorem is false. It is not possible for some to be true and some to be false. In a theorem with, say, three statements, we often prove that statement 1 implies statement 2, statement 2 implies statement 3, and statement three implies statement 1. Then you can start at any statement and reach any other statement, showing that if one is true, all the others must be true. However, with longer lists, we sometimes have to prove things a bit more piecemeal.  The Invertible Matrix Theorem   Let be a by matrix. The following are equivalent:  is an invertible matrix.  is row equivalent to .  has pivots.  has only the trivial solution.  The linear transformation is one-to-one.  The linear transformation is onto.  has a solution for every .  The columns of form a linearly independent set.  The columns of span .  The rows of form a linearly independent set.  The rows of span .  is invertible.        Two important ideas in this course that have been tied to many different methods or ideas are 1) consistent systems of linear equations and 2) invertible matrices. These two ideas are a bit different though. Give an example of a consistent system of linear equations (in matrix equation form ) where the coefficient matrix is a non-invertible square matrix.    "
 },
 {
-  "id": "investigation-32",
+  "id": "investigation-33",
   "level": "2",
-  "url": "IvertibleMatrixThm.html#investigation-32",
+  "url": "IvertibleMatrixThm.html#investigation-33",
   "type": "Investigation",
   "number": "2.4.1",
   "title": "",
@@ -1153,9 +1189,9 @@ var ptx_lunr_docs = [
   "body": "The Invertible Matrix Theorem   Let be a by matrix. The following are equivalent:  is an invertible matrix.  is row equivalent to .  has pivots.  has only the trivial solution.  The linear transformation is one-to-one.  The linear transformation is onto.  has a solution for every .  The columns of form a linearly independent set.  The columns of span .  The rows of form a linearly independent set.  The rows of span .  is invertible.     "
 },
 {
-  "id": "investigation-33",
+  "id": "investigation-34",
   "level": "2",
-  "url": "IvertibleMatrixThm.html#investigation-33",
+  "url": "IvertibleMatrixThm.html#investigation-34",
   "type": "Investigation",
   "number": "2.4.2",
   "title": "",
@@ -1180,9 +1216,9 @@ var ptx_lunr_docs = [
   "body": "  The determinant is a function from by matrices to the real numbers ( ).  If is a 1 by 1 matrix, , then .  For , the determinant of a by matrix is given by the following formula in terms of determinants of by matrices: where is the by matrix obtained by deleting the -th row and -th column of . The term is called the  cofactor of .   "
 },
 {
-  "id": "investigation-34",
+  "id": "investigation-35",
   "level": "2",
-  "url": "determinants.html#investigation-34",
+  "url": "determinants.html#investigation-35",
   "type": "Investigation",
   "number": "2.5.1",
   "title": "",
@@ -1252,27 +1288,27 @@ var ptx_lunr_docs = [
   "body": " Compute the determinant of the following matrices:      "
 },
 {
-  "id": "activity-30",
+  "id": "activity-32",
   "level": "2",
-  "url": "determinants.html#activity-30",
+  "url": "determinants.html#activity-32",
   "type": "Activity",
   "number": "2.5.2",
   "title": "",
   "body": " Find when   Find when   Find when   Find when   "
 },
 {
-  "id": "investigation-35",
+  "id": "investigation-36",
   "level": "2",
-  "url": "determinants.html#investigation-35",
+  "url": "determinants.html#investigation-36",
   "type": "Investigation",
   "number": "2.5.3",
   "title": "",
   "body": "  Prove that if has a row of zeros, then .   "
 },
 {
-  "id": "investigation-36",
+  "id": "investigation-37",
   "level": "2",
-  "url": "determinants.html#investigation-36",
+  "url": "determinants.html#investigation-37",
   "type": "Investigation",
   "number": "2.5.4",
   "title": "",
@@ -1315,9 +1351,9 @@ var ptx_lunr_docs = [
   "body": " A Motivating Example    We want to look at the effect that a matrix has when we look at the matrix's effect on an entire vector space. Let's start small and look at We want to look at what happens to different directions (measured with unit vectors) when we use the function .   Use Python to construct a bunch of unit vectors centered at the origin. Plot these vectors.  Use Python to calculate for each of your unit vectors. Plot these vectors. What do you notice about these results?  Where does send ? Why should this make sense on your plot?  Where does send ? Why should this make sense on your plot?  How does the area traced out by all unit vectors starting at the origin change under ? Calculate the determinant of and compare to your change in area.  Where does send ? Why should this make sense on your plot?  Are there other directions that work like this?  So and are important directions. Will there be any other directions that are just scalar multiplication under the action of ?  The set spans all of . How can we justify this statement?  We can write any vector in as a linear combination of the set . Use this idea to describe in terms of and .  Can we do all of these steps for other matrices? Great question Dr. Long. You deserve a raise and come cookies. You may proceed to the next section to see the answer.   "
 },
 {
-  "id": "activity-31",
+  "id": "activity-33",
   "level": "2",
-  "url": "NatureofaMatrix.html#activity-31",
+  "url": "NatureofaMatrix.html#activity-33",
   "type": "Activity",
   "number": "2.6.1",
   "title": "",
@@ -1342,27 +1378,27 @@ var ptx_lunr_docs = [
   "body": "  An eigenvector of a matrix is a nonzero vector such that for some scalar . The scalar is called an eigenvalue of if there exists a nonzero solution to .   "
 },
 {
-  "id": "investigation-37",
+  "id": "investigation-38",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#investigation-37",
+  "url": "EigenvaluesEigenvectors.html#investigation-38",
   "type": "Investigation",
   "number": "2.7.1",
   "title": "",
   "body": "  Which of the following vectors are an eigenvector of ? For any vectors that are eigenvectors of , give the eigenvalue.         "
 },
 {
-  "id": "investigation-38",
+  "id": "investigation-39",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#investigation-38",
+  "url": "EigenvaluesEigenvectors.html#investigation-39",
   "type": "Investigation",
   "number": "2.7.2",
   "title": "",
   "body": "  Let . Try to find an eigenvector with eigenvalue . In other words, find a vector such that .   "
 },
 {
-  "id": "investigation-39",
+  "id": "investigation-40",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#investigation-39",
+  "url": "EigenvaluesEigenvectors.html#investigation-40",
   "type": "Investigation",
   "number": "2.7.3",
   "title": "",
@@ -1378,45 +1414,45 @@ var ptx_lunr_docs = [
   "body": "  Let be a square matrix. We have that iff is an eigenvalue of .   "
 },
 {
-  "id": "p-351",
+  "id": "p-371",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#p-351",
+  "url": "EigenvaluesEigenvectors.html#p-371",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "characteristic polynomial of "
 },
 {
-  "id": "investigation-40",
+  "id": "investigation-41",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#investigation-40",
+  "url": "EigenvaluesEigenvectors.html#investigation-41",
   "type": "Investigation",
   "number": "2.7.4",
   "title": "",
   "body": "  For each of the following matrices:  write out the characteristic polynomial  give all eigenvalues  for each eigenvalue, find an eigenvector  You should do the first two by hand to get a feel for finding the characteristic polynomial. After that, I have provided a SageMath cell you can modify to get the characteristic polynomial quickly, but you will need to work from there to find eigenvalues and eigenvectors.          Work smarter, not harder, on this part!   A root of a polynomial (in ) has (algebraic) multiplicity  if is the largest integer such that is a factor. Which, if any, of the eigenvalues you found above have algebraic multiplicity greater than ?   "
 },
 {
-  "id": "investigation-41",
+  "id": "investigation-42",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#investigation-41",
+  "url": "EigenvaluesEigenvectors.html#investigation-42",
   "type": "Investigation",
   "number": "2.7.5",
   "title": "",
   "body": "  Prove that a nonzero vector, , is an eigenvector of with eigenvalue if and only if is in the null space of .     If is an eigenvector of with eigenvalue , then . By algebra, this means that , and hence . Thus, is in the null space of .   If , then . Hence, , or . Thus, is an eigenvector of with eigenvalue .   "
 },
 {
-  "id": "investigation-42",
+  "id": "investigation-43",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#investigation-42",
+  "url": "EigenvaluesEigenvectors.html#investigation-43",
   "type": "Investigation",
   "number": "2.7.6",
   "title": "",
   "body": "  Prove that if is an eigenvector of , then is also an eigenvector of (when ).    Since is an eigenvector of , there is a scalar such that . By properties of matrix multiplication, we thus have . As , this shows that is an eigenvector with the same eigenvalue.   "
 },
 {
-  "id": "investigation-43",
+  "id": "investigation-44",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#investigation-43",
+  "url": "EigenvaluesEigenvectors.html#investigation-44",
   "type": "Investigation",
   "number": "2.7.7",
   "title": "",
@@ -1432,9 +1468,9 @@ var ptx_lunr_docs = [
   "body": "  If is an eigenvalue of , then the eigenspace of , , is the set of vectors such that .   "
 },
 {
-  "id": "activity-32",
+  "id": "activity-34",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#activity-32",
+  "url": "EigenvaluesEigenvectors.html#activity-34",
   "type": "Activity",
   "number": "2.7.8",
   "title": "",

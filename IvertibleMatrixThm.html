@@ -214,44 +214,44 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="IvertibleMatrixThm"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.4</span><span class="space"> </span><span class="title">Invertible Matrix Theorem</span>
 </h2>
-<article class="investigation project-like" id="investigation-32"><h3 class="heading">
+<article class="investigation project-like" id="investigation-33"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-288">In many texts there is a long list of equivalent conditions for when a square matrix is invertible. Below is a list of some of these conditions that we have talked about or proven. Go back through your notes and questions and cite when we connected two of the ideas in the list. For instance, parts <span class="process-math">\(a)\)</span> and <span class="process-math">\(b)\)</span> are linked by <a href="" class="xref" data-knowl="./knowl/xref/q11.html" title="Investigation 2.3.2">Investigation 2.3.2</a>
-</div></article><div class="para" id="p-289">Before stating this major theorem, we should explain what the phrase “the following are equivalent” (sometimes written “TFAE” in scratchwork or on the board) means. A theorem of this type is essentially a giant if and only if theorem. Specifically, each statement in the theorem is true or each statement in the theorem is false. It is not possible for some to be true and some to be false. In a theorem with, say, three statements, we often prove that statement 1 implies statement 2, statement 2 implies statement 3, and statement three implies statement 1. Then you can start at any statement and reach any other statement, showing that if one is true, all the others must be true. However, with longer lists, we sometimes have to prove things a bit more piecemeal.</div>
+<div class="para" id="p-308">In many texts there is a long list of equivalent conditions for when a square matrix is invertible. Below is a list of some of these conditions that we have talked about or proven. Go back through your notes and questions and cite when we connected two of the ideas in the list. For instance, parts <span class="process-math">\(a)\)</span> and <span class="process-math">\(b)\)</span> are linked by <a href="" class="xref" data-knowl="./knowl/xref/q11.html" title="Investigation 2.3.2">Investigation 2.3.2</a>
+</div></article><div class="para" id="p-309">Before stating this major theorem, we should explain what the phrase “the following are equivalent” (sometimes written “TFAE” in scratchwork or on the board) means. A theorem of this type is essentially a giant if and only if theorem. Specifically, each statement in the theorem is true or each statement in the theorem is false. It is not possible for some to be true and some to be false. In a theorem with, say, three statements, we often prove that statement 1 implies statement 2, statement 2 implies statement 3, and statement three implies statement 1. Then you can start at any statement and reach any other statement, showing that if one is true, all the others must be true. However, with longer lists, we sometimes have to prove things a bit more piecemeal.</div>
 <article class="theorem theorem-like" id="imt"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">The Invertible Matrix Theorem.</span>
 </h3>
-<div class="para logical" id="p-290">
+<div class="para logical" id="p-310">
 <div class="para">Let <span class="process-math">\(A\)</span> be a <span class="process-math">\(n\)</span> by <span class="process-math">\(n\)</span> matrix. The following are equivalent:</div>
 <ol class="lower-alpha">
-<li id="li-73"><div class="para" id="p-derived-li-73">
+<li id="li-76"><div class="para" id="p-derived-li-76">
 <span class="process-math">\(A\)</span> is an invertible matrix.</div></li>
-<li id="li-74"><div class="para" id="p-derived-li-74">
+<li id="li-77"><div class="para" id="p-derived-li-77">
 <span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(Id_n\text{.}\)</span>
 </div></li>
-<li id="li-75"><div class="para" id="p-derived-li-75">
+<li id="li-78"><div class="para" id="p-derived-li-78">
 <span class="process-math">\(A\)</span> has <span class="process-math">\(n\)</span> pivots.</div></li>
-<li id="li-76"><div class="para" id="p-derived-li-76">
-<span class="process-math">\(A\vec{x} =\vec{0}\)</span> has only the trivial solution.</div></li>
-<li id="li-77"><div class="para" id="p-derived-li-77">The linear transformation <span class="process-math">\(\vec{x} \rightarrow A\vec{x}\)</span> is one-to-one.</div></li>
-<li id="li-78"><div class="para" id="p-derived-li-78">The linear transformation <span class="process-math">\(\vec{x} \rightarrow A\vec{x}\)</span> is onto.</div></li>
 <li id="li-79"><div class="para" id="p-derived-li-79">
+<span class="process-math">\(A\vec{x} =\vec{0}\)</span> has only the trivial solution.</div></li>
+<li id="li-80"><div class="para" id="p-derived-li-80">The linear transformation <span class="process-math">\(\vec{x} \rightarrow A\vec{x}\)</span> is one-to-one.</div></li>
+<li id="li-81"><div class="para" id="p-derived-li-81">The linear transformation <span class="process-math">\(\vec{x} \rightarrow A\vec{x}\)</span> is onto.</div></li>
+<li id="li-82"><div class="para" id="p-derived-li-82">
 <span class="process-math">\(A\vec{x}=\vec{b}\)</span> has a solution for every <span class="process-math">\(\vec{b} \in \mathbb{R}^n\text{.}\)</span>
 </div></li>
-<li id="li-80"><div class="para" id="p-derived-li-80">The columns of <span class="process-math">\(A\)</span> form a linearly independent set.</div></li>
-<li id="li-81"><div class="para" id="p-derived-li-81">The columns of <span class="process-math">\(A\)</span> span <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
+<li id="li-83"><div class="para" id="p-derived-li-83">The columns of <span class="process-math">\(A\)</span> form a linearly independent set.</div></li>
+<li id="li-84"><div class="para" id="p-derived-li-84">The columns of <span class="process-math">\(A\)</span> span <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
 </div></li>
-<li id="li-82"><div class="para" id="p-derived-li-82">The rows of <span class="process-math">\(A\)</span> form a linearly independent set.</div></li>
-<li id="li-83"><div class="para" id="p-derived-li-83">The rows of <span class="process-math">\(A\)</span> span <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
+<li id="li-85"><div class="para" id="p-derived-li-85">The rows of <span class="process-math">\(A\)</span> form a linearly independent set.</div></li>
+<li id="li-86"><div class="para" id="p-derived-li-86">The rows of <span class="process-math">\(A\)</span> span <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
 </div></li>
-<li id="li-84"><div class="para" id="p-derived-li-84">
+<li id="li-87"><div class="para" id="p-derived-li-87">
 <span class="process-math">\(A^T\)</span> is invertible.</div></li>
 </ol>
-</div></article><article class="investigation project-like" id="investigation-33"><h3 class="heading">
+</div></article><article class="investigation project-like" id="investigation-34"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-291">Two important ideas in this course that have been tied to many different methods or ideas are 1) consistent systems of linear equations and 2) invertible matrices. These two ideas are a bit different though. Give an example of a consistent system of linear equations (in matrix equation form <span class="process-math">\(A\vec{x} = \vec{b}\)</span>) where the coefficient matrix <span class="process-math">\(A\)</span> is a non-invertible square matrix.</div></article></section></div>
+<div class="para" id="p-311">Two important ideas in this course that have been tied to many different methods or ideas are 1) consistent systems of linear equations and 2) invertible matrices. These two ideas are a bit different though. Give an example of a consistent system of linear equations (in matrix equation form <span class="process-math">\(A\vec{x} = \vec{b}\)</span>) where the coefficient matrix <span class="process-math">\(A\)</span> is a non-invertible square matrix.</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="InverseMatrices.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="determinants.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
