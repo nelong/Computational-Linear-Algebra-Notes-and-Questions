@@ -790,7 +790,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Matrix Operations",
-  "body": " Matrix Operations   Addition and Transposition    Finish the following sentences.    Vectors are equal if…    Matrices are equal if…    A scalar is…    Just as you can add two vectors in componentwise, you can add two matrices entry-wise. For this reason, it only makes sense to add two matrices if they are the same size. You can also define scalar multiplication of a matrix entry-wise.   Let , , and .   Is a scalar multiple of ? Why or why not?              Symbolically, and       Let be a by matrix. The transpose of , denoted , is a by matrix such that .    There are a couple of ways to think about the transpose. First, you can think about flipping the matrix across the main diagonal (the elements of the form ). You can also view the transpose of a matrix as switching the rows and columns (but preserving the order). In other words, the -th row of is the -th column of .    Let and                   Let , , and .            If and are by matrices, then .      What dimensions should have in order to be able to add to ?      For all matrices , .    A matrix is symmetric if .    The sum of two symmetric by matrices is symmetric.      If is a symmetric matrix, then is symmetric.      Matrix Multiplication  Earlier we saw how to multiply a by matrix by a vector from . We will discuss how to define matrix multiplication with multiple interpretations.  Let be an by matrix and let and be vectors from . Earlier we defined what and meant. If we build a by matrix using and as the columns, then we can define , read as times , to be The above definition is just distributing our matrix-vector product across the columns of . In a similar fashion, given any by matrix where is the -th column of , we can define In particular, this means that if makes sense, then we can calculate just the -th column of without calculating all of . Namely, the -th column of is , which is written symbolically as .  Formally, we can define the product of a by matrix with a by matrix to be the by matrix such that   This formula looks difficult, but what it really tells us is that the entry of is really the dot product of the -th row of with the -th column of . Remember the dot product of and is just the sum of the products of the components. Namely, This idea lets us calculate the matrix product one entry at a time. Continuing this idea will lead us to see that the -th row of the product can be calculated as .  Note that in general , even when both products make sense.   What sizes of matrices can you add to a by matrix?  What sizes of matrices can you multiply on the right of a by matrix?  What sizes of matrices can you multiply on the left of a by matrix?     If , when does it make sense to multiply by ?      Let and .   What is the size of ?  Compute just the first column of .  Write the first column of as a linear combination of the columns of A. Be sure to check your work.  Solve the matrix equation .  Compute just the second row of      Let and                      Let and . Compute and .      Let and . Compute and .    You can approach proving the following theorem by showing matrix equality entry-wise or column-wise or row-wise.    For all matrices , , and such that the addition and multiplication of matrices below makes sense, .      Give 2 different examples of 3 by 3 matrices and such that .      Give 2 different examples of 3 by 3 matrices and such that .      For all matrices such that is defined, .      Special Types of Matrices  A square matrix is a matrix that has the same number of rows and columns. A by matrix is said to be upper triangular if whenever . Similarly, a matrix is lower triangular if whenever . We usually consider square matrices when we talk about upper or lower triangular, but it may be helpful to consider non-square cases.    Give an example of a matrix that is upper triangular but is not in echelon form. If one does not exist, explain why.      Give an example of a matrix that is in echelon form but is not upper triangular. If one does not exist, explain why.      Can a matrix be upper and lower triangular? Either give an example or explain why there cannot exist one.     Diagonal matrices are matrices whose only nonzero entries are on the diagonal. Specifically, a matrix is diagonal if whenever .    Give an example of a matrix that is diagonal but not in echelon form.    The by  identity matrix , denoted , is the unique matrix such that for every . In fact the entries of are easily computed in terms of the Dirac delta function. Specifically , where     Write out and use it to prove that for any the product of and will always be .     Superstar Bonus Question   Prove that is the only matrix that has the property from the problem above.     "
+  "body": " Matrix Operations     To compute matrix opertions like addition, subtraction, scalar multiplication, transpose, and matrix multiplication    To understand how to compute matrix operations for an entry, row, or column    To determine if matrices fir specific forms like upper triangular, lower triangular, symmetric, skew symmetric, or identity      Addition and Transposition    Finish the following sentences.    Vectors are equal if…    Matrices are equal if…    A scalar is…    Just as you can add two vectors in componentwise, you can add two matrices entry-wise. For this reason, it only makes sense to add two matrices if they are the same size. You can also define scalar multiplication of a matrix entry-wise.   Let , , and .   Is a scalar multiple of ? Why or why not?              Symbolically, and       Let be a by matrix. The transpose of , denoted , is a by matrix such that .    There are a couple of ways to think about the transpose. First, you can think about flipping the matrix across the main diagonal (the elements of the form ). You can also view the transpose of a matrix as switching the rows and columns (but preserving the order). In other words, the -th row of is the -th column of .    Let and                   Let , , and .            If and are by matrices, then .      What dimensions should have in order to be able to add to ?      For all matrices , .    A matrix is symmetric if .    The sum of two symmetric by matrices is symmetric.      If is a symmetric matrix, then is symmetric.      Matrix Multiplication  Earlier we saw how to multiply a by matrix by a vector from . We will discuss how to define matrix multiplication with multiple interpretations.  Let be an by matrix and let and be vectors from . Earlier we defined what and meant. If we build a by matrix using and as the columns, then we can define , read as times , to be The above definition is just distributing our matrix-vector product across the columns of . In a similar fashion, given any by matrix where is the -th column of , we can define In particular, this means that if makes sense, then we can calculate just the -th column of without calculating all of . Namely, the -th column of is , which is written symbolically as .    Let and .    Write out the columns of as vectors where .    Compute the following:       Use the results of your previous work to compute     Take a moment to look back on exactly what calculation you had to do to get the value of . Write out exactly which parts of and are used in your calculation.    Formally, we can define the product of a by matrix with a by matrix to be the by matrix such that   This formula looks difficult, but what it really tells us is that the entry of is really the dot product of the -th row of with the -th column of . Remember the dot product of and is just the sum of the products of the components. Namely, This idea lets us calculate the matrix product one entry at a time. Continuing this idea will lead us to see that the -th row of the product can be calculated as .  Note that in general , even when both products make sense.   What sizes of matrices can you add to a by matrix?  What sizes of matrices can you multiply on the right of a by matrix?  What sizes of matrices can you multiply on the left of a by matrix?     If , when does it make sense to multiply by ?      Let and .   What is the size of ?  Compute just the first column of .  Write the first column of as a linear combination of the columns of A. Be sure to check your work.  Solve the matrix equation .  Compute just the second row of      Let and                      Let and . Compute and .      Let and . Compute and .    You can approach proving the following theorem by showing matrix equality entry-wise or column-wise or row-wise.    For all matrices , , and such that the addition and multiplication of matrices below makes sense, .      Give 2 different examples of 3 by 3 matrices and such that .      Give 2 different examples of 3 by 3 matrices and such that .      For all matrices such that is defined, .      Special Types of Matrices  A square matrix is a matrix that has the same number of rows and columns. A by matrix is said to be upper triangular if whenever . Similarly, a matrix is lower triangular if whenever . We usually consider square matrices when we talk about upper or lower triangular, but it may be helpful to consider non-square cases.    Give an example of a matrix that is upper triangular but is not in echelon form. If one does not exist, explain why.      Give an example of a matrix that is in echelon form but is not upper triangular. If one does not exist, explain why.      Can a matrix be upper and lower triangular? Either give an example or explain why there cannot exist one.     Diagonal matrices are matrices whose only nonzero entries are on the diagonal. Specifically, a matrix is diagonal if whenever .    Give an example of a matrix that is diagonal but not in echelon form.    The by  identity matrix , denoted , is the unique matrix such that for every . In fact the entries of are easily computed in terms of the Dirac delta function. Specifically , where     Write out and use it to prove that for any the product of and will always be .     Superstar Bonus Question   Prove that is the only matrix that has the property from the problem above.     "
+},
+{
+  "id": "objectives-4",
+  "level": "2",
+  "url": "sec_matrix_ops.html#objectives-4",
+  "type": "Objectives",
+  "number": "2.2",
+  "title": "",
+  "body": "   To compute matrix opertions like addition, subtraction, scalar multiplication, transpose, and matrix multiplication    To understand how to compute matrix operations for an entry, row, or column    To determine if matrices fir specific forms like upper triangular, lower triangular, symmetric, skew symmetric, or identity    "
 },
 {
   "id": "investigation-9",
@@ -874,9 +883,9 @@ var ptx_lunr_docs = [
   "body": "  For all matrices , .   "
 },
 {
-  "id": "p-245",
+  "id": "p-248",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-245",
+  "url": "sec_matrix_ops.html#p-248",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -901,9 +910,18 @@ var ptx_lunr_docs = [
   "body": "  If is a symmetric matrix, then is symmetric.   "
 },
 {
-  "id": "p-251",
+  "id": "activity-31",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-251",
+  "url": "sec_matrix_ops.html#activity-31",
+  "type": "Activity",
+  "number": "2.2.7",
+  "title": "",
+  "body": "  Let and .    Write out the columns of as vectors where .    Compute the following:       Use the results of your previous work to compute     Take a moment to look back on exactly what calculation you had to do to get the value of . Write out exactly which parts of and are used in your calculation.   "
+},
+{
+  "id": "p-259",
+  "level": "2",
+  "url": "sec_matrix_ops.html#p-259",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -914,7 +932,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-15",
   "type": "Investigation",
-  "number": "2.2.7",
+  "number": "2.2.8",
   "title": "",
   "body": " What sizes of matrices can you add to a by matrix?  What sizes of matrices can you multiply on the right of a by matrix?  What sizes of matrices can you multiply on the left of a by matrix?  "
 },
@@ -923,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-16",
   "type": "Investigation",
-  "number": "2.2.8",
+  "number": "2.2.9",
   "title": "",
   "body": "  If , when does it make sense to multiply by ?   "
 },
@@ -932,7 +950,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-17",
   "type": "Investigation",
-  "number": "2.2.9",
+  "number": "2.2.10",
   "title": "",
   "body": "  Let and .   What is the size of ?  Compute just the first column of .  Write the first column of as a linear combination of the columns of A. Be sure to check your work.  Solve the matrix equation .  Compute just the second row of   "
 },
@@ -941,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-18",
   "type": "Investigation",
-  "number": "2.2.10",
+  "number": "2.2.11",
   "title": "",
   "body": "  Let and                   "
 },
@@ -950,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-19",
   "type": "Investigation",
-  "number": "2.2.11",
+  "number": "2.2.12",
   "title": "",
   "body": "  Let and . Compute and .   "
 },
@@ -959,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-20",
   "type": "Investigation",
-  "number": "2.2.12",
+  "number": "2.2.13",
   "title": "",
   "body": "  Let and . Compute and .   "
 },
@@ -977,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-21",
   "type": "Investigation",
-  "number": "2.2.13",
+  "number": "2.2.14",
   "title": "",
   "body": "  Give 2 different examples of 3 by 3 matrices and such that .   "
 },
@@ -986,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-22",
   "type": "Investigation",
-  "number": "2.2.14",
+  "number": "2.2.15",
   "title": "",
   "body": "  Give 2 different examples of 3 by 3 matrices and such that .   "
 },
@@ -1000,9 +1018,9 @@ var ptx_lunr_docs = [
   "body": "  For all matrices such that is defined, .   "
 },
 {
-  "id": "p-276",
+  "id": "p-284",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-276",
+  "url": "sec_matrix_ops.html#p-284",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1013,7 +1031,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-23",
   "type": "Investigation",
-  "number": "2.2.15",
+  "number": "2.2.16",
   "title": "",
   "body": "  Give an example of a matrix that is upper triangular but is not in echelon form. If one does not exist, explain why.   "
 },
@@ -1022,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-24",
   "type": "Investigation",
-  "number": "2.2.16",
+  "number": "2.2.17",
   "title": "",
   "body": "  Give an example of a matrix that is in echelon form but is not upper triangular. If one does not exist, explain why.   "
 },
@@ -1031,14 +1049,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-25",
   "type": "Investigation",
-  "number": "2.2.17",
+  "number": "2.2.18",
   "title": "",
   "body": "  Can a matrix be upper and lower triangular? Either give an example or explain why there cannot exist one.   "
 },
 {
-  "id": "p-280",
+  "id": "p-288",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-280",
+  "url": "sec_matrix_ops.html#p-288",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1049,14 +1067,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-26",
   "type": "Investigation",
-  "number": "2.2.18",
+  "number": "2.2.19",
   "title": "",
   "body": "  Give an example of a matrix that is diagonal but not in echelon form.   "
 },
 {
-  "id": "p-282",
+  "id": "p-290",
   "level": "2",
-  "url": "sec_matrix_ops.html#p-282",
+  "url": "sec_matrix_ops.html#p-290",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1067,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-27",
   "type": "Investigation",
-  "number": "2.2.19",
+  "number": "2.2.20",
   "title": "",
   "body": "  Write out and use it to prove that for any the product of and will always be .   "
 },
@@ -1076,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_matrix_ops.html#investigation-28",
   "type": "Investigation",
-  "number": "2.2.20",
+  "number": "2.2.21",
   "title": "Superstar Bonus Question.",
   "body": " Superstar Bonus Question   Prove that is the only matrix that has the property from the problem above.   "
 },
@@ -1099,9 +1117,9 @@ var ptx_lunr_docs = [
   "body": " A matrix is invertible if there exists a matrix such that and . The inverse matrix of is denoted .  "
 },
 {
-  "id": "p-287",
+  "id": "p-295",
   "level": "2",
-  "url": "InverseMatrices.html#p-287",
+  "url": "InverseMatrices.html#p-295",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1126,9 +1144,9 @@ var ptx_lunr_docs = [
   "body": "  Any sequence of elementary row operations that reduces to also transforms into .   "
 },
 {
-  "id": "activity-31",
+  "id": "activity-32",
   "level": "2",
-  "url": "InverseMatrices.html#activity-31",
+  "url": "InverseMatrices.html#activity-32",
   "type": "Activity",
   "number": "2.3.3",
   "title": "",
@@ -1288,9 +1306,9 @@ var ptx_lunr_docs = [
   "body": " Compute the determinant of the following matrices:      "
 },
 {
-  "id": "activity-32",
+  "id": "activity-33",
   "level": "2",
-  "url": "determinants.html#activity-32",
+  "url": "determinants.html#activity-33",
   "type": "Activity",
   "number": "2.5.2",
   "title": "",
@@ -1351,9 +1369,9 @@ var ptx_lunr_docs = [
   "body": " A Motivating Example    We want to look at the effect that a matrix has when we look at the matrix's effect on an entire vector space. Let's start small and look at We want to look at what happens to different directions (measured with unit vectors) when we use the function .   Use Python to construct a bunch of unit vectors centered at the origin. Plot these vectors.  Use Python to calculate for each of your unit vectors. Plot these vectors. What do you notice about these results?  Where does send ? Why should this make sense on your plot?  Where does send ? Why should this make sense on your plot?  How does the area traced out by all unit vectors starting at the origin change under ? Calculate the determinant of and compare to your change in area.  Where does send ? Why should this make sense on your plot?  Are there other directions that work like this?  So and are important directions. Will there be any other directions that are just scalar multiplication under the action of ?  The set spans all of . How can we justify this statement?  We can write any vector in as a linear combination of the set . Use this idea to describe in terms of and .  Can we do all of these steps for other matrices? Great question Dr. Long. You deserve a raise and come cookies. You may proceed to the next section to see the answer.   "
 },
 {
-  "id": "activity-33",
+  "id": "activity-34",
   "level": "2",
-  "url": "NatureofaMatrix.html#activity-33",
+  "url": "NatureofaMatrix.html#activity-34",
   "type": "Activity",
   "number": "2.6.1",
   "title": "",
@@ -1414,9 +1432,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a square matrix. We have that iff is an eigenvalue of .   "
 },
 {
-  "id": "p-371",
+  "id": "p-379",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#p-371",
+  "url": "EigenvaluesEigenvectors.html#p-379",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1468,9 +1486,9 @@ var ptx_lunr_docs = [
   "body": "  If is an eigenvalue of , then the eigenspace of , , is the set of vectors such that .   "
 },
 {
-  "id": "activity-34",
+  "id": "activity-35",
   "level": "2",
-  "url": "EigenvaluesEigenvectors.html#activity-34",
+  "url": "EigenvaluesEigenvectors.html#activity-35",
   "type": "Activity",
   "number": "2.7.8",
   "title": "",
