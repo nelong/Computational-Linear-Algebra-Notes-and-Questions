@@ -1,5 +1,4 @@
 
-
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="C3">
   <title>Applications of Linear Algebra</title>
   <xi:include href="C3/DiscreteDS.ptx" />
@@ -11,4 +10,3 @@
   <xi:include href="C3/Projections.ptx" />
   <xi:include href="C3/Fourier.ptx" />
 </chapter>
-

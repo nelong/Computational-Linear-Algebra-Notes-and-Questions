@@ -21,7 +21,7 @@
     Let us look at a much simplier example and do some calculations. Let our dynamical system be <m>(\mathbb{R},f(x)=x^2)</m>. This means that our state space is the set of real numbers and our current state evolves according to the rule <m>x \rightarrow x^2</m>.
   </p>
   <p>
-    Notice here that we can only apply our rule (apply the function<m>f</m>) in discrete amounts. So if we start with the initial value <m>x_0=a</m>, then our next state will be <m>x_1=f(x_0=a)=a^2</m>. Our study really becomes aboue the sequence <m>x_0,x_1=f(x_0),x_2=f(x_1)=f(f(x_0)), x_3=f(x_2)=f(f(f(x_0))), \ldots</m>. This is called a <term>discrete dynamical system</term> because we can measure the state of the system (and it's evolution) only at discrete values.
+    Notice here that we can only apply our rule (apply the function<m>f</m>) in discrete amounts. So if we start with the initial value <m>x_0=a</m>, then our next state will be <m>x_1=f(x_0=a)=a^2</m>. Our study really becomes about the sequence <m>x_0,x_1=f(x_0),x_2=f(x_1)=f(f(x_0)), x_3=f(x_2)=f(f(f(x_0))), \ldots</m>. This is called a <term>discrete dynamical system</term> because we can measure the state of the system (and it's evolution) only at discrete values.
   </p>
   <p>
     Take a few minutes to find the solution sequence for <m>x_0=2</m>. Try to write out what the long term behavior of this solution sequence is. Will all initial values have this same long term behavior? How many different long term behaviors can you find?
