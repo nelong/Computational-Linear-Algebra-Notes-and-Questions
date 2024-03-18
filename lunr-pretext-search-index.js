@@ -1504,6 +1504,681 @@ var ptx_lunr_docs = [
   "body": "  Let . Show that only has an eigenvalue of 2. What is the algebraic multiplicity of the eigenvalue 2?    Can you pick , , and , so that the eigenspace of 2 has dimension 3? If so, give a choice of , , and that does so.    Can you pick , , and , so that the eigenspace of 2 has dimension 2? If so, give a choice of , , and that does so.    Can you pick , , and , so that the eigenspace of 2 has dimension 1? If so, give a choice of , , and that does so.   "
 },
 {
+  "id": "DiscreteDS",
+  "level": "1",
+  "url": "DiscreteDS.html",
+  "type": "Section",
+  "number": "3.1",
+  "title": "Discrete Dynamical Systems",
+  "body": " Discrete Dynamical Systems   A dynamical system is a pair where is the set of states a system can be in and is a rule for how the system evolves or changes. This can feel like a really abstract and general statement, so let's look at some real life examples and some simple math examples that we can easily work with.   Let our state space be the set of all possible collections of position, velocities, and times of the sun and nine planets (Pluto is still a planet to me...). You might store each planet's position, velocity, and time as a vector then we would say that the ten vectors are the current state of the system and the rule for evolution would be the the force of gravity. In this way, each state leads to the next by following the dynamical rule.  The field of dynamical systems would study questions like 1)if this system always has a solution, 2)what properties solutions typically have, or 3) what is the long term behavior of solution? Another important part of the system above would be an initial condition, or the state of the system at beginning.  You often label this as time zero and state the values for the different planets' position and velocity at time zero. This leads to even more questions like \"If the initial configuration of planets was a bit different, would the long term behavior still be the same?\" This example is a continuous dynamical system since we look how the states of the system evolve in terms of a continuous variable (time in this case). This particular system is quite complicated and has been a focus of science, philosophy, and religion for quite some time.    Let us look at a much simplier example and do some calculations. Let our dynamical system be . This means that our state space is the set of real numbers and our current state evolves according to the rule .  Notice here that we can only apply our rule (apply the function ) in discrete amounts. So if we start with the initial value , then our next state will be . Our study really becomes about the sequence . This is called a discrete dynamical system because we can measure the state of the system (and it's evolution) only at discrete values.  Take a few minutes to find the solution sequence for . Try to write out what the long term behavior of this solution sequence is. Will all initial values have this same long term behavior? How many different long term behaviors can you find?    You may think a game like chess is also a dynamical system but that is not the case. You could consider all the different ways that pieces could be configured on the board as a state space for the game, there is no rule for how the configuration must change. This is what makes chess an interesting game.     Predator-Prey Systems  In this section we will look at a basic type of two dimensional discrete dynamical system that models the populations of a predator and a prey, which we will call foxes ( ) and rabbits, . We will construct a discrete dynamcial system that describe the amount of foxes and rabbits in the next year based on the amount of foxes and rabbits in the current year. In other words,    Let's figure out reasonable functions for and under the following ideas:  If there are no rabbits, then some of the foxes will die in the next year (starvation)  If there are rabbits, then the fox populations grows in the next year based on the interaction of the species (predation)  If there are no foxes, the rabbit population will grow by some proportion in the next year  If there are foxes, then the rabbit population will decrease based on the interaction of the species (being eaten)  Functions that fit these simple rules might be of the form  So choosing coefficients would give the relative weight of each of these rules on the change in each population. For instance,  Note here that we can use linear algebra to analyse this type of problem because our sequence now looks like where . In other words, the solution to this two dimensional, discrete dynamical system is of the form .    Difference Equations and Linear Algebra  A dynamical system with an n-dimensional vector for the state and dynamical rule given by is called a linear difference equation .  Let examine how eigenvalues and eigenvectors could help us easily understand the long term behavior of a linear difference equation. In particular, we will assume that we have a difference equation given by a by matrix and that we can find a set of linearly independent eigenvectors, , with eigenvalues . This is actually a really big assumption and is NOT true in general, so the discussion below will not be enough to analyze the general case. Because we have a set of linearly independent vectors from , we can put them as columns of a matrix and apply the Invertible Matrix Theorem to demonstrate that this set will also span all of . This means that no matter what initial values we take for our system, we can write that initial value as a linear combination of the set . In other words, there is a solution to the vector equation for every . Because these vectors in our spanning set are not just some vectors, but rather are eigenvectors of , we will be able to write out the rest of the sequence and understand the long term behavior regardless of initial values of our system.  Looking at we get the following:  Since each of the are eigenvectors, . Thus,   In this same way, we can look at the -th iteration of our system and get    Notice that the only thing changing under iteration is the power of the eigenvalue. Once we figure out how much of our inital value vector is in the direction of each of our eigenvectors, then that amount does NOT change during the evolution of our system! The only thing changing is that each eigenvector direction is getting stretched or shrunk by the eigenvalue at each step. So when will these different parts grow or shrink?    In this activity, we want to go through all of the parts of the argument above and its geometric meaning for the difference equation described by .   What are the eigenvalues and eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  Show that if , then .  What is the long term behavior of the solution with initial value ?     In this activity, we want to go through all of the parts of the argument above and its geometric meaning for the difference equation described by .   What are the eigenvalues and eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  Show that if , then .  What is the long term behavior of the solution with initial value ?     Types of Solutions to Two Dimensional Linear Difference Equations   What are the fixed points of the difference equation where .    What are the fixed points of the difference equation where .   Since the long term behavior of these type of systems depends on the eigenvalues, we wil try to talk about all of the possible cases of eigenvalues and the corresponding behaviors. Remember that we need to pay attention to how changes as increases.  and  and  and  and  and  and  and  What other possibilities are there?      Use your new found appreaciation of eigenvalues and eigenvectors to describe the general solution and behavior of solutions to the difference equation with each of the following .                             An attractor or attracting fixed point is a fixed point of a dynamical system where all nearby points converge to the fixed point. These are also called sinks .  A repeller or repelling fixed point is a fixed point of a dynamical system where all nearby points move away from the fixed point. These are also called sources .  A saddle fixed point is a fixed point of a dynamical system where some nearby points converge to the fixed point and other nearby points move away from the fixed point.    If we consider the dynamical system given by , what are the fixed points of this system and what behaviors do they exhibit?     Use your work from the earlier activity to describe the fixed points and thier behavior for the difference equation with each of the following .                             "
+},
+{
+  "id": "p-408",
+  "level": "2",
+  "url": "DiscreteDS.html#p-408",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "dynamical system "
+},
+{
+  "id": "example-4",
+  "level": "2",
+  "url": "DiscreteDS.html#example-4",
+  "type": "Example",
+  "number": "3.1.1",
+  "title": "",
+  "body": " Let our state space be the set of all possible collections of position, velocities, and times of the sun and nine planets (Pluto is still a planet to me...). You might store each planet's position, velocity, and time as a vector then we would say that the ten vectors are the current state of the system and the rule for evolution would be the the force of gravity. In this way, each state leads to the next by following the dynamical rule.  The field of dynamical systems would study questions like 1)if this system always has a solution, 2)what properties solutions typically have, or 3) what is the long term behavior of solution? Another important part of the system above would be an initial condition, or the state of the system at beginning.  You often label this as time zero and state the values for the different planets' position and velocity at time zero. This leads to even more questions like \"If the initial configuration of planets was a bit different, would the long term behavior still be the same?\" This example is a continuous dynamical system since we look how the states of the system evolve in terms of a continuous variable (time in this case). This particular system is quite complicated and has been a focus of science, philosophy, and religion for quite some time.  "
+},
+{
+  "id": "example-5",
+  "level": "2",
+  "url": "DiscreteDS.html#example-5",
+  "type": "Example",
+  "number": "3.1.2",
+  "title": "",
+  "body": " Let us look at a much simplier example and do some calculations. Let our dynamical system be . This means that our state space is the set of real numbers and our current state evolves according to the rule .  Notice here that we can only apply our rule (apply the function ) in discrete amounts. So if we start with the initial value , then our next state will be . Our study really becomes about the sequence . This is called a discrete dynamical system because we can measure the state of the system (and it's evolution) only at discrete values.  Take a few minutes to find the solution sequence for . Try to write out what the long term behavior of this solution sequence is. Will all initial values have this same long term behavior? How many different long term behaviors can you find?  "
+},
+{
+  "id": "example-6",
+  "level": "2",
+  "url": "DiscreteDS.html#example-6",
+  "type": "Example",
+  "number": "3.1.3",
+  "title": "",
+  "body": " You may think a game like chess is also a dynamical system but that is not the case. You could consider all the different ways that pieces could be configured on the board as a state space for the game, there is no rule for how the configuration must change. This is what makes chess an interesting game.  "
+},
+{
+  "id": "p-418",
+  "level": "2",
+  "url": "DiscreteDS.html#p-418",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "difference equation "
+},
+{
+  "id": "activity-36",
+  "level": "2",
+  "url": "DiscreteDS.html#activity-36",
+  "type": "Activity",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  In this activity, we want to go through all of the parts of the argument above and its geometric meaning for the difference equation described by .   What are the eigenvalues and eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  Show that if , then .  What is the long term behavior of the solution with initial value ?  "
+},
+{
+  "id": "activity-37",
+  "level": "2",
+  "url": "DiscreteDS.html#activity-37",
+  "type": "Activity",
+  "number": "3.1.2",
+  "title": "",
+  "body": "  In this activity, we want to go through all of the parts of the argument above and its geometric meaning for the difference equation described by .   What are the eigenvalues and eigenvectors of ?  How can we write the vector as a linear combination of the eigenvectors of ?  Show that if , then .  What is the long term behavior of the solution with initial value ?  "
+},
+{
+  "id": "question-9",
+  "level": "2",
+  "url": "DiscreteDS.html#question-9",
+  "type": "Question",
+  "number": "3.1.4",
+  "title": "",
+  "body": " What are the fixed points of the difference equation where .  "
+},
+{
+  "id": "question-10",
+  "level": "2",
+  "url": "DiscreteDS.html#question-10",
+  "type": "Question",
+  "number": "3.1.5",
+  "title": "",
+  "body": " What are the fixed points of the difference equation where .  "
+},
+{
+  "id": "activity-38",
+  "level": "2",
+  "url": "DiscreteDS.html#activity-38",
+  "type": "Activity",
+  "number": "3.1.3",
+  "title": "",
+  "body": "  Use your new found appreaciation of eigenvalues and eigenvectors to describe the general solution and behavior of solutions to the difference equation with each of the following .                           "
+},
+{
+  "id": "definition-17",
+  "level": "2",
+  "url": "DiscreteDS.html#definition-17",
+  "type": "Definition",
+  "number": "3.1.6",
+  "title": "",
+  "body": " An attractor or attracting fixed point is a fixed point of a dynamical system where all nearby points converge to the fixed point. These are also called sinks .  A repeller or repelling fixed point is a fixed point of a dynamical system where all nearby points move away from the fixed point. These are also called sources .  A saddle fixed point is a fixed point of a dynamical system where some nearby points converge to the fixed point and other nearby points move away from the fixed point.  "
+},
+{
+  "id": "question-11",
+  "level": "2",
+  "url": "DiscreteDS.html#question-11",
+  "type": "Question",
+  "number": "3.1.7",
+  "title": "",
+  "body": " If we consider the dynamical system given by , what are the fixed points of this system and what behaviors do they exhibit?  "
+},
+{
+  "id": "activity-39",
+  "level": "2",
+  "url": "DiscreteDS.html#activity-39",
+  "type": "Activity",
+  "number": "3.1.4",
+  "title": "",
+  "body": "  Use your work from the earlier activity to describe the fixed points and thier behavior for the difference equation with each of the following .                           "
+},
+{
+  "id": "ChangeofCoordinates",
+  "level": "1",
+  "url": "ChangeofCoordinates.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Change of Coordinates",
+  "body": " Change of Coordinates   In the previous section, we saw how advantageous our use of eigenvalues and eigenvectors was to describing the long term behavior of the linear discrete dynamical systems. We will take a few minutes here to set up the algebra of what was going on more fully.    Same Eigenvalues, Different Eigenvectors   Find the eigenvalues for the matrices and . For each of the eigenvalues of these matrices, you need to find an eigenvector.  Hopefully you noticed that these matrices have the same eigenvalues but different eigenvectors. Let be the eigenvector of corresponding to and be the eigenvector of corresponding to . Let be the eigenvector of corresponding to and be the eigenvector of corresponding to . Find a matrix such that and .  Find a matrix such that and .  Compute the matrix .  Explain what just happened with matrix product ...    Let's try to reverse engineer what just happened in the previous activity. Can we come up with the matrix that has eigenvalues and with eigenvectors of and ? Think about what parts of the corresponding matrix parts are given by the information above. Once you have guessed at how to write the corresponding matrix. Test your answer by checking what the eigenvalues and eigenvectors are.    "
+},
+{
+  "id": "activity-40",
+  "level": "2",
+  "url": "ChangeofCoordinates.html#activity-40",
+  "type": "Activity",
+  "number": "3.2.1",
+  "title": "",
+  "body": " Find the eigenvalues for the matrices and . For each of the eigenvalues of these matrices, you need to find an eigenvector.  Hopefully you noticed that these matrices have the same eigenvalues but different eigenvectors. Let be the eigenvector of corresponding to and be the eigenvector of corresponding to . Let be the eigenvector of corresponding to and be the eigenvector of corresponding to . Find a matrix such that and .  Find a matrix such that and .  Compute the matrix .  Explain what just happened with matrix product ...  "
+},
+{
+  "id": "activity-41",
+  "level": "2",
+  "url": "ChangeofCoordinates.html#activity-41",
+  "type": "Activity",
+  "number": "3.2.2",
+  "title": "",
+  "body": " Let's try to reverse engineer what just happened in the previous activity. Can we come up with the matrix that has eigenvalues and with eigenvectors of and ? Think about what parts of the corresponding matrix parts are given by the information above. Once you have guessed at how to write the corresponding matrix. Test your answer by checking what the eigenvalues and eigenvectors are.  "
+},
+{
+  "id": "ContinuousDynamicalSystems",
+  "level": "1",
+  "url": "ContinuousDynamicalSystems.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "Continuous Dynamical Systems",
+  "body": " Continuous Dynamical Systems   A dynamical system is a pair where is the set of states a system can be in and is a rule for how the system evolves or changes. We will look at some dynamical systems where the rule of evolution will describe how the state of the system changes in terms of a continuous parameter. Let's look at some examples.   When examining an electrical circuit with a resistor, capacitor, and an inductor, it is useful to look at how the current (a measure of the flow of electricity) changes as a function of time. The dynamical system in this case would consist of where is the set of possible functions with input and is the rule given by the differential equation . In this equation the current is and the constants , , and are the resistance, inductance, and capacitance of the individual components of the circuit.    If you are looking at the position of an object moving under the force of gravity and under air-resistence, your dynamical system would consist of where  is the set of vectors of the form where are continuous functions of  is the rule of evolution given by      Wave Equation  Many different physical phenomena satisfy a very famous differential equation: The state of the system is given by some function that may vary in both space and time coordinates. This kind of system is called a partial differential equation since there is not A derivative for a multivariable function and the change in our system depends on the various partial derivatives of our function.    Heat Equation  Many different physical phenomena satisfy another very famous differential equation: The state of the system is given by some function that may vary in both space and time coordinates. This is another partial differential equation.      For this activity, we want to look at the following 2D continuous dynamical system.     What would a solution look like to this system?  Give a solution to this system.  Give all possible solutions to this system.  What is the solution with and ?   None of the stuff in the previous problem seems like linear algebra, so why are we doing this stuff? The answer is that we can expand our notion of what a vector is and use the idea that we would like to express solutions to these systems as linear combinations of our nice solutions.   Linear Systems of Ordinary Differential Equations  In this subsection, we will look at systems of Linear ODEs of the form: with initial values given by .  Notice that this system has the following properties:  no forcing term (the right hand side of the system does not explicitly depend on )  constant coefficients  linear solutions (solutions are linear combinations of each other)    If you look around at other books and online resources, you will see that the solution to the system given by where , will be of the form: . The term is called the matrix exponential of .  The solution to a linear continuous dynamical system involves evaluating a matrix exponential. This is not a straightforward task and the evaluation algorithm is highly suspect in many situations. In fact, one of the most cited papers in all of applied mathematics is written by Van Loan and Moler (founder of Matlab) titled 19 Dubious Ways to Compute the Exponential of a Matrix written in 1978. This paper and idea was so important in computational science and applied mathematics that it was revised by the same authors and updated 25 years later titled appropriately 19 Dubious Ways to Compute the Exponential of a Matrix, Twenty-Five Years Later . In short, the papers primary contribution is to show that there is no accepted way to evaluate a matrix exponential for all matrices and the algorithm choice is matrix dependent. Dr. Beauregard's research takes a particular interest in symplectic approximations as they preserve fundamental physical quantities.  Let's start with the same assumption we did for discrete dynamical systems: We will assume that we have continuous dynamical system given by a by matrix (with rule given by ) and that we can find a set of linearly independent eigenvectors of , , with eigenvalues . Further, let's define two matrices and . From our work onj= change of coordinates, you should recognize that . So, where . We can use our knowledge of power series to write exponentials using Notice that all this requires to apply to a matrix is that powers of the matrices have to make sense and the scalar multiplication by also needs to make sense. So we can define the matrix exponential as Note here that will be a vector (by matrix vector product) and thus our solution to is given by .  This looks a bit like our solutions to the discrete dynamical systems but still different. The vector is a solution to what matrix equation? If , then is the solution to !!! You should recognize that is the vector of coefficients for the vector equation ! The vector comes from writing the initial condition of our system as a linear combination of the eigenvectors of !  Our solutions to are of the form Look at how much of this is determined by the algebra of problems you already know how to do. Which parts of this will determine the long term behavior of solutions? When will you have fixed point(s)? When will the fixed point(s) be attractors? repellors? saddles?   Let . As we have seen in our previous work, has eigenvalues of and with a choice of eigenvectors given by and . The system of differential equations that corresponds to this matrix is given by:   Using our tools from earlier, we can see that the solutions of this system can be written in the vector form     To arouse a deeper interest into the study of linear systems, let us borrow from a classic example of relationships, first presented by Steven Strogatz in 1988 and then further illustrated by J.C. Sprott in 2004.  Now we know the story of Romeo and Juliet. In our situation, Romeo is desperately in love with Juliet, but Juliet is more fickle than what Shakespeare had in mind. In fact, the more Romeo loves Juliet, the more Juliet wants to run away and hide. This discourages Romeo and he starts to love Juliet less, strangely this is exactly the moment that Juliet finds Romeo more attractive and she begins to love him. On the other hand, Romeo notices again that Juliet is warming up to Romeo and he begins to warm up to her as well. Will the eager beaver (Romeo) ever find true love with the ever fickle and cautious lover (Juliet)?  Let and be the love (or hate, when negative) that each person has for each other, respectively, at time . Let . The love\/hate relationship is governed by the dynamical system: Consider the case where , and answer the following:  Determine the eigenvalues and eigenvectors for the coefficient matrix.  Write down the general solution using the eigenvalues and eigenvectors.  Use Euler's formula to simplify the result completely to determine the real-valued solution to the position function.  Plot and over time. Plot versus . Contrast this to a phase portrait.  How does the situation change if ? What of ?      For each of the matrices below, state the general solution for the system of differential equations given by and find the particular solution with            Converting Higher Order DEs to Systems  Since we have such a nice description and clean algebra to solve systems of differential equations of the form , it is common to write other types of questions in terms of a system of first order differential equations. For example, if we consider the damped harmonic oscillator (an object moving on a spring with some friction), then the system follows the differential equation where is the function of time that measures the position of the object (as measured from the rest length of the spring), is the mass of the object, is the spring constant, and is the coefficent of friction for the object. This is called a second order differential equation because it involves a second derivative of the objective function, but we can rewrite this as first oder differential equation of . In particular, Which takes the form for . Thus by analyzing the second component of our solution, , we can give the solution to    "
+},
+{
+  "id": "p-468",
+  "level": "2",
+  "url": "ContinuousDynamicalSystems.html#p-468",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "dynamical system "
+},
+{
+  "id": "example-7",
+  "level": "2",
+  "url": "ContinuousDynamicalSystems.html#example-7",
+  "type": "Example",
+  "number": "3.3.1",
+  "title": "",
+  "body": " When examining an electrical circuit with a resistor, capacitor, and an inductor, it is useful to look at how the current (a measure of the flow of electricity) changes as a function of time. The dynamical system in this case would consist of where is the set of possible functions with input and is the rule given by the differential equation . In this equation the current is and the constants , , and are the resistance, inductance, and capacitance of the individual components of the circuit.  "
+},
+{
+  "id": "example-8",
+  "level": "2",
+  "url": "ContinuousDynamicalSystems.html#example-8",
+  "type": "Example",
+  "number": "3.3.2",
+  "title": "",
+  "body": " If you are looking at the position of an object moving under the force of gravity and under air-resistence, your dynamical system would consist of where  is the set of vectors of the form where are continuous functions of  is the rule of evolution given by    "
+},
+{
+  "id": "example-9",
+  "level": "2",
+  "url": "ContinuousDynamicalSystems.html#example-9",
+  "type": "Example",
+  "number": "3.3.3",
+  "title": "Wave Equation.",
+  "body": " Wave Equation  Many different physical phenomena satisfy a very famous differential equation: The state of the system is given by some function that may vary in both space and time coordinates. This kind of system is called a partial differential equation since there is not A derivative for a multivariable function and the change in our system depends on the various partial derivatives of our function.  "
+},
+{
+  "id": "example-10",
+  "level": "2",
+  "url": "ContinuousDynamicalSystems.html#example-10",
+  "type": "Example",
+  "number": "3.3.4",
+  "title": "Heat Equation.",
+  "body": " Heat Equation  Many different physical phenomena satisfy another very famous differential equation: The state of the system is given by some function that may vary in both space and time coordinates. This is another partial differential equation.  "
+},
+{
+  "id": "activity-42",
+  "level": "2",
+  "url": "ContinuousDynamicalSystems.html#activity-42",
+  "type": "Activity",
+  "number": "3.3.1",
+  "title": "",
+  "body": "  For this activity, we want to look at the following 2D continuous dynamical system.     What would a solution look like to this system?  Give a solution to this system.  Give all possible solutions to this system.  What is the solution with and ?  "
+},
+{
+  "id": "example-11",
+  "level": "2",
+  "url": "ContinuousDynamicalSystems.html#example-11",
+  "type": "Example",
+  "number": "3.3.5",
+  "title": "",
+  "body": " Let . As we have seen in our previous work, has eigenvalues of and with a choice of eigenvectors given by and . The system of differential equations that corresponds to this matrix is given by:   Using our tools from earlier, we can see that the solutions of this system can be written in the vector form   "
+},
+{
+  "id": "activity-43",
+  "level": "2",
+  "url": "ContinuousDynamicalSystems.html#activity-43",
+  "type": "Activity",
+  "number": "3.3.2",
+  "title": "",
+  "body": " To arouse a deeper interest into the study of linear systems, let us borrow from a classic example of relationships, first presented by Steven Strogatz in 1988 and then further illustrated by J.C. Sprott in 2004.  Now we know the story of Romeo and Juliet. In our situation, Romeo is desperately in love with Juliet, but Juliet is more fickle than what Shakespeare had in mind. In fact, the more Romeo loves Juliet, the more Juliet wants to run away and hide. This discourages Romeo and he starts to love Juliet less, strangely this is exactly the moment that Juliet finds Romeo more attractive and she begins to love him. On the other hand, Romeo notices again that Juliet is warming up to Romeo and he begins to warm up to her as well. Will the eager beaver (Romeo) ever find true love with the ever fickle and cautious lover (Juliet)?  Let and be the love (or hate, when negative) that each person has for each other, respectively, at time . Let . The love\/hate relationship is governed by the dynamical system: Consider the case where , and answer the following:  Determine the eigenvalues and eigenvectors for the coefficient matrix.  Write down the general solution using the eigenvalues and eigenvectors.  Use Euler's formula to simplify the result completely to determine the real-valued solution to the position function.  Plot and over time. Plot versus . Contrast this to a phase portrait.  How does the situation change if ? What of ?    "
+},
+{
+  "id": "activity-44",
+  "level": "2",
+  "url": "ContinuousDynamicalSystems.html#activity-44",
+  "type": "Activity",
+  "number": "3.3.3",
+  "title": "",
+  "body": " For each of the matrices below, state the general solution for the system of differential equations given by and find the particular solution with         "
+},
+{
+  "id": "Operators",
+  "level": "1",
+  "url": "Operators.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Operators",
+  "body": " Operators   In our work for continuous dynamical systems and inner products, we have started to see how scalar valued functions can act just like the vectors from . For the rest of our course, we will think about a vector space of functions (and will give a precise definition of vector space a little later). Let's look at some examples of these kinds of spaces.   Let be the set of all -th degree polynomials. In other words, . Notice that linear combinations of -th degree polynomials will give you other -th degree polynomials. A set like will span .    Let be the set of all polynomials. Notice that linear combinations of polynomials will give you other polynomials. A set like will span . In fact, there is no finite set you can give that will span , which means this space is inifinite dimensional.    Let be the set of smooth functions with domain of . A function is smooth if all of its derivatives are continuous. This set contains more than and would include functions like .  Let be the set of functions with domain and whose first derivatives are continuous. The set would be the set of continuous functions on (and includes functions that are not necessarily differentiable).   All of these examples work on the idea that if we take functions from these sets, , then linear combinations and vector equations make sense ( ). What would the zero vector look like for these kinds of vectors\/functions?   So what would the analog be of matrices with vector spaces of functions?     Linear Operators  Recall how we defined the Matrix-Vector Product in and the associated transformation defined by a matrix .  A linear operator is linear transformation between vector spaces. A linear transformation is a map that respects linear combinations. In other words, if is a linear transformation, then .   Let's consider the operator from the space to . In first semester calculus, you saw how you could factor out constant coefficents from derivatives and split up derivatives into different terms in a sum ( ). The other thing to note here is that this operator takes differentiable functions to continuous functions (the domain and range of this function are a bit different).  We can also define the integral operator as going from to by considering . Integration is another operation that will perserve linear combinations.  Let's consider the mapping from to where . You should take couple of minutes to show that . This shows that the set of solutions to is a vector space. This kind of idea shows how we can find a set with a couple of different solutions that will span the set of all solutions to a differential equation.   Linear operators (or simply operators) will be the analogs of matrices, so as important and useful as eigenvalues\/eigenvectors have been for studying vectors from , what would it look like to find eigenvalues for a linear operator?   Let's look at , the derivative operator from to . What kinds of functions and scalars would satisfy ?  Let's look at , the integral operator from to . What kinds of functions and scalars would satisfy ?  Let's look at , the operator from to with . What kinds of functions and scalars would satisfy ?   As you saw in the previous activity, there are infinite number of eigenvalues for many of these differential operators. An eigenpair is a a eigenvalue and corresponding eigenfunction for a linear operator. For example is an example of an eigenpair for the derivative operator since . As With many problems related to physical situations there are often some boundary conditions (since we usually study different physical properties in a confined setting). Let's look at an example with a basic version of boundary conditions.    Boundary Value Problems   Let's consider smooth functions on the domain and define a linear operator such that with . Can you give an example of an eigenpair of this operator that also satisfies this boundary condition?  If you had two eigenfunctions, and , that satisfy your boundary conditions for the previous task, would also satisfy your constraint  If you had two eigenfunctions, and , that satisfy a boundary condition of , would also satisfy this new boundary condition?    "
+},
+{
+  "id": "example-12",
+  "level": "2",
+  "url": "Operators.html#example-12",
+  "type": "Example",
+  "number": "3.4.1",
+  "title": "",
+  "body": " Let be the set of all -th degree polynomials. In other words, . Notice that linear combinations of -th degree polynomials will give you other -th degree polynomials. A set like will span .  "
+},
+{
+  "id": "example-13",
+  "level": "2",
+  "url": "Operators.html#example-13",
+  "type": "Example",
+  "number": "3.4.2",
+  "title": "",
+  "body": " Let be the set of all polynomials. Notice that linear combinations of polynomials will give you other polynomials. A set like will span . In fact, there is no finite set you can give that will span , which means this space is inifinite dimensional.  "
+},
+{
+  "id": "example-14",
+  "level": "2",
+  "url": "Operators.html#example-14",
+  "type": "Example",
+  "number": "3.4.3",
+  "title": "",
+  "body": " Let be the set of smooth functions with domain of . A function is smooth if all of its derivatives are continuous. This set contains more than and would include functions like .  Let be the set of functions with domain and whose first derivatives are continuous. The set would be the set of continuous functions on (and includes functions that are not necessarily differentiable).  "
+},
+{
+  "id": "question-12",
+  "level": "2",
+  "url": "Operators.html#question-12",
+  "type": "Question",
+  "number": "3.4.4",
+  "title": "",
+  "body": " So what would the analog be of matrices with vector spaces of functions?  "
+},
+{
+  "id": "p-501",
+  "level": "2",
+  "url": "Operators.html#p-501",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "linear operator linear transformation "
+},
+{
+  "id": "example-15",
+  "level": "2",
+  "url": "Operators.html#example-15",
+  "type": "Example",
+  "number": "3.4.5",
+  "title": "",
+  "body": " Let's consider the operator from the space to . In first semester calculus, you saw how you could factor out constant coefficents from derivatives and split up derivatives into different terms in a sum ( ). The other thing to note here is that this operator takes differentiable functions to continuous functions (the domain and range of this function are a bit different).  We can also define the integral operator as going from to by considering . Integration is another operation that will perserve linear combinations.  Let's consider the mapping from to where . You should take couple of minutes to show that . This shows that the set of solutions to is a vector space. This kind of idea shows how we can find a set with a couple of different solutions that will span the set of all solutions to a differential equation.  "
+},
+{
+  "id": "activity-45",
+  "level": "2",
+  "url": "Operators.html#activity-45",
+  "type": "Activity",
+  "number": "3.4.1",
+  "title": "",
+  "body": " Let's look at , the derivative operator from to . What kinds of functions and scalars would satisfy ?  Let's look at , the integral operator from to . What kinds of functions and scalars would satisfy ?  Let's look at , the operator from to with . What kinds of functions and scalars would satisfy ?  "
+},
+{
+  "id": "p-509",
+  "level": "2",
+  "url": "Operators.html#p-509",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "eigenpair "
+},
+{
+  "id": "activity-46",
+  "level": "2",
+  "url": "Operators.html#activity-46",
+  "type": "Activity",
+  "number": "3.4.2",
+  "title": "",
+  "body": " Let's consider smooth functions on the domain and define a linear operator such that with . Can you give an example of an eigenpair of this operator that also satisfies this boundary condition?  If you had two eigenfunctions, and , that satisfy your boundary conditions for the previous task, would also satisfy your constraint  If you had two eigenfunctions, and , that satisfy a boundary condition of , would also satisfy this new boundary condition?  "
+},
+{
+  "id": "section-20",
+  "level": "1",
+  "url": "section-20.html",
+  "type": "Section",
+  "number": "3.5",
+  "title": "Vector Spaces: The Big Idea",
+  "body": " Vector Spaces: The Big Idea  Vector spaces are the primary objects that we study in linear algebra. Generally speaking, a vector space is a collection of objects (called vectors) that preserves linear relationships; that is, the objects work well under vector addition and scalar multiplication. As you will see shortly, vectors are not always going to be the column vectors we have seen so far or viewed geometrically as arrows from one point to another.    A vector space , , is a nonempty set of objects called vectors with two operations called addition and scalar multiplication such that the following hold for all and :  If , then .      There exists a vector such that .  For each , there is a vector such that .  If and , then .          You can refer to these properties as  closure of vector addition  commutativity of vector addition  associativity of vector addition  existence of the zero vector  existence of the additive inverse  closure of scalar multiplication  distributive property of scalar multiplication across vector addition  distributive property of scalar addition across scalar multiplication (of a vector)  associativity of scalar multiplication  existence of scalar multiplicative identity      This is the definition for a real vector space since the scalars come from , the real numbers. Sometimes it will be useful for us to consider complex vector spaces (scalars come from ), but unless otherwise stated, you should assume that you are working with a real vector space.  In order to gain an appreciation of definitions, use only the above definition to prove the following results:  The zero vector is unique. You can begin this by supposing that there exists some such that for every , then you need to show that must equal .  The additive inverse of a vector is unique.    The real numbers, , are a vector space since all of the above properties hold.    Real valued vectors, , are a vector space since all of the above properties hold when vector addition and scalar multiplication are done componentwise. We can think of the vectors in as a directed line segment (an arrow) or as a point in -dimensional space.   Show why , the set of vectors with integer components is not a vector space.  Is a real vector space? Why or why not?  Is a complex vector space? Why or why not?  The set of by matrices over the real numbers, or simply , is a vector space since all of the above properties hold when vector addition and scalar multiplication are done entry wise. The quotes are around vector in the previous sentence because you may not always think of matrices as being vectors but using the properties from , you can treat matrices as vectors in the general sense.  The set of polynomials (in variable ) of degree at most is denoted by .    Is ?    Is ?    Is ?    Write as a set using set builder notation. Be sure you have a statement that you can use to verify if an object is in your set or not.    Prove that is a real vector space.    The following sets are also vector spaces:  The set of all polynomials (in variable ) denoted .   , the set of functions from a set to the real numbers. We will take a closer look at this vector space in the next problem.   , the trivial vector space .     We are going to take a look at the vector space to get used to our more general way of thinking about vectors and vector spaces. You should think of the vector space as the set of functions with domain and codomain . In other words, we are looking at the set of functions that only use , , and as inputs and have outputs of real numbers.  Let be the function that takes , , and to , , and respectively.  Let be the function that takes , , and to , , and respectively.  Let be the function that takes , , and to , , and respectively.  Let be the function that takes , , and to , , and respectively.        Fill in the blank:   Fill in the blank:  Fill in the blank:      Does it make sense to add the inputs of these functions? Explain.    Does it make sense to add the outputs of these functions? Explain.    Let be the function that takes , , and to , , and respectively. Is ?    Describe the function . In other words, give the outputs for all possible inputs and write a sentence about how you built in terms of and .    Describe the function .    What function when added to will give ?    Can you write as a linear combination of the set ? Explain why or why not.    Can you write as a linear combination of the set ? Explain why or why not.      Write a sentence or two about what property makes a vector the zero vector for , called .    What is the zero vector for the vector space ? Remember to state your answer as an element of .    What is the zero vector for the vector space ? Remember to state your answer as an element of .    What is the zero vector for the vector space ? Remember to state your answer as an element of .    What is the zero vector for the vector space ? Remember to state your answer as an element of .    "
+},
+{
+  "id": "definition-18",
+  "level": "2",
+  "url": "section-20.html#definition-18",
+  "type": "Definition",
+  "number": "3.5.1",
+  "title": "",
+  "body": "  A vector space , , is a nonempty set of objects called vectors with two operations called addition and scalar multiplication such that the following hold for all and :  If , then .      There exists a vector such that .  For each , there is a vector such that .  If and , then .          You can refer to these properties as  closure of vector addition  commutativity of vector addition  associativity of vector addition  existence of the zero vector  existence of the additive inverse  closure of scalar multiplication  distributive property of scalar multiplication across vector addition  distributive property of scalar addition across scalar multiplication (of a vector)  associativity of scalar multiplication  existence of scalar multiplicative identity     "
+},
+{
+  "id": "investigation-46",
+  "level": "2",
+  "url": "section-20.html#investigation-46",
+  "type": "Investigation",
+  "number": "3.5.1",
+  "title": "",
+  "body": "In order to gain an appreciation of definitions, use only the above definition to prove the following results:  The zero vector is unique. You can begin this by supposing that there exists some such that for every , then you need to show that must equal .  The additive inverse of a vector is unique.  "
+},
+{
+  "id": "example-16",
+  "level": "2",
+  "url": "section-20.html#example-16",
+  "type": "Example",
+  "number": "3.5.2",
+  "title": "",
+  "body": " The real numbers, , are a vector space since all of the above properties hold.  "
+},
+{
+  "id": "example-17",
+  "level": "2",
+  "url": "section-20.html#example-17",
+  "type": "Example",
+  "number": "3.5.3",
+  "title": "",
+  "body": " Real valued vectors, , are a vector space since all of the above properties hold when vector addition and scalar multiplication are done componentwise. We can think of the vectors in as a directed line segment (an arrow) or as a point in -dimensional space.  "
+},
+{
+  "id": "investigation-47",
+  "level": "2",
+  "url": "section-20.html#investigation-47",
+  "type": "Investigation",
+  "number": "3.5.2",
+  "title": "",
+  "body": "Show why , the set of vectors with integer components is not a vector space. "
+},
+{
+  "id": "investigation-48",
+  "level": "2",
+  "url": "section-20.html#investigation-48",
+  "type": "Investigation",
+  "number": "3.5.3",
+  "title": "",
+  "body": "Is a real vector space? Why or why not? "
+},
+{
+  "id": "investigation-49",
+  "level": "2",
+  "url": "section-20.html#investigation-49",
+  "type": "Investigation",
+  "number": "3.5.4",
+  "title": "",
+  "body": "Is a complex vector space? Why or why not? "
+},
+{
+  "id": "example-18",
+  "level": "2",
+  "url": "section-20.html#example-18",
+  "type": "Example",
+  "number": "3.5.4",
+  "title": "",
+  "body": "The set of by matrices over the real numbers, or simply , is a vector space since all of the above properties hold when vector addition and scalar multiplication are done entry wise. The quotes are around vector in the previous sentence because you may not always think of matrices as being vectors but using the properties from , you can treat matrices as vectors in the general sense. "
+},
+{
+  "id": "vse",
+  "level": "2",
+  "url": "section-20.html#vse",
+  "type": "Investigation",
+  "number": "3.5.5",
+  "title": "",
+  "body": "The set of polynomials (in variable ) of degree at most is denoted by .    Is ?    Is ?    Is ?    Write as a set using set builder notation. Be sure you have a statement that you can use to verify if an object is in your set or not.    Prove that is a real vector space.   "
+},
+{
+  "id": "example-19",
+  "level": "2",
+  "url": "section-20.html#example-19",
+  "type": "Example",
+  "number": "3.5.5",
+  "title": "",
+  "body": "The following sets are also vector spaces:  The set of all polynomials (in variable ) denoted .   , the set of functions from a set to the real numbers. We will take a closer look at this vector space in the next problem.   , the trivial vector space .  "
+},
+{
+  "id": "investigation-51",
+  "level": "2",
+  "url": "section-20.html#investigation-51",
+  "type": "Investigation",
+  "number": "3.5.6",
+  "title": "",
+  "body": "  We are going to take a look at the vector space to get used to our more general way of thinking about vectors and vector spaces. You should think of the vector space as the set of functions with domain and codomain . In other words, we are looking at the set of functions that only use , , and as inputs and have outputs of real numbers.  Let be the function that takes , , and to , , and respectively.  Let be the function that takes , , and to , , and respectively.  Let be the function that takes , , and to , , and respectively.  Let be the function that takes , , and to , , and respectively.        Fill in the blank:   Fill in the blank:  Fill in the blank:      Does it make sense to add the inputs of these functions? Explain.    Does it make sense to add the outputs of these functions? Explain.    Let be the function that takes , , and to , , and respectively. Is ?    Describe the function . In other words, give the outputs for all possible inputs and write a sentence about how you built in terms of and .    Describe the function .    What function when added to will give ?    Can you write as a linear combination of the set ? Explain why or why not.    Can you write as a linear combination of the set ? Explain why or why not.   "
+},
+{
+  "id": "investigation-52",
+  "level": "2",
+  "url": "section-20.html#investigation-52",
+  "type": "Investigation",
+  "number": "3.5.7",
+  "title": "",
+  "body": "  Write a sentence or two about what property makes a vector the zero vector for , called .    What is the zero vector for the vector space ? Remember to state your answer as an element of .    What is the zero vector for the vector space ? Remember to state your answer as an element of .    What is the zero vector for the vector space ? Remember to state your answer as an element of .    What is the zero vector for the vector space ? Remember to state your answer as an element of .   "
+},
+{
+  "id": "section-21",
+  "level": "1",
+  "url": "section-21.html",
+  "type": "Section",
+  "number": "3.6",
+  "title": "Subspaces",
+  "body": " Subspaces  As shows, it can be very tedious to prove that a set is indeed a vector space. A subspace of a vector space is a subset that is itself a vector space. Since most of the properties of the vector spaces we look at get inherited from some larger vector space, it is often easier to show that a set is a vector space by showing it is a subspace of the appropriate parent vector space.    A subset of a vector space is a subspace if and only if the following are true:  The zero vector of is in ; .  H is closed under vector addition; if , then .  H is closed under scalar multiplication; if and , then .      We first assume that is a subspace of . Item (a) of the theorem follows from axiom 4 of being a vector space. Item (b) of the theorem follows from axiom 1 of being a vector space. Item (c) of the theorem follows from axiom 6 of being a vector space.  For the converse, we assume that and the three items of the theorem satement are satisfied. We must verify the 10 vector space axioms:  This follows from item (b) of the theorem statement.  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  This follows from item (a) of the theorem statement.  This requires proof. Since , item (c) of the theorem statement tells us that for all , . Thus, this axiom is verified.  This follows from item (c) of the theorem statement.  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .     This theorem is so useful because we can prove a set is a vector space by checking only three properties instead of the ten that are involved in the definition. The reason that we do not need to check these other properties is that by using this subspace, we already have proven the proper rules of arithmetic from the parent space. Additionally, since we are using the same rules for scalar multiplication and vector addition as the parent space, we must also have the same scalars as the parent space.  Use the preceding theorem to prove that is a subspace of .   Is a subspace of ? Why or why not?  Is a subspace of ? Why or why not?  Is the set of points on the plane given by a subspace of ? Why or why not?  Is the set of points on the plane given by a subspace of ? Why or why not?  Draw a plot of the points in given by . Is a subspace of ? Why or why not?  Is , the set of symmetric by matrices a subspace of ? Why or why not?  Prove or disprove: The set of odd functions on (i.e., those for which for every ) a subspace of .   The statement is true. We use Theorem 3.6 to prove this. First note that the function is the zero vector for this vector space, as for any function , . To see that is odd, we have . Now suppose that are odd functions. We have , verifying the second part of the theorem is satisfied. Finally, let . Now . Thus, the set of odd functions are a subspace of the vector space of functions from to .   If is a by matrix, the solution set to the homogeneous equation is a subspace of .  If and are subspaces of some vector space , then the set is a subspace of as well.  Prove or Disprove: the set of by matrices with at least one zero entry is a subspace of .  Prove or Disprove: the set of matrices of the form is a subspace of .  Prove or disprove: The set of quadratic polynomials of the form is a subspace of the vector space of polynomials.  "
+},
+{
+  "id": "p-547",
+  "level": "2",
+  "url": "section-21.html#p-547",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "subspace "
+},
+{
+  "id": "theorem-17",
+  "level": "2",
+  "url": "section-21.html#theorem-17",
+  "type": "Theorem",
+  "number": "3.6.1",
+  "title": "",
+  "body": "  A subset of a vector space is a subspace if and only if the following are true:  The zero vector of is in ; .  H is closed under vector addition; if , then .  H is closed under scalar multiplication; if and , then .      We first assume that is a subspace of . Item (a) of the theorem follows from axiom 4 of being a vector space. Item (b) of the theorem follows from axiom 1 of being a vector space. Item (c) of the theorem follows from axiom 6 of being a vector space.  For the converse, we assume that and the three items of the theorem satement are satisfied. We must verify the 10 vector space axioms:  This follows from item (b) of the theorem statement.  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  This follows from item (a) of the theorem statement.  This requires proof. Since , item (c) of the theorem statement tells us that for all , . Thus, this axiom is verified.  This follows from item (c) of the theorem statement.  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .    "
+},
+{
+  "id": "investigation-53",
+  "level": "2",
+  "url": "section-21.html#investigation-53",
+  "type": "Investigation",
+  "number": "3.6.1",
+  "title": "",
+  "body": "Use the preceding theorem to prove that is a subspace of .  "
+},
+{
+  "id": "investigation-54",
+  "level": "2",
+  "url": "section-21.html#investigation-54",
+  "type": "Investigation",
+  "number": "3.6.2",
+  "title": "",
+  "body": "Is a subspace of ? Why or why not? "
+},
+{
+  "id": "investigation-55",
+  "level": "2",
+  "url": "section-21.html#investigation-55",
+  "type": "Investigation",
+  "number": "3.6.3",
+  "title": "",
+  "body": "Is a subspace of ? Why or why not? "
+},
+{
+  "id": "investigation-56",
+  "level": "2",
+  "url": "section-21.html#investigation-56",
+  "type": "Investigation",
+  "number": "3.6.4",
+  "title": "",
+  "body": "Is the set of points on the plane given by a subspace of ? Why or why not? "
+},
+{
+  "id": "investigation-57",
+  "level": "2",
+  "url": "section-21.html#investigation-57",
+  "type": "Investigation",
+  "number": "3.6.5",
+  "title": "",
+  "body": "Is the set of points on the plane given by a subspace of ? Why or why not? "
+},
+{
+  "id": "investigation-58",
+  "level": "2",
+  "url": "section-21.html#investigation-58",
+  "type": "Investigation",
+  "number": "3.6.6",
+  "title": "",
+  "body": "Draw a plot of the points in given by . Is a subspace of ? Why or why not? "
+},
+{
+  "id": "investigation-59",
+  "level": "2",
+  "url": "section-21.html#investigation-59",
+  "type": "Investigation",
+  "number": "3.6.7",
+  "title": "",
+  "body": "Is , the set of symmetric by matrices a subspace of ? Why or why not? "
+},
+{
+  "id": "investigation-60",
+  "level": "2",
+  "url": "section-21.html#investigation-60",
+  "type": "Investigation",
+  "number": "3.6.8",
+  "title": "",
+  "body": "Prove or disprove: The set of odd functions on (i.e., those for which for every ) a subspace of .   The statement is true. We use Theorem 3.6 to prove this. First note that the function is the zero vector for this vector space, as for any function , . To see that is odd, we have . Now suppose that are odd functions. We have , verifying the second part of the theorem is satisfied. Finally, let . Now . Thus, the set of odd functions are a subspace of the vector space of functions from to .  "
+},
+{
+  "id": "theorem-18",
+  "level": "2",
+  "url": "section-21.html#theorem-18",
+  "type": "Theorem",
+  "number": "3.6.2",
+  "title": "",
+  "body": "If is a by matrix, the solution set to the homogeneous equation is a subspace of . "
+},
+{
+  "id": "theorem-19",
+  "level": "2",
+  "url": "section-21.html#theorem-19",
+  "type": "Theorem",
+  "number": "3.6.3",
+  "title": "",
+  "body": "If and are subspaces of some vector space , then the set is a subspace of as well. "
+},
+{
+  "id": "investigation-61",
+  "level": "2",
+  "url": "section-21.html#investigation-61",
+  "type": "Investigation",
+  "number": "3.6.9",
+  "title": "",
+  "body": "Prove or Disprove: the set of by matrices with at least one zero entry is a subspace of . "
+},
+{
+  "id": "investigation-62",
+  "level": "2",
+  "url": "section-21.html#investigation-62",
+  "type": "Investigation",
+  "number": "3.6.10",
+  "title": "",
+  "body": "Prove or Disprove: the set of matrices of the form is a subspace of . "
+},
+{
+  "id": "investigation-63",
+  "level": "2",
+  "url": "section-21.html#investigation-63",
+  "type": "Investigation",
+  "number": "3.6.11",
+  "title": "",
+  "body": "Prove or disprove: The set of quadratic polynomials of the form is a subspace of the vector space of polynomials. "
+},
+{
+  "id": "section-22",
+  "level": "1",
+  "url": "section-22.html",
+  "type": "Section",
+  "number": "3.7",
+  "title": "Motivating Activity",
+  "body": " Motivating Activity    Let's look at the vector as a vector in .   How much does move horizontally?  How much does move vertically?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  How much does move in the direction?  How much does move in the direction?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  How much does move in the direction?  How much does move in the direction?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  What is different about the different sets we considered different sets to span ? Be specific about what aspects will make answering the linear combination question easier to answer.   "
+},
+{
+  "id": "activity-47",
+  "level": "2",
+  "url": "section-22.html#activity-47",
+  "type": "Activity",
+  "number": "3.7.1",
+  "title": "",
+  "body": "  Let's look at the vector as a vector in .   How much does move horizontally?  How much does move vertically?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  How much does move in the direction?  How much does move in the direction?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  How much does move in the direction?  How much does move in the direction?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  What is different about the different sets we considered different sets to span ? Be specific about what aspects will make answering the linear combination question easier to answer.  "
+},
+{
+  "id": "section-23",
+  "level": "1",
+  "url": "section-23.html",
+  "type": "Section",
+  "number": "3.8",
+  "title": "Fourier Series",
+  "body": " Fourier Series  We will formalize some of the work done in Project 3, specifically the generalization of the dot product to vector spaces in general.   Inner Product  An inner product is a bilinear operation (denoted ) from a vector space to that satisifies the following: if and then         , iff  A vector space with a choice of inner product is called an inner product space .    and the dot product  The dot product ( ) is an inner product for our first example of a vector space, .    As we developed in Project 3, we can define an inner product of for . because integrals are lienar with respect to the functions being integrated.  There is not just one inner product that we could define on . We could give a weighting of the the points in our region of integration and define a weighted integral which will still give an inner product. Specifically, we could define for . For instance, if and , then but the unweighted inner product will not be defined for and . The weighted inner product with exists for and because converges to a finite value.   If we look at a set of of functions, , we can still consider the span of that set, While the span of this set is unlikely to be all of our vector space , we can still ask what function from the span is closest to a given function. The inner product (like the dot product) gives us a way to measure how much functions move together, so we can try to find the function from that will maximize it's inner product with a given . If this sounds like a projection vector problem, good news, it is!  Let's consider our set as a subset of functions\/vectors from . What kind of functions can we write as a linear combination from ? For one thing, all of the linear combinations of functions from will be periodic and will have zeros at 0 and .   Let's consider , a function that has zeros at 0 and 1 as shown in the graph below.   A plot of     How well can we approximate this function with a linear combination from our set ?   A very useful fact about our set is that each of the functions, , is orthogonal to any other element of . If , then . Here we are using the unweighted inner product. Note here that we will consider so that our region of interest is the interval from .  What does it mean for our functions to be \"orthogonal\"? Let's look at the graph of (with ) on the interval from 0 to 1. Change the and values to see how the function we are integrating changes.   For our set , we should also look at what would be. Let's calculate .   Let be the approximation of using . For instance, when , So to figure out each of the coefficents, let's take the inner product with on both sides of our linear combination. We get But since each of the functions is orthogonal to all of the other functions ( ), we will get Thus our coefficents can be found by   The following sage commands will calculate the coefficents for our approximation of using a linear combination of functions from . You can see how we get successively better approximations of as we increase the number of terms in the linear combination.   If you noticed, the function we used above for was actually a linear combination from . What if we considered the same problem but with a function NOT in . Consider .   A plot of    Let's see what the coefficients will be for our approximation of with a linear combination from .   What do you notice about where the approximations are getting better and where the approximations are awful? Why do you think this is the case?  Let's consider a larger set of functions, . Will this set still have the property that each element is orthogonal to all of the others (except itself)?   So we probably shouldn't use both the sine and cosine functions unless we have a good way to split up our coefficents since for . For now, let's consider just the cosine functions (with ) for our problem because our target function does not have a zero output at the boundaries of our interval.  Let be the approximation of using . For instance, when , So to figure out each of the coefficents, let's take the inner product with on both sides of our linear combination. We get But since each of the functions is orthogonal to all of the other functions ( ), we will get Thus our coefficents can be found by   Let's see what the coefficients will be for our approximation of with a linear combination from .   While our function is not in the span of our set , our linear combination approximiation is the closest function to (where closest is measured using the inner product!).  We should take a bit of time to list all of the tools we have learned about this semester that are involved in the previous problems: vectors (the bigger idea of vectors as objects that you can work with linear combinations), linear combinations, span, inner products\/orthogonality, efficiently solving linear algebraic systems. What others?  "
+},
+{
+  "id": "definition-19",
+  "level": "2",
+  "url": "section-23.html#definition-19",
+  "type": "Definition",
+  "number": "3.8.1",
+  "title": "Inner Product.",
+  "body": " Inner Product  An inner product is a bilinear operation (denoted ) from a vector space to that satisifies the following: if and then         , iff  A vector space with a choice of inner product is called an inner product space .  "
+},
+{
+  "id": "example-20",
+  "level": "2",
+  "url": "section-23.html#example-20",
+  "type": "Example",
+  "number": "3.8.2",
+  "title": "<span class=\"process-math\">\\(\\mathbb{R}^n\\)<\/span> and the dot product.",
+  "body": " and the dot product  The dot product ( ) is an inner product for our first example of a vector space, .  "
+},
+{
+  "id": "example-21",
+  "level": "2",
+  "url": "section-23.html#example-21",
+  "type": "Example",
+  "number": "3.8.3",
+  "title": "",
+  "body": " As we developed in Project 3, we can define an inner product of for . because integrals are lienar with respect to the functions being integrated.  There is not just one inner product that we could define on . We could give a weighting of the the points in our region of integration and define a weighted integral which will still give an inner product. Specifically, we could define for . For instance, if and , then but the unweighted inner product will not be defined for and . The weighted inner product with exists for and because converges to a finite value.  "
+},
+{
+  "id": "figure-5",
+  "level": "2",
+  "url": "section-23.html#figure-5",
+  "type": "Figure",
+  "number": "3.8.4",
+  "title": "",
+  "body": " A plot of   "
+},
+{
+  "id": "question-13",
+  "level": "2",
+  "url": "section-23.html#question-13",
+  "type": "Question",
+  "number": "3.8.5",
+  "title": "",
+  "body": " How well can we approximate this function with a linear combination from our set ?  "
+},
+{
+  "id": "figure-6",
+  "level": "2",
+  "url": "section-23.html#figure-6",
+  "type": "Figure",
+  "number": "3.8.6",
+  "title": "",
+  "body": " A plot of   "
+},
+{
   "id": "colophon-2",
   "level": "1",
   "url": "colophon-2.html",
