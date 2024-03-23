@@ -99,7 +99,7 @@
     D=diag(\lambda_1,\lambda_2, \ldots, \lambda_n)=
     \begin{bmatrix} \lambda_1 \amp 0 \amp \cdots \amp 0\\ 0 \amp \lambda_2 \amp \cdots \amp 0\\ \vdots \amp \vdots \amp \ddots \amp \vdots \\ 0 \amp 0 \amp \cdots \amp \lambda_n \end{bmatrix}
   </me>
-  and <m>V=[\vec{v}_1 , \ldots , \vec{v}_n]</m>. From our work onj= change of coordinates, you should recognize that <m>A = V D V^{-1}</m>. So,
+  and <m>V=[\vec{v}_1 , \ldots , \vec{v}_n]</m>. From our work on change of coordinates, you should recognize that <m>A = V D V^{-1}</m>. So,
   <md>
     <mrow>A^k =\amp  (V D V^{-1})(V D V^{-1})\ldots (V D V^{-1})</mrow>
     <mrow> = \amp V D^k V^{-1}</mrow>
@@ -179,7 +179,7 @@
   <me>m \dfrac{d^2 x}{dt^2} = -\alpha \dfrac{d x}{dt}- k x</me>
   where <m>x(t)</m> is the function of time that measures the position of the object (as measured from the rest length of the spring), <m>m</m> is the mass of the object, <m>k</m> is the spring constant, and <m>\alpha</m> is the coefficent of friction for the object. This is called a second order differential equation because it involves a second derivative of the objective function, but we can rewrite this as first oder differential equation of <m>\vec{y}(t) =\colvec{\dfrac{dx}{dt}(t) \\ x(t)}</m>. In particular,
   <me>\dfrac{d\vec{y}}{dt}=\colvec{-\frac{\alpha}{m} \dfrac{dx}{dt}- \frac{k}{m} x \\ \dfrac{dx}{dt}}</me>
-  Which takes the form <m>\dfrac{d\vec{y}}{dt}=A\vec{y}</m> for <m>A==\begin{bmatrix} -\frac{\alpha}{m} \amp - \frac{k}{m} \\ 1 \amp 0 \end{bmatrix}</m>. Thus by analyzing the second component of our solution, <m>\vec{y}(t)</m>, we can give the solution to <m>m \dfrac{d^2 x}{dt^2} = -\alpha \dfrac{d x}{dt}- k x</m>
+  Which takes the form <m>\dfrac{d\vec{y}}{dt}=A\vec{y}</m> for <m>A=\begin{bmatrix} -\frac{\alpha}{m} \amp - \frac{k}{m} \\ 1 \amp 0 \end{bmatrix}</m>. Thus by analyzing the second component of our solution, <m>\vec{y}(t)</m>, we can give the solution to <m>m \dfrac{d^2 x}{dt^2} = -\alpha \dfrac{d x}{dt}- k x</m>
 </p>
 </subsection>
 
