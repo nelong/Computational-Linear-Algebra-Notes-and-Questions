@@ -249,11 +249,11 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-20"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Vector Spaces: The Big Idea</span>
 </h2>
-<div class="para" id="p-513">Vector spaces are the primary objects that we study in linear algebra. Generally speaking, a vector space is a collection of objects (called vectors) that preserves linear relationships; that is, the objects work well under vector addition and scalar multiplication. As you will see shortly, vectors are not always going to be the column vectors we have seen so far or viewed geometrically as arrows from one point to another.</div>
+<div class="para" id="p-516">Vector spaces are the primary objects that we study in linear algebra. Generally speaking, a vector space is a collection of objects (called vectors) that preserves linear relationships; that is, the objects work well under vector addition and scalar multiplication. As you will see shortly, vectors are not always going to be the column vectors we have seen so far or viewed geometrically as arrows from one point to another.</div>
 <article class="definition definition-like" id="definition-18"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-514">
+<div class="para logical" id="p-517">
 <div class="para">A <dfn class="terminology">vector space</dfn>, <span class="process-math">\(V\text{,}\)</span> is a nonempty set of objects called <dfn class="terminology">vectors</dfn> with two operations called addition and scalar multiplication such that the following hold for all <span class="process-math">\(\vec{u}, \vec{v}, \vec{w} \in V\)</span> and <span class="process-math">\(c,d \in \mathbb{R}\text{:}\)</span>
 </div>
 <ol class="decimal">
@@ -285,45 +285,45 @@ window.MathJax = {
 <li id="li-148"><div class="para" id="p-derived-li-148">associativity of scalar multiplication</div></li>
 <li id="li-149"><div class="para" id="p-derived-li-149">existence of scalar multiplicative identity</div></li>
 </ol>
-</div></article><div class="para" id="p-515">This is the definition for a <em class="emphasis">real</em> vector space since the scalars come from <span class="process-math">\(\mathbb{R}\text{,}\)</span> the real numbers. Sometimes it will be useful for us to consider complex vector spaces (scalars come from <span class="process-math">\(\mathbb{C}\)</span>), but unless otherwise stated, you should assume that you are working with a real vector space.</div>
+</div></article><div class="para" id="p-518">This is the definition for a <em class="emphasis">real</em> vector space since the scalars come from <span class="process-math">\(\mathbb{R}\text{,}\)</span> the real numbers. Sometimes it will be useful for us to consider complex vector spaces (scalars come from <span class="process-math">\(\mathbb{C}\)</span>), but unless otherwise stated, you should assume that you are working with a real vector space.</div>
 <article class="investigation project-like" id="investigation-46"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-45"><div class="para" id="p-516">In order to gain an appreciation of definitions, use only the above definition to prove the following results:</div></div>
+<div class="introduction" id="introduction-45"><div class="para" id="p-519">In order to gain an appreciation of definitions, use only the above definition to prove the following results:</div></div>
 <article class="task exercise-like" id="task-220"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-517">The zero vector is unique. You can begin this by supposing that there exists some <span class="process-math">\(\vec{w}\)</span> such that <span class="process-math">\(\vec{x} +\vec{w} = \vec{x}\)</span> for every <span class="process-math">\(\vec{x} \in V\text{,}\)</span> then you need to show that <span class="process-math">\(\vec{w}\)</span> must equal <span class="process-math">\(\vec{0}_V\text{.}\)</span>
+<div class="para" id="p-520">The zero vector is unique. You can begin this by supposing that there exists some <span class="process-math">\(\vec{w}\)</span> such that <span class="process-math">\(\vec{x} +\vec{w} = \vec{x}\)</span> for every <span class="process-math">\(\vec{x} \in V\text{,}\)</span> then you need to show that <span class="process-math">\(\vec{w}\)</span> must equal <span class="process-math">\(\vec{0}_V\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-221"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-518">The additive inverse of a vector is unique.</div></article></article><details id="example-16" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
+<div class="para" id="p-521">The additive inverse of a vector is unique.</div></article></article><details id="example-17" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
-</h3></summary><article class="example example-like"><div class="para" id="p-519">The real numbers, <span class="process-math">\(\mathbb{R}\text{,}\)</span> are a vector space since all of the above properties hold.</div></article></details><details id="example-17" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
+</h3></summary><article class="example example-like"><div class="para" id="p-522">The real numbers, <span class="process-math">\(\mathbb{R}\text{,}\)</span> are a vector space since all of the above properties hold.</div></article></details><details id="example-18" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span>
-</h3></summary><article class="example example-like"><div class="para" id="p-520">Real valued vectors, <span class="process-math">\(\mathbb{R}^n\text{,}\)</span> are a vector space since all of the above properties hold when vector addition and scalar multiplication are done componentwise. We can think of the vectors in <span class="process-math">\(\mathbb{R}^n\)</span> as a directed line segment (an arrow) or as a point in <span class="process-math">\(n\)</span>-dimensional space.</div></article></details><article class="investigation project-like" id="investigation-47"><h3 class="heading">
+</h3></summary><article class="example example-like"><div class="para" id="p-523">Real valued vectors, <span class="process-math">\(\mathbb{R}^n\text{,}\)</span> are a vector space since all of the above properties hold when vector addition and scalar multiplication are done componentwise. We can think of the vectors in <span class="process-math">\(\mathbb{R}^n\)</span> as a directed line segment (an arrow) or as a point in <span class="process-math">\(n\)</span>-dimensional space.</div></article></details><article class="investigation project-like" id="investigation-47"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-521">Show why <span class="process-math">\(\mathbb{Z}^n\text{,}\)</span> the set of vectors with <span class="process-math">\(n\)</span> integer components is not a vector space.</div></article><article class="investigation project-like" id="investigation-48"><h3 class="heading">
+<div class="para" id="p-524">Show why <span class="process-math">\(\mathbb{Z}^n\text{,}\)</span> the set of vectors with <span class="process-math">\(n\)</span> integer components is not a vector space.</div></article><article class="investigation project-like" id="investigation-48"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-522">Is <span class="process-math">\(\mathbb{C}^n\)</span> a real vector space? Why or why not?</div></article><article class="investigation project-like" id="investigation-49"><h3 class="heading">
+<div class="para" id="p-525">Is <span class="process-math">\(\mathbb{C}^n\)</span> a real vector space? Why or why not?</div></article><article class="investigation project-like" id="investigation-49"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.5.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-523">Is <span class="process-math">\(\mathbb{R}^n\)</span> a complex vector space? Why or why not?</div></article><details id="example-18" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
+<div class="para" id="p-526">Is <span class="process-math">\(\mathbb{R}^n\)</span> a complex vector space? Why or why not?</div></article><details id="example-19" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.4</span><span class="period">.</span>
-</h3></summary><article class="example example-like"><div class="para" id="p-524">The set of <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrices over the real numbers, <span class="process-math">\(M_{m \times n}(\mathbb{R})\)</span> or simply <span class="process-math">\(M_{m \times n}\text{,}\)</span> is a vector space since all of the above properties hold when “vector” addition and scalar multiplication are done entry wise. The quotes are around vector in the previous sentence because you may not always think of matrices as being vectors but using the properties from <a href="sec_matrix_ops.html" class="internal" title="Section 2.2: Matrix Operations">Section 2.2</a>, you can treat matrices as vectors in the general sense.</div></article></details><article class="investigation project-like" id="vse"><h3 class="heading">
+</h3></summary><article class="example example-like"><div class="para" id="p-527">The set of <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrices over the real numbers, <span class="process-math">\(M_{m \times n}(\mathbb{R})\)</span> or simply <span class="process-math">\(M_{m \times n}\text{,}\)</span> is a vector space since all of the above properties hold when “vector” addition and scalar multiplication are done entry wise. The quotes are around vector in the previous sentence because you may not always think of matrices as being vectors but using the properties from <a href="sec_matrix_ops.html" class="internal" title="Section 2.2: Matrix Operations">Section 2.2</a>, you can treat matrices as vectors in the general sense.</div></article></details><article class="investigation project-like" id="vse"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.5.5</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-46"><div class="para" id="p-525">The set of polynomials (in variable <span class="process-math">\(t\)</span>) of degree at most <span class="process-math">\(n\)</span> is denoted by <span class="process-math">\(\mathbb{P}_n\text{.}\)</span>
+<div class="introduction" id="introduction-46"><div class="para" id="p-528">The set of polynomials (in variable <span class="process-math">\(t\)</span>) of degree at most <span class="process-math">\(n\)</span> is denoted by <span class="process-math">\(\mathbb{P}_n\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="task-222"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-526">Is <span class="process-math">\(t^2-4t \in \mathbb{P}_2\text{?}\)</span>
+<div class="para" id="p-529">Is <span class="process-math">\(t^2-4t \in \mathbb{P}_2\text{?}\)</span>
 </div></article><article class="task exercise-like" id="task-223"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-527">Is <span class="process-math">\(3t^2+t \in \mathbb{P}_3\text{?}\)</span>
+<div class="para" id="p-530">Is <span class="process-math">\(3t^2+t \in \mathbb{P}_3\text{?}\)</span>
 </div></article><article class="task exercise-like" id="task-224"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-528">Is <span class="process-math">\(t^2-t+1 \in \mathbb{P}_1\text{?}\)</span>
+<div class="para" id="p-531">Is <span class="process-math">\(t^2-t+1 \in \mathbb{P}_1\text{?}\)</span>
 </div></article><article class="task exercise-like" id="task-225"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-529">Write <span class="process-math">\(\mathbb{P}_n\)</span> as a set using set builder notation. Be sure you have a statement that you can use to verify if an object is in your set or not.</div></article><article class="task exercise-like" id="task-226"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-530">Prove that <span class="process-math">\(\mathbb{P}_n\)</span> is a real vector space.</div></article></article><details id="example-19" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
+<div class="para" id="p-532">Write <span class="process-math">\(\mathbb{P}_n\)</span> as a set using set builder notation. Be sure you have a statement that you can use to verify if an object is in your set or not.</div></article><article class="task exercise-like" id="task-226"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="p-533">Prove that <span class="process-math">\(\mathbb{P}_n\)</span> is a real vector space.</div></article></article><details id="example-20" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.5</span><span class="period">.</span>
-</h3></summary><article class="example example-like"><div class="para logical" id="p-531">
+</h3></summary><article class="example example-like"><div class="para logical" id="p-534">
 <div class="para">The following sets are also vector spaces:</div>
 <ol class="decimal">
 <li id="li-150"><div class="para" id="p-derived-li-150">The set of all polynomials (in variable <span class="process-math">\(t\)</span>) denoted <span class="process-math">\(\mathbb{P}\text{.}\)</span>
@@ -336,7 +336,7 @@ window.MathJax = {
 </div></article></details><article class="investigation project-like" id="investigation-51"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.5.6</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-47"><div class="para logical" id="p-532">
+<div class="introduction" id="introduction-47"><div class="para logical" id="p-535">
 <div class="para">We are going to take a look at the vector space <span class="process-math">\(V=F(\{a,b,c\},\mathbb{R})\)</span> to get used to our more general way of thinking about vectors and vector spaces. You should think of the vector space <span class="process-math">\(V\)</span> as the set of functions with domain <span class="process-math">\(\{a,b,c\}\)</span> and codomain <span class="process-math">\(\mathbb{R}\text{.}\)</span> In other words, we are looking at the set of functions that only use <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> as inputs and have outputs of real numbers.</div>
 <ul class="disc">
 <li id="li-153"><div class="para" id="p-derived-li-153">Let <span class="process-math">\(g_1\)</span> be the function that takes <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> to <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(-2\text{,}\)</span> and <span class="process-math">\(0\)</span> respectively.</div></li>
@@ -346,7 +346,7 @@ window.MathJax = {
 </ul>
 </div></div>
 <article class="task exercise-like" id="task-227"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="p-533"><ol class="decimal">
+<div class="para logical" id="p-536"><ol class="decimal">
 <li id="li-157"><div class="para" id="p-derived-li-157">Fill in the blank: <span class="process-math">\(g_2(b) =\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
 </div></li>
 <li id="li-158"><div class="para" id="p-derived-li-158">Fill in the blank: <span class="process-math">\(g_3(a) =\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
@@ -354,33 +354,33 @@ window.MathJax = {
 <li id="li-159"><div class="para" id="p-derived-li-159">Fill in the blank: <span class="process-math">\(g_1(c) =\)</span><span class="fillin underline" role="img" aria-label="2-character blank" style="width: 0.909090909090909em;"></span>
 </div></li>
 </ol></div></article><article class="task exercise-like" id="task-228"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-534">Does it make sense to add the inputs of these functions? Explain.</div></article><article class="task exercise-like" id="task-229"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-535">Does it make sense to add the outputs of these functions? Explain.</div></article><article class="task exercise-like" id="task-230"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-536">Let <span class="process-math">\(g_5\)</span> be the function that takes <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(1\text{,}\)</span> and <span class="process-math">\(0\)</span> to <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> respectively. Is <span class="process-math">\(g_5 \in V\text{?}\)</span>
+<div class="para" id="p-537">Does it make sense to add the inputs of these functions? Explain.</div></article><article class="task exercise-like" id="task-229"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-538">Does it make sense to add the outputs of these functions? Explain.</div></article><article class="task exercise-like" id="task-230"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-539">Let <span class="process-math">\(g_5\)</span> be the function that takes <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(1\text{,}\)</span> and <span class="process-math">\(0\)</span> to <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> respectively. Is <span class="process-math">\(g_5 \in V\text{?}\)</span>
 </div></article><article class="task exercise-like" id="task-231"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-537">Describe the function <span class="process-math">\(g_1 +g_2\text{.}\)</span> In other words, give the outputs for all possible inputs and write a sentence about how you built <span class="process-math">\(g_1+g_2\)</span> in terms of <span class="process-math">\(g_1\)</span> and <span class="process-math">\(g_2\text{.}\)</span>
+<div class="para" id="p-540">Describe the function <span class="process-math">\(g_1 +g_2\text{.}\)</span> In other words, give the outputs for all possible inputs and write a sentence about how you built <span class="process-math">\(g_1+g_2\)</span> in terms of <span class="process-math">\(g_1\)</span> and <span class="process-math">\(g_2\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-232"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="p-538">Describe the function <span class="process-math">\(3 g_3\text{.}\)</span>
+<div class="para" id="p-541">Describe the function <span class="process-math">\(3 g_3\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-233"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="p-539">What function when added to <span class="process-math">\(g_2\)</span> will give <span class="process-math">\(g_4\text{?}\)</span>
+<div class="para" id="p-542">What function when added to <span class="process-math">\(g_2\)</span> will give <span class="process-math">\(g_4\text{?}\)</span>
 </div></article><article class="task exercise-like" id="task-234"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="p-540">Can you write <span class="process-math">\(g_1\)</span> as a linear combination of the set <span class="process-math">\(\{ g_2 , g_3 , g_4\}\text{?}\)</span> Explain why or why not.</div></article><article class="task exercise-like" id="task-235"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="p-541">Can you write <span class="process-math">\(g_4\)</span> as a linear combination of the set <span class="process-math">\(\{ g_2 , g_3 , g_1\}\text{?}\)</span> Explain why or why not.</div></article></article><article class="investigation project-like" id="investigation-52"><h3 class="heading">
+<div class="para" id="p-543">Can you write <span class="process-math">\(g_1\)</span> as a linear combination of the set <span class="process-math">\(\{ g_2 , g_3 , g_4\}\text{?}\)</span> Explain why or why not.</div></article><article class="task exercise-like" id="task-235"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="p-544">Can you write <span class="process-math">\(g_4\)</span> as a linear combination of the set <span class="process-math">\(\{ g_2 , g_3 , g_1\}\text{?}\)</span> Explain why or why not.</div></article></article><article class="investigation project-like" id="investigation-52"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.5.7</span><span class="period">.</span>
 </h3>
 <article class="task exercise-like" id="task-236"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-542">Write a sentence or two about what property makes a vector <span class="process-math">\(\vec{v}
+<div class="para" id="p-545">Write a sentence or two about what property makes a vector <span class="process-math">\(\vec{v}
 \in V\)</span> the zero vector for <span class="process-math">\(V\text{,}\)</span> called <span class="process-math">\(\vec{0}_V\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-237"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-543">What is the zero vector for the vector space <span class="process-math">\(M_{m \times
+<div class="para" id="p-546">What is the zero vector for the vector space <span class="process-math">\(M_{m \times
 n}\text{?}\)</span> Remember to state your answer as an element of <span class="process-math">\(M_{m
 \times n}\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-238"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-544">What is the zero vector for the vector space <span class="process-math">\(\mathbb{P}_n\text{?}\)</span> Remember to state your answer as an element of <span class="process-math">\(\mathbb{P}_n\text{.}\)</span>
+<div class="para" id="p-547">What is the zero vector for the vector space <span class="process-math">\(\mathbb{P}_n\text{?}\)</span> Remember to state your answer as an element of <span class="process-math">\(\mathbb{P}_n\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-239"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-545">What is the zero vector for the vector space <span class="process-math">\(\mathbb{P}\text{?}\)</span> Remember to state your answer as an element of <span class="process-math">\(\mathbb{P}\text{.}\)</span>
+<div class="para" id="p-548">What is the zero vector for the vector space <span class="process-math">\(\mathbb{P}\text{?}\)</span> Remember to state your answer as an element of <span class="process-math">\(\mathbb{P}\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-240"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-546">What is the zero vector for the vector space <span class="process-math">\(F(\mathbb{R},\mathbb{R})\text{?}\)</span> Remember to state your answer as an element of <span class="process-math">\(F(\mathbb{R},\mathbb{R})\text{.}\)</span>
+<div class="para" id="p-549">What is the zero vector for the vector space <span class="process-math">\(F(\mathbb{R},\mathbb{R})\text{?}\)</span> Remember to state your answer as an element of <span class="process-math">\(F(\mathbb{R},\mathbb{R})\text{.}\)</span>
 </div></article></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="Operators.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-21.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

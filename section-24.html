@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Operators</title>
+<title>Fourier Series</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -86,7 +86,19 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -123,7 +135,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Graphics.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="C3.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-21.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="section-23.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="C3.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand\colvec[1]{\begin{bmatrix}#1\end{bmatrix}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -232,7 +244,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Graphics.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Graphics and Linear Algebra</span></a></div></li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Operators.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Operators</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Operators.html#subsection-25" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Linear Operators</span></a></div></li>
@@ -242,54 +254,224 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-21.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Vector Spaces: The Big Idea</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-22.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Subspaces</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-23.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Motivating Activity</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-24.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Fourier Series</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="section-24.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Fourier Series</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="Operators"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Operators</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-24"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.9</span><span class="space"> </span><span class="title">Fourier Series</span>
 </h2>
-<section class="introduction" id="introduction-45"><div class="para" id="p-499">In our work for continuous dynamical systems and inner products, we have started to see how scalar valued functions can act just like the vectors from <span class="process-math">\(\mathbb{R}^n\text{.}\)</span> For the rest of our course, we will think about a vector space of functions (and will give a precise definition of vector space a little later). Let’s look at some examples of these kinds of spaces.</div> <details id="example-13" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
-</h3></summary><article class="example example-like"><div class="para" id="p-500">Let <span class="process-math">\(P_n\)</span> be the set of all <span class="process-math">\(n\)</span>-th degree polynomials. In other words, <span class="process-math">\(P_n =\{f(x)=a_0+a_1 x+\ldots +a_n x^n| a_i \in \mathbb{R}\}\text{.}\)</span> Notice that linear combinations of <span class="process-math">\(n\)</span>-th degree polynomials will give you other <span class="process-math">\(n\)</span>-th degree polynomials. A set like <span class="process-math">\(\{1,x,x^2,\ldots, x^n\}\)</span> will span <span class="process-math">\(P_n\text{.}\)</span>
-</div></article></details> <details id="example-14" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
-</h3></summary><article class="example example-like"><div class="para" id="p-501">Let <span class="process-math">\(P\)</span> be the set of all polynomials. Notice that linear combinations of polynomials will give you other polynomials. A set like <span class="process-math">\(\{1,x,x^2,\ldots, \}\)</span> will span <span class="process-math">\(P\text{.}\)</span> In fact, there is no finite set you can give that will span <span class="process-math">\(P\text{,}\)</span> which means this space is inifinite dimensional.</div></article></details> <details id="example-15" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span>
-</h3></summary><article class="example example-like"><div class="para" id="p-502">Let <span class="process-math">\(C^\infty([0,1])\)</span> be the set of smooth functions with domain of <span class="process-math">\([0,1]\text{.}\)</span> A function is smooth if all of its derivatives are continuous. This set contains more than <span class="process-math">\(P\)</span> and would include functions like <span class="process-math">\(g(x)=e^x\text{.}\)</span>
-</div> <div class="para" id="p-503">Let <span class="process-math">\(C^n(D)\)</span> be the set of functions with domain  <span class="process-math">\(D\)</span> and whose first <span class="process-math">\(n\)</span> derivatives are continuous. The set <span class="process-math">\(C^0(D)\)</span> would be the set of continuous functions on <span class="process-math">\(D\)</span> (and includes functions that are not necessarily differentiable).</div></article></details> <div class="para" id="p-504">All of these examples work on the idea that if we take functions from these sets, <span class="process-math">\(f,g,h \in S\text{,}\)</span> then linear combinations and vector equations make sense (<span class="process-math">\(\alpha f(x)+\beta g(x)=h(x)\)</span>). What would the zero vector look like for these kinds of vectors/functions?</div> <details id="question-12" class="question example-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">3.5.4</span><span class="period">.</span>
-</h3></summary><article class="question example-like"><div class="para" id="p-505">So what would the analog be of matrices with vector spaces of functions?</div></article></details></section><section class="subsection" id="subsection-25"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="space"> </span><span class="title">Linear Operators</span>
-</h3>
-<div class="para" id="p-506">Recall how we defined the Matrix-Vector Product in <a href="" class="xref" data-knowl="./knowl/xref/MVProd.html" title="Definition 2.1.1">Definition 2.1.1</a> and the associated transformation defined by a matrix <a href="" class="xref" data-knowl="./knowl/xref/MatrixTransformation.html" title="Definition 2.1.2">Definition 2.1.2</a>.</div>
-<div class="para" id="p-507">A <dfn class="terminology">linear operator</dfn> is linear transformation between vector spaces. A <dfn class="terminology">linear transformation</dfn> is a map that respects linear combinations. In other words, if <span class="process-math">\(f\)</span> is a linear transformation, then <span class="process-math">\(f(a \vec{u} +b \vec{v})=a f(\vec{u}) +b f(\vec{v})\text{.}\)</span>
+<div class="para" id="p-589">We will formalize some of the work done in Project 3, specifically the generalization of the dot product to vector spaces in general.</div>
+<article class="definition definition-like" id="definition-19"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.9.1</span><span class="period">.</span><span class="space"> </span><span class="title">Inner Product.</span>
+</h3> <div class="para logical" id="p-590">
+<div class="para">An <dfn class="terminology">inner product</dfn> is a bilinear operation (denoted <span class="process-math">\(\langle . , . \rangle\)</span>) from a vector space <span class="process-math">\(V \times V\)</span> to <span class="process-math">\(\mathbb{C}\)</span> that satisifies the following: if <span class="process-math">\(x,y,z\in V\)</span> and <span class="process-math">\(k\in \mathbb{C}\)</span> then</div>
+<ol class="decimal">
+<li id="li-176"><div class="para" id="p-derived-li-176"><span class="process-math">\(\displaystyle \langle x , y \rangle = \overline{\langle y,x\rangle}\)</span></div></li>
+<li id="li-177"><div class="para" id="p-derived-li-177"><span class="process-math">\(\displaystyle \langle x , y+z \rangle = \langle x,y \rangle +\langle x,z\rangle \)</span></div></li>
+<li id="li-178"><div class="para" id="p-derived-li-178"><span class="process-math">\(\displaystyle \langle  k x , y \rangle = k \langle x,y \rangle\)</span></div></li>
+<li id="li-179"><div class="para" id="p-derived-li-179">
+<span class="process-math">\(\langle  x , x \rangle \geq 0\text{,}\)</span> <span class="process-math">\(\langle x,x\rangle =0\)</span> iff <span class="process-math">\(x= \vec{0}\)</span>
+</div></li>
+</ol>
+<div class="para">A vector space <span class="process-math">\(V\)</span> with a choice of inner product is called an <dfn class="terminology">inner product space</dfn>.</div>
+</div></article><details id="example-21" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.9.2</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\mathbb{R}^n\)</span> and the dot product.</span>
+</h3></summary><article class="example example-like"> <div class="para" id="p-591">The dot product (<span class="process-math">\(\vec{v} \cdot \vec{w} =\sum_i v_i w_i\)</span>) is an inner product for our first example of a vector space, <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
+</div></article></details><details id="example-22" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.9.3</span><span class="period">.</span>
+</h3></summary><article class="example example-like"><div class="para logical" id="p-592">
+<div class="para">As we developed in Project 3, we can define an inner product of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\langle f,g \rangle =\int_a^b f(x) g(x) \enspace dx 
+\end{equation*}
 </div>
-<details id="example-16" class="example example-like born-hidden-knowl"><summary><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.5</span><span class="period">.</span>
-</h4></summary><article class="example example-like"><div class="para" id="p-508">Let’s consider the operator <span class="process-math">\(\dfrac{d}{dx}\)</span> from the space <span class="process-math">\(C^1([0,1])\)</span> to <span class="process-math">\(C^0([0,1])\text{.}\)</span> In first semester calculus, you saw how you could factor out constant coefficents from derivatives and split up derivatives into different terms in a sum (<span class="process-math">\(\dfrac{d}{dx} (a f(x)+b g(x))=a \dfrac{df}{dx}+ b\dfrac{dg}{dx}\)</span>). The other thing to note here is that this operator takes differentiable functions to continuous functions (the domain and range of this function are a bit different).</div> <div class="para" id="p-509">We can also define the integral operator as going from <span class="process-math">\(C^0([0,1])\)</span> to <span class="process-math">\(C^1([0,1])\)</span> by considering <span class="process-math">\(f(x) \rightarrow \int_0^x f(u) \: du\text{.}\)</span> Integration is another operation that will perserve linear combinations.</div> <div class="para" id="p-510">Let’s consider the mapping <span class="process-math">\(DE\)</span> from <span class="process-math">\(C^\infty(\mathbb{R})\)</span> to <span class="process-math">\(C^\infty(\mathbb{R})\)</span> where <span class="process-math">\(f(x) \rightarrow \dfrac{d^2 f}{dx^2}-3\dfrac{df}{dx}+2 f(x)\text{.}\)</span> You should take couple of minutes to show that <span class="process-math">\(DE(a f(x) + b g(x))=a DE(f(x)) + b DE(g(x))\text{.}\)</span> This shows that the set of solutions to <span class="process-math">\(\dfrac{d^2 f}{dx^2}-3\dfrac{df}{dx}+2 f(x) =0 \)</span> is a vector space. This kind of idea shows how we can find a set with a couple of different solutions that will span the set of all solutions to a differential equation.</div></article></details><div class="para" id="p-511">Linear operators (or simply operators) will be the analogs of matrices, so as important and useful as eigenvalues/eigenvectors have been for studying vectors from <span class="process-math">\(\mathbb{R}^n\text{,}\)</span> what would it look like to find eigenvalues for a linear operator?</div>
-<article class="activity project-like" id="activity-45"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
-</h4>
-<article class="task exercise-like" id="task-214"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-512">Let’s look at <span class="process-math">\(D\text{,}\)</span> the derivative operator from <span class="process-math">\(C^\infty(\mathbb{R})\)</span> to <span class="process-math">\(C^\infty(\mathbb{R})\text{.}\)</span> What kinds of functions and scalars would satisfy <span class="process-math">\(D(f)= \lambda f\text{?}\)</span>
-</div></article><article class="task exercise-like" id="task-215"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-513">Let’s look at <span class="process-math">\(T\text{,}\)</span> the integral operator from <span class="process-math">\(C^\infty(\mathbb{R})\)</span> to <span class="process-math">\(C^\infty(\mathbb{R})\text{.}\)</span> What kinds of functions and scalars would satisfy <span class="process-math">\(T(f)= \lambda f\text{?}\)</span>
-</div></article><article class="task exercise-like" id="task-216"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-514">Let’s look at <span class="process-math">\(S\text{,}\)</span> the operator from <span class="process-math">\(C^\infty(\mathbb{R})\)</span> to <span class="process-math">\(C^\infty(\mathbb{R})\)</span> with <span class="process-math">\(S(f)= \dfrac{d^2f}{dx^2}\text{.}\)</span> What kinds of functions and scalars would satisfy <span class="process-math">\(S(f)= \lambda f\text{?}\)</span>
-</div></article></article><div class="para" id="p-515">As you saw in the previous activity, there are infinite number of eigenvalues for many of these differential operators. An <dfn class="terminology">eigenpair</dfn> is a a eigenvalue and corresponding eigenfunction for a linear operator. For example <span class="process-math">\((3,e^{3x})\)</span> is an example of an eigenpair for the derivative operator since <span class="process-math">\(\dfrac{d}{dx}(e^{3x})=3 e^{3x}\text{.}\)</span> As With many problems related to physical situations there are often some boundary conditions (since we usually study different physical properties in a confined setting). Let’s look at an example with a basic version of boundary conditions.</div></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="space"> </span><span class="title">Boundary Value Problems</span>
-</h3>
-<article class="activity project-like" id="activity-46"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
-</h4>
-<article class="task exercise-like" id="task-217"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-516">Let’s consider smooth functions on the domain <span class="process-math">\([0,L]\)</span> and define a linear operator <span class="process-math">\(T\)</span> such that <span class="process-math">\(T(f)=\dfrac{d^2f}{dx^2}\)</span> with <span class="process-math">\(f(0)=f(L)=0\text{.}\)</span> Can you give an example of an eigenpair of this operator that also satisfies this boundary condition?</div></article><article class="task exercise-like" id="task-218"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-517">If you had two eigenfunctions, <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{,}\)</span> that satisfy your boundary conditions for the previous task, would <span class="process-math">\(\alpha g +\beta h\)</span> also satisfy your constraint</div></article><article class="task exercise-like" id="task-219"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-518">If you had two eigenfunctions, <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{,}\)</span> that satisfy a boundary condition of <span class="process-math">\(f(0)=f(L)=1\text{,}\)</span> would <span class="process-math">\(\alpha g +\beta h\)</span> also satisfy this new boundary condition?</div></article></article></section></section></div>
+<div class="para">for <span class="process-math">\(f,g \in C^0([a,b])\text{.}\)</span> because integrals are lienar with respect to the functions being integrated.</div>
+</div> <div class="para logical" id="p-593">
+<div class="para">There is not just one inner product that we could define on <span class="process-math">\(C^0([a,b])\text{.}\)</span> We could give a weighting of the the points in our region of integration and define a weighted integral which will still give an inner product. Specifically, we could define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\langle f,g \rangle_{w(x)} =\int_a^b f(x) g(x) w(x) \enspace dx 
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(f,g \in C^0([a,b])\text{.}\)</span> For instance, if <span class="process-math">\(f(x)=x\)</span> and <span class="process-math">\(g(x)=^2\text{,}\)</span> then <span class="process-math">\(f,g\in C^0(\mathbb{R})\)</span> but the unweighted inner product</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\langle f,g\rangle = \int_{-\infty}^\infty f(x) g(x) \enspace dx
+\end{equation*}
+</div>
+<div class="para">will not be defined for <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{.}\)</span> The weighted inner product with <span class="process-math">\(w(x) = e^{-x^2}\)</span> exists for <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> because</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\langle f,g\rangle_{w(x)} = \int_{-\infty}^\infty f(x) g(x) e^{-x^2} \enspace dx
+\end{equation*}
+</div>
+<div class="para">converges to a finite value.</div>
+</div></article></details><div class="para logical" id="p-594">
+<div class="para">If we look at a set of of functions, <span class="process-math">\(S=\{\phi_k(x)\} \subset C^0(\mathbb{R})\text{,}\)</span> we can still consider the span of that set,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+Span(S)=\{g(x)|g(x)=\sum_{i=1}^n a_i \phi_i(x)\}
+\end{equation*}
+</div>
+<div class="para">While the span of this set is unlikely to be all of our vector space <span class="process-math">\(C^0(\mathbb{R})\text{,}\)</span> we can still ask what function from the span is closest to a given function. The inner product (like the dot product) gives us a way to measure how much functions move together, so we can try to find the function from <span class="process-math">\(Span(S)\)</span> that will maximize it’s inner product with a given <span class="process-math">\(g \in C^0\text{.}\)</span> If this sounds like a projection vector problem, good news, it is!</div>
+</div>
+<div class="para" id="p-595">Let’s consider our set <span class="process-math">\(S=\{\phi_k(x)=\sin(\frac{k \pi x}{L})\}\)</span> as a subset of functions/vectors from <span class="process-math">\(C^\infty(\mathbb{R})\text{.}\)</span> What kind of functions can we write as a linear combination from <span class="process-math">\(S\text{?}\)</span> For one thing, all of the linear combinations of functions from <span class="process-math">\(S\)</span> will be periodic and will have zeros at 0 and <span class="process-math">\(L\text{.}\)</span>
+</div>
+<pre id="sage-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('x')
+colors=['red','orange','green','blue','purple']
+plot1=plot(0,(x,-2,9),color='black')
+for i in range(1,5):
+  plot1+=plot(sin(i*pi*x/7),(x,-2,9),color=colors[i-1])
+show(plot1)
+</script></pre>
+<div class="para" id="p-596">Let’s consider <span class="process-math">\(h(x)\text{,}\)</span> a function that has zeros at 0 and 1 as shown in the graph below.</div>
+<figure class="figure figure-like" id="figure-5"><iframe id="interactive-2" width="660" height="660" src="interactive-2-if.html"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.9.4<span class="period">.</span></span><span class="space"> </span>A plot of <span class="process-math">\(h(x)\)</span></figcaption></figure><details id="question-13" class="question example-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">3.9.5</span><span class="period">.</span>
+</h3></summary><article class="question example-like"><div class="para" id="p-597">How well can we approximate this function with a linear combination from our set <span class="process-math">\(S\text{?}\)</span>
+</div></article></details><div class="para" id="p-598">A very useful fact about our set <span class="process-math">\(S\)</span> is that each of the functions, <span class="process-math">\(\phi_k(x)=\sin(\frac{k \pi x}{L})\text{,}\)</span> is orthogonal to any other element of <span class="process-math">\(S\text{.}\)</span> If <span class="process-math">\(k\neq j\text{,}\)</span> then <span class="process-math">\(\langle \phi_k , \phi_j \rangle =0\text{.}\)</span> Here we are using the unweighted inner product. Note here that we will consider <span class="process-math">\(L=1\)</span> so that our region of interest is the interval from <span class="process-math">\([0,1]\text{.}\)</span>
+</div>
+<div class="para" id="p-599">What does it mean for our functions to be "orthogonal"? Let’s look at the graph of <span class="process-math">\(\phi_k(x) \phi_j(x)\)</span> (with <span class="process-math">\(L=0\)</span>) on the interval from 0 to 1. Change the <span class="process-math">\(k\)</span> and <span class="process-math">\(j\)</span> values to see how the function we are integrating changes.</div>
+<pre id="sage-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('x')
+j = 1
+k = 2
+plot1=plot(sin(j*pi*x)*sin(k*pi*x),(x,0,1),color='blue')
+plot1+=plot(sin(j*pi*x),(x,0,1),color='red')
+plot1+=plot(sin(k*pi*x),(x,0,1),color='green')
+show(plot1)
+</script></pre>
+<div class="para logical" id="p-600">
+<div class="para">For our set <span class="process-math">\(S\text{,}\)</span> we should also look at what <span class="process-math">\(\langle \phi_k, \phi_k\)</span> would be. Let’s calculate</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_0^1 (\sin(k \pi x))^2 \enspace dx \text{.}
+\end{equation*}
+</div>
+</div>
+<pre id="sage-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('x,m')
+integrate(sin(m*pi*x)^2,(x,0,1))
+</script></pre>
+<div class="para logical" id="p-601">
+<div class="para">Let <span class="process-math">\(h_N\)</span> be the approximation of <span class="process-math">\(h\)</span> using <span class="process-math">\(\{\phi_0, \phi_1, \ldots , \phi_N\}\text{.}\)</span> For instance, when <span class="process-math">\(N=4\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(x) \approx h_N(x) = \sum_{j=0}^4 a_j \phi_j(x)
+\end{equation*}
+</div>
+<div class="para">So to figure out each of the <span class="process-math">\(a_j\)</span> coefficents, let’s take the inner product with <span class="process-math">\(\phi_k\)</span> on both sides of our <span class="process-math">\(h_N(x)\)</span> linear combination. We get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\langle h(x), \phi_k(x)\rangle \approx \langle h_n(x), \phi_k(x)\rangle = \langle \sum_{j=0}^4 a_j \phi_j(x), \phi_k(x)\rangle 
+\end{equation*}
+</div>
+<div class="para">But since each of the <span class="process-math">\(\phi_k\)</span> functions is orthogonal to all of the other <span class="process-math">\(\phi_j\)</span> functions (<span class="process-math">\(k\neq j\)</span>), we will get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\langle h(x), \phi_k(x)\rangle \approx \langle h_n(x), \phi_k(x)\rangle = \langle  a_k \phi_k(x), \phi_k(x)\rangle
+\end{equation*}
+</div>
+<div class="para">Thus our coefficents <span class="process-math">\(a_i\)</span> can be found by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_i=\frac{\langle h(x), \phi_i(x)\rangle}{\langle \phi_i(x), \phi_i(x)\rangle}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-602">The following sage commands will calculate the coefficents for our approximation of <span class="process-math">\(h(x)\)</span> using a linear combination of functions from <span class="process-math">\(S\text{.}\)</span> You can see how we get successively better approximations of <span class="process-math">\(h(x)\)</span> as we increase the number of terms in the linear combination.</div>
+<pre id="sage-10" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('x,m')
+colors=['red','orange','green','blue','purple']
+h(x)=2*sin(pi*x)-3*sin(2*pi*x)+sin(3*pi*x)
+plot1=plot(h(x),(x,0,1),color='black')
+a=[]
+hn(x)=0
+for i in range(1,6):
+  avalue=integrate(h(x)*sin(i*pi*x),(x,0,1))/integrate(sin(i*pi*x)*sin(i*pi*x),(x,0,1))
+  a.append(avalue)
+  hn(x)=hn(x)+avalue*sin(i*pi*x)
+  plot1+=plot(hn(x),(x,0,1),color=colors[i-1])
+  show(plot1)
+print(a)
+</script></pre>
+<div class="para" id="p-603">If you noticed, the function we used above for <span class="process-math">\(h(x)\)</span> was actually a linear combination from <span class="process-math">\(S\text{.}\)</span> What if we considered the same problem but with a function NOT in <span class="process-math">\(Span(S)\text{.}\)</span> Consider <span class="process-math">\(g(x)=|x-1/2|\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="figure-6"><iframe id="interactive-3" width="660" height="660" src="interactive-3-if.html"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.9.6<span class="period">.</span></span><span class="space"> </span>A plot of <span class="process-math">\(g(x)=|x-1/2|\)</span></figcaption></figure><div class="para" id="p-604">Let’s see what the coefficients will be for our approximation of <span class="process-math">\(g(x)\)</span> with a linear combination from <span class="process-math">\(S\text{.}\)</span>
+</div>
+<pre id="sage-11" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('x,m')
+colors=['red','orange','green','blue','purple']
+h(x)=abs(x-0.5)
+plot1=plot(h(x),(x,0,1),color='black')
+a=[]
+hn(x)=0
+for i in range(1,6):
+  avalue=integrate(h(x)*sin(i*pi*x),(x,0,1))/integrate(sin(i*pi*x)*sin(i*pi*x),(x,0,1))
+  a.append(avalue)
+  hn(x)=hn(x)+avalue*sin(i*pi*x)
+  plot1+=plot(hn(x),(x,0,1),color=colors[i-1])
+  show(plot1)
+print(a)
+</script></pre>
+<div class="para" id="p-605">What do you notice about where the approximations are getting better and where the approximations are awful? Why do you think this is the case?</div>
+<div class="para" id="p-606">Let’s consider a larger set of functions, <span class="process-math">\(SC=\{\phi_k(x)=\sin(\frac{k \pi x}{L})\} \cup \{\psi_k(x)=\cos(\frac{k \pi x}{L})\}\text{.}\)</span> Will this set still have the property that each element is orthogonal to all of the others (except itself)?</div>
+<pre id="sage-12" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('x')
+j = 1
+k = 2
+plot1=plot(sin(j*pi*x)*cos(k*pi*x),(x,0,1),color='blue')
+plot1+=plot(sin(j*pi*x),(x,0,1),color='red')
+plot1+=plot(cos(k*pi*x),(x,0,1),color='green')
+show(plot1)
+integrate(sin(j*pi*x)*cos(k*pi*x),(x,0,1))
+</script></pre>
+<div class="para" id="p-607">So we probably shouldn’t use both the sine and cosine functions unless we have a good way to split up our coefficents since <span class="process-math">\(\langle \phi_k, \psi_j \rangle \neq 0\)</span> for <span class="process-math">\(k \neq j\text{.}\)</span> For now, let’s consider just the cosine functions <span class="process-math">\(C=\{\psi_k(x)=\cos(k \pi x)\}\)</span> (with <span class="process-math">\(L=1\)</span>) for our problem because our target function does not have a zero output at the boundaries of our interval.</div>
+<div class="para logical" id="p-608">
+<div class="para">Let <span class="process-math">\(g_N\)</span> be the approximation of <span class="process-math">\(g\)</span> using <span class="process-math">\(\{\psi_0, \psi_1, \ldots , \psi_N\}\text{.}\)</span> For instance, when <span class="process-math">\(N=4\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x) \approx g_N(x) = \sum_{j=0}^4 b_j \psi_j(x)
+\end{equation*}
+</div>
+<div class="para">So to figure out each of the <span class="process-math">\(b_j\)</span> coefficents, let’s take the inner product with <span class="process-math">\(\psi_k\)</span> on both sides of our <span class="process-math">\(g_N(x)\)</span> linear combination. We get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\langle g(x), \psi_k(x)\rangle \approx \langle g_n(x), \psi_k(x)\rangle = \langle \sum_{j=0}^4 b_j \psi_j(x), \psi_k(x)\rangle 
+\end{equation*}
+</div>
+<div class="para">But since each of the <span class="process-math">\(\psi_k\)</span> functions is orthogonal to all of the other <span class="process-math">\(\psi_j\)</span> functions (<span class="process-math">\(k\neq j\)</span>), we will get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\langle g(x), \psi_k(x)\rangle \approx \langle g_n(x), \psi_k(x)\rangle = \langle  b_k \psi_k(x), \psi_k(x)\rangle
+\end{equation*}
+</div>
+<div class="para">Thus our coefficents <span class="process-math">\(a_i\)</span> can be found by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_i=\frac{\langle g(x), \psi_i(x)\rangle}{\langle \psi_i(x), \psi_i(x)\rangle}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-609">Let’s see what the coefficients will be for our approximation of <span class="process-math">\(g(x)\)</span> with a linear combination from <span class="process-math">\(C\text{.}\)</span>
+</div>
+<pre id="sage-13" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('x,m')
+colors=['red','orange','green','blue','purple','red','orange','green','blue','purple']
+h(x)=abs(x-0.5)
+plot1=plot(h(x),(x,0,1),color='black')
+a=[]
+hn(x)=0
+for i in range(6):
+  avalue=integrate(h(x)*cos(i*pi*x),(x,0,1))/integrate(cos(i*pi*x)*cos(i*pi*x),(x,0,1))
+  a.append(avalue)
+  hn(x)=hn(x)+avalue*cos(i*pi*x)
+  plot1+=plot(hn(x),(x,0,1),color=colors[i])
+  show(plot1)
+print(a)
+</script></pre>
+<div class="para" id="p-610">While our function <span class="process-math">\(g(x)=|x-1/2|\)</span> is not in the span of our set <span class="process-math">\(SC\text{,}\)</span> our linear combination approximiation is the closest function to <span class="process-math">\(g\)</span> (where closest is measured using the inner product!).</div>
+<div class="para" id="p-611">We should take a bit of time to list all of the tools we have learned about this semester that are involved in the previous problems: vectors (the bigger idea of vectors as objects that you can work with linear combinations), linear combinations, span, inner products/orthogonality, efficiently solving linear algebraic systems. What others?</div></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="Graphics.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-21.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="section-23.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Motivating Activity</title>
+<title>Subspaces</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -231,49 +231,120 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ContinuousDynamicalSystems.html#subsection-24" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Converting Higher Order DEs to Systems</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Graphics.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Graphics and Linear Algebra</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Operators.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Operators</span></a></div>
+<div class="toc-title-box"><a href="Operators.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Operators</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Operators.html#subsection-25" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Linear Operators</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Operators.html#subsection-26" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Boundary Value Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Operators.html#subsection-25" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Linear Operators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Operators.html#subsection-26" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Boundary Value Problems</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-20.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Vector Spaces: The Big Idea</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-21.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Subspaces</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="section-22.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Motivating Activity</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-23.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Fourier Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-21.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Vector Spaces: The Big Idea</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="section-22.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Subspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-23.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Motivating Activity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-24.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Fourier Series</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-22"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.7</span><span class="space"> </span><span class="title">Motivating Activity</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.7</span><span class="space"> </span><span class="title">Subspaces</span>
 </h2>
-<article class="activity project-like" id="activity-47"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.7.1</span><span class="period">.</span>
+<div class="para" id="p-553">As <a href="" class="xref" data-knowl="./knowl/xref/vse.html" title="Investigation 3.6.5">Investigation 3.6.5</a> shows, it can be very tedious to prove that a set is indeed a vector space. A <dfn class="terminology">subspace</dfn> of a vector space is a subset that is itself a vector space. Since most of the properties of the vector spaces we look at get inherited from some larger vector space, it is often easier to show that a set is a vector space by showing it is a subspace of the appropriate parent vector space.</div>
+<article class="theorem theorem-like" id="theorem-17"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.7.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-48"><div class="para" id="p-566">Let’s look at the vector <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> as a vector in <span class="process-math">\(\mathbb{R}^2\text{.}\)</span>
-</div></div>
-<article class="task exercise-like" id="task-241"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-567">How much does <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> move horizontally?</div></article><article class="task exercise-like" id="task-242"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-568">How much does <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> move vertically?</div></article><article class="task exercise-like" id="task-243"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-569">Calculate the dot product of <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> with <span class="process-math">\(\colvec{1\\0}\text{.}\)</span> How does this relate to your previous answers?</div></article><article class="task exercise-like" id="task-244"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-570">Calculate the dot product of <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> with <span class="process-math">\(\colvec{0\\1}\text{.}\)</span> How does this relate to your previous answers?</div></article><article class="task exercise-like" id="task-245"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-571">How can you write <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> as a linear combination of <span class="process-math">\(\colvec{1\\0}\)</span> and <span class="process-math">\(\colvec{1\\0}\text{?}\)</span>
-</div></article><article class="task exercise-like" id="task-246"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="p-572">How much does <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> move in the <span class="process-math">\(\colvec{1\\1}\)</span> direction?</div></article><article class="task exercise-like" id="task-247"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="p-573">How much does <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> move in the <span class="process-math">\(\colvec{-1\\1}\)</span> direction?</div></article><article class="task exercise-like" id="task-248"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="p-574">Calculate the dot product of <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> with <span class="process-math">\(\colvec{1\\1}\text{.}\)</span> How does this relate to your previous answers?</div></article><article class="task exercise-like" id="task-249"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="p-575">Calculate the dot product of <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> with <span class="process-math">\(\colvec{-1\\1}\text{.}\)</span> How does this relate to your previous answers?</div></article><article class="task exercise-like" id="task-250"><h4 class="heading"><span class="codenumber">(j)</span></h4>
-<div class="para" id="p-576">How can you write <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> as a linear combination of <span class="process-math">\(\colvec{1\\1}\)</span> and <span class="process-math">\(\colvec{-1\\1}\text{?}\)</span>
-</div></article><article class="task exercise-like" id="task-251"><h4 class="heading"><span class="codenumber">(k)</span></h4>
-<div class="para" id="p-577">How much does <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> move in the <span class="process-math">\(\colvec{1\\1}\)</span> direction?</div></article><article class="task exercise-like" id="task-252"><h4 class="heading"><span class="codenumber">(l)</span></h4>
-<div class="para" id="p-578">How much does <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> move in the <span class="process-math">\(\colvec{1\\0}\)</span> direction?</div></article><article class="task exercise-like" id="task-253"><h4 class="heading"><span class="codenumber">(m)</span></h4>
-<div class="para" id="p-579">Calculate the dot product of <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> with <span class="process-math">\(\colvec{1\\1}\text{.}\)</span> How does this relate to your previous answers?</div></article><article class="task exercise-like" id="task-254"><h4 class="heading"><span class="codenumber">(n)</span></h4>
-<div class="para" id="p-580">Calculate the dot product of <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> with <span class="process-math">\(\colvec{1\\0}\text{.}\)</span> How does this relate to your previous answers?</div></article><article class="task exercise-like" id="task-255"><h4 class="heading"><span class="codenumber">(o)</span></h4>
-<div class="para" id="p-581">How can you write <span class="process-math">\(\vec{w}=\colvec{7 \\-2}\)</span> as a linear combination of <span class="process-math">\(\colvec{1\\1}\)</span> and <span class="process-math">\(\colvec{1\\0}\text{?}\)</span>
-</div></article><article class="task exercise-like" id="task-256"><h4 class="heading"><span class="codenumber">(p)</span></h4>
-<div class="para" id="p-582">What is different about the different sets we considered different sets to span <span class="process-math">\(\mathbb{R}^2\text{?}\)</span> Be specific about what aspects will make answering the linear combination question easier to answer.</div></article></article></section></div>
+<div class="para logical" id="p-554">
+<div class="para">A subset <span class="process-math">\(H\)</span> of a vector space <span class="process-math">\(V\)</span> is a subspace if and only if the following are true:</div>
+<ol class="lower-alpha">
+<li id="li-163"><div class="para" id="p-derived-li-163">The zero vector of <span class="process-math">\(V\)</span> is in <span class="process-math">\(H\text{;}\)</span> <span class="process-math">\(\vec{0}_V \in H\text{.}\)</span>
+</div></li>
+<li id="li-164"><div class="para" id="p-derived-li-164">H is closed under vector addition; if <span class="process-math">\(\vec{u}, \vec{v} \in H\text{,}\)</span> then <span class="process-math">\(\vec{u}+\vec{v}\in H\text{.}\)</span>
+</div></li>
+<li id="li-165"><div class="para" id="p-derived-li-165">H is closed under scalar multiplication; if <span class="process-math">\(\vec{u} \in H\)</span> and <span class="process-math">\(c \in \mathbb{R}\text{,}\)</span> then <span class="process-math">\(c\vec{u} \in H\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><details id="proof-1" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-555">We first assume that <span class="process-math">\(H\)</span> is a subspace of <span class="process-math">\(V\text{.}\)</span> Item (a) of the theorem follows from axiom 4 of being a vector space. Item (b) of the theorem follows from axiom 1 of being a vector space. Item (c) of the theorem follows from axiom 6 of being a vector space.</div> <div class="para logical" id="p-556">
+<div class="para">For the converse, we assume that <span class="process-math">\(H\subseteq V\)</span> and the three items of the theorem satement are satisfied. We must verify the 10 vector space axioms:</div>
+<ol class="decimal">
+<li id="li-166"><div class="para" id="p-derived-li-166">This follows from item (b) of the theorem statement.</div></li>
+<li id="li-167"><div class="para" id="p-derived-li-167">Since <span class="process-math">\(H\subseteq V\)</span> and this axiom holds for all elements of <span class="process-math">\(V\text{,}\)</span> the axiom holds when restricted to elements of <span class="process-math">\(H\text{.}\)</span>
+</div></li>
+<li id="li-168"><div class="para" id="p-derived-li-168">Since <span class="process-math">\(H\subseteq V\)</span> and this axiom holds for all elements of <span class="process-math">\(V\text{,}\)</span> the axiom holds when restricted to elements of <span class="process-math">\(H\text{.}\)</span>
+</div></li>
+<li id="li-169"><div class="para" id="p-derived-li-169">This follows from item (a) of the theorem statement.</div></li>
+<li id="li-170"><div class="para" id="p-derived-li-170">This requires proof. Since <span class="process-math">\(-1\in\mathbb{R}\text{,}\)</span> item (c) of the theorem statement tells us that for all <span class="process-math">\(\vec{u}\in H\text{,}\)</span> <span class="process-math">\((-1)\vec{u}=-\vec{u}\in H\text{.}\)</span> Thus, this axiom is verified.</div></li>
+<li id="li-171"><div class="para" id="p-derived-li-171">This follows from item (c) of the theorem statement.</div></li>
+<li id="li-172"><div class="para" id="p-derived-li-172">Since <span class="process-math">\(H\subseteq V\)</span> and this axiom holds for all elements of <span class="process-math">\(V\text{,}\)</span> the axiom holds when restricted to elements of <span class="process-math">\(H\text{.}\)</span>
+</div></li>
+<li id="li-173"><div class="para" id="p-derived-li-173">Since <span class="process-math">\(H\subseteq V\)</span> and this axiom holds for all elements of <span class="process-math">\(V\text{,}\)</span> the axiom holds when restricted to elements of <span class="process-math">\(H\text{.}\)</span>
+</div></li>
+<li id="li-174"><div class="para" id="p-derived-li-174">Since <span class="process-math">\(H\subseteq V\)</span> and this axiom holds for all elements of <span class="process-math">\(V\text{,}\)</span> the axiom holds when restricted to elements of <span class="process-math">\(H\text{.}\)</span>
+</div></li>
+<li id="li-175"><div class="para" id="p-derived-li-175">Since <span class="process-math">\(H\subseteq V\)</span> and this axiom holds for all elements of <span class="process-math">\(V\text{,}\)</span> the axiom holds when restricted to elements of <span class="process-math">\(H\text{.}\)</span>
+</div></li>
+</ol>
+</div></article></details><div class="para" id="p-557">This theorem is so useful because we can prove a set is a vector space by checking only <em class="emphasis">three</em> properties instead of the <em class="emphasis">ten</em> that are involved in the definition. The reason that we do not need to check these other properties is that by using this subspace, we already have proven the proper rules of arithmetic from the parent space. Additionally, since we are using the same rules for scalar multiplication and vector addition as the parent space, we <em class="emphasis">must</em> also have the same scalars as the parent space.</div>
+<article class="investigation project-like" id="investigation-53"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.7.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-558">Use the preceding theorem to prove that <span class="process-math">\(\mathbb{P}_n\)</span> is a subspace of <span class="process-math">\(\mathbb{P}\text{.}\)</span>
+</div></article><article class="investigation project-like" id="investigation-54"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.7.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-559">Is <span class="process-math">\(\mathbb{R}\)</span> a subspace of <span class="process-math">\(\mathbb{C}\text{?}\)</span> Why or why not?</div></article><article class="investigation project-like" id="investigation-55"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.7.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-560">Is <span class="process-math">\(\mathbb{R}^2\)</span> a subspace of <span class="process-math">\(\mathbb{R}^3\text{?}\)</span> Why or why not?</div></article><article class="investigation project-like" id="investigation-56"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.7.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-561">Is the set of points on the plane given by <span class="process-math">\(z=0\)</span> a subspace of <span class="process-math">\(\mathbb{R}^3\text{?}\)</span> Why or why not?</div></article><article class="investigation project-like" id="investigation-57"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.7.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-562">Is the set of points on the plane given by <span class="process-math">\(z=1\)</span> a subspace of <span class="process-math">\(\mathbb{R}^3\text{?}\)</span> Why or why not?</div></article><article class="investigation project-like" id="investigation-58"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.7.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-563">Draw a plot of the points in <span class="process-math">\(\mathbb{R}^2\)</span> given by <span class="process-math">\(\{ \vec{x}=\colvec{x_1\\ x_2} \in
+\mathbb{R}^2 \mid x_1 x_2 \geq 0\}\text{.}\)</span> Is <span class="process-math">\(\{ \vec{x}=\colvec{x_1\\
+x_2} \in \mathbb{R}^2 \mid x_1 x_2 \geq 0\}\)</span> a subspace of <span class="process-math">\(\mathbb{R}^2\text{?}\)</span> Why or why not?</div></article><article class="investigation project-like" id="investigation-59"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.7.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-564">Is <span class="process-math">\(Sym_{n \times n}\text{,}\)</span> the set of symmetric <span class="process-math">\(n\)</span> by <span class="process-math">\(n\)</span> matrices a subspace of <span class="process-math">\(M_{n \times n}\text{?}\)</span> Why or why not?</div></article><article class="investigation project-like" id="investigation-60"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.7.8</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-565">Prove or disprove: The set of odd functions on <span class="process-math">\(\mathbb{R}\)</span> (i.e., those for which <span class="process-math">\(f(-t)=-f(t)\)</span> for every <span class="process-math">\(t \in \mathbb{R}\)</span>) a subspace of <span class="process-math">\(F(\mathbb{R},\mathbb{R})\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-7" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-566">
+<div class="para">The statement is true. We use Theorem 3.6 to prove this. First note that the function <span class="process-math">\(Z(t)=0\)</span> is the zero vector for this vector space, as for any function <span class="process-math">\(f\colon \mathbb{R}\to\mathbb{R}\text{,}\)</span> <span class="process-math">\((f+Z)(t) = f(t)+Z(t) =
+f(t)+0 = f(t)\text{.}\)</span> To see that <span class="process-math">\(Z\)</span> is odd, we have <span class="process-math">\(Z(-t)
+= 0=-0=-Z(t)\text{.}\)</span> Now suppose that <span class="process-math">\(f,g\)</span> are odd functions. We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(f+g)(-t) = f(-t)+g(-t)=-f(t)+(-g(t))=-(f(t)+g(t))=-(f+g)(t)\text{,}
+\end{equation*}
+</div>
+<div class="para">verifying the second part of the theorem is satisfied. Finally, let <span class="process-math">\(c\in\mathbb{R}\text{.}\)</span> Now <span class="process-math">\((cf)(-t) =
+c(f(-t))=c(-f(t))=-cf(t)=-(cf)(t)\text{.}\)</span> Thus, the set of odd functions are a subspace of the vector space of functions from <span class="process-math">\(\mathbb{R}\)</span> to <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</div>
+</div></div></details></div></article><article class="theorem theorem-like" id="theorem-18"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.7.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-567">If <span class="process-math">\(A\)</span> is a <span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix, the solution set to the homogeneous equation <span class="process-math">\(A\vec{x}=\vec{0}\)</span> is a subspace of <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="theorem-19"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.7.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-568">If <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> are subspaces of some vector space <span class="process-math">\(V\text{,}\)</span> then the set <span class="process-math">\(H \cap K\)</span> is a subspace of <span class="process-math">\(V\)</span> as well.</div></article><article class="investigation project-like" id="investigation-61"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.7.9</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-569">Prove or Disprove: the set of <span class="process-math">\(2\)</span> by <span class="process-math">\(2\)</span> matrices with at least one zero entry is a subspace of <span class="process-math">\(M_{2 \times 2}\text{.}\)</span>
+</div></article><article class="investigation project-like" id="investigation-62"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.7.10</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-570">Prove or Disprove: the set of matrices of the form <span class="process-math">\(\begin{bmatrix} a \amp b \\0 \amp -a \end{bmatrix}\)</span> is a subspace of <span class="process-math">\(M_{2 \times 2}\text{.}\)</span>
+</div></article><article class="investigation project-like" id="investigation-63"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.7.11</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-571">Prove or disprove: The set of quadratic polynomials of the form <span class="process-math">\(at^2+b\)</span> is a subspace of the vector space of polynomials.</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-21.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-23.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
