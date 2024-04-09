@@ -107,8 +107,8 @@
   where <m>D^k = diag(\lambda_1^k,\lambda_2^k, \ldots, \lambda_n^k)</m>. We can use our knowledge of power series to write exponentials using
   <me>e^\alpha = \sum_{k=0}^\infty \frac{\alpha^k}{k!}</me>
   Notice that all this requires to apply to a matrix is that powers of the matrices have to make sense and the scalar multiplication by <m>\frac{1}{k!}</m> also needs to make sense. So we can define the matrix exponential as
-  <me> e^{At} = V \sum_{k=0}^\infty \frac{D^k}{k!} V^{-1}= V e^{Dt} V^{-1}= V diag(e^{\lambda_1 t},e^{\lambda_2 t}, \ldots, e^{\lambda_n t})</me>
-  Note here that <m>e^{At} \vec{x}_0</m> will be a vector (by matrix vector product) and thus our solution to <m>\dfrac{d \vec{x}}{dt} = A \vec{x}</m> is given by <m>\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} V^{-1} \vec{x}_0 \: V^{-1}</m>.
+  <me> e^{At} = V \sum_{k=0}^\infty \frac{D^k}{k!} V^{-1}= V e^{Dt} V^{-1}= V diag(e^{\lambda_1 t},e^{\lambda_2 t}, \ldots, e^{\lambda_n t}) V^{-1}</me>
+  Note here that <m>e^{At} \vec{x}_0</m> will be a vector (by matrix vector product) and thus our solution to <m>\dfrac{d \vec{x}}{dt} = A \vec{x}</m> is given by <m>\vec{x}(t) = e^{At}\vec{x}_0= V e^{Dt} V^{-1} \vec{x}_0 </m>.
 </p>
 <p>
   This looks a bit like our solutions to the discrete dynamical systems but still different. The vector <m>V^{-1} \vec{x}_0</m> is a solution to what matrix equation? If <m>\vec{c}=V^{-1}\vec{x}_0</m>, then <m>\vec{c}</m> is the solution to <m>V \vec{c} =\vec{x}_0</m>!!! You should recognize that <m>\vec{c}</m> is the vector of coefficients for the vector equation <m>c_1 \vec{v_1} +c_2 \vec{v}_2 +\ldots + c_n \vec{v}_n = \vec{x}_0</m>! The vector <m>\vec{c}=V^{-1}\vec{x}_0</m> comes from writing the initial condition of our system as a linear combination of the eigenvectors of <m>A</m>!
@@ -129,9 +129,13 @@
   <p>
     Using our tools from earlier, we can see that the solutions of this system can be written in the vector form
     <md>
-      <mrow>\vec{x}(t) =\amp \colvec{x_1(t)\\x_2(t)} =\amp \sum_{j=1}^n c_j e^{\lambda_j t} \vec{v}_j</mrow>
-      <mrow> \amp  \amp c_1 e^{\frac{1}{2}t}\colvec{1\\1}+c_2 e^{2t} \colvec{1 \\-1}</mrow>
+      <mrow>\vec{x}(t) =\amp \colvec{x_1(t)\\x_2(t)} \amp= \sum_{j=1}^n c_j e^{\lambda_j t} \vec{v}_j</mrow>
+      <mrow>  \amp =c_1 e^{\frac{1}{2}t}\colvec{1\\1}+c_2 e^{2t} \colvec{1 \\-1}</mrow>
     </md>
+  </p>
+  <p>
+    If we wanted to find the particular solution with <m>\vec{x}(0)=\colvec{1\\2}</m>, then we need to solve <me> \colvec{1\\2} =c_1 \colvec{1\\1}+c_2  \colvec{1 \\-1} </me>, which has a solution of <m>c_1=\frac{3}{2}</m> and <m>c_2= -\frac{1}{2}</m>. So the particular solution with <m>\vec{x}(0)=\colvec{1\\2}</m> is 
+    <me>\vec{x}=\frac{3}{2} e^{\frac{1}{2}t}\colvec{1\\1}-\frac{1}{2} e^{2t} \colvec{1 \\-1}</me>.
   </p>
 </example>
 <activity>
@@ -153,7 +157,7 @@
       <li>Write down the general solution using the eigenvalues and eigenvectors.</li>
       <li>Use Euler's formula to simplify the result completely to determine the real-valued solution to the position function.</li>
       <li>Plot <m>R(t)</m> and <m>J(t)</m> over time.  Plot <m>R(t)</m> versus <m>J(t)</m>.  Contrast this to a phase portrait.</li>
-      <li>How does the situation change if <m>a = 3</m>?  What of <m>a > 3</m>?</li>
+      <li>How does the situation change if <m>a = 3</m>?  What of <m>a \gt 3</m>?</li>
     </ul>
   </p>
 </activity>
@@ -175,12 +179,28 @@
 <subsection>
   <title>Converting Higher Order DEs to Systems</title>
 <p>
-  Since we have such a nice description and clean algebra to solve systems of differential equations of the form <m>\dfrac{d \vec{x}}{dt}=A \vec{x}</m>, it is common to write other types of questions in terms of a system of first order differential equations. For example, if we consider the damped harmonic oscillator (an object moving on a spring with some friction), then the system follows the differential equation
+  Since we have such a nice description and clean algebra to solve systems of differential equations of the form <m>\dfrac{d \vec{x}}{dt}=A \vec{x}</m>, it is common to write other types of questions in terms of a system of first order differential equations. For example, if we consider the damped harmonic oscillator (an object moving on a spring with friction), then the system follows the differential equation
   <me>m \dfrac{d^2 x}{dt^2} = -\alpha \dfrac{d x}{dt}- k x</me>
-  where <m>x(t)</m> is the function of time that measures the position of the object (as measured from the rest length of the spring), <m>m</m> is the mass of the object, <m>k</m> is the spring constant, and <m>\alpha</m> is the coefficent of friction for the object. This is called a second order differential equation because it involves a second derivative of the objective function, but we can rewrite this as first oder differential equation of <m>\vec{y}(t) =\colvec{\dfrac{dx}{dt}(t) \\ x(t)}</m>. In particular,
+  where <m>x(t)</m> is the function of time that measures the position of the object (as measured from the rest length of the spring), <m>m</m> is the mass of the object, <m>k</m> is the spring constant, and <m>\alpha</m> is the coefficent of friction for the object. This is called a second order differential equation because it involves a second derivative of the objective function, but we can rewrite this as first order differential equation of the vector <m>\vec{y}(t) =\colvec{\dfrac{dx}{dt}(t) \\ x(t)}</m>. In particular,
   <me>\dfrac{d\vec{y}}{dt}=\colvec{-\frac{\alpha}{m} \dfrac{dx}{dt}- \frac{k}{m} x \\ \dfrac{dx}{dt}}</me>
   Which takes the form <m>\dfrac{d\vec{y}}{dt}=A\vec{y}</m> for <m>A=\begin{bmatrix} -\frac{\alpha}{m} \amp - \frac{k}{m} \\ 1 \amp 0 \end{bmatrix}</m>. Thus by analyzing the second component of our solution, <m>\vec{y}(t)</m>, we can give the solution to <m>m \dfrac{d^2 x}{dt^2} = -\alpha \dfrac{d x}{dt}- k x</m>
 </p>
+<example>
+  <p>
+    If we consider the second-order, ordinary differential equation given by 
+    <me> \dfrac{d^2 x}{dt^2} = - 5 \dfrac{d x}{dt}- 2 x</me>
+    then we are trying to find a scalar function <m>x(t)</m> that satisfies the second order equation. The corresponding first-order, vector differential equation will be 
+    <me>\dfrac{d\vec{y}}{dt}=\colvec{-5 \dfrac{dx}{dt}- 5 x \\ \dfrac{dx}{dt}}= \begin{bmatrix} -5  \amp - 2  \\ 1 \amp 0 \end{bmatrix} \colvec{\frac{dx}{dt} \\ x}</me>
+    The corresponding matrix (<m>\begin{bmatrix} -5 \amp -2 \\ 1 \amp 0 \end{bmatrix}</m>) has eigenvalues of <m> \frac{-5 \pm \sqrt{17}}{2}</m> which will have eigenvectors of <m>\colvec{-5\pm \sqrt{17} \\ 2}</m>. So the general solution to our vector equation will be 
+    <me>\dfrac{d\vec{y}}{dt}=c_1 e^{(\frac{-5 + \sqrt{17}}{2})t} \colvec{-5+ \sqrt{17} \\ 2}+ c_1 e^{(\frac{-5 - \sqrt{17}}{2})t} \colvec{-5- \sqrt{17} \\ 2}</me>
+    The solution to 
+    <me> \dfrac{d^2 x}{dt^2} = - 5 \dfrac{d x}{dt}- 2 x</me>
+    will be the first component of our vector solution, namely <m>x(t)=c_1 e^{(\frac{-5 + \sqrt{17}}{2})t} (-5+ \sqrt{17}) + c_1 e^{(\frac{-5 - \sqrt{17}}{2})t} (-5- \sqrt{17})</m>. You can write this a little more simply because you can absorb the constants into the <m>c_1</m> and <m>c_2</m> to get <m>x(t)=c_1 e^{(\frac{-5 + \sqrt{17}}{2})t} + c_1 e^{(\frac{-5 - \sqrt{17}}{2})t} </m>. 
+  </p>
+  <p>
+    What is the long term behavior of these solutions? Does the behavior depend on <m>c_1</m> and <m>c_2</m>?
+  </p>
+</example>
 </subsection>
 
 </section>
