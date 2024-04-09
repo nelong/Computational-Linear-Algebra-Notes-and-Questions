@@ -8,21 +8,51 @@ Changes in graphics correspond to manipulating these points.
 
 GPUs are very efficent at calculating linear transformations for common manipulations
 
-For instance
+Grpahics and computer based image generation are a large class of problems that utilize a lot of the tools we have discussed in this course. We will be simplifying many of these ideas but the basics are things you can understand now and hopefully learn the linear algebra tools about the more sofisticated approches needed to work on these ideas.
 
-rotation
+- Example 1: transforming basic 2D images. It's vital to know a little about how images are created/stored. The long and the short of it is that the different image file types correspond to a different method of storing data about how to create the image. Find links to various descriptions of these. These are by no means a comprehensive list of relevant ideas but enough to get you to see how broadly applicable the elements we have talked about are.
+SVG: Scaled Vector Graphics 
+PS: Postscript is simplified intstructions on how to create a figure
+Fonts: instructions on how to create the shape and width of each part of a character. This is like parameterizations of the curves to make the character along with an idea of width as you move along the curve of the character.
+Fourier Transform of an image: https://plus.maths.org/content/fourier-transforms-images Images might not be stored as an array of colors but might be more efficiently stored as the frequencies involved in the wave that describes how the intensity changes across the elements in an array.
+Example 2: Transforming 2D graphics to 3D space or looking at textures and lighting in 3D
+Thank about using the instructions for a font on a curved object in 3D. or thinking about how the lighting/reflections would look on a curved object in 3D. Key to this is translated 2D information like font definitions to an element in 3D or looking at vector transformations relative to a camera location/orientation. 
+Example 3: Medical imaging or inverse image problems in geology
+Think about trying to create an image of the materials inside a patient or of the different geologic structures like water or crude oil inside some rock structure. These images are created by measuring signal strengths that correspond to density changes along a path then reorienting and getting data on a new set of points. The big idea is to create an image of this 3D structure from these linear measurements.
+Rotation transformations, projections are key here. How to fill in between measurements is a huge issue. AI tools for sharpening pictures an example of another linear algebra application of how to interpolate data. 
+Sonar data is the opposite from a perspective approach. You are not moving just looking at your surroundings with respect to relative orientation. 
 
-Shear
+Wew ill be looking at some simple examples of transformations in 2 and 3 dimensions that can give you an idea of how different kinds of transfomations can be built. 
 
-Projection
+Let's look at what our smiley face image would look like under the following tranformations. 
 
-reflection
+Expansion:
 
-shrink/expand
+Contraction:
 
-Can do this as a tranformation from 2D to 3D (embedding pictures in a 3D environment)
+Rotation:
 
-Want to be efficient, algorithmic, and not case based (GPUs excel at these ideas then)
+Shear:
+
+Projection:
+
+Reflection:
+
+
+
+
+Create a transformation thatj   
+df  would expand by a factor of 2 in the <1,1> direction? 
+
+Create a transformation that would reflect the image across the line y=-x. 
+
+Create a transformation that shears by 1/2 in the direction <2,-1>
+
+
+Show how to take a x,y  problem and project onto the plane x+2y+3z=0
+
+
+Remember that you want generalizable (no exceptions), algorithmic (easily stated, repeatable rules) ways to change location data. Remember that we can describe a vector with points of location data, so we can transform vectors with these same tools. 
 
 
     </p>
