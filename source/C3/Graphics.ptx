@@ -1,59 +1,196 @@
 <section xml:id="Graphics">
   <title>Graphics and Linear Algebra</title>
-<introduction>
-    <p>
-      Graphics and computer-based image generation are a large class of problems that utilize a lot of the tools we have discussed in this course. We will be (over)simplifying many of these ideas but you can understand the basics now and  learn the linear algebra tools about the more sophisticated approaches needed to work on these ideas later.
-    </p>
-    <p>
-      <alert>Example 1: Transforming Basic 2D Images</alert> It is vital to know a little about how images are created/stored. The long and the short of it is that the different image file types correspond to a different method of storing data about how to create the image. This is by no means a comprehensive list of relevant ideas but enough to get you to see how broadly applicable the elements we have talked about are.
-      <ul>
-        <li>SVG: Scaled Vector Graphics </li>
-        <li>PS: Postscript is simplified instructions on how to create a figure
-        Fonts: instructions on how to create the shape and width of each part of a character. This is like parameterizations of the curves to make the character along with an idea of width as you move along the curve of the character. </li>
-        <li>Fourier Transform of an image: <url href="https://plus.maths.org/content/fourier-transforms-images" />  Images might not be stored as an array of colors but might be more efficiently stored as the frequencies involved in the wave that describes how the intensity changes across the elements in an array. </li>
-      </ul>
-    </p>
 <p>
-Example 2: Transforming 2D graphics to 3D space or looking at textures and lighting in 3D
-Thank about using the instructions for a font on a curved object in 3D. or thinking about how the lighting/reflections would look on a curved object in 3D. Key to this is translated 2D information like font definitions to an element in 3D or looking at vector transformations relative to a camera location/orientation. 
-Example 3: Medical imaging or inverse image problems in geology
-Think about trying to create an image of the materials inside a patient or of the different geologic structures like water or crude oil inside some rock structure. These images are created by measuring signal strengths that correspond to density changes along a path then reorienting and getting data on a new set of points. The big idea is to create an image of this 3D structure from these linear measurements.
-Rotation transformations, projections are key here. How to fill in between measurements is a huge issue. AI tools for sharpening pictures an example of another linear algebra application of how to interpolate data. 
-Sonar data is the opposite from a perspective approach. You are not moving just looking at your surroundings with respect to relative orientation. 
+  Graphics and computer-based image generation are a large class of problems that utilize a lot of the tools we have discussed in this course. We will be (over)simplifying many of these ideas but you can understand the basics now and  learn the linear algebra tools about the more sophisticated approaches needed to work on these ideas later.
+</p>
+<p>
+  <alert>Example 1: Transforming Basic 2D Images</alert> It is vital to know a little about how images are created/stored. The long and the short of it is that the different image file types correspond to a different method of storing data about how to create the image. This is by no means a comprehensive list of relevant ideas but enough to get you to see how broadly applicable the elements we have talked about are.
+  <ul>
+    <li><url href="https://en.wikipedia.org/wiki/SVG" >SVG/Scalable Vector Graphics</url>: Instead of pixel based descriptions of an image, SVG files store the image with curves, lines, and other mathematical graphs relative to a grid.</li>
+    <li>PS/Postscript: is simplified instructions on how to create a figure</li>
+    <li>Fonts: instructions on how to create the shape and width of each part of a character. This is like parameterizations of the curves to make the character along with an idea of width as you move along the curve of the character. </li>
+    <li>Fourier Transform of an image: <url href="https://plus.maths.org/content/fourier-transforms-images" />  Images might not be stored as an array of colors but might be more efficiently stored as the frequencies involved in the wave that describes how the intensity changes across the elements in an array. </li>
+  </ul>
+</p>
+<p>
+<alert>Example 2: Transforming 2D graphics to 3D space/Textures and Lighting</alert>
+Think about you would use the instructions for a font on a curved object in 3D. This amounts to transforming or thinking about how the lighting/reflections would look on a curved object in 3D. Key to this is translated 2D information like font definitions to an element in 3D or looking at vector transformations relative to a camera location/orientation. 
+</p>
+<p>
+  <alert>Example 3: Medical imaging or inverse image problems in geology</alert>
+  Think about trying to create an image of the materials inside a patient or of the different geologic structures like water or crude oil inside some rock structure. These images are created by measuring signal strengths that correspond to density changes along a path then reorienting and getting data on a new set of points. The big idea is to create an image of the 3D structure from these linear measurements.
+  Rotation transformations and projections are key tools here and create a host of other problems when you need to select an slice of the 3D model to display on a 2D computer screen (for diagnostic purposes). In particular, it is a difficult question to figure out how best to fill in between measurements and retain accuracy. AI tools for sharpening pictures are an example of another linear algebra application of how to interpolate data related to these imaging problems. Sonar data is the opposite from a perspective approach. Your signal and detector are not moving; instead you are looking at your surroundings with respect to relative orientation. 
+</p>
 
-We will be looking at some simple examples of transformations in 2 and 3 dimensions that can give you an idea of how different kinds of transformations can be built. 
+<activity xml:id="graphics_transformations">
+  <introduction>
+    <p>
+      We will be looking at some simple examples of transformations in 2 and 3 dimensions that can give you an idea of how different kinds of transformations can be built. We will look at what the smiley face image below would look like under the following transformations. As a point of information, there are about 230 points involved in creating this image, so you would need to tranform each of these 230 poins individiaully to create the new image.
+    </p>
+    <figure>
+      <caption> The base image for transformations in <xref ref="graphics_transformations" /></caption>
+      <image source="./images/smile.svg"  width="50%"/>
+    </figure>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Expansion: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} 2 \amp 0 \\0 \amp 1 \end{bmatrix} </m>?
+      </p>
+    </statement>
+    <answer>
+      <figure>
+        <image source="./images/expansion.svg" width="50%" />
+      </figure>
+    </answer>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Expansion: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} 1 \amp 0 \\0 \amp 3 \end{bmatrix} </m>?
+      </p>
+    </statement>
+    <answer>
+      <figure>
+        <image source="./images/expansion2.svg" width="50%" />
+      </figure>
+    </answer>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Contraction: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} \frac{1}{2} \amp 0 \\0 \amp 1 \end{bmatrix} </m>?
+      </p>
+    </statement>
+    <answer>
+      <figure>
+        <image source="./images/contraction.svg" width="50%" />
+      </figure>
+    </answer>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Rotation: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} \frac{2}{2} \amp -\frac{2}{2}  \\ \frac{2}{2}  \amp \frac{2}{2}  \end{bmatrix} </m>?
+      </p>
+    </statement>
+    <answer>
+      <figure>
+        <image source="./images/rotation.svg" width="50%" />
+      </figure>
+    </answer>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Rotation: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} 0 \amp 1  \\  -1 \amp 0  \end{bmatrix} </m>?
+      </p>
+    </statement>
+    <answer>
+      <figure>
+        <image source="./images/rotation2.svg" width="50%" />
+      </figure>
+      <p>
+        In general, the rotation transformation by <m>\theta</m> is given by <m>\begin{bmatrix} \cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\theta) \end{bmatrix} </m>.
+      </p>
+    </answer>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Shear: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} 1 \amp 2  \\  0 \amp 1  \end{bmatrix} </m>?
+      </p>
+    </statement>
+    <answer>
+      <figure>
+        <image source="./images/shear.svg" width="50%" />
+      </figure>
+    </answer>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Shear: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} 1 \amp 0  \\  2 \amp 1  \end{bmatrix} </m>?
+      </p>
+    </statement>
+    <answer>
+      <figure>
+        <image source="./images/shear2.svg" width="50%" />
+      </figure>
+    </answer>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Projection: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} 1 \amp 0  \\  0 \amp 0  \end{bmatrix} </m>?
+      </p>
+    </statement>
+    <answer>
+      <figure>
+        <image source="./images/projection.svg" width="50%" />
+      </figure>
+    </answer>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Reflection: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} 1 \amp 0  \\   0 \amp -1  \end{bmatrix} </m>?
+      </p>
+    </statement>
+    <answer>
+      <figure>
+        <image source="./images/reflection.svg" width="50%" />
+      </figure>
+    </answer>
+  </task>
 
-Let's look at what our smiley face image would look like under the following transformations.
 
-Expansion:
+  
+</activity>
+<activity>
+  <task>
+    <statement>
+      <p>
+        Create a transformation that would expand by a factor of 2 in the <m>\langle 1 , 1 \rangle </m> direction? 
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Create a transformation that would reflect the image across the line y=-x. 
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Create a transformation that shears by 1/2 in the direction <m>\langle 2 , -1 \rangle </m>.
+      </p>
+    </statement>
+  </task>
+</activity>
 
-Contraction:
-
-Rotation:
-
-Shear:
-
-Projection:
-
-Reflection:
-
-
-
-
-Create a transformation thatj   
-df  would expand by a factor of 2 in the 1,1 direction? 
-
-Create a transformation that would reflect the image across the line y=-x. 
-
-Create a transformation that shears by 1/2 in the direction 2,-1
-
-
+<activity>
+  <statement>
+    <p>
+      We would like to find a transformation that will map our smiley face image onto the plane given by <m>x+2y+3z=0</m>.
+    </p>
+  </statement>
+  <answer>
+    <p>
+      In order to make this transformation, we need to think about where <m>\colvec{1\\0}</m> and <m>\colvec{0\\2}</m> will go under this transformation. We will need to find a 3 by 2 matrix such <m>\begin{bmatrix} a_{1,1} \amp a_{1,2} \\a_{2,1} \amp a_{2,2} \\a_{3,1} \amp a_{3,2} \end{bmatrix} \colvec{1\\0} =\colvec{-1\\0\\-1/3}</m> and <m>\begin{bmatrix} a_{1,1} \amp a_{1,2} \\a_{2,1} \amp a_{2,2} \\a_{3,1} \amp a_{3,2} \end{bmatrix} \colvec{0\\1} =\colvec{0\\1\\-2/3} </m>.
+    </p>
+    <figure>
+      <caption>The smiley face in space</caption>
+      <image source="./images/2dto3d.svg"/> 
+    </figure>
+  </answer>
+</activity>
 Show how to take a x,y  problem and project onto the plane x+2y+3z=0
 
+<p>
+  Remember that you want generalizable (no exceptions), algorithmic (easily stated, repeatable rules) ways to change location data. Remember that we can describe a vector with points of location data, so we can transform vectors with these same tools. 
+</p>
 
-Remember that you want generalizable (no exceptions), algorithmic (easily stated, repeatable rules) ways to change location data. Remember that we can describe a vector with points of location data, so we can transform vectors with these same tools. 
-
-
-    </p>
-</introduction>
 </section>
