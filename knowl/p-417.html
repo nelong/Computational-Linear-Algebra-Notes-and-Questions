@@ -11,9 +11,46 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Compute the matrix <span class="process-math">\(C A D\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Let's figure out reasonable functions for <span class="process-math">\(g\)</span> and <span class="process-math">\(h\)</span> under the following ideas:</div>
+<ul class="disc">
+<li><div class="para">If there are no rabbits, then some of the foxes will die in the next year (starvation)</div></li>
+<li><div class="para">If there are rabbits, then the fox populations grows in the next year based on the interaction of the species (predation)</div></li>
+<li><div class="para">If there are no foxes, the rabbit population will grow by some proportion in the next year</div></li>
+<li><div class="para">If there are foxes, then the rabbit population will decrease based on the interaction of the species (being eaten)</div></li>
+</ul>
+<div class="para">Functions that fit these simple rules might be of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F_{n+1}=g(F_n,R_n)= -a F_n + b R_n 
+\end{equation*}
 </div>
-<span class="incontext"><a href="ChangeofCoordinates.html#p-417" class="internal">in-context</a></span>
+<div class="displaymath process-math">
+\begin{equation*}
+R_{n+1}=h(F_n,R_n)= c R_n - d F_n 
+\end{equation*}
+</div>
+<div class="para">So choosing coefficients would give the relative weight of each of these rules on the change in each population. For instance,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F_{n+1} = -0.2 F_n + 0.13 R_n 
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R_{n+1}  = 1.05 R_n - 2.1 F_n
+\end{equation*}
+</div>
+<div class="para">Note here that we can use linear algebra to analyse this type of problem because our sequence now looks like</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x}_0=\colvec{F_0 \\R_0}, \vec{x}_1=A \vec{x}_0, \vec{x}_2=A \vec{x}_1 = A(A \vec{x}_0), \ldots 
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(A=\begin{bmatrix} a\amp b \\c \amp d \end{bmatrix} \text{.}\)</span> In other words, the solution to this two dimensional, discrete dynamical system is of the form <span class="process-math">\(\vec{x}_n = A^n \vec{x}_0\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="DiscreteDS.html#p-417" class="internal">in-context</a></span>
 </body>
 </html>

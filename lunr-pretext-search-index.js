@@ -1762,7 +1762,34 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.4",
   "title": "Graphics and Linear Algebra",
-  "body": " Graphics and Linear Algebra   Graphics and computer-based image generation are a large class of problems that utilize a lot of the tools we have discussed in this course. We will be (over)simplifying many of these ideas but you can understand the basics now and learn the linear algebra tools about the more sophisticated approaches needed to work on these ideas later.   Example 1: Transforming Basic 2D Images It is vital to know a little about how images are created\/stored. The long and the short of it is that the different image file types correspond to a different method of storing data about how to create the image. This is by no means a comprehensive list of relevant ideas but enough to get you to see how broadly applicable the elements we have talked about are.  SVG: Scaled Vector Graphics  PS: Postscript is simplified instructions on how to create a figure Fonts: instructions on how to create the shape and width of each part of a character. This is like parameterizations of the curves to make the character along with an idea of width as you move along the curve of the character.  Fourier Transform of an image: Images might not be stored as an array of colors but might be more efficiently stored as the frequencies involved in the wave that describes how the intensity changes across the elements in an array.    Example 2: Transforming 2D graphics to 3D space or looking at textures and lighting in 3D Thank about using the instructions for a font on a curved object in 3D. or thinking about how the lighting\/reflections would look on a curved object in 3D. Key to this is translated 2D information like font definitions to an element in 3D or looking at vector transformations relative to a camera location\/orientation. Example 3: Medical imaging or inverse image problems in geology Think about trying to create an image of the materials inside a patient or of the different geologic structures like water or crude oil inside some rock structure. These images are created by measuring signal strengths that correspond to density changes along a path then reorienting and getting data on a new set of points. The big idea is to create an image of this 3D structure from these linear measurements. Rotation transformations, projections are key here. How to fill in between measurements is a huge issue. AI tools for sharpening pictures an example of another linear algebra application of how to interpolate data. Sonar data is the opposite from a perspective approach. You are not moving just looking at your surroundings with respect to relative orientation. We will be looking at some simple examples of transformations in 2 and 3 dimensions that can give you an idea of how different kinds of transformations can be built. Let's look at what our smiley face image would look like under the following transformations. Expansion: Contraction: Rotation: Shear: Projection: Reflection: Create a transformation thatj df would expand by a factor of 2 in the 1,1 direction? Create a transformation that would reflect the image across the line y=-x. Create a transformation that shears by 1\/2 in the direction 2,-1 Show how to take a x,y problem and project onto the plane x+2y+3z=0 Remember that you want generalizable (no exceptions), algorithmic (easily stated, repeatable rules) ways to change location data. Remember that we can describe a vector with points of location data, so we can transform vectors with these same tools.   "
+  "body": " Graphics and Linear Algebra  Graphics and computer-based image generation are a large class of problems that utilize a lot of the tools we have discussed in this course. We will be (over)simplifying many of these ideas but you can understand the basics now and learn the linear algebra tools about the more sophisticated approaches needed to work on these ideas later.   Example 1: Transforming Basic 2D Images It is vital to know a little about how images are created\/stored. The long and the short of it is that the different image file types correspond to a different method of storing data about how to create the image. This is by no means a comprehensive list of relevant ideas but enough to get you to see how broadly applicable the elements we have talked about are.  SVG\/Scalable Vector Graphics : Instead of pixel based descriptions of an image, SVG files store the image with curves, lines, and other mathematical graphs relative to a grid.  PS\/Postscript: is simplified instructions on how to create a figure  Fonts: instructions on how to create the shape and width of each part of a character. This is like parameterizations of the curves to make the character along with an idea of width as you move along the curve of the character.  Fourier Transform of an image: Images might not be stored as an array of colors but might be more efficiently stored as the frequencies involved in the wave that describes how the intensity changes across the elements in an array.     Example 2: Transforming 2D graphics to 3D space\/Textures and Lighting Think about you would use the instructions for a font on a curved object in 3D. This amounts to transforming or thinking about how the lighting\/reflections would look on a curved object in 3D. Key to this is translated 2D information like font definitions to an element in 3D or looking at vector transformations relative to a camera location\/orientation.   Example 3: Medical imaging or inverse image problems in geology Think about trying to create an image of the materials inside a patient or of the different geologic structures like water or crude oil inside some rock structure. These images are created by measuring signal strengths that correspond to density changes along a path then reorienting and getting data on a new set of points. The big idea is to create an image of the 3D structure from these linear measurements. Rotation transformations and projections are key tools here and create a host of other problems when you need to select an slice of the 3D model to display on a 2D computer screen (for diagnostic purposes). In particular, it is a difficult question to figure out how best to fill in between measurements and retain accuracy. AI tools for sharpening pictures are an example of another linear algebra application of how to interpolate data related to these imaging problems. Sonar data is the opposite from a perspective approach. Your signal and detector are not moving; instead you are looking at your surroundings with respect to relative orientation.    We will be looking at some simple examples of transformations in 2 and 3 dimensions that can give you an idea of how different kinds of transformations can be built. We will look at what the smiley face image below would look like under the following transformations. As a point of information, there are about 230 points involved in creating this image, so you would need to tranform each of these 230 poins individiaully to create the new image.   The base image for transformations in      Expansion: What would the smile image look like under the transformation given by ?        Expansion: What would the smile image look like under the transformation given by ?        Contraction: What would the smile image look like under the transformation given by ?        Rotation: What would the smile image look like under the transformation given by ?        Rotation: What would the smile image look like under the transformation given by ?      In general, the rotation transformation by is given by .    Shear: What would the smile image look like under the transformation given by ?        Shear: What would the smile image look like under the transformation given by ?        Projection: What would the smile image look like under the transformation given by ?        Reflection: What would the smile image look like under the transformation given by ?          Create a transformation that would expand by a factor of 2 in the direction?    Create a transformation that would reflect the image across the line y=-x.    Create a transformation that shears by 1\/2 in the direction .      We would like to find a transformation that will map our smiley face image onto the plane given by .    In order to make this transformation, we need to think about where and will go under this transformation. We will need to find a 3 by 2 matrix such and .   The smiley face in space     Show how to take a x,y problem and project onto the plane x+2y+3z=0 Remember that you want generalizable (no exceptions), algorithmic (easily stated, repeatable rules) ways to change location data. Remember that we can describe a vector with points of location data, so we can transform vectors with these same tools.  "
+},
+{
+  "id": "graphics_transformations",
+  "level": "2",
+  "url": "Graphics.html#graphics_transformations",
+  "type": "Activity",
+  "number": "3.4.1",
+  "title": "",
+  "body": "  We will be looking at some simple examples of transformations in 2 and 3 dimensions that can give you an idea of how different kinds of transformations can be built. We will look at what the smiley face image below would look like under the following transformations. As a point of information, there are about 230 points involved in creating this image, so you would need to tranform each of these 230 poins individiaully to create the new image.   The base image for transformations in      Expansion: What would the smile image look like under the transformation given by ?        Expansion: What would the smile image look like under the transformation given by ?        Contraction: What would the smile image look like under the transformation given by ?        Rotation: What would the smile image look like under the transformation given by ?        Rotation: What would the smile image look like under the transformation given by ?      In general, the rotation transformation by is given by .    Shear: What would the smile image look like under the transformation given by ?        Shear: What would the smile image look like under the transformation given by ?        Projection: What would the smile image look like under the transformation given by ?        Reflection: What would the smile image look like under the transformation given by ?       "
+},
+{
+  "id": "activity-46",
+  "level": "2",
+  "url": "Graphics.html#activity-46",
+  "type": "Activity",
+  "number": "3.4.2",
+  "title": "",
+  "body": "  Create a transformation that would expand by a factor of 2 in the direction?    Create a transformation that would reflect the image across the line y=-x.    Create a transformation that shears by 1\/2 in the direction .   "
+},
+{
+  "id": "activity-47",
+  "level": "2",
+  "url": "Graphics.html#activity-47",
+  "type": "Activity",
+  "number": "3.4.3",
+  "title": "",
+  "body": "  We would like to find a transformation that will map our smiley face image onto the plane given by .    In order to make this transformation, we need to think about where and will go under this transformation. We will need to find a 3 by 2 matrix such and .   The smiley face in space     "
 },
 {
   "id": "Operators",
@@ -1810,9 +1837,9 @@ var ptx_lunr_docs = [
   "body": " So what would the analog be of matrices with vector spaces of functions?  "
 },
 {
-  "id": "p-507",
+  "id": "p-525",
   "level": "2",
-  "url": "Operators.html#p-507",
+  "url": "Operators.html#p-525",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1828,27 +1855,27 @@ var ptx_lunr_docs = [
   "body": " Let's consider the operator from the space to . In first semester calculus, you saw how you could factor out constant coefficents from derivatives and split up derivatives into different terms in a sum ( ). The other thing to note here is that this operator takes differentiable functions to continuous functions (the domain and range of this function are a bit different).  We can also define the integral operator as going from to by considering . Integration is another operation that will perserve linear combinations.  Let's consider the mapping from to where . You should take couple of minutes to show that . This shows that the set of solutions to is a vector space. This kind of idea shows how we can find a set with a couple of different solutions that will span the set of all solutions to a differential equation.  "
 },
 {
-  "id": "activity-45",
+  "id": "activity-48",
   "level": "2",
-  "url": "Operators.html#activity-45",
+  "url": "Operators.html#activity-48",
   "type": "Activity",
   "number": "3.5.1",
   "title": "",
   "body": " Let's look at , the derivative operator from to . What kinds of functions and scalars would satisfy ?  Let's look at , the integral operator from to . What kinds of functions and scalars would satisfy ?  Let's look at , the operator from to with . What kinds of functions and scalars would satisfy ?  "
 },
 {
-  "id": "p-515",
+  "id": "p-533",
   "level": "2",
-  "url": "Operators.html#p-515",
+  "url": "Operators.html#p-533",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "eigenpair "
 },
 {
-  "id": "activity-46",
+  "id": "activity-49",
   "level": "2",
-  "url": "Operators.html#activity-46",
+  "url": "Operators.html#activity-49",
   "type": "Activity",
   "number": "3.5.2",
   "title": "",
@@ -1981,9 +2008,9 @@ var ptx_lunr_docs = [
   "body": " Subspaces  As shows, it can be very tedious to prove that a set is indeed a vector space. A subspace of a vector space is a subset that is itself a vector space. Since most of the properties of the vector spaces we look at get inherited from some larger vector space, it is often easier to show that a set is a vector space by showing it is a subspace of the appropriate parent vector space.    A subset of a vector space is a subspace if and only if the following are true:  The zero vector of is in ; .  H is closed under vector addition; if , then .  H is closed under scalar multiplication; if and , then .      We first assume that is a subspace of . Item (a) of the theorem follows from axiom 4 of being a vector space. Item (b) of the theorem follows from axiom 1 of being a vector space. Item (c) of the theorem follows from axiom 6 of being a vector space.  For the converse, we assume that and the three items of the theorem satement are satisfied. We must verify the 10 vector space axioms:  This follows from item (b) of the theorem statement.  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  This follows from item (a) of the theorem statement.  This requires proof. Since , item (c) of the theorem statement tells us that for all , . Thus, this axiom is verified.  This follows from item (c) of the theorem statement.  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .  Since and this axiom holds for all elements of , the axiom holds when restricted to elements of .     This theorem is so useful because we can prove a set is a vector space by checking only three properties instead of the ten that are involved in the definition. The reason that we do not need to check these other properties is that by using this subspace, we already have proven the proper rules of arithmetic from the parent space. Additionally, since we are using the same rules for scalar multiplication and vector addition as the parent space, we must also have the same scalars as the parent space.  Use the preceding theorem to prove that is a subspace of .   Is a subspace of ? Why or why not?  Is a subspace of ? Why or why not?  Is the set of points on the plane given by a subspace of ? Why or why not?  Is the set of points on the plane given by a subspace of ? Why or why not?  Draw a plot of the points in given by . Is a subspace of ? Why or why not?  Is , the set of symmetric by matrices a subspace of ? Why or why not?  Prove or disprove: The set of odd functions on (i.e., those for which for every ) a subspace of .   The statement is true. We use Theorem 3.6 to prove this. First note that the function is the zero vector for this vector space, as for any function , . To see that is odd, we have . Now suppose that are odd functions. We have , verifying the second part of the theorem is satisfied. Finally, let . Now . Thus, the set of odd functions are a subspace of the vector space of functions from to .   If is a by matrix, the solution set to the homogeneous equation is a subspace of .  If and are subspaces of some vector space , then the set is a subspace of as well.  Prove or Disprove: the set of by matrices with at least one zero entry is a subspace of .  Prove or Disprove: the set of matrices of the form is a subspace of .  Prove or disprove: The set of quadratic polynomials of the form is a subspace of the vector space of polynomials.  "
 },
 {
-  "id": "p-553",
+  "id": "p-571",
   "level": "2",
-  "url": "section-22.html#p-553",
+  "url": "section-22.html#p-571",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2125,9 +2152,9 @@ var ptx_lunr_docs = [
   "body": " Motivating Activity    Let's look at the vector as a vector in .   How much does move horizontally?  How much does move vertically?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  How much does move in the direction?  How much does move in the direction?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  How much does move in the direction?  How much does move in the direction?  Calculate the dot product of with . How does this relate to your previous answers?  Calculate the dot product of with . How does this relate to your previous answers?  How can you write as a linear combination of and ?  What is different about the different sets we considered different sets to span ? Be specific about what aspects will make answering the linear combination question easier to answer.   "
 },
 {
-  "id": "activity-47",
+  "id": "activity-50",
   "level": "2",
-  "url": "section-23.html#activity-47",
+  "url": "section-23.html#activity-50",
   "type": "Activity",
   "number": "3.8.1",
   "title": "",
@@ -2170,9 +2197,9 @@ var ptx_lunr_docs = [
   "body": " As we developed in Project 3, we can define an inner product of for . because integrals are lienar with respect to the functions being integrated.  There is not just one inner product that we could define on . We could give a weighting of the the points in our region of integration and define a weighted integral which will still give an inner product. Specifically, we could define for . For instance, if and , then but the unweighted inner product will not be defined for and . The weighted inner product with exists for and because converges to a finite value.  "
 },
 {
-  "id": "figure-5",
+  "id": "figure-16",
   "level": "2",
-  "url": "section-24.html#figure-5",
+  "url": "section-24.html#figure-16",
   "type": "Figure",
   "number": "3.9.4",
   "title": "",
@@ -2188,9 +2215,9 @@ var ptx_lunr_docs = [
   "body": " How well can we approximate this function with a linear combination from our set ?  "
 },
 {
-  "id": "figure-6",
+  "id": "figure-17",
   "level": "2",
-  "url": "section-24.html#figure-6",
+  "url": "section-24.html#figure-17",
   "type": "Figure",
   "number": "3.9.6",
   "title": "",
@@ -2211,7 +2238,6 @@ var ptx_lunr_idx = lunr(function () {
   this.ref('id')
   this.field('title')
   this.field('body')
-  this.metadataWhitelist = ['position']
 
   ptx_lunr_docs.forEach(function (doc) {
     this.add(doc)

@@ -11,9 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Let's try to reverse engineer what just happened in the previous activity. Can we come up with the matrix that has eigenvalues <span class="process-math">\(\lambda_1=1.5\)</span> and <span class="process-math">\(\lambda_2=-1/3\)</span> with eigenvectors of <span class="process-math">\(\colvec{2 \\ 1} \)</span> and <span class="process-math">\(\colvec{4 \\ 1}\text{?}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Let examine how eigenvalues and eigenvectors could help us easily understand the long term behavior of a linear difference equation. In particular, we will assume that we have a difference equation given by a <span class="process-math">\(n\)</span> by <span class="process-math">\(n\)</span> matrix <span class="process-math">\(A\)</span> and that we can find a set of <span class="process-math">\(n\)</span> linearly independent eigenvectors, <span class="process-math">\(\{\vec{v}_1,\vec{v}_2, \ldots, \vec{v}_n\}\text{,}\)</span> with eigenvalues <span class="process-math">\(\{\lambda_1,\lambda_2, \ldots, \lambda_n\}\text{.}\)</span> This is actually a really big assumption and is NOT true in general, so the discussion below will not be enough to analyze the general case. Because we have a set of <span class="process-math">\(n\)</span> linearly independent vectors from <span class="process-math">\(\mathbb{R}^n\text{,}\)</span> we can put them as columns of a matrix and apply the Invertible Matrix Theorem to demonstrate that this set will also span all of <span class="process-math">\(\mathbb{R}^n\text{.}\)</span> This means that no matter what initial values we take for our system, we can write that initial value as a linear combination of the set <span class="process-math">\(\{\vec{v}_1,\vec{v}_2, \ldots, \vec{v}_n\}\text{.}\)</span> In other words, there is a solution to the vector equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x}_0 = c_1 \vec{v}_1 + c_2 \vec{v}_2 + \ldots+ c_n \vec{v}_n
+\end{equation*}
 </div>
-<span class="incontext"><a href="ChangeofCoordinates.html#p-419" class="internal">in-context</a></span>
+<div class="para">for every <span class="process-math">\(\vec{x}_0 \in \mathbb{R}^n\text{.}\)</span> Because these vectors in our spanning set are not just some vectors, but rather are eigenvectors of <span class="process-math">\(A\text{,}\)</span> we will be able to write out the rest of the sequence and understand the long term behavior regardless of initial values of our system.</div>
+</div>
+<span class="incontext"><a href="DiscreteDS.html#p-419" class="internal">in-context</a></span>
 </body>
 </html>
