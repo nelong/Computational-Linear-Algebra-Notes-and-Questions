@@ -195,7 +195,7 @@
     <me>\vec{y(t)}=c_1 e^{(\frac{-5 + \sqrt{17}}{2})t} \colvec{-5+ \sqrt{17} \\ 2}+ c_2 e^{(\frac{-5 - \sqrt{17}}{2})t} \colvec{-5- \sqrt{17} \\ 2}</me>
     The solution to 
     <me> \dfrac{d^2 x}{dt^2} = - 5 \dfrac{d x}{dt}- 2 x</me>
-    will be the first component of our vector solution, namely <m>x(t)=c_1 e^{(\frac{-5 + \sqrt{17}}{2})t} (-5+ \sqrt{17}) + c_2 e^{(\frac{-5 - \sqrt{17}}{2})t} (-5- \sqrt{17})</m>. You can write this a little more simply because you can absorb the constants into the <m>c_1</m> and <m>c_2</m> to get <m>x(t)=c_1 e^{(\frac{-5 + \sqrt{17}}{2})t} + c_2 e^{(\frac{-5 - \sqrt{17}}{2})t} </m>. 
+    will be the second component of our vector solution, namely <m>x(t)=c_1 e^{(\frac{-5 + \sqrt{17}}{2})t} (2) + c_2 e^{(\frac{-5 - \sqrt{17}}{2})t} (2)</m>. You can write this a little more simply because you can absorb the constants into the <m>c_1</m> and <m>c_2</m> to get <m>x(t)=c_1 e^{(\frac{-5 + \sqrt{17}}{2})t} + c_2 e^{(\frac{-5 - \sqrt{17}}{2})t} </m>. 
   </p>
   <p>
     What is the long term behavior of these solutions? Does the behavior depend on <m>c_1</m> and <m>c_2</m>?
