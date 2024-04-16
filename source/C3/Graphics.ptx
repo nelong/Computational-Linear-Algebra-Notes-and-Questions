@@ -71,7 +71,7 @@ Think about you would use the instructions for a font on a curved object in 3D. 
   <task>
     <statement>
       <p>
-        Rotation: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} \frac{2}{2} \amp -\frac{2}{2}  \\ \frac{2}{2}  \amp \frac{2}{2}  \end{bmatrix} </m>?
+        Rotation: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} \frac{\sqrt{2}}{2} \amp -\frac{\sqrt{2}}{2}  \\ \frac{\sqrt{2}}{2}  \amp \frac{\sqrt{2}}{2}  \end{bmatrix} </m>?
       </p>
     </statement>
     <answer>
