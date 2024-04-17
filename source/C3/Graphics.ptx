@@ -134,7 +134,7 @@ Think about you would use the instructions for a font on a curved object in 3D. 
   <task>
     <statement>
       <p>
-        Reflection: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix} 1 \amp 0  \\   0 \amp -1  \end{bmatrix} </m>?
+        Reflection: What would the smile image look like under the transformation <m>T_A: \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> given by <m>A=\begin{bmatrix}  -1 \amp 0  \\   0 \amp 1  \end{bmatrix} </m>?
       </p>
     </statement>
     <answer>
