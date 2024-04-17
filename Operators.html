@@ -278,11 +278,35 @@ window.MathJax = {
 <div class="para" id="Operators-3-6-2-1">Let’s look at <span class="process-math">\(T\text{,}\)</span> the integral operator from <span class="process-math">\(C^\infty(\mathbb{R})\)</span> to <span class="process-math">\(C^\infty(\mathbb{R})\text{.}\)</span> What kinds of functions and scalars would satisfy <span class="process-math">\(T(f)= \lambda f\text{?}\)</span>
 </div></article><article class="task exercise-like" id="Operators-3-6-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="Operators-3-6-3-1">Let’s look at <span class="process-math">\(S\text{,}\)</span> the operator from <span class="process-math">\(C^\infty(\mathbb{R})\)</span> to <span class="process-math">\(C^\infty(\mathbb{R})\)</span> with <span class="process-math">\(S(f)= \dfrac{d^2f}{dx^2}\text{.}\)</span> What kinds of functions and scalars would satisfy <span class="process-math">\(S(f)= \lambda f\text{?}\)</span>
-</div></article></article><div class="para" id="Operators-3-7">As you saw in the previous activity, there are infinite number of eigenvalues for many of these differential operators. An <dfn class="terminology">eigenpair</dfn> is a a eigenvalue and corresponding eigenfunction for a linear operator. For example <span class="process-math">\((3,e^{3x})\)</span> is an example of an eigenpair for the derivative operator since <span class="process-math">\(\dfrac{d}{dx}(e^{3x})=3 e^{3x}\text{.}\)</span> As With many problems related to physical situations there are often some boundary conditions (since we usually study different physical properties in a confined setting). Let’s look at an example with a basic version of boundary conditions.</div></section><section class="subsection" id="Operators-4"><h3 class="heading hide-type">
+</div></article></article><div class="para" id="Operators-3-7">As you saw in the previous activity, there are infinite number of eigenvalues for many of these differential operators. An <dfn class="terminology">eigenpair</dfn> is a a eigenvalue and corresponding eigenfunction for a linear operator. For example <span class="process-math">\((3,e^{3x})\)</span> is an example of an eigenpair for the derivative operator since <span class="process-math">\(\dfrac{d}{dx}(e^{3x})=3 e^{3x}\text{.}\)</span>
+</div>
+<article class="activity project-like" id="Operators-3-8"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="Operators-3-8-1"><div class="para logical" id="Operators-3-8-1-1">
+<div class="para">For this activity, you should consider the following linear operators on the space of smooth functions:</div>
+<ol class="decimal">
+<li id="Operators-3-8-1-1-1-1"><div class="para" id="p-derived-Operators-3-8-1-1-1-1"><span class="process-math">\(\displaystyle T_1 : f \rightarrow \frac{df}{dx}\)</span></div></li>
+<li id="Operators-3-8-1-1-1-2"><div class="para" id="p-derived-Operators-3-8-1-1-1-2"><span class="process-math">\(\displaystyle T_2 : f \rightarrow \int_0^x f(u) du \)</span></div></li>
+<li id="Operators-3-8-1-1-1-3"><div class="para" id="p-derived-Operators-3-8-1-1-1-3"><span class="process-math">\(\displaystyle T_3 : f \rightarrow \frac{d^2f}{dx^2}\)</span></div></li>
+<li id="Operators-3-8-1-1-1-4"><div class="para" id="p-derived-Operators-3-8-1-1-1-4"><span class="process-math">\(\displaystyle T_4 : f \rightarrow \frac{d^2f}{dx^2}- f\)</span></div></li>
+</ol>
+</div></div>
+<article class="task exercise-like" id="Operators-3-8-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="Operators-3-8-2-1-1">Is <span class="process-math">\((-3,2\sin(3x))\)</span> an eigenpair for <span class="process-math">\(T_1\text{?}\)</span>
+</div></article><article class="task exercise-like" id="Operators-3-8-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="Operators-3-8-3-1-1">Is <span class="process-math">\((-3,2e^{-3x})\)</span> an eigenpair for <span class="process-math">\(T_1\text{?}\)</span>
+</div></article><article class="task exercise-like" id="Operators-3-8-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="Operators-3-8-4-1-1">Is <span class="process-math">\((-3,2e^{-3x})\)</span> an eigenpair for <span class="process-math">\(T_2\text{?}\)</span>
+</div></article><article class="task exercise-like" id="Operators-3-8-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="Operators-3-8-5-1-1">Is <span class="process-math">\((-9,2\sin(3x))\)</span> an eigenpair for <span class="process-math">\(T_3\text{?}\)</span>
+</div></article><article class="task exercise-like" id="Operators-3-8-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="Operators-3-8-6-1-1">Is <span class="process-math">\((1,2e^{-x})\)</span> an eigenpair for <span class="process-math">\(T_4\text{?}\)</span>
+</div></article></article><div class="para" id="Operators-3-9">As with many problems related to physical situations there are often some boundary conditions (since we usually study different physical properties in a confined setting). Let’s look at an example with a basic version of boundary conditions.</div></section><section class="subsection" id="Operators-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="space"> </span><span class="title">Boundary Value Problems</span>
 </h3>
 <article class="activity project-like" id="Operators-4-2"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span>
 </h4>
 <article class="task exercise-like" id="Operators-4-2-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="Operators-4-2-1-1">Let’s consider smooth functions on the domain <span class="process-math">\([0,L]\)</span> and define a linear operator <span class="process-math">\(T\)</span> such that <span class="process-math">\(T(f)=\dfrac{d^2f}{dx^2}\)</span> with <span class="process-math">\(f(0)=f(L)=0\text{.}\)</span> Can you give an example of an eigenpair of this operator that also satisfies this boundary condition?</div></article><article class="task exercise-like" id="Operators-4-2-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
