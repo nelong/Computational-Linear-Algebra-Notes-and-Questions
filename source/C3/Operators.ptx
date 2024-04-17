@@ -71,7 +71,67 @@
   </task>
 </activity>
 <p>
-  As you saw in the previous activity, there are infinite number of eigenvalues for many of these differential operators. An <term>eigenpair</term> is a a eigenvalue and corresponding eigenfunction for a linear operator. For example <m>(3,e^{3x})</m> is an example of an eigenpair for the derivative operator since <m>\dfrac{d}{dx}(e^{3x})=3 e^{3x}</m>. As With many problems related to physical situations there are often some boundary conditions (since we usually study different physical properties in a confined setting). Let's look at an example with a basic version of boundary conditions.
+  As you saw in the previous activity, there are infinite number of eigenvalues for many of these differential operators. An <term>eigenpair</term> is a a eigenvalue and corresponding eigenfunction for a linear operator. For example <m>(3,e^{3x})</m> is an example of an eigenpair for the derivative operator since <m>\dfrac{d}{dx}(e^{3x})=3 e^{3x}</m>. 
+</p>
+  <activity>
+    <introduction>
+      <p>
+        For this activity, you should consider the following linear operators on the space of smooth functions:
+        <ol>
+          <li>
+            <m>T_1 : f \rightarrow \frac{df}{dx}</m>
+          </li>
+          <li>
+            <m>T_2 : f \rightarrow \int_0^x f(u) du </m>
+          </li>
+          <li>
+            <m>T_3 : f \rightarrow \frac{d^2f}{dx^2}</m>
+          </li>
+          <li>
+            <m>T_4 : f \rightarrow \frac{d^2f}{dx^2}- f</m>
+          </li>
+        </ol>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Is <m>(-3,2\sin(3x))</m> an eigenpair for <m>T_1</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Is <m>(-3,2e^{-3x})</m> an eigenpair for <m>T_1</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Is <m>(-3,2e^{-3x})</m> an eigenpair for <m>T_2</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Is <m>(-9,2\sin(3x))</m> an eigenpair for <m>T_3</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Is <m>(1,2e^{-x})</m> an eigenpair for <m>T_4</m>?
+        </p>
+      </statement>
+    </task>
+
+  </activity>
+  <p> 
+    As with many problems related to physical situations there are often some boundary conditions (since we usually study different physical properties in a confined setting). Let's look at an example with a basic version of boundary conditions.
 </p>
 </subsection>
 <subsection>
