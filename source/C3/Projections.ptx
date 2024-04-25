@@ -28,7 +28,7 @@
   </task>
   <task>
     <p>
-      How can you write <m>\vec{w}=\colvec{7 \\-2}</m> as a linear combination of <m>\colvec{1\\0}</m> and <m>\colvec{1\\0}</m>? 
+      How can you write <m>\vec{w}=\colvec{7 \\-2}</m> as a linear combination of <m>\colvec{1\\0}</m> and <m>\colvec{0\\1}</m>? 
     </p>
   </task>
   <task>
@@ -83,7 +83,7 @@
   </task>
   <task>
     <p>
-      What is different about the different sets we considered different sets to span <m>\mathbb{R}^2</m>? Be specific about what aspects will make answering the linear combination question easier to answer.
+      What is different about the different sets we considered to span <m>\mathbb{R}^2</m> in this activity? Be specific about what aspects will make answering the linear combination question easier to answer.
     </p>
   </task>
 </activity>
