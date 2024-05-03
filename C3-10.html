@@ -333,7 +333,7 @@ show(plot1)
 </h3></summary><article class="question example-like knowl__content"><div class="para" id="C3-10-11-1">How well can we approximate this function with a linear combination from our set <span class="process-math">\(S\text{?}\)</span>
 </div></article></details><div class="para" id="C3-10-12">A very useful fact about our set <span class="process-math">\(S\)</span> is that each of the functions, <span class="process-math">\(\phi_k(x)=\sin(\frac{k \pi x}{L})\text{,}\)</span> is orthogonal to any other element of <span class="process-math">\(S\text{.}\)</span> If <span class="process-math">\(k\neq j\text{,}\)</span> then <span class="process-math">\(\langle \phi_k , \phi_j \rangle =0\text{.}\)</span> Here we are using the unweighted inner product. Note here that we will consider <span class="process-math">\(L=1\)</span> so that our region of interest is the interval from <span class="process-math">\([0,1]\text{.}\)</span>
 </div>
-<div class="para" id="C3-10-13">What does it mean for our functions to be "orthogonal"? Let’s look at the graph of <span class="process-math">\(\phi_k(x) \phi_j(x)\)</span> (with <span class="process-math">\(L=0\)</span>) on the interval from 0 to 1. Change the <span class="process-math">\(k\)</span> and <span class="process-math">\(j\)</span> values to see how the function we are integrating changes.</div>
+<div class="para" id="C3-10-13">What does it mean for our functions to be "orthogonal"? Let’s look at the graph of <span class="process-math">\(\phi_k(x) \phi_j(x)\)</span> (with <span class="process-math">\(L=1\)</span>) on the interval from 0 to 1. Change the <span class="process-math">\(k\)</span> and <span class="process-math">\(j\)</span> values to see how the function we are integrating changes.</div>
 <pre id="C3-10-14" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('x')
 j = 1
 k = 2
@@ -343,7 +343,7 @@ plot1+=plot(sin(k*pi*x),(x,0,1),color='green')
 show(plot1)
 </script></pre>
 <div class="para logical" id="C3-10-15">
-<div class="para">For our set <span class="process-math">\(S\text{,}\)</span> we should also look at what <span class="process-math">\(\langle \phi_k, \phi_k\)</span> would be. Let’s calculate</div>
+<div class="para">For our set <span class="process-math">\(S\text{,}\)</span> we should also look at what <span class="process-math">\(\langle \phi_k, \phi_k \rangle \)</span> would be. Let’s calculate</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_0^1 (\sin(k \pi x))^2 \enspace dx \text{.}
