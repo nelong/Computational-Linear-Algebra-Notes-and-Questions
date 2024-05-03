@@ -69,7 +69,7 @@
   A very useful fact about our set <m>S</m> is that each of the functions, <m>\phi_k(x)=\sin(\frac{k \pi x}{L})</m>, is orthogonal to any other element of <m>S</m>. If <m>k\neq j</m>, then <m>\langle \phi_k , \phi_j \rangle =0</m>. Here we are using the unweighted inner product. Note here that we will consider <m>L=1</m> so that our region of interest is the interval from <m>[0,1]</m>.
 </p>
 <p>
-  What does it mean for our functions to be "orthogonal"? Let's look at the graph of <m>\phi_k(x) \phi_j(x)</m> (with <m>L=0</m>) on the interval from 0 to 1. Change the <m>k</m> and <m>j</m> values to see how the function we are integrating changes.
+  What does it mean for our functions to be "orthogonal"? Let's look at the graph of <m>\phi_k(x) \phi_j(x)</m> (with <m>L=1</m>) on the interval from 0 to 1. Change the <m>k</m> and <m>j</m> values to see how the function we are integrating changes.
 </p>
 <sage width="110%">
   <input>
@@ -83,7 +83,7 @@
   </input>
 </sage>
 <p>
-  For our set <m>S</m>, we should also look at what <m>\langle \phi_k, \phi_k</m> would be. Let's calculate <me>\int_0^1 (\sin(k \pi x))^2 \enspace dx </me>.
+  For our set <m>S</m>, we should also look at what <m>\langle \phi_k, \phi_k \rangle </m> would be. Let's calculate <me>\int_0^1 (\sin(k \pi x))^2 \enspace dx </me>.
 </p>
 <sage>
   <input>
