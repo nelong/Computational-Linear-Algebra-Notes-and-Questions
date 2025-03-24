@@ -9,7 +9,7 @@
     </macros>
   </docinfo>
 
-  <book xml:id="NL-Computational-Linear-Algebra">
+  <book xml:id="my-great-book">
     <title>Computational Linear Algebra</title>
     <subtitle>Notes and Questions for MATH 3325</subtitle>
 
