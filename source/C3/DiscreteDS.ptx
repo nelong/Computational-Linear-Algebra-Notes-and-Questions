@@ -220,7 +220,8 @@
     </task>
   </activity>
   <definition>
-    <p>
+  <statement>
+     <p>
       An <term>attractor</term> or attracting fixed point is a fixed point of a dynamical system where all nearby points converge to the fixed point. These are also called <term>sinks</term>.
     </p>
     <p>
@@ -229,6 +230,7 @@
     <p>
       A <term>saddle</term> fixed point is a fixed point of a dynamical system where some nearby points converge to the fixed point and other nearby points move away from the fixed point.
     </p>
+  </statement>
   </definition>
   <question>
     <p>

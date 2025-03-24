@@ -35,6 +35,7 @@
   </p>
 </example>
 </introduction>
+<subsection>
 <activity>
   <introduction>
     <p>
@@ -67,6 +68,7 @@
 <p>
   None of the stuff in the previous problem seems like linear algebra, so why are we doing this stuff? The answer is that we can expand our notion of what a <q>vector</q> is and use the idea that we would like to express solutions to these systems as linear combinations of our <q>nice</q> solutions.
 </p>
+</subsection>
 <subsection>
   <title>Linear Systems of Ordinary Differential Equations</title>
 <p>

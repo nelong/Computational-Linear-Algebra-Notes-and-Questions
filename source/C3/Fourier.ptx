@@ -5,7 +5,8 @@
 </p>
 <definition>
   <title>Inner Product</title>
-  <p>
+  <statement>
+    <p>
     An <term>inner product</term> is a bilinear operation (denoted <m>\langle . , . \rangle</m>) from a vector space <m>V \times V</m> to <m>\mathbb{C}</m> that satisifies the following: if <m>x,y,z\in V</m> and <m>k\in \mathbb{C}</m> then 
     <ol>
       <li> <m>\langle x , y \rangle = \overline{\langle y,x\rangle}</m></li>
@@ -15,6 +16,7 @@
     </ol>
     A vector space <m>V</m> with a choice of inner product is called an <term>inner product space</term>.
   </p>
+  </statement>
 </definition>
 <example>
   <title><m>\mathbb{R}^n</m> and the dot product</title>
@@ -210,5 +212,8 @@
 </p>
 <p>
   We should take a bit of time to list all of the tools we have learned about this semester that are involved in the previous problems: vectors (the bigger idea of vectors as objects that you can work with linear combinations), linear combinations, span, inner products/orthogonality, efficiently solving linear algebraic systems. What others?
+</p>
+<p>
+  Here is some extra text
 </p>
 </section>
