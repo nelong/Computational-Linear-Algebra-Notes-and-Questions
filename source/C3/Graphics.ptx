@@ -13,8 +13,7 @@
   </ul>
 </p>
 <p>
-<alert>Example 2: Transforming 2D graphics to 3D space/Textures and Lighting</alert>
-Think about you would use the instructions for a font on a curved object in 3D. This amounts to transforming or thinking about how the lighting/reflections would look on a curved object in 3D. Key to this is translated 2D information like font definitions to an element in 3D or looking at vector transformations relative to a camera location/orientation. 
+  <alert>Example 2: Transforming 2D graphics to 3D space/Textures and Lighting</alert> Think about you would use the instructions for a font on a curved object in 3D. This amounts to transforming or thinking about how the lighting/reflections would look on a curved object in 3D. Key to this is translated 2D information like font definitions to an element in 3D or looking at vector transformations relative to a camera location/orientation. 
 </p>
 <p>
   <alert>Example 3: Medical imaging or inverse image problems in geology</alert>
