@@ -3,6 +3,5 @@
 <project ptx-version="2" > <!--  I removed this option-->
   <targets>
     <target name="web" format="html" />
-    <target name="print" format="pdf" />
   </targets>
 </project>
