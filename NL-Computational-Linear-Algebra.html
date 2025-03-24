@@ -107,6 +107,7 @@ sagecell.makeSagecell({
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -129,97 +130,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.1';
+eBookConfig.runestone_version = '7.5.11';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.87cabc2515250052.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.630d5c4fb4b681eb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.97f3ae4f7a71ba18.css">
-<style>
-#intro_activity-3-3-3-1-1 { counter-set: intro_activity-3-3-3-1-1 0; }
-#intro_activity-3-3-3-1-1 > li::marker { content: ""counter(intro_activity-3-3-3-1-1,decimal)"."; }
-#intro_activity-3-3-3-1-1 > li { counter-increment: intro_activity-3-3-3-1-1; }
-#solving_linear_systems-2-9-1-1-2 { counter-set: solving_linear_systems-2-9-1-1-2 0; }
-#solving_linear_systems-2-9-1-1-2 > li::marker { content: ""counter(solving_linear_systems-2-9-1-1-2,decimal)"."; }
-#solving_linear_systems-2-9-1-1-2 > li { counter-increment: solving_linear_systems-2-9-1-1-2; }
-#solving_linear_systems-2-22-1-2-1 { counter-set: solving_linear_systems-2-22-1-2-1 0; }
-#solving_linear_systems-2-22-1-2-1 > li::marker { content: ""counter(solving_linear_systems-2-22-1-2-1,decimal)"."; }
-#solving_linear_systems-2-22-1-2-1 > li { counter-increment: solving_linear_systems-2-22-1-2-1; }
-#solving_linear_systems-2-26-1-1-1 { counter-set: solving_linear_systems-2-26-1-1-1 0; }
-#solving_linear_systems-2-26-1-1-1 > li::marker { content: ""counter(solving_linear_systems-2-26-1-1-1,decimal)"."; }
-#solving_linear_systems-2-26-1-1-1 > li { counter-increment: solving_linear_systems-2-26-1-1-1; }
-#solving_linear_systems-2-35-1 { counter-set: solving_linear_systems-2-35-1 0; }
-#solving_linear_systems-2-35-1 > li::marker { content: ""counter(solving_linear_systems-2-35-1,decimal)"."; }
-#solving_linear_systems-2-35-1 > li { counter-increment: solving_linear_systems-2-35-1; }
-#Conunique-5-2-1-1-1 { counter-set: Conunique-5-2-1-1-1 0; }
-#Conunique-5-2-1-1-1 > li::marker { content: ""counter(Conunique-5-2-1-1-1,decimal)"."; }
-#Conunique-5-2-1-1-1 > li { counter-increment: Conunique-5-2-1-1-1; }
-#Conunique-5-3-1-1-5 { counter-set: Conunique-5-3-1-1-5 0; }
-#Conunique-5-3-1-1-5 > li::marker { content: ""counter(Conunique-5-3-1-1-5,decimal)"."; }
-#Conunique-5-3-1-1-5 > li { counter-increment: Conunique-5-3-1-1-5; }
-#Conunique-5-4-1-1-5 { counter-set: Conunique-5-4-1-1-5 0; }
-#Conunique-5-4-1-1-5 > li::marker { content: ""counter(Conunique-5-4-1-1-5,decimal)"."; }
-#Conunique-5-4-1-1-5 > li { counter-increment: Conunique-5-4-1-1-5; }
-#Geo_App-3-3-1-1 { counter-set: Geo_App-3-3-1-1 0; }
-#Geo_App-3-3-1-1 > li::marker { content: ""counter(Geo_App-3-3-1-1,decimal)"."; }
-#Geo_App-3-3-1-1 > li { counter-increment: Geo_App-3-3-1-1; }
-#sec_vector_calc-3-8-1-4 { counter-set: sec_vector_calc-3-8-1-4 0; }
-#sec_vector_calc-3-8-1-4 > li::marker { content: ""counter(sec_vector_calc-3-8-1-4,decimal)"."; }
-#sec_vector_calc-3-8-1-4 > li { counter-increment: sec_vector_calc-3-8-1-4; }
-#span-2-5-1-1-1 { counter-set: span-2-5-1-1-1 0; }
-#span-2-5-1-1-1 > li::marker { content: ""counter(span-2-5-1-1-1,decimal)"."; }
-#span-2-5-1-1-1 > li { counter-increment: span-2-5-1-1-1; }
-#imt-2-1-4 { counter-set: imt-2-1-4 0; }
-#imt-2-1-4 > li::marker { content: ""counter(imt-2-1-4,lower-alpha)")"; }
-#imt-2-1-4 > li { counter-increment: imt-2-1-4; }
-#determinants-4-5-1-1-1 { counter-set: determinants-4-5-1-1-1 0; }
-#determinants-4-5-1-1-1 > li::marker { content: "("counter(determinants-4-5-1-1-1,lower-alpha)")"; }
-#determinants-4-5-1-1-1 > li { counter-increment: determinants-4-5-1-1-1; }
-#determinants-4-6-1-1-1 { counter-set: determinants-4-6-1-1-1 0; }
-#determinants-4-6-1-1-1 > li::marker { content: "("counter(determinants-4-6-1-1-1,lower-alpha)")"; }
-#determinants-4-6-1-1-1 > li { counter-increment: determinants-4-6-1-1-1; }
-#EigenvaluesEigenvectors-10-1-1-1 { counter-set: EigenvaluesEigenvectors-10-1-1-1 0; }
-#EigenvaluesEigenvectors-10-1-1-1 > li::marker { content: ""counter(EigenvaluesEigenvectors-10-1-1-1,decimal)"."; }
-#EigenvaluesEigenvectors-10-1-1-1 > li { counter-increment: EigenvaluesEigenvectors-10-1-1-1; }
-#ContinuousDynamicalSystems-5-11-1-1-3 { counter-set: ContinuousDynamicalSystems-5-11-1-1-3 0; }
-#ContinuousDynamicalSystems-5-11-1-1-3 > li::marker { content: ""counter(ContinuousDynamicalSystems-5-11-1-1-3,decimal)"."; }
-#ContinuousDynamicalSystems-5-11-1-1-3 > li { counter-increment: ContinuousDynamicalSystems-5-11-1-1-3; }
-#Operators-3-8-1-1-1 { counter-set: Operators-3-8-1-1-1 0; }
-#Operators-3-8-1-1-1 > li::marker { content: ""counter(Operators-3-8-1-1-1,decimal)"."; }
-#Operators-3-8-1-1-1 > li { counter-increment: Operators-3-8-1-1-1; }
-#C3-7-3-1-1-6 { counter-set: C3-7-3-1-1-6 0; }
-#C3-7-3-1-1-6 > li::marker { content: ""counter(C3-7-3-1-1-6,decimal)"."; }
-#C3-7-3-1-1-6 > li { counter-increment: C3-7-3-1-1-6; }
-#C3-7-3-1-1-7 { counter-set: C3-7-3-1-1-7 0; }
-#C3-7-3-1-1-7 > li::marker { content: ""counter(C3-7-3-1-1-7,decimal)"."; }
-#C3-7-3-1-1-7 > li { counter-increment: C3-7-3-1-1-7; }
-#C3-7-13-1-1 { counter-set: C3-7-13-1-1 0; }
-#C3-7-13-1-1 > li::marker { content: ""counter(C3-7-13-1-1,decimal)"."; }
-#C3-7-13-1-1 > li { counter-increment: C3-7-13-1-1; }
-#C3-7-14-2-1-1-1 { counter-set: C3-7-14-2-1-1-1 0; }
-#C3-7-14-2-1-1-1 > li::marker { content: ""counter(C3-7-14-2-1-1-1,decimal)"."; }
-#C3-7-14-2-1-1-1 > li { counter-increment: C3-7-14-2-1-1-1; }
-#C3-8-3-1-1-3 { counter-set: C3-8-3-1-1-3 0; }
-#C3-8-3-1-1-3 > li::marker { content: "("counter(C3-8-3-1-1-3,lower-alpha)")"; }
-#C3-8-3-1-1-3 > li { counter-increment: C3-8-3-1-1-3; }
-#C3-8-3-2-2-2 { counter-set: C3-8-3-2-2-2 0; }
-#C3-8-3-2-2-2 > li::marker { content: ""counter(C3-8-3-2-2-2,decimal)"."; }
-#C3-8-3-2-2-2 > li { counter-increment: C3-8-3-2-2-2; }
-#C3-10-3-2-7 { counter-set: C3-10-3-2-7 0; }
-#C3-10-3-2-7 > li::marker { content: ""counter(C3-10-3-2-7,decimal)"."; }
-#C3-10-3-2-7 > li { counter-increment: C3-10-3-2-7; }
-</style>
+<script src="_static/prefix-runtime.ee5a0b116b7d0991.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="NL-Computational-Linear-Algebra.html"><span class="title">Computational Linear Algebra:</span> <span class="subtitle">Notes and Questions for MATH 3325</span></a></h1>
 <p class="byline">Nicholas Long</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -241,7 +166,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="C1.html" class="internal"><span class="codenumber">1</span> <span class="title">Solving Linear Systems</span></a></div>
@@ -336,8 +261,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="ContinuousDynamicalSystems.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Continuous Dynamical Systems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ContinuousDynamicalSystems.html#ContinuousDynamicalSystems-5" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Linear Systems of Ordinary Differential Equations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ContinuousDynamicalSystems.html#ContinuousDynamicalSystems-6" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Converting Higher Order DEs to Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ContinuousDynamicalSystems.html#ContinuousDynamicalSystems-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ContinuousDynamicalSystems.html#ContinuousDynamicalSystems-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Linear Systems of Ordinary Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ContinuousDynamicalSystems.html#ContinuousDynamicalSystems-5" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Converting Higher Order DEs to Systems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Graphics.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Graphics and Linear Algebra</span></a></div></li>
@@ -368,7 +294,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>
